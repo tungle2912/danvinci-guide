@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Sổ tay DaVinci Resolve 21
+  structure:
+    - type: space
+      key: davinci-guide
+      title: Sổ tay DaVinci Resolve 21
+      path: davinci
+      default: true
+      content:
+        directory: ./
+        language: vi

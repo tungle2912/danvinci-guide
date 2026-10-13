@@ -50,7 +50,7 @@ Rê chuột lên một ô để xem tên ở thanh trạng thái góc dưới tr
 
 | Màu | Tên | Dùng để |
 |---|---|---|
-| Vàng cam | **Background** / đầu vào chính | Hình chính đi vào node. Trên Merge là **lớp dưới** |
+| Vàng | **Background** / đầu vào chính | Hình chính đi vào node. Trên Merge là **lớp dưới** |
 | Xanh lá | **Foreground** | Trên Merge là **lớp trên** |
 | Xanh dương | **Effect Mask** | Nối mask vào để **giới hạn vùng** node có tác dụng |
 | Xám | **Garbage Matte** | Trên keyer: loại bỏ chân đèn, micro lọt vào phông xanh |
@@ -58,7 +58,11 @@ Rê chuột lên một ô để xem tên ở thanh trạng thái góc dưới tr
 
 Hầu hết node có một đầu vào chính và một đầu vào **Effect Mask** xanh dương.
 
-> Manual gọi đầu vào Background của Merge là *orange* (cam), còn đầu vào Background của Tracker là *yellow* (vàng). Trên màn hình chúng là cùng một tông vàng cam.
+![Merge với ba đầu vào: vàng bên trái, xanh lá phía trên, xanh dương phía dưới](../../assets/img/fusion-merge-inputs.png)
+
+*Ảnh chụp thật trong Resolve 21: video vào mũi tên **vàng** bên trái (Background), chữ `TieuDe` vào mũi tên **xanh lá** phía trên (Foreground), mũi tên **xanh dương** phía dưới để cắm mask.*
+
+> Manual có chỗ gọi đầu vào Background của Merge là *orange*. Trên màn hình bản 21 nó hiện **vàng** — cùng màu với đầu vào Background của Tracker.
 
 Rê chuột lên một node: mọi đường nối của nó sáng lên **theo màu đầu vào** mà chúng cắm vào. Nhìn vậy là biết ngay hình nào đang là lớp trên, lớp dưới.
 

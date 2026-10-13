@@ -40,7 +40,7 @@ Fusion nặng máy và phát chậm hơn trang Edit nhiều. Đừng dùng nó c
 | Ghép từ ba lớp hình trở lên | **Fusion** |
 | Tách phông xanh lá, xanh dương | **Fusion** (Delta Keyer) |
 | Gắn chữ, logo bám theo vật chuyển động | **Fusion** (Tracker) |
-| Thay biển hiệu, màn hình điện thoại trong cảnh | **Fusion** (Planar Tracker) |
+| Thay biển hiệu, màn hình điện thoại trong cảnh | **Fusion** (Tracker chế độ Corner Position; Planar Tracker là `Studio`) |
 | Che, làm mờ một vùng có hình dạng tuỳ ý | **Fusion** (Polygon) |
 
 > **Quy tắc ngón tay cái:** việc gì có thể làm trong 30 giây ở trang Edit thì làm ở trang Edit. Sang Fusion khi trang Edit không làm được, hoặc cần quá nhiều track chồng nhau.
@@ -63,7 +63,7 @@ Fusion nặng máy và phát chậm hơn trang Edit nhiều. Đừng dùng nó c
 | ★★☆ | [Tracker](mask-tracker-keyer.md#tracker--bám-một-điểm) | Gắn chữ, hình bám theo vật |
 | ★★☆ | [Spline Editor — làm chuyển động mượt](keyframe-va-spline.md#làm-chuyển-động-mượt) | Easing, chậm dần, nhanh dần |
 | ★★☆ | [Tắt tạm node `⌘P`](node-co-ban.md#xoá-tắt-tạm-khoá-node) | So sánh trước và sau |
-| ★☆☆ | [Planar Tracker](mask-tracker-keyer.md#planar-tracker--bám-mặt-phẳng) | Thay biển hiệu, màn hình |
+| `Studio` | [Planar Tracker](mask-tracker-keyer.md#planar-tracker--bám-mặt-phẳng) | Thay biển hiệu, màn hình |
 | ★☆☆ | [Follower](chu-dong.md#follower--chữ-hiện-lần-lượt) | Hiệu ứng chạy lần lượt từng ký tự |
 | ★☆☆ | [Fusion Clip](node-co-ban.md#fusion-clip-và-fusion-composition) | Đưa nhiều track từ Edit vào một comp |
 | ★☆☆ | [Lưu thành Fusion Title](chu-dong.md#lưu-thành-fusion-title-dùng-lại-ở-trang-edit) | Dùng lại mẫu chữ ở trang Edit |

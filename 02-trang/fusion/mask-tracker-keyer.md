@@ -141,7 +141,7 @@ Mask nối vào Effect Mask được áp **sau** hiệu ứng: node xử lý c�
 | **Corner Position** | Track bốn góc, ghép một hình vào bốn góc đó — thay màn hình, biển hiệu | ★☆☆ |
 | **Perspective Position** | Track bốn góc rồi kéo thẳng phối cảnh | ★☆☆ |
 
-Hai việc dùng bốn góc thì **Planar Tracker** thường dễ hơn — xem bên dưới.
+Ở bản Studio, hai việc dùng bốn góc này làm bằng **Planar Tracker** dễ hơn — xem bên dưới. Bản free dùng Corner Position của Tracker thường.
 
 ### Bước 1 — Nối và đặt ô track
 
@@ -199,7 +199,9 @@ Cách B dùng được cho bất cứ thông số **Center**, **Pivot** nào —
 
 ## Planar Tracker — bám mặt phẳng
 
-`★☆☆ Tình huống cụ thể`
+`Studio`
+
+> **Bản free không có node này.** Đã thử trên Resolve 21.0.4 bản free: Planar Tracker, Planar Transform, Camera Tracker và Surface Tracker đều không thêm được vào comp. Tracker thường và Delta Keyer thì có. Phần dưới để bạn biết nó làm gì khi lên bản Studio.
 
 **Là gì:** track cả một **mặt phẳng** (biển số, biển hiệu, màn hình, bức tường) thay vì một điểm. Ra được cả **phối cảnh** — mặt phẳng nghiêng thế nào, hình gắn vào nghiêng theo thế đó. Chịu được khi một phần mặt phẳng bị che hoặc ra khỏi khung tốt hơn Tracker thường.
 

@@ -43,20 +43,37 @@ Nếu thứ tự không đổi so với bản cũ thì là: `⇧2` Media · `⇧
 
 ## Mỗi trang làm gì
 
-| Trang | Làm gì | Bạn sẽ dùng |
-|---|---|---|
-| [**Media**](../02-trang/media/README.md) | Nạp file, sắp xếp bin, gõ metadata, backup thẻ nhớ | Đầu mỗi dự án |
-| **Photo** | Quản lý và chỉnh ảnh tĩnh: album, chấm sao, chụp tethered, xuất ảnh | Nếu bạn làm ảnh |
-| [**Cut**](../02-trang/cut/README.md) | Dựng nhanh, ít nút, nhiều tự động | Video ngắn, deadline gấp |
-| [**Edit**](../02-trang/edit/README.md) | Dựng chi tiết, nhiều track, keyframe | Phần lớn thời gian |
-| [**Fusion**](../02-trang/fusion/README.md) | VFX dạng node: phông xanh, tracking, chữ động phức tạp | Khi cần hiệu ứng |
-| [**Color**](../02-trang/color/README.md) | Chỉnh màu bằng node | Mọi video |
-| [**Fairlight**](../02-trang/fairlight/README.md) | Mix âm thanh: EQ, nén, hiệu ứng | Mọi video có lời |
-| [**Deliver**](../02-trang/deliver/README.md) | Xuất file | Cuối mỗi dự án |
+| Trang | Làm gì | Bạn sẽ dùng | Giao diện chi tiết |
+|---|---|---|---|
+| [**Media**](../02-trang/media/README.md) | Nạp file, sắp xếp bin, gõ metadata, backup thẻ nhớ | Đầu mỗi dự án | [Năm vùng của trang Media](../02-trang/media/README.md#năm-vùng-của-trang-media) |
+| [**Photo**](../02-trang/photo/README.md) | Quản lý và chỉnh ảnh tĩnh: album, chấm sao, chụp tethered, xuất ảnh | Nếu bạn làm ảnh | [Giao diện Photo](../02-trang/photo/giao-dien.md) |
+| [**Cut**](../02-trang/cut/README.md) | Dựng nhanh, ít nút, nhiều tự động | Video ngắn, deadline gấp | [Giao diện Cut](../02-trang/cut/giao-dien.md) |
+| [**Edit**](../02-trang/edit/README.md) | Dựng chi tiết, nhiều track, keyframe, phụ đề | Phần lớn thời gian | [Giao diện Edit](../02-trang/edit/giao-dien.md) |
+| [**Fusion**](../02-trang/fusion/README.md) | Hiệu ứng dạng node: chữ động, ghép lớp, phông xanh, tracking | Khi trang Edit không làm được | [Giao diện Fusion](../02-trang/fusion/giao-dien.md) |
+| [**Color**](../02-trang/color/README.md) | Chỉnh màu bằng node | Mọi video | [Giao diện Color](../02-trang/color/giao-dien.md) |
+| [**Fairlight**](../02-trang/fairlight/README.md) | Mix âm thanh: làm sạch giọng, cân to nhỏ, đo loudness | Mọi video có lời | [Giao diện Fairlight](../02-trang/fairlight/giao-dien.md) |
+| [**Deliver**](../02-trang/deliver/README.md) | Xuất file, xếp hàng đợi render | Cuối mỗi dự án | [Giao diện Deliver](../02-trang/deliver/giao-dien.md) |
 
 **Cut và Edit dùng chung một timeline.** Dựng ở Cut rồi sang Edit sửa tiếp được, và ngược lại.
 
-**Photo là luồng riêng.** Ảnh trong album của trang Photo đưa sang được các trang Cut, Edit, Color, Fusion để dùng trong video.
+**Fusion, Color, Fairlight cũng làm trên chính timeline đó.** Comp Fusion và grade màu dính theo từng clip; chỉnh tiếng ở Fairlight thì quay về Edit vẫn thấy.
+
+**Thứ tự xử lý hình:** Edit → Fusion → Color. Vì vậy Viewer trang Fusion hiện hình **chưa chỉnh màu** — xem [Fusion làm việc thế nào](../02-trang/fusion/README.md#fusion-làm-việc-thế-nào).
+
+**Photo là luồng riêng.** Album của trang Photo đưa sang trang Color, Fusion để chỉnh tiếp; muốn dùng ảnh trong video thì xuất ra file rồi nạp lại. Xem [Photo → Đưa album sang trang Color](../02-trang/photo/xuat-anh.md#đưa-album-sang-trang-color).
+
+## Một video đi qua các trang thế nào
+
+| Bước | Trang | Đọc |
+|---|---|---|
+| 1. Tạo project, nạp footage | Media | [Tạo project](tao-du-an.md), [Nạp media](../02-trang/media/nap-media.md) |
+| 2. Dựng | Cut hoặc Edit | [Đưa clip xuống, cắt, trim](../02-trang/edit/dung-va-cat.md) |
+| 3. Chữ, phụ đề | Edit, Fusion | [Phụ đề](../02-trang/edit/phu-de.md), [Chữ động Text+](../02-trang/fusion/chu-dong.md) |
+| 4. Màu | Color | [Chuỗi 6 node](../02-trang/color/node.md#chuỗi-6-node-cơ-bản) |
+| 5. Tiếng | Fairlight | [Một lượt cân tiếng vlog](../02-trang/fairlight/README.md#một-lượt-cân-tiếng-vlog) |
+| 6. Xuất | Deliver | [Preset theo nền tảng](../02-trang/deliver/preset-theo-nen-tang.md) |
+
+Bước 2 đến 5 không bắt buộc đúng thứ tự — quay lại trang trước bất cứ lúc nào. Luồng đầy đủ: [Vlog YouTube](../03-luong/vlog-youtube.md).
 
 ## Ẩn bớt trang không dùng
 
@@ -73,8 +90,8 @@ Gọn hơn nữa:
 | Panel | Là gì |
 |---|---|
 | **Media Pool** | Kho clip của project — cùng một kho ở mọi trang |
-| **Inspector** | Thông số của thứ đang chọn |
-| **Mixer** | Các kênh âm thanh |
+| **Inspector** | Thông số của thứ đang chọn. Xem [Inspector trang Edit](../02-trang/edit/inspector.md) |
+| **Mixer** | Các kênh âm thanh — ở Fairlight có thêm EQ, Dynamics, Track FX. Xem [Cột kênh trong Mixer](../02-trang/fairlight/mixer-va-track-fx.md#cột-kênh-trong-mixer) |
 
 Panel nào cũng kéo tách ra thành cửa sổ rời được — tiện khi dùng hai màn hình.
 
@@ -84,3 +101,5 @@ Panel nào cũng kéo tách ra thành cửa sổ rời được — tiện khi d
 |---|---|
 | **Ngôi nhà** | Mở Project Manager |
 | **Bánh răng** | Mở Project Settings |
+
+Thiết lập nên làm ngay khi tạo project: [Tạo project đúng ngay từ đầu](tao-du-an.md).

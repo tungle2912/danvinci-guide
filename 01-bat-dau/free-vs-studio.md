@@ -16,6 +16,8 @@ Tài liệu này viết cho **bản free**. Dưới đây là những gì bạn 
 
 Bản free vẫn **nạp, dựng và chỉnh màu** được footage lớn hơn 4K bình thường. Chỉ là không xuất ra lớn hơn 4K.
 
+Ở trang Deliver, preset **IMF** và **Remote Rendering** (render trên máy khác trong mạng) cũng là `Studio`. Xem [Deliver → Giới hạn bản free](../02-trang/deliver/README.md#giới-hạn-bản-free).
+
 ## Tính năng AI thuộc Studio
 
 Đây là nhóm bị khoá nhiều nhất. Những thứ dưới đây **không có** ở bản free. (Một số công cụ AI vẫn free: nút **Auto Color**, **Dialogue Leveler**.)
@@ -29,8 +31,11 @@ Bản free vẫn **nạp, dựng và chỉnh màu** được footage lớn hơn 
 - **Super Scale** — phóng to bằng AI
 - **Scene Cut Detection** — tự cắt clip tại các điểm chuyển cảnh
 - **Text-Based Editing** — dựng bằng cách sửa transcript
-- **Create Subtitles from Audio** — tự tạo phụ đề từ lời nói
+- **Create Subtitles from Audio** — tự tạo phụ đề từ lời nói. Bản free gõ tay hoặc nhập file `.srt` — xem [Phụ đề](../02-trang/edit/phu-de.md#create-subtitles-from-audio--ai-tự-tạo)
+- **AI Animated Subtitles** — chữ phụ đề sáng lên theo từng từ
+- **Multicam SmartSwitch** — tự chọn góc máy theo người đang nói
 - **Audio Assistant** — tự mix tiếng
+- **Dialogue Separator**, **Music Remixer**, **Remove Silence** — tách giọng/nền/vang, tách nhạc thành từng phần, tự cắt khoảng lặng
 - **Voice Convert** — đổi giọng người nói
 - **Speed Warp** — slow motion chất lượng cao bằng AI (Optical Flow thường vẫn dùng được ở bản free)
 
@@ -46,11 +51,32 @@ Bản free vẫn **nạp, dựng và chỉnh màu** được footage lớn hơn 
 
 ## Âm thanh — bản free có gì đáng chú ý
 
-Ba công cụ "tự mix" hữu ích nhất đều **có ở bản free**: **Dialogue Leveler**, **Ducker**, **Normalize Audio Levels**. Xem [Fairlight](../02-trang/fairlight/README.md).
+Ba công cụ "tự mix" hữu ích nhất đều **có ở bản free**: **Normalize Audio Levels**, **Dialogue Leveler**, **Ducker**. Xem [Track FX — ba công cụ "tự mix"](../02-trang/fairlight/mixer-va-track-fx.md#track-fx--ba-công-cụ-tự-mix).
+
+Bộ **Fairlight FX** làm sạch giọng (Noise Reduction, EQ, De-Esser, De-Hummer, Dialogue Processor, Limiter) cũng có ở bản free — xem [Làm sạch giọng](../02-trang/fairlight/lam-sach-giong.md). Loudness meter chuẩn YouTube và **Normalize Audio** lúc xuất đều dùng được.
+
+## Fusion — node nào bị khoá
+
+Đã thử trên Resolve 21.0.4 **bản free** (thêm node bằng script):
+
+| Node | Bản free |
+|---|---|
+| **Tracker** | Có |
+| **Delta Keyer** | Có |
+| **Planar Tracker** | Không — `Studio` |
+| **Planar Transform** | Không — `Studio` |
+| **Camera Tracker** | Không — `Studio` |
+| **Surface Tracker** | Không — `Studio` |
+
+**Magic Mask** trong Fusion cũng là `Studio` — bản free dùng mask Polygon kèm keyframe.
+
+Thay biển hiệu, màn hình điện thoại ở bản free: dùng **Tracker** chế độ Corner Position. Xem [Planar Tracker](../02-trang/fusion/mask-tracker-keyer.md#planar-tracker--bám-mặt-phẳng) và [Tracker](../02-trang/fusion/mask-tracker-keyer.md#tracker--bám-một-điểm).
+
+Text+, Merge, Transform, mask, keyframe, Spline — mọi thứ dùng để [làm chữ động](../02-trang/fusion/chu-dong.md) — đều có ở bản free.
 
 ## Sửa hình
 
-- **Lens Correction** — sửa méo ống kính góc rộng. Bản free không có, kể cả ở trang Cut và Edit.
+- **Lens Correction** — sửa méo ống kính góc rộng. Bản free không có, kể cả ở trang Cut và Edit. Thay thế: tăng nhẹ Zoom để cắt bớt mép cong — xem [Cut → Lens Correction](../02-trang/cut/tools.md#lens-correction--sửa-méo-góc-rộng).
 
 ## Hiệu ứng
 

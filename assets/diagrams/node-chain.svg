@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="270" viewBox="0 0 680 270" role="img"><title>Chuỗi 6 node chỉnh màu cơ bản</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="tl"><rect class="bx" x="60" y="50" width="170" height="60" rx="8"/><text class="t" x="145" y="77" text-anchor="middle">01 — Balance</text><text class="s" x="145" y="97" text-anchor="middle">Cân bằng trắng</text></g>
+<g class="tl"><rect class="bx" x="255" y="50" width="170" height="60" rx="8"/><text class="t" x="340" y="77" text-anchor="middle">02 — Contrast</text><text class="s" x="340" y="97" text-anchor="middle">Tương phản + pivot</text></g>
+<g class="pu"><rect class="bx" x="450" y="50" width="170" height="60" rx="8"/><text class="t" x="535" y="77" text-anchor="middle">03 — Color</text><text class="s" x="535" y="97" text-anchor="middle">Sửa hue, sat</text></g>
+<g class="pu"><rect class="bx" x="60" y="170" width="170" height="60" rx="8"/><text class="t" x="145" y="197" text-anchor="middle">04 — Secondary</text><text class="s" x="145" y="217" text-anchor="middle">Da người, vùng chọn</text></g>
+<g class="co"><rect class="bx" x="255" y="170" width="170" height="60" rx="8"/><text class="t" x="340" y="197" text-anchor="middle">05 — Look</text><text class="s" x="340" y="217" text-anchor="middle">LUT, tông màu phim</text></g>
+<g class="co"><rect class="bx" x="450" y="170" width="170" height="60" rx="8"/><text class="t" x="535" y="197" text-anchor="middle">06 — Finishing</text><text class="s" x="535" y="217" text-anchor="middle">Vignette, sharpen</text></g>
+<line class="ar" x1="232" y1="80" x2="245" y2="80" marker-end="url(#a)"/>
+<line class="ar" x1="427" y1="80" x2="440" y2="80" marker-end="url(#a)"/>
+<path class="ar" d="M535 112 L535 140 L145 140 L145 160" marker-end="url(#a)"/>
+<line class="ar" x1="232" y1="200" x2="245" y2="200" marker-end="url(#a)"/>
+<line class="ar" x1="427" y1="200" x2="440" y2="200" marker-end="url(#a)"/>
+</svg>

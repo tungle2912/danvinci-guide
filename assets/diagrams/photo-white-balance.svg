@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="360" viewBox="0 0 680 360" role="img"><title>Chỉnh cân bằng trắng ảnh ở tab nào trong Inspector trang Photo</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><rect class="bx" x="240" y="30" width="200" height="56" rx="8"/><text class="t" x="340" y="54" text-anchor="middle">Ảnh của bạn là file gì?</text><text class="s" x="340" y="73" text-anchor="middle">Xem đuôi file</text></g>
+<g class="tl"><rect class="bx" x="60" y="130" width="260" height="66" rx="8"/><text class="t" x="190" y="156" text-anchor="middle">RAW</text><text class="s" x="190" y="177" text-anchor="middle">CR3, NEF, ARW, RAF, RW2, ProRAW</text></g>
+<g class="co"><rect class="bx" x="360" y="130" width="260" height="66" rx="8"/><text class="t" x="490" y="156" text-anchor="middle">Ảnh thường</text><text class="s" x="490" y="177" text-anchor="middle">JPG, PNG, HEIC, TIFF</text></g>
+<g class="tl"><rect class="bx" x="60" y="236" width="260" height="96" rx="8"/><text class="t" x="190" y="262" text-anchor="middle">Inspector → tab RAW</text><text class="s" x="190" y="284" text-anchor="middle">1. White Balance: chọn preset</text><text class="s" x="190" y="302" text-anchor="middle">2. Color Temp (Kelvin)</text><text class="s" x="190" y="320" text-anchor="middle">3. Tint (xanh lá ↔ hồng)</text></g>
+<g class="co"><rect class="bx" x="360" y="236" width="260" height="96" rx="8"/><text class="t" x="490" y="262" text-anchor="middle">Inspector → tab Photo</text><text class="s" x="490" y="284" text-anchor="middle">1. Auto Balance (tự động)</text><text class="s" x="490" y="302" text-anchor="middle">2. Temp (ấm ↔ lạnh)</text><text class="s" x="490" y="320" text-anchor="middle">3. Tint (xanh lá ↔ hồng)</text></g>
+<path class="ar" d="M300 88 L300 108 L190 108 L190 124" marker-end="url(#a)"/>
+<path class="ar" d="M380 88 L380 108 L490 108 L490 124" marker-end="url(#a)"/>
+<line class="ar" x1="190" y1="198" x2="190" y2="230" marker-end="url(#a)"/>
+<line class="ar" x1="490" y1="198" x2="490" y2="230" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="230" viewBox="0 0 860 230" role="img"><title>Thanh công cụ trên timeline trang Edit, từ trái sang phải</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 13px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 11.5px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+</style>
+<g class="gy"><rect class="bx" x="10" y="10" width="840" height="210" rx="14"/></g>
+<g class="gy"><rect class="bx" x="22" y="40" width="104" height="150" rx="8" fill="#FFFFFF"/><text class="t" x="74" y="64" text-anchor="middle">1. Hiển thị</text><text class="s" x="74" y="92" text-anchor="middle">View Options</text><text class="s" x="74" y="112" text-anchor="middle">Keyframe Editor</text><text class="s" x="74" y="132" text-anchor="middle">Voiceover</text></g>
+<g class="tl"><rect class="bx" x="134" y="40" width="118" height="150" rx="8"/><text class="t" x="193" y="64" text-anchor="middle">2. Chế độ</text><text class="s" x="193" y="92" text-anchor="middle">Selection  A</text><text class="s" x="193" y="112" text-anchor="middle">Trim  T</text><text class="s" x="193" y="132" text-anchor="middle">Dynamic Trim  W</text><text class="s" x="193" y="152" text-anchor="middle">Blade  B</text></g>
+<g class="pu"><rect class="bx" x="260" y="40" width="118" height="150" rx="8"/><text class="t" x="319" y="64" text-anchor="middle">3. Edit</text><text class="s" x="319" y="92" text-anchor="middle">Insert  F9</text><text class="s" x="319" y="112" text-anchor="middle">Overwrite  F10</text><text class="s" x="319" y="132" text-anchor="middle">Replace  F11</text></g>
+<g class="co"><rect class="bx" x="386" y="40" width="118" height="150" rx="8"/><text class="t" x="445" y="64" text-anchor="middle">4. Khoá, hít</text><text class="s" x="445" y="92" text-anchor="middle">Snapping  N</text><text class="s" x="445" y="112" text-anchor="middle">Linked  ⌘⇧L</text><text class="s" x="445" y="132" text-anchor="middle">Position Lock</text></g>
+<g class="tl"><rect class="bx" x="512" y="40" width="100" height="150" rx="8"/><text class="t" x="562" y="64" text-anchor="middle">5. Đánh dấu</text><text class="s" x="562" y="92" text-anchor="middle">Flag  G</text><text class="s" x="562" y="112" text-anchor="middle">Marker  M</text></g>
+<g class="pu"><rect class="bx" x="620" y="40" width="112" height="150" rx="8"/><text class="t" x="676" y="64" text-anchor="middle">6. Zoom</text><text class="s" x="676" y="92" text-anchor="middle">Full Extent</text><text class="s" x="676" y="112" text-anchor="middle">Detail</text><text class="s" x="676" y="132" text-anchor="middle">Custom</text><text class="s" x="676" y="152" text-anchor="middle">Thanh trượt</text></g>
+<g class="gy"><rect class="bx" x="740" y="40" width="98" height="150" rx="8" fill="#FFFFFF"/><text class="t" x="789" y="64" text-anchor="middle">7. Nghe</text><text class="s" x="789" y="92" text-anchor="middle">Bật/tắt loa</text><text class="s" x="789" y="112" text-anchor="middle">Âm lượng</text><text class="s" x="789" y="132" text-anchor="middle">DIM</text></g>
+</svg>

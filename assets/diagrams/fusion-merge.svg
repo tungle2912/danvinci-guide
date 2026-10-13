@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="330" viewBox="0 0 680 330" role="img"><title>Chuỗi node ghép chữ lên video bằng Merge</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="co"><rect class="bx" x="255" y="30" width="170" height="60" rx="8"/><text class="t" x="340" y="57" text-anchor="middle">TieuDe (Text+)</text><text class="s" x="340" y="77" text-anchor="middle">Lớp chữ, nền trong suốt</text></g>
+<g class="tl"><rect class="bx" x="40" y="150" width="170" height="60" rx="8"/><text class="t" x="125" y="177" text-anchor="middle">MediaIn1</text><text class="s" x="125" y="197" text-anchor="middle">Clip từ timeline</text></g>
+<g class="pu"><rect class="bx" x="255" y="150" width="170" height="60" rx="8"/><text class="t" x="340" y="177" text-anchor="middle">Merge1</text><text class="s" x="340" y="197" text-anchor="middle">Chồng chữ lên video</text></g>
+<g class="tl"><rect class="bx" x="470" y="150" width="170" height="60" rx="8"/><text class="t" x="555" y="177" text-anchor="middle">MediaOut1</text><text class="s" x="555" y="197" text-anchor="middle">Trả về timeline</text></g>
+<line class="ar" x1="212" y1="180" x2="245" y2="180" marker-end="url(#a)"/>
+<line class="ar" x1="340" y1="92" x2="340" y2="140" marker-end="url(#a)"/>
+<line class="ar" x1="427" y1="180" x2="460" y2="180" marker-end="url(#a)"/>
+<text class="s" fill="#5F5E5A" x="352" y="122">Foreground — đầu vào xanh lá (lớp trên)</text>
+<text class="s" fill="#5F5E5A" x="40" y="236">Background — đầu vào vàng cam (lớp dưới)</text>
+<g class="gy"><rect class="bx" x="40" y="260" width="600" height="50" rx="10"/></g><text class="s" fill="#5F5E5A" x="340" y="281" text-anchor="middle">Đầu vào thứ ba, xanh dương: Effect Mask — tuỳ chọn, giới hạn vùng có hiệu ứng.</text><text class="s" fill="#5F5E5A" x="340" y="299" text-anchor="middle">Background quyết định độ phân giải đầu ra của Merge.</text>
+</svg>

@@ -39,6 +39,10 @@ Text+ có sáu tab trong Inspector: **Text**, **Layout**, **Transform**, **Shadi
 
 ## Gõ chữ ngay trên Viewer
 
+![Thanh công cụ chữ trên Viewer](../../assets/img/fusion-text-viewer-toolbar.png)
+
+*Gõ, kerning tay, hiện khung viền chữ ngay trên hình.*
+
 Khi chọn Text+, một **thanh công cụ chữ** hiện ra trên Viewer. Bấm đúp vào Viewer để vào chế độ gõ chữ trực tiếp, dùng `←` `→` di chuyển con trỏ, `↑` `↓` đổi dòng.
 
 | Nút | Làm gì |
@@ -50,6 +54,10 @@ Khi chọn Text+, một **thanh công cụ chữ** hiện ra trên Viewer. Bấm
 ---
 
 ## Tab Text
+
+![Tab Text của node Text+](../../assets/img/fusion-text-tab-text.png)
+
+*Nội dung, font, cỡ, màu và thanh Write On.*
 
 `★★★ Hằng ngày`
 
@@ -86,6 +94,10 @@ Ngược lại, **chữ biến mất dần:** keyframe **Start** từ `0` lên `
 ---
 
 ## Tab Layout
+
+![Tab Layout của Text+](../../assets/img/fusion-text-tab-layout.png)
+
+*Vị trí và kiểu sắp xếp cả khối chữ; keyframe Center để chữ trượt.*
 
 `★★★ Hằng ngày`
 

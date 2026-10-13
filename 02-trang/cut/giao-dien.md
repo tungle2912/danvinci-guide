@@ -12,6 +12,10 @@ Mặc định trang Cut chỉ có **ba vùng**: Media Pool (trái), Viewer (ph�
 
 ### Bên trái — các tab thay thế cho Media Pool
 
+![Sáu tab bên trái toolbar trang Cut](../../assets/img/cut-toolbar-tabs.png)
+
+*Bấm tab nào thì vùng Media Pool đổi thành nội dung tab đó.*
+
 Bấm tab nào thì vùng Media Pool **đổi thành** nội dung tab đó. Chỉ hiện một cái một lúc.
 
 | Tab | Mở ra | Mức |
@@ -62,6 +66,10 @@ Từ trái sang phải:
 
 ### Thanh dưới đáy Viewer — từ trái sang phải
 
+![Thanh nút dưới Viewer trang Cut](../../assets/img/cut-viewer-transport.png)
+
+*Từ trái sang phải: Tools, Voiceover, Fast Review, Jog, cụm phát, Mark In/Out.*
+
 | Nút | Làm gì | Mức |
 |---|---|---|
 | **Tools** | Mở thanh công cụ phóng to, crop, tốc độ, chống rung — xem [Tools](tools.md) | ★★☆ |
@@ -91,6 +99,10 @@ Nút loa trên đầu đồng hồ để tắt/bật tiếng.
 
 ## Timeline hai tầng
 
+![Timeline hai tầng trang Cut](../../assets/img/cut-timeline-two-tier.png)
+
+*Tầng trên là bản đồ cả video, tầng dưới là kính lúp quanh con trỏ.*
+
 Đây là thứ đặc trưng nhất của trang Cut.
 
 ### Timeline trên
@@ -107,6 +119,10 @@ Nút loa trên đầu đồng hồ để tắt/bật tiếng.
 > **Vì sao hay:** ở trang Edit bạn phải liên tục zoom vào zoom ra. Ở trang Cut thì không bao giờ — tầng trên là bản đồ, tầng dưới là kính lúp.
 
 ### Nút ở đầu mỗi track
+
+![Nút đầu track trang Cut](../../assets/img/cut-track-header.png)
+
+*Track nhạc đang khoá: clip hiện chấm lốm đốm, không kéo lệch được.*
 
 Từ trái sang phải: **phóng to track · khoá · tắt tiếng · tắt hình**.
 
@@ -129,6 +145,10 @@ Trong bản 21, các tuỳ chọn timeline được gom vào **ba icon menu**. B
 
 ### 1. Timeline Options — cách hiển thị và chế độ
 
+![Menu Timeline Options trang Cut](../../assets/img/cut-menu-timeline-options.png)
+
+*Icon đầu tiên: tuỳ chọn hiển thị và chế độ của timeline.*
+
 | Mục | Làm gì | Mức |
 |---|---|---|
 | **Ripple On** | Bật/tắt tự dồn ở Track 1 | ★★☆ |
@@ -142,6 +162,10 @@ Trong bản 21, các tuỳ chọn timeline được gom vào **ba icon menu**. B
 | **Boring Detector** | Soát cảnh quá dài/quá ngắn | ★☆☆ |
 
 ### 2. Timeline Actions — thêm và sửa hàng loạt
+
+![Menu Timeline Actions trang Cut](../../assets/img/cut-menu-timeline-actions.png)
+
+*Icon thứ hai: thêm track, cắt, marker, chuyển cảnh hàng loạt.*
 
 | Mục | Làm gì | Mức |
 |---|---|---|
@@ -157,6 +181,10 @@ Trong bản 21, các tuỳ chọn timeline được gom vào **ba icon menu**. B
 | **Audio Assistant**, **Voice Convert** | Mix tiếng bằng AI, đổi giọng | `Studio` |
 
 ### 3. Edit Actions — sửa clip
+
+![Menu Edit Actions trang Cut](../../assets/img/cut-menu-edit-actions.png)
+
+*Trim Start/End to Playhead: cắt đầu hoặc đuôi clip đúng tới con trỏ.*
 
 | Mục | Làm gì | Mức |
 |---|---|---|

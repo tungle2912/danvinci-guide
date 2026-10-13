@@ -8,6 +8,10 @@ Hai công cụ cho bước cuối: **soát lại** bản dựng và **xuất nha
 
 `★☆☆ Tình huống cụ thể` — nhưng nên chạy một lần trước khi xuất
 
+![Boring Detector và kết quả trên timeline](../../assets/img/cut-boring-detector.png)
+
+*Clip quá dài bị tô để nhắc bạn xem lại.*
+
 **Là gì:** quét timeline và **tô màu** những clip quá dài (dễ gây chán) hoặc quá ngắn (dễ là lỗi).
 
 **Mở:** icon **Timeline Options** (góc trên trái timeline) → **Boring Detector**.
@@ -50,6 +54,10 @@ Không phải cứ xám là phải cắt. Cảnh phong cảnh đẹp dài 12 gi�
 **Mở:** nút **Quick Export** góc trên phải trang Cut. Hoặc **File → Quick Export** — dùng được ở **mọi trang**.
 
 ### Cách làm
+
+![Cửa sổ Quick Export](../../assets/img/cut-quick-export-dialog.png)
+
+*Chọn preset ở hàng icon trên cùng rồi bấm Export.*
 
 1. (Tuỳ chọn) Đặt `I` `O` trên timeline nếu chỉ muốn xuất một đoạn. Không đặt thì xuất cả timeline.
 2. Mở Quick Export.

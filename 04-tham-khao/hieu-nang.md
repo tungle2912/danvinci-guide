@@ -4,6 +4,15 @@ Resolve lag không có nghĩa là máy bạn yếu. Phần lớn trường hợp
 
 Làm theo thứ tự dưới đây, dừng lại ngay khi đã đủ mượt. Đừng làm hết từ đầu.
 
+| Bước | Tốn gì |
+|---|---|
+| [1. Hạ độ phân giải khi xem](#bước-1--hạ-độ-phân-giải-khi-xem-miễn-phí-tức-thì) | Không tốn gì |
+| [2. Render Cache](#bước-2--render-cache) | Ổ cache |
+| [3. Hạ timeline resolution](#bước-3--hạ-timeline-resolution) | Không tốn gì |
+| [4. Optimized Media](#bước-4--optimized-media) | Ổ, thời gian tạo |
+| [5. Proxy Media](#bước-5--proxy-media) | Ổ, thời gian tạo |
+| [Riêng trang Fusion](#riêng-trang-fusion) | — |
+
 ## Bước 1 — Hạ độ phân giải khi xem (miễn phí, tức thì)
 
 **Playback → Timeline Proxy Resolution → Half Resolution** (hoặc Quarter Resolution). Chọn **None** để tắt.
@@ -26,7 +35,9 @@ Resolve phát ở độ phân giải thấp hơn nhưng **không đụng gì đ�
 
 Chế độ **User**: chuột phải clip → **Render Cache Color Output** cho những clip có nhiều hiệu ứng.
 
-Đặt nơi lưu cache: **Project Settings → Master Settings → Working Folders → Cache files location**. Trỏ vào SSD nhanh.
+Đặt nơi lưu cache: **Project Settings → Master Settings → Working Folders → Cache files location**. Trỏ vào SSD nhanh. Xem [Tạo project → Nơi lưu cache](../01-bat-dau/tao-du-an.md#bước-5--nơi-lưu-cache-và-file-tạo-ra).
+
+Lúc xuất, cache dùng lại được nhờ ô **Use render cached images** — xem [Render cache khi xuất](../02-trang/deliver/render-queue-va-loi.md#render-cache-và-use-render-cached-images).
 
 ## Bước 3 — Hạ timeline resolution
 
@@ -58,6 +69,19 @@ Nhược điểm: tốn dung lượng ổ, và mất thời gian tạo.
 Giống Optimized Media nhưng tạo ra **file thật** nằm trên ổ, mang sang máy khác được.
 
 Chuột phải clip → **Generate Proxy Media**. Dùng khi làm việc nhóm hoặc dựng trên laptop rồi chuyển sang máy bàn.
+
+So sánh Proxy và Optimized Media chi tiết: [Proxy và Optimized Media](../02-trang/media/nap-media.md#proxy-và-optimized-media).
+
+> Lúc xuất, để **tắt** **Use Proxy Media** — render từ proxy sẽ kém nét. Xem [Render xong mà file lỗi](../02-trang/deliver/render-queue-va-loi.md#render-xong-mà-file-lỗi).
+
+## Riêng trang Fusion
+
+Fusion nặng hơn trang Edit nhiều và không đảm bảo phát đúng tốc độ thực.
+
+- Chuột phải vùng nút phát → bật **Proxy** hoặc **Auto Proxy**. Xem [Time Ruler và nút phát](../02-trang/fusion/giao-dien.md#time-ruler-và-nút-phát).
+- Giữ `⌘` kéo trên Time Ruler để thu hẹp vùng render khi xem thử.
+- Node quá nặng: chọn node, `⌘U` để ngừng cập nhật. Xem [Xoá, tắt tạm, khoá node](../02-trang/fusion/node-co-ban.md#xoá-tắt-tạm-khoá-node).
+- Việc làm được ở trang Edit thì đừng mở Fusion. Xem [Khi nào cần Fusion](../02-trang/fusion/README.md#khi-nào-cần-fusion-khi-nào-không).
 
 ## Vấn đề gốc — codec của footage
 

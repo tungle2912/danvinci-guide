@@ -43,16 +43,16 @@ Nếu thứ tự không đổi so với bản cũ thì là: `⇧2` Media · `⇧
 
 ## Mỗi trang làm gì
 
-| Trang | Làm gì | Bạn sẽ dùng | Giao diện chi tiết |
-|---|---|---|---|
-| [**Media**](../02-trang/media/README.md) | Nạp file, sắp xếp bin, gõ metadata, backup thẻ nhớ | Đầu mỗi dự án | [Năm vùng của trang Media](../02-trang/media/README.md#năm-vùng-của-trang-media) |
-| [**Photo**](../02-trang/photo/README.md) | Quản lý và chỉnh ảnh tĩnh: album, chấm sao, chụp tethered, xuất ảnh | Nếu bạn làm ảnh | [Giao diện Photo](../02-trang/photo/giao-dien.md) |
-| [**Cut**](../02-trang/cut/README.md) | Dựng nhanh, ít nút, nhiều tự động | Video ngắn, deadline gấp | [Giao diện Cut](../02-trang/cut/giao-dien.md) |
-| [**Edit**](../02-trang/edit/README.md) | Dựng chi tiết, nhiều track, keyframe, phụ đề | Phần lớn thời gian | [Giao diện Edit](../02-trang/edit/giao-dien.md) |
-| [**Fusion**](../02-trang/fusion/README.md) | Hiệu ứng dạng node: chữ động, ghép lớp, phông xanh, tracking | Khi trang Edit không làm được | [Giao diện Fusion](../02-trang/fusion/giao-dien.md) |
-| [**Color**](../02-trang/color/README.md) | Chỉnh màu bằng node | Mọi video | [Giao diện Color](../02-trang/color/giao-dien.md) |
-| [**Fairlight**](../02-trang/fairlight/README.md) | Mix âm thanh: làm sạch giọng, cân to nhỏ, đo loudness | Mọi video có lời | [Giao diện Fairlight](../02-trang/fairlight/giao-dien.md) |
-| [**Deliver**](../02-trang/deliver/README.md) | Xuất file, xếp hàng đợi render | Cuối mỗi dự án | [Giao diện Deliver](../02-trang/deliver/giao-dien.md) |
+| Trang | Làm gì | Bạn sẽ dùng | Giao diện chi tiết | Đọc tiếp |
+|---|---|---|---|---|
+| [**Media**](../02-trang/media/README.md) | Nạp file, sắp xếp bin, gõ metadata, backup thẻ nhớ | Đầu mỗi dự án | [Năm vùng của trang Media](../02-trang/media/README.md#năm-vùng-của-trang-media) | [Nạp media](../02-trang/media/nap-media.md), [Bin](../02-trang/media/bin.md), [Clone Tool](../02-trang/media/clone-tool.md) |
+| [**Photo**](../02-trang/photo/README.md) | Quản lý và chỉnh ảnh tĩnh: album, chấm sao, chụp tethered, xuất ảnh | Nếu bạn làm ảnh | [Giao diện Photo](../02-trang/photo/giao-dien.md) | [Chỉnh ảnh](../02-trang/photo/chinh-anh.md), [Xuất ảnh](../02-trang/photo/xuat-anh.md) |
+| [**Cut**](../02-trang/cut/README.md) | Dựng nhanh, ít nút, nhiều tự động | Video ngắn, deadline gấp | [Giao diện Cut](../02-trang/cut/giao-dien.md) | [6 nút edit](../02-trang/cut/dung-clip.md), [Trim](../02-trang/cut/trim.md), [Quick Export](../02-trang/cut/kiem-tra-va-xuat.md#quick-export) |
+| [**Edit**](../02-trang/edit/README.md) | Dựng chi tiết, nhiều track, keyframe, phụ đề | Phần lớn thời gian | [Giao diện Edit](../02-trang/edit/giao-dien.md) | [Cắt, trim](../02-trang/edit/dung-va-cat.md), [Inspector](../02-trang/edit/inspector.md), [Phụ đề](../02-trang/edit/phu-de.md) |
+| [**Fusion**](../02-trang/fusion/README.md) | Hiệu ứng dạng node: chữ động, ghép lớp, phông xanh, tracking | Khi trang Edit không làm được | [Giao diện Fusion](../02-trang/fusion/giao-dien.md) | [Node cơ bản](../02-trang/fusion/node-co-ban.md), [Chữ động](../02-trang/fusion/chu-dong.md), [Mask, Tracker, Keyer](../02-trang/fusion/mask-tracker-keyer.md) |
+| [**Color**](../02-trang/color/README.md) | Chỉnh màu bằng node | Mọi video | [Giao diện Color](../02-trang/color/giao-dien.md) | [Cân bằng](../02-trang/color/can-bang.md), [Node](../02-trang/color/node.md), [LUT, quản lý màu](../02-trang/color/lut-va-quan-ly-mau.md) |
+| [**Fairlight**](../02-trang/fairlight/README.md) | Mix âm thanh: làm sạch giọng, cân to nhỏ, đo loudness | Mọi video có lời | [Giao diện Fairlight](../02-trang/fairlight/giao-dien.md) | [Làm sạch giọng](../02-trang/fairlight/lam-sach-giong.md), [Mixer, Ducker](../02-trang/fairlight/mixer-va-track-fx.md), [Loudness](../02-trang/fairlight/loudness-va-xuat.md) |
+| [**Deliver**](../02-trang/deliver/README.md) | Xuất file, xếp hàng đợi render | Cuối mỗi dự án | [Giao diện Deliver](../02-trang/deliver/giao-dien.md) | [Preset theo nền tảng](../02-trang/deliver/preset-theo-nen-tang.md), [Cài đặt xuất](../02-trang/deliver/cai-dat-xuat.md), [Lỗi khi xuất](../02-trang/deliver/render-queue-va-loi.md#render-xong-mà-file-lỗi) |
 
 **Cut và Edit dùng chung một timeline.** Dựng ở Cut rồi sang Edit sửa tiếp được, và ngược lại.
 

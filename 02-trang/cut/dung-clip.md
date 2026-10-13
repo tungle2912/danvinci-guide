@@ -32,6 +32,10 @@ Phần lớn trường hợp để Track 1. Riêng nút **Place On Top** thì b�
 
 ![Sáu nút edit](../../assets/diagrams/cut-edit-buttons.svg)
 
+![Sáu nút edit dưới đáy Media Pool, ảnh chụp](../../assets/img/cut-edit-buttons.png)
+
+*Ảnh thật của sáu nút edit, đúng thứ tự trong sơ đồ.*
+
 Xong mỗi lần edit, bấm `Q` để xem lại trên timeline, `Q` lần nữa để quay về chọn clip tiếp.
 
 ---

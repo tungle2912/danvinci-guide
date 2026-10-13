@@ -2,7 +2,7 @@ import re, pathlib, urllib.parse
 root = pathlib.Path(".")
 bad = []
 for md in root.rglob("*.md"):
-    if any(p in md.parts for p in (".venv", ".manual")):
+    if any(p in md.parts for p in (".venv", ".manual", "shots")):
         continue
     text = md.read_text(encoding="utf-8")
     for m in re.finditer(r"\[[^\]]*\]\(([^)]+)\)", text):

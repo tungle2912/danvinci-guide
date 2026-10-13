@@ -70,6 +70,10 @@ Rê chuột lên một node: mọi đường nối của nó sáng lên **theo m
 
 ## Thêm node
 
+![Hộp Select Tool mở bằng Shift Space](../../assets/img/fusion-select-tool.png)
+
+*Gõ vài chữ, chọn bằng mũi tên, Return để thêm node.*
+
 `★★★ Hằng ngày`
 
 **Luật chung cho mọi cách thêm:**
@@ -176,6 +180,10 @@ Các lệnh này cũng có trong menu chuột phải node → **Modes**. Node đ
 > **Lỗi số một của người mới:** nối ngược Background và Foreground — video che mất chữ. Sửa: chọn Merge, bấm `⌘T`.
 
 ### Thông số Merge trong Inspector
+
+![Inspector của node Merge](../../assets/img/fusion-merge-inspector.png)
+
+*Merge tự có Center, Size, Angle cho lớp trên.*
 
 Merge có ba tab: **Merge**, **Channels**, **Settings**. Tab **Merge**:
 

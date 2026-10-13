@@ -6,6 +6,10 @@ Chọn clip trên timeline trước, rồi chọn một nhóm công cụ.
 
 ## Hai nút chung của mọi nhóm
 
+![Hàng Tools dưới Viewer trang Cut](../../assets/img/cut-tools-bar.png)
+
+*Bấm Tools để hiện các nhóm chỉnh trực tiếp trên Viewer.*
+
 | Vị trí | Nút | Làm gì |
 |---|---|---|
 | **Ngoài cùng bên trái** | Toggle | Tắt/bật hiệu ứng **mà không mất** những gì đã chỉnh — để so sánh trước/sau |
@@ -18,6 +22,10 @@ Chọn clip trên timeline trước, rồi chọn một nhóm công cụ.
 ## Transform — phóng to, dời, xoay
 
 `★★★ Hằng ngày`
+
+![Transform trực tiếp trên Viewer](../../assets/img/cut-tools-transform.png)
+
+*Kéo góc để phóng, kéo trong khung để dời, tay nắm giữa để xoay.*
 
 Khi chọn Transform, **khung điều khiển** hiện lên trên hình trong Viewer:
 
@@ -52,6 +60,10 @@ Giữ `⇧` khi dời → chỉ dời ngang hoặc chỉ dời dọc.
 
 ## Crop — cắt rìa
 
+![Crop trên Viewer: dải đen trên dưới](../../assets/img/cut-tools-crop.png)
+
+*Crop Top và Bottom bằng nhau tạo khung điện ảnh.*
+
 `★★☆ Thường dùng`
 
 Mỗi cạnh hình có **tay nắm riêng** trên Viewer, kéo vào để cắt cạnh đó.
@@ -72,6 +84,10 @@ Mỗi cạnh hình có **tay nắm riêng** trên Viewer, kéo vào để cắt 
 ---
 
 ## Dynamic Zoom — zoom chậm tự động
+
+![Dynamic Zoom: khung xanh lá và khung đỏ](../../assets/img/cut-tools-dynamic-zoom.png)
+
+*Xanh lá là khung lúc bắt đầu, đỏ là khung lúc kết thúc.*
 
 `★★☆ Thường dùng`
 
@@ -128,6 +144,10 @@ Năm kiểu trộn hay dùng:
 
 ## Speed — nhanh, chậm, tua ngược
 
+![Speed trong Tools](../../assets/img/cut-tools-speed.png)
+
+*Speed 50% là chậm một nửa; Add Speed Point để làm speed ramp.*
+
 `★★☆ Thường dùng`
 
 | Thông số | Làm gì |
@@ -174,6 +194,10 @@ Inspector → **Speed Change** có thêm:
 ---
 
 ## Stabilization — chống rung
+
+![Chống rung trong Tools](../../assets/img/cut-tools-stabilization.png)
+
+*Chọn phương pháp trước, rồi bấm Stabilize.*
 
 `★★☆ Thường dùng`
 

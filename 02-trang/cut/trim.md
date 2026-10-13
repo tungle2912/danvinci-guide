@@ -85,6 +85,10 @@ Trim là **sửa độ dài và vị trí** của clip đã nằm trên timeline
 
 ## Trim Editor — trim chính xác từng khung
 
+![Trim Editor trang Cut](../../assets/img/cut-trim-editor.png)
+
+*Dải trên là clip trước, dải dưới là clip sau; tay nắm trắng để roll.*
+
 `★☆☆ Tình huống cụ thể`
 
 **Mở:** **bấm đúp** vào điểm nối giữa hai clip.

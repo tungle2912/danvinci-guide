@@ -114,6 +114,8 @@ Cùng trang Master Settings, nhóm **Optimized Media and Render Cache** chọn �
 | **Project backup location** | Nơi lưu bản sao. Mặc định thư mục `ProjectBackup` trên ổ scratch | Trỏ sang ổ khác ổ hệ thống nếu có |
 | **Timeline Backups** | Lưu bản sao riêng từng timeline | Bật nếu hay sửa lớn |
 
+Manual ghi hai bộ số mặc định khác nhau (đoạn Timeline Backups ghi 2 bản theo giờ, 2 bản theo ngày). Số thật trên máy bạn hiện ngay trong các ô này.
+
 **Mở bản sao lưu:** Project Manager → chuột phải project → **Project Backups** → chọn bản → **Load**. Bản sao mở thành project riêng, không đè bản gốc.
 
 **Khôi phục timeline:** chuột phải timeline trong Media Pool → **Restore Timeline Backup**. Xem [Timeline Backup](../02-trang/edit/timeline-nang-cao.md#timeline-backup--điểm-khôi-phục).

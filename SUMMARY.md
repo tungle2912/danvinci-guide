@@ -11,6 +11,7 @@
 ## Từng trang
 
 * [Media — nạp và tổ chức](02-trang/media/README.md)
+  * [Giao diện — từng nút nằm ở đâu](02-trang/media/giao-dien.md)
   * [Media Storage — duyệt ổ cứng](02-trang/media/media-storage.md)
   * [Media Pool — kho clip](02-trang/media/media-pool.md)
   * [Bin, Power Bin, Smart Bin](02-trang/media/bin.md)

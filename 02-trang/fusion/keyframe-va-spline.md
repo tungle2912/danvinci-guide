@@ -14,6 +14,10 @@
 
 ## Keyframe trong Inspector
 
+![Nút keyframe hình thoi: cam và xám](../../assets/img/fusion-keyframe-diamond.png)
+
+*Cam là đang đứng trên keyframe; xám là chưa có keyframe ở khung này.*
+
 `★★★ Hằng ngày`
 
 **Là gì:** mỗi thông số keyframe được có một **nút hình thoi** nhỏ bên phải.

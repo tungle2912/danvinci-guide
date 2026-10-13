@@ -12,6 +12,10 @@ Nhưng làm hằng ngày bạn chỉ cần **ba thứ**: Viewer, Node Editor, In
 
 ## Thanh trên cùng
 
+![Thanh nút trên cùng trang Fusion](../../assets/img/fusion-toolbar-top.png)
+
+*Nút bên trái mở kho clip/node, bên phải mở Spline, Keyframes, Inspector.*
+
 Thanh nút ở mép trên dùng để **bật/tắt panel**. Chuột phải vào thanh để chọn hiện hay ẩn chữ bên cạnh icon.
 
 ### Bên trái
@@ -74,6 +78,10 @@ Xoá hình khỏi Viewer: bấm vào Viewer đó rồi bấm phím `` ` `` (phí
 
 ### Thanh tiêu đề Viewer
 
+![Thanh tiêu đề Viewer trang Fusion](../../assets/img/fusion-viewer-header.png)
+
+*Tên giữa thanh cho biết Viewer đang xem node nào.*
+
 | Nút | Làm gì | Mức |
 |---|---|---|
 | **Menu zoom** (ví dụ `33%`) | Chọn tỉ lệ, hoặc **Fit** | ★★☆ |
@@ -92,6 +100,10 @@ Chọn node **Text+** thì một thanh công cụ chữ hiện thêm trên Viewe
 ---
 
 ## Time Ruler và nút phát
+
+![Time Ruler và nút phát trang Fusion](../../assets/img/fusion-time-ruler.png)
+
+*Hai vạch vàng là In/Out của clip; vạch xanh lá là khung đã cache.*
 
 Nằm ngay dưới Viewer.
 
@@ -121,6 +133,10 @@ Nút **loa** bên trái nút phát để bật/tắt tiếng. Dạng sóng âm t
 ## Thanh công cụ dưới Time Ruler
 
 `★★★ Hằng ngày`
+
+![Thanh công cụ node dưới Time Ruler](../../assets/img/fusion-toolbar-nodes.png)
+
+*Người mới chỉ cần ba nhóm đầu và nhóm Mask.*
 
 **Là gì:** một hàng icon các node hay dùng nhất. Rê chuột lên icon để xem tên.
 
@@ -177,6 +193,10 @@ Inspector có hai trang ở trên cùng: **Tools** (thông số node) và **Modi
 
 ### Thanh tên node — đầu Inspector
 
+![Thanh tên node đầu Inspector](../../assets/img/fusion-inspector-header.png)
+
+*Công tắc, tên, màu, Versions, Pin, Lock, Reset của node đang chọn.*
+
 Từ trái sang phải:
 
 | Nút | Làm gì | Mức |
@@ -218,6 +238,10 @@ Chi tiết: [Keyframe và Spline](keyframe-va-spline.md).
 ---
 
 ## Effects Library
+
+![Effects Library trong trang Fusion](../../assets/img/fusion-effects-library.png)
+
+*Kho mọi node của Fusion, chia nhóm.*
 
 `★★☆ Thường dùng`
 

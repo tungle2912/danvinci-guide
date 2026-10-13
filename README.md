@@ -28,7 +28,14 @@ Nếu bạn mới bắt đầu, đi theo đúng thứ tự mục lục bên trá
 | Hiểu từng trang làm gì | [Tám trang và vai trò](01-bat-dau/giao-dien.md) |
 | Dựng phim, cắt ghép | [Trang Edit](02-trang/edit/README.md) |
 | Chỉnh màu | [Trang Color](02-trang/color/README.md) |
+| Làm chữ động, tiêu đề chạy | [Fusion → Chữ động với Text+](02-trang/fusion/chu-dong.md) |
+| Ghép phông xanh, bám chuyển động | [Fusion → Mask, Tracker, Delta Keyer](02-trang/fusion/mask-tracker-keyer.md) |
+| Giọng bị ồn, ù, chói | [Fairlight → Làm sạch giọng](02-trang/fairlight/lam-sach-giong.md) |
+| Tiếng đủ to cho YouTube (−14 LUFS) | [Fairlight → Loudness](02-trang/fairlight/loudness-va-xuat.md) |
+| Thêm phụ đề, xuất `.srt` | [Edit → Phụ đề](02-trang/edit/phu-de.md) |
 | Xuất file | [Trang Deliver](02-trang/deliver/README.md) |
+| Xuất đúng chuẩn YouTube, TikTok | [Deliver → Preset theo nền tảng](02-trang/deliver/preset-theo-nen-tang.md) |
+| Render lỗi, file xuất hỏng | [Deliver → Render xong mà file lỗi](02-trang/deliver/render-queue-va-loi.md#render-xong-mà-file-lỗi) |
 | Làm video dọc cho TikTok, Reels | [Luồng: video dọc](03-luong/video-doc.md) |
 | Footage quay LOG bị xám xịt | [Luồng: LOG sang Rec.709](03-luong/log-sang-rec709.md) |
 | Chỉnh ảnh tĩnh, ảnh RAW | [Trang Photo](02-trang/photo/README.md) |
@@ -36,6 +43,7 @@ Nếu bạn mới bắt đầu, đi theo đúng thứ tự mục lục bên trá
 | Dựng nhanh video ngắn | [Trang Cut](02-trang/cut/README.md) |
 | Máy lag, tua giật | [Tối ưu hiệu năng](04-tham-khao/hieu-nang.md) |
 | Quên phím tắt | [Bảng phím tắt](04-tham-khao/phim-tat.md) |
+| Gặp lỗi lạ | [Lỗi thường gặp](04-tham-khao/loi-thuong-gap.md) |
 
 ## Xem tài liệu này
 

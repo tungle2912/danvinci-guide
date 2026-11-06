@@ -26,7 +26,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** album Demo - Anh đang mở. Chuột phải toolbar → bật hiện nhãn chữ dưới icon (nếu có tuỳ chọn).
 - **Khung chụp:** chỉ một vùng — toàn bộ dải toolbar trên cùng (có thể cắt làm hai nửa ghép dọc nếu quá dài).
 - **Cần thấy rõ trong ảnh:** bảy nút Media Pool, Effects Library, Photo Album, Quick Export, Metadata, Capture (Studio, có thể xám), Inspector.
-- **Alt + chú thích:** `![Toolbar trang Photo](../../assets/img/photo-toolbar.png)` — *Bảy nút từ trái sang phải; Capture chỉ có ở Studio.*
+- **Alt + chú thích:** `![Toolbar trang Photo](../../assets/img/photo-toolbar.png)` — *Trái: Media Pool, Effects, Photo Album. Phải: Quick Export, Metadata, Inspector. Bản Studio có thêm nút Capture.*
 
 ### PHO-02 — `photo-viewer-top-bar.png`
 - **Ưu tiên:** P1
@@ -62,7 +62,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** chọn một ảnh JPG, bấm `4` để chấm 4 sao, bấm `S` để gắn tag tốt.
 - **Khung chụp:** chỉ một vùng — thanh dưới Viewer, toàn chiều ngang.
 - **Cần thấy rõ trong ảnh:** Tools, EXIF Data, Favorite (tim, đang sáng), Untag, Reject (x), Version Selector, Star Rating (4 sao), Color, Flag.
-- **Alt + chú thích:** `![Thanh dưới Viewer trang Photo](../../assets/img/photo-viewer-bottom-bar.png)` — *Ảnh đang được gắn tim và 4 sao.*
+- **Alt + chú thích:** `![Thanh dưới Viewer trang Photo](../../assets/img/photo-viewer-bottom-bar.png)` — *Từ trái: Tools, ba nút Favorite / Untag / Reject, Version, Star Rating, Color, Flag.*
 
 ### PHO-06 — `photo-exif-overlay.png`
 - **Ưu tiên:** P3
@@ -116,7 +116,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** trong album: áp **Vignette** cho ảnh 1 (để có icon FX), crop ảnh 2 (Tools → Crop 4:5, đóng Tools), Transform ảnh 3 (Zoom 1.1). Mở dải Photo Album.
 - **Khung chụp:** chỉ một vùng — dải Photo Album ở đáy màn hình, gồm các icon lọc phía trên.
 - **Cần thấy rõ trong ảnh:** thumbnail có icon FX, icon Transform, icon Crop; tên album.
-- **Alt + chú thích:** `![Dải Photo Album với icon dưới thumbnail](../../assets/img/photo-album-strip.png)` — *FX là có hiệu ứng, hình chữ nhật là đã Transform, hai góc chồng là đã Crop.*
+- **Alt + chú thích:** `![Dải Photo Album với icon dưới thumbnail](../../assets/img/photo-album-strip.png)` — *Mỗi thumbnail ghi số thứ tự và định dạng file; cột icon bên trái để lọc. Ảnh đã thêm hiệu ứng, Transform hay Crop sẽ hiện thêm icon nhỏ dưới thumbnail.*
 
 ### PHO-12 — `photo-album-filters.png`
 - **Ưu tiên:** P2

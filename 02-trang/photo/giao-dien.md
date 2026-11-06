@@ -8,6 +8,9 @@
 
 ## Thanh toolbar trên cùng
 
+![Toolbar trang Photo](../../assets/img/photo-toolbar.png)
+*Trái: Media Pool, Effects, Photo Album. Phải: Quick Export, Metadata, Inspector. Bản Studio có thêm nút Capture.*
+
 Bảy nút, từ trái sang phải:
 
 | # | Nút | Làm gì | Mức |
@@ -25,6 +28,9 @@ Bảy nút, từ trái sang phải:
 ---
 
 ## Thanh trên của Viewer
+
+![Thanh trên Viewer trang Photo](../../assets/img/photo-viewer-top-bar.png)
+*Chọn nguồn xem, mức zoom, Single View hay Lightbox.*
 
 Từ trái sang phải:
 
@@ -87,6 +93,9 @@ Bấm **Lightbox** trên thanh trên Viewer. Ảnh to biến thành **lưới th
 ---
 
 ## Thanh dưới của Viewer
+
+![Thanh dưới Viewer trang Photo](../../assets/img/photo-viewer-bottom-bar.png)
+*Từ trái: Tools, ba nút Favorite / Untag / Reject, Version, Star Rating, Color, Flag.*
 
 | Nút | Làm gì | Phím | Mức |
 |---|---|---|---|

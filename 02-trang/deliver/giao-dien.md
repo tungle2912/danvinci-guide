@@ -35,6 +35,9 @@ Trang Deliver có **năm vùng**: Render Settings (trái), Viewer (giữa trên)
 
 ### 1. Preset
 
+![Menu Preset của Render Settings](../../assets/img/deliver-preset-menu.png)
+*Bản 21 gom preset vào một menu thả xuống thay cho hàng icon.*
+
 `★★★ Hằng ngày`
 
 Ở bản 21, preset nằm trong **một menu thả xuống** (ô **Preset**) ở đầu panel, không còn là hàng icon. Chọn preset thì Resolve điền sẵn thông số và **khoá** những ô preset đó không cần.

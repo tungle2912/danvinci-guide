@@ -31,20 +31,29 @@ Muốn thấy cả chữ bên cạnh icon: chuột phải vào dãy icon → **S
 
 `★★★ Hằng ngày`
 
-| Phím | Đi tới | Nguồn |
-|---|---|---|
-| `⇧1` | Project Manager | Manual tr. 21 |
-| `⇧9` | Project Settings | Manual tr. 21 |
-| Từng trang | Không có phím chắc chắn cho bản 21 | Xem dưới |
+Đã kiểm tra trên menu của Resolve 21 (**Workspace → Switch to Page** và **File**):
 
-**Manual nói gì:** chỉ đúng một câu ở tr. 21 — "các trang (`⇧2` tới `⇧8`), Project Manager (`⇧1`), Project Settings (`⇧9`)". Mục "Switching Pages Using Keyboard Shortcuts" ở tr. 20 chỉ trỏ sang menu **Workspace → Switch to Page**, và manual **không có bảng phím riêng cho từng trang**. Câu đó viết từ khi Resolve có bảy trang (tr. 20 vẫn ghi "seven main pages"); bản 21 có tám trang nên `⇧2`…`⇧8` không còn khớp với thứ tự trang.
+| Phím | Đi tới |
+|---|---|
+| `⇧0` | Project Manager |
+| `⇧1` | Media |
+| `⇧2` | Photo |
+| `⇧3` | Cut |
+| `⇧4` | Edit |
+| `⇧5` | Fusion |
+| `⇧6` | Color |
+| `⇧7` | Fairlight |
+| `⇧8` | Deliver |
+| `⇧9` | Project Settings |
 
-**Đổi trang chắc chắn được:**
-1. Bấm icon ở đáy cửa sổ.
-2. Menu **Workspace → Switch to Page** → chọn trang. Nếu trang có phím, phím hiện ngay bên phải tên trang.
-3. Tự gán phím: **DaVinci Resolve → Keyboard Customization** (manual tr. 125–128) → chọn **All Commands**, ô Search gõ tên trang (ví dụ `Edit`) → chọn lệnh chuyển trang → gán tổ hợp phím. Bấm thử tổ hợp trên bàn phím ảo trước để chắc nó chưa làm việc khác — ví dụ `⌥⇧1`…`⌥⇧8` đã là phím khoá track hình.
+Mẹo nhớ: số trùng thứ tự icon ở đáy cửa sổ, từ trái sang phải.
 
-> **Lưu ý:** bản dịch mạng và bài hướng dẫn cũ hay ghi `⇧2` Media · `⇧3` Cut · `⇧4` Edit · `⇧5` Fusion · `⇧6` Color · `⇧7` Fairlight · `⇧8` Deliver. Đó là thứ tự của bản bảy trang, chưa có Photo — đừng dựa vào nó trên bản 21.
+![Menu Workspace → Switch to Page trên Resolve 21, mỗi trang có phím ⇧1 tới ⇧8](../assets/img/start-menu-switch-to-page.png)
+*Menu **Workspace → Switch to Page**: phím của từng trang in ngay bên phải tên trang.*
+
+> **Lưu ý:** manual (tr. 21) và nhiều bài cũ vẫn ghi `⇧1` Project Manager, `⇧2` Media… `⇧8` Deliver. Đó là thứ tự của bản bảy trang, chưa có Photo. Trên bản 21, `⇧1` mở trang **Media**; Project Manager chuyển sang `⇧0`.
+
+> **Mẹo:** phím không ăn thì bấm vào một panel trước (ví dụ Viewer) rồi bấm lại — con trỏ đang nằm trong ô nhập số thì phím bị ô đó nuốt. Vẫn không được thì đổi trang bằng icon ở đáy, hoặc tự gán phím ở **DaVinci Resolve → Keyboard Customization** (manual tr. 125–128).
 
 ## Mỗi trang làm gì
 

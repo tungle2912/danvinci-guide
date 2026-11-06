@@ -15,6 +15,9 @@ Sau đó cả hai cùng đi qua [Bố cục khung dọc](#bố-cục-khung-dọc
 
 ## Tình huống A — quay dọc sẵn
 
+![Project Settings với Use vertical resolution đã tick](../assets/img/flow-doc-vertical-resolution.png)
+*Một ô tick đảo 1920×1080 thành 1080×1920.*
+
 Đơn giản nhất.
 
 1. **Project Settings** (`⇧9`) → **Master Settings** → **Timeline resolution** `1920 x 1080 HD` → tick **Use vertical resolution**. Ô này đảo chiều ngang và dọc, khung thành **1080×1920**.

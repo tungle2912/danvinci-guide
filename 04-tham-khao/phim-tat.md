@@ -12,9 +12,13 @@ Mức dùng: `★★★` hằng ngày · `★★☆` thường dùng · `★☆�
 
 ## Toàn cục
 
+![Cửa sổ Keyboard Customization lọc lệnh đổi trang](../assets/img/ref-keyboard-customization.png)
+*Tìm lệnh theo tên để xem hoặc gán phím. Phím đã gán hiện màu trên bàn phím ảo.*
+
 | Phím | Làm gì | Mức | Tr. |
 |---|---|---|---|
-| `⇧1` | Project Manager | ★★★ | 21 |
+| `⇧0` | Project Manager (manual tr. 21 ghi `⇧1` — đó là bản cũ) | ★★★ | 21 |
+| `⇧1`…`⇧8` | Đổi trang: Media, Photo, Cut, Edit, Fusion, Color, Fairlight, Deliver | ★★★ | 20 |
 | `⇧9` | Project Settings | ★★★ | 21 |
 | `⇧D` | Tắt/bật toàn bộ chỉnh màu và Fusion — so sánh trước/sau, phát mượt hơn | ★★☆ | 621 |
 | `⌘Z` / `⌘⇧Z` | Hoàn tác / làm lại | ★★★ | 913 |
@@ -23,7 +27,7 @@ Mức dùng: `★★★` hằng ngày · `★★☆` thường dùng · `★☆�
 | `⌘I` | Import Media | ★★★ | 673 |
 | `⌘F` | Cinema Viewer — Viewer đang chọn phủ kín màn hình. Bấm lại để thoát | ★★☆ | 890 |
 
-**Đổi trang:** manual chỉ có một câu: "các trang (`⇧2` tới `⇧8`)" (tr. 21), viết từ khi Resolve còn bảy trang, và không có bảng phím riêng cho từng trang. Bản 21 có tám trang (thêm Photo), nên `⇧2`…`⇧8` không còn khớp. Cách chắc chắn: **Workspace → Switch to Page** (tr. 20), bấm icon ở đáy cửa sổ, hoặc tự gán phím ở Keyboard Customization. Chi tiết: [Phím tắt đổi trang](../01-bat-dau/giao-dien.md#phím-tắt-đổi-trang).
+**Đổi trang:** đã kiểm tra trên menu **Workspace → Switch to Page** của Resolve 21: `⇧1` Media · `⇧2` Photo · `⇧3` Cut · `⇧4` Edit · `⇧5` Fusion · `⇧6` Color · `⇧7` Fairlight · `⇧8` Deliver. Manual (tr. 21) vẫn ghi theo bản bảy trang (`⇧1` Project Manager, `⇧2`…`⇧8` các trang) — đừng theo. Chi tiết: [Phím tắt đổi trang](../01-bat-dau/giao-dien.md#phím-tắt-đổi-trang).
 
 ## Phát và điều hướng
 

@@ -103,6 +103,9 @@ Temp và Tint thực chất chỉnh **Gain** (vùng sáng) — nên tác động
 
 ## Sáng tối — 4 bánh xe
 
+![Palette Primaries ở chế độ Color Wheels: bốn bánh xe Lift Gamma Gain Offset và hai hàng thanh](../../assets/img/color-pal-primaries-wheels.png)
+*Chế độ hay dùng nhất: kéo tâm bánh xe để đổi màu, xoay vòng dưới để đổi độ sáng.*
+
 `★★★ Hằng ngày`
 
 ![Biểu đồ vùng tác động của Lift, Gamma, Gain và Offset trên dải sáng 0 đến 1023](../../assets/diagrams/color-lgg-vung-tac-dong.svg)

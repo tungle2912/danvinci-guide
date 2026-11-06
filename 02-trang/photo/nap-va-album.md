@@ -106,6 +106,9 @@ Album **không cho kéo thả** để sắp xếp. Không có trước sau như 
 
 ### Icon nhỏ dưới thumbnail
 
+![Dải Photo Album với icon dưới thumbnail](../../assets/img/photo-album-strip.png)
+*Mỗi thumbnail ghi số thứ tự và định dạng file; cột icon bên trái để lọc. Ảnh đã thêm hiệu ứng, Transform hay Crop sẽ hiện thêm icon nhỏ dưới thumbnail.*
+
 Nhìn thumbnail là biết ảnh đã được làm gì:
 
 | Icon | Vị trí | Nghĩa |

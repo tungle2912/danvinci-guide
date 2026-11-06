@@ -10,7 +10,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (đã nhúng ở `
 - **Ưu tiên:** P1
 - **Chèn vào:** `01-bat-dau/tao-du-an.md` — ngay sau heading `## Bước 1 — Tạo project trong Project Manager`
 - **Trang Resolve:** cửa sổ Project Manager
-- **Chuẩn bị:** bấm `⇧1` hoặc icon nhà ở góc dưới phải để mở Project Manager. Bật sidebar **Project Libraries** (icon bên trái thanh tiêu đề) để thấy project library "Local Database". Xem dạng lưới (thumbnail). Project "So tay DaVinci - Demo" đang mở, nằm trong lưới.
+- **Chuẩn bị:** bấm `⇧0` hoặc icon nhà ở góc dưới phải để mở Project Manager. Bật sidebar **Project Libraries** (icon bên trái thanh tiêu đề) để thấy project library "Local Database". Xem dạng lưới (thumbnail). Project "So tay DaVinci - Demo" đang mở, nằm trong lưới.
 - **Khung chụp:** toàn cửa sổ Project Manager (là cửa sổ riêng — chụp toàn màn hình rồi cắt).
 - **Cần thấy rõ trong ảnh:** sidebar Project Libraries, thumbnail project demo, nút **New Project**, **Import**, ô tìm kiếm.
 - **Alt + chú thích:** `![Project Manager với sidebar Project Libraries và project demo](../assets/img/start-project-manager.png)` — *Project Manager: mỗi thumbnail là một project. Bên trái là các project library.*

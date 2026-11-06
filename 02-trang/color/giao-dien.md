@@ -54,6 +54,9 @@ Chọn một bộ lọc → dải clip chỉ còn clip khớp. Khi đang lọc, 
 
 ### Thanh tiêu đề — trên cùng Viewer
 
+![Thanh tiêu đề và thanh công cụ Viewer trang Color](../../assets/img/color-viewer-title-bar.png)
+*Hàng trên: hiển thị và Bypass. Hàng dưới: Wipe, Split Screen, Highlight.*
+
 | Nút | Làm gì | Mức |
 |---|---|---|
 | **Zoom / Fit** | Phóng to theo % hoặc vừa khung (`⇧Z`) | ★★☆ |
@@ -181,6 +184,9 @@ Menu **Workspace → Viewer Mode**.
 ---
 
 ## Gallery
+
+![Gallery trang Color: cột album Stills 1, PowerGrade 1, Timelines và một still](../../assets/img/color-gallery.png)
+*Bấm đúp still để wipe; chuột phải still để áp grade.*
 
 `★★★ Hằng ngày` · Nút **Gallery** trên toolbar.
 

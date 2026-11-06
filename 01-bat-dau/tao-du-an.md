@@ -26,7 +26,10 @@ Phần lớn rắc rối về sau (video giật, tiếng lệch hình, xuất ra
 
 ## Bước 1 — Tạo project trong Project Manager
 
-**Project Manager** là cửa sổ hiện ra đầu tiên khi mở Resolve. Đang làm dở thì mở lại bằng `⇧1`, hoặc nút **ngôi nhà** góc dưới phải.
+![Project Manager với sidebar Project Libraries và project demo](../assets/img/start-project-manager.png)
+*Project Manager: mỗi thumbnail là một project. Bên trái là các project library.*
+
+**Project Manager** là cửa sổ hiện ra đầu tiên khi mở Resolve. Đang làm dở thì mở lại bằng `⇧0`, hoặc nút **ngôi nhà** góc dưới phải.
 
 **Tạo project mới:**
 `★★★ Hằng ngày`
@@ -56,6 +59,9 @@ Nhập project từ máy khác: kéo file `.drp` thả vào Project Manager, ho�
 > **Lưu ý:** Resolve lưu project trong một **project library** (thư viện project), không phải file rời. Nút góc trên trái Project Manager mở thanh **Project Libraries** — xem project đang nằm ở thư viện nào (tr. 82). Muốn mang project sang máy khác thì dùng **Export Project** hoặc **Export Project Archive**. Chỉ copy thư mục footage là không đủ.
 
 ## Bước 2 — Frame rate, thứ không sửa được về sau
+
+![Project Settings, mục Timeline Format](../assets/img/start-project-settings-timeline-format.png)
+*Timeline frame rate bị khoá ngay khi timeline đầu tiên có clip. Hãy đặt trước khi dựng.*
 
 `★★★ Hằng ngày`
 
@@ -92,6 +98,9 @@ Timeline resolution đổi được bất cứ lúc nào — Resolve tự tính 
 **Clip khác cỡ khung xử lý thế nào:** **Project Settings → Image Scaling → Input Scaling → Mismatched resolution files** (tr. 152). Mặc định **Scale entire image to fit** — giữ toàn hình, khác tỉ lệ thì có viền đen. Muốn lấp kín khung (cắt bớt mép): **Scale full frame with crop**.
 
 ## Bước 4 — Chọn cách quản lý màu
+
+![Project Settings, mục Color Management](../assets/img/start-project-settings-color-management.png)
+*Color science quyết định Resolve tự quản lý màu hay để bạn tự làm bằng node.*
 
 `★★☆ Thường dùng`
 
@@ -139,6 +148,9 @@ Cùng trang Master Settings, nhóm **Optimized Media and Render Cache** chọn �
 
 ## Bước 6 — Tự động lưu và bản sao lưu
 
+![Preferences, mục Project Save and Load](../assets/img/start-preferences-project-save-load.png)
+*Live Save và ba ô sao lưu định kỳ. Ba ô này dùng chung cho cả Project Backups lẫn Timeline Backups.*
+
 `★★★ Hằng ngày`
 
 **DaVinci Resolve → Preferences → User → Project Save and Load** (manual tr. 115–117). Đây là thiết lập của máy, áp cho mọi project.
@@ -146,12 +158,12 @@ Cùng trang Master Settings, nhóm **Optimized Media and Render Cache** chọn �
 | Ô | Làm gì | Mặc định | Nên |
 |---|---|---|---|
 | **Live Save** | Lưu liên tục khi bạn làm. Cut, Edit, Fairlight lưu ngay từng thao tác; Fusion, Color lưu khi chuyển clip và định kỳ ngầm | Bật | Để bật |
-| **Project Backups** | Lưu định kỳ bản sao đầy đủ của project (không gồm still và LUT) | — | Bật |
-| **Timeline Backups** | Lưu bản sao riêng từng timeline | — | Bật |
+| **Project Backups** | Lưu định kỳ bản sao đầy đủ của project (không gồm still và LUT) | Tắt | Bật |
+| **Timeline Backups** | Lưu bản sao riêng từng timeline | Bật | Để bật |
 | **Perform backups every X minutes** | Bao lâu lưu một bản trong giờ gần nhất | **10** phút → luôn giữ 6 bản của giờ gần nhất | Giữ |
 | **Hourly backups for the past X hours** | Giữ bao nhiêu bản theo giờ | **2** | Tăng lên 8 nếu ngày dài |
 | **Daily backups for the past X days** | Giữ bao nhiêu bản theo ngày | **2** | Tăng lên 7–14 cho dự án kéo dài |
-| **Backup location** | Nơi lưu bản sao, gồm cả project lẫn timeline backup | Thư mục `ProjectBackup` trên ổ scratch | Trỏ sang ổ khác ổ hệ thống nếu có |
+| **Backup location** | Nơi lưu bản sao, gồm cả project lẫn timeline backup | Trên Mac: `~/Movies/Resolve Project Backups` | Trỏ sang ổ khác ổ hệ thống nếu có |
 
 Ba ô số dùng chung cho cả Project Backups và Timeline Backups (tr. 116). Resolve chỉ lưu bản mới khi project có thay đổi — để máy đứng yên thì không ghi đè bản cũ.
 

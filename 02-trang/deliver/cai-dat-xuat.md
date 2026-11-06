@@ -8,6 +8,9 @@ Chọn preset mạng xã hội (YouTube, TikTok…) thì panel đổi sang **d�
 
 ## Tab Video
 
+![Tab Video của Custom Export](../../assets/img/deliver-video-tab.png)
+*Chọn Custom Export thì mọi ô trong ba tab mới mở khoá.*
+
 ### Export Video
 
 `★★★ Hằng ngày`

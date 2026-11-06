@@ -36,6 +36,9 @@ Vùng được chọn gọi là **key** (hay matte): ảnh đen trắng, **trắ
 
 ### Qualifier — hút màu
 
+![Viewer ở chế độ Highlight: chỉ áo cô gái giữ màu, nền chuyển xám](../../assets/img/color-qualifier-highlight.png)
+*`⇧H`: phần được chọn giữ màu, phần còn lại xám — thấy ngay chọn thừa hay thiếu.*
+
 Palette thứ 10 (icon ống hút).
 
 ![Palette Qualifier ở chế độ HSL: thanh Hue, Saturation, Luminance bên trái, Matte Finesse bên phải](../../assets/img/color-pal-qualifier.png)
@@ -85,6 +88,9 @@ Mỗi nét bạn vẽ là một dòng trong **danh sách nét** (strokes list) c
 **Ví dụ:** áo xanh lá của cô gái ở trang trại hơi gắt. 3D → kéo một nét dọc áo → `⇧H` → **Clean Black 10**, **Blur Radius 5** → thoát `⇧H` → **Saturation 40** ở Primaries.
 
 ### Window — khoanh vùng
+
+![Khung Circle Window quanh mặt cô gái trên Viewer, có viền mềm bên ngoài](../../assets/img/color-window-viewer.png)
+*Kéo tâm để dời, kéo điểm trên viền để đổi cỡ, kéo vòng ngoài để làm mềm.*
 
 Palette thứ 11. Manual gọi là **Power Window**.
 

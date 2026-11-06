@@ -64,6 +64,9 @@ LUT quá tay → chọn node chứa LUT → palette **Key** → **Key Output Gai
 
 ## LUT Browser
 
+![LUT Browser: cột nhóm bên trái, lưới LUT có ảnh xem trước](../../assets/img/color-lut-browser.png)
+*Rê chuột qua LUT để xem trước; kéo thả lên node để áp.*
+
 `★★☆ Thường dùng` · Nút **LUTs** trên toolbar.
 
 Mọi LUT trong máy, xếp theo nhóm ở cột trái, có **ảnh xem trước**.
@@ -87,6 +90,19 @@ Mọi LUT trong máy, xếp theo nhóm ở cột trái, có **ảnh xem trước
 Thư mục mặc định trên macOS: `Library/Application Support/Blackmagic Design/DaVinci Resolve/LUT/`.
 
 > Bản tải từ **Mac App Store** dùng thư mục khác. Luôn dùng nút **Open LUT Folder** cho chắc.
+
+### LUT miễn phí đáng thử
+
+Tải từ trang gốc. Đừng chia sẻ lại file cho người khác, vì nhiều bộ cấm phân phối lại.
+
+| Bộ LUT | Dùng cho | Ghi chú |
+|---|---|---|
+| [Fujifilm F-Log / F-Log2](https://www.fujifilm-x.com/en-gb/support/download/lut/) | Máy Fuji quay F-Log | LUT chính hãng. Có bản Rec.709 trung tính và bản ETERNA kiểu phim. |
+| [Panasonic VariCam V-Log](https://pro-av.panasonic.net/en/cinema_camera_varicam_eva/support/lut/index.html) | Panasonic quay V-Log (cả Lumix S/GH) | Hơn 30 look: Nicest 709, Vintage, Golden, đen trắng. |
+| [IWLTBAP Free Pack](https://luts.iwltbap.com) | Có bản cho clip Rec.709, Log chung, V-Log | Bản Generic-LOG dùng được cho Sony, Canon, DJI. |
+| [FreeVisuals 10 Cinematic](https://www.freevisuals.net/luts/free-10-cinematic-luts-pack) | Clip Rec.709 thường (điện thoại, máy không quay log) | Teal/orange, ấm kiểu vlog, chân dung. |
+
+> **Lưu ý:** LUT dành cho clip log phải đặt lên clip log. Đặt lên clip Rec.709 thường sẽ ra ảnh quá đậm và gắt. Với Sony S-Log3, Canon C-Log hay DJI D-Log, cách chắc nhất là dùng **Color Space Transform** (phần dưới), rồi mới thêm LUT look.
 
 ### Xuất grade thành LUT
 
@@ -173,6 +189,9 @@ Sửa Shared Node ở một clip → **mọi clip dùng nó đổi theo**.
 | **ACEScc / ACEScct** | Chuẩn ACES của ngành phim | Làm theo quy trình xưởng phim |
 
 ### Bật Color Managed — cách đơn giản
+
+![Project Settings, mục Color Management, chế độ Color Managed tự động](../../assets/img/color-project-color-management.png)
+*Bốn ô cần đặt: Color science, Automatic color management, Color processing mode SDR, Output color space SDR Rec.709. Ô Enable OpenFX Color Management tự tick sẵn.*
 
 1. **Color science** → **DaVinci YRGB Color Managed**.
 2. Tick **Automatic Color Management**.

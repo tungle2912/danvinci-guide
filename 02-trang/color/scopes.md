@@ -95,6 +95,9 @@ Có hai chỗ:
 
 ## Parade
 
+![Scope Parade thật của clip món ăn: ba cột R G B](../../assets/img/color-scope-parade.png)
+*Clip đã cân bằng: chân và đỉnh ba cột gần ngang nhau.*
+
 `★★★ Hằng ngày` — dùng để cân bằng trắng
 
 Ba cột **đỏ, xanh lá, xanh dương** đặt cạnh nhau. Trục dọc là độ sáng, từ 0 (đáy) tới 1023 (đỉnh).
@@ -120,6 +123,9 @@ Ba cột **đỏ, xanh lá, xanh dương** đặt cạnh nhau. Trục dọc là 
 **Ví dụ — quay trong nhà dưới đèn sợi đốt:** cột đỏ cao hơn hẳn ở đỉnh. Kéo **Temp** xuống tới khi đỉnh ba cột ngang nhau ở chỗ tường trắng.
 
 ## Waveform
+
+![Scope Waveform (chế độ RGB) của clip trại cừu](../../assets/img/color-scope-waveform.png)
+*Trái sang phải trên scope là trái sang phải trong khung hình; trời nằm ở phần cao.*
 
 `★★★ Hằng ngày` — dùng để đặt độ sáng
 
@@ -148,6 +154,9 @@ Một khối duy nhất cho độ sáng. Trái sang phải tương ứng trái s
 **Ví dụ — người đứng trước cửa sổ:** bên phải Waveform dẹt ở 1023 (cửa sổ), khối giữa ở 300–500 (mặt). Hạ **Highlights** cho cửa sổ xuống dưới 1000, rồi nâng **Gamma** cho mặt sáng lên.
 
 ## Vectorscope
+
+![Vectorscope thật có vạch màu da](../../assets/img/color-scope-vectorscope.png)
+*Vạch chéo hướng 11 giờ là vạch màu da; da người nằm dọc theo nó.*
 
 `★★☆ Thường dùng` — dùng cho màu da
 

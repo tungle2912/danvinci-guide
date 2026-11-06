@@ -94,7 +94,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-edit.png` (toàn cửa sổ
 - **Chuẩn bị:** chọn clip 2 trên V1, mở Inspector (nút góc trên phải), tab **Video**. Đặt Zoom 1.200 để có giá trị khác mặc định.
 - **Khung chụp:** chỉ một vùng — panel Inspector bên phải, từ hàng tab tới hết nhóm Cropping.
 - **Cần thấy rõ trong ảnh:** hàng tab Video / Audio / Effects / Transition / Image / File, nhóm Transform (Zoom, Position, Rotation Angle, Anchor Point, Pitch, Yaw, Flip), nút keyframe và nút reset của từng thông số.
-- **Alt + chú thích:** `![Tab Video của Inspector, nhóm Transform](../../assets/img/edit-inspector-video.png)` — *Thông số đã đổi khỏi mặc định có nút reset sáng bên phải.*
+- **Alt + chú thích:** `![Tab Video của Inspector, nhóm Transform](../../assets/img/edit-inspector-video.png)` — *Mỗi thông số có nút keyframe (hình thoi) và nút reset ở mép phải.*
 
 ### EDT-11 — `edit-retime-controls.png`
 - **Ưu tiên:** P2

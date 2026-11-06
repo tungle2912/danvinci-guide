@@ -126,6 +126,9 @@ Nếu bạn làm dự án dài với footage H.265, chuyển đổi toàn bộ s
 
 ## Thiết lập khác đáng chỉnh
 
+![Preferences, mục Memory and GPU](../assets/img/ref-preferences-memory-gpu.png)
+*Giới hạn RAM và chế độ GPU. Trên Mac để Auto hoặc Metal.*
+
 **Project Settings → Master Settings:**
 - **Optimized Media Resolution** → Half
 

@@ -59,6 +59,9 @@ Việc tải lên chạy ngầm — vẫn làm việc khác trong Resolve đư�
 
 ## TikTok, Reels, Shorts — video dọc
 
+![Preset TikTok với Use vertical resolution đã tick](../../assets/img/deliver-tiktok-vertical.png)
+*Preset mặc định không tick ô này — đây là bước hay quên nhất.*
+
 `★★★ Hằng ngày`
 
 **Là gì:** preset **TikTok** chọn sẵn MP4 + H.264, tiếng AAC, độ phân giải **720p** hoặc **1080p**.

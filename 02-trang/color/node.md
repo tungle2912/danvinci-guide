@@ -42,6 +42,9 @@ Một node có:
 
 ## Thêm node
 
+![Menu chuột phải node, submenu Add Node mở](../../assets/img/color-node-add-menu.png)
+*Mọi kiểu node mới đều ở Add Node; phím tắt in sẵn bên phải.*
+
 | Phím | Làm gì | Mức |
 |---|---|---|
 | `⌥S` | Thêm node **Serial** (nối tiếp) **sau** node đang chọn | ★★★ |

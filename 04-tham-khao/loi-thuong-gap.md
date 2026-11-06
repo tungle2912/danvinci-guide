@@ -123,7 +123,7 @@ Phòng tránh: trên điện thoại tắt quay HDR, chọn frame rate cố đ�
 
 Resolve lưu project trong **project library** (thư viện project; bản cũ gọi là database) chứ không phải file rời.
 
-Tìm lại: mở **Project Manager** (`⇧1`), kiểm tra xem bạn có đang ở đúng thư viện không — nút góc trên trái mở thanh **Project Libraries** liệt kê mọi thư viện trên máy (manual tr. 82). Project cũng có thể nằm trong một thư mục con — bấm đúp để mở thư mục.
+Tìm lại: mở **Project Manager** (`⇧0`), kiểm tra xem bạn có đang ở đúng thư viện không — nút góc trên trái mở thanh **Project Libraries** liệt kê mọi thư viện trên máy (manual tr. 82). Project cũng có thể nằm trong một thư mục con — bấm đúp để mở thư mục.
 
 Khôi phục bản cũ: chuột phải project → **Project Backups** → chọn bản → **Load**. Xem [Tạo project → Bước 6](../01-bat-dau/tao-du-an.md#bước-6--tự-động-lưu-và-bản-sao-lưu).
 

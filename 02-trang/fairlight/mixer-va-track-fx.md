@@ -48,6 +48,23 @@ Bật Mixer: nút **Mixer** góc trên phải. Mỗi track một cột, bus nằ
 
 Trong [ảnh chụp trang Fairlight](../../assets/img/page-fairlight.png) có ba cột: **A1** (Giong noi), **A2** (Nhac nen), **Bus1**.
 
+### Tiếng đi qua cột kênh theo thứ tự nào
+
+Tiếng của một track chạy qua các mục trong cột **từ trên xuống**, rồi mới đổ vào bus:
+
+![Đường đi của tiếng trong Fairlight: clip, Track FX, Effects, Dynamics, EQ, fader, Bus 1, đầu ra](../../assets/diagrams/fairlight-signal-flow.svg)
+
+*Clip gain và fade tác động trước khi tiếng vào Mixer; Limiter trên Bus 1 là chốt cuối trước file xuất.*
+
+Ba điều nên nhớ (manual trang 4011):
+- **Track FX** có sẵn ô nhưng **tắt** cho tới khi bạn bật plugin.
+- Mục **Effects** chứa được tối đa **6 hiệu ứng** (gọi là 6 *insert* — điểm cắm hiệu ứng) mỗi track, chưa tính Dynamics và EQ có sẵn.
+- **Bus Sends** mặc định lấy tín hiệu **sau fader** (post-fader): kéo fader nhỏ thì phần gửi đi cũng nhỏ theo.
+
+**Ví dụ:** bạn tăng clip gain một câu lên +3 dB. Câu đó vào Compressor ở Dynamics to hơn, nên bị nén nhiều hơn. Muốn tránh, chỉnh clip gain trước rồi mới chỉnh Dynamics.
+
+### Các mục trong cột
+
 Từ trên xuống:
 
 | Mục | Làm gì | Mức |
@@ -55,7 +72,7 @@ Từ trên xuống:
 | **Input** | Chọn nguồn thu cho track (mic, cổng vào). Mặc định **No Input** | ★★☆ |
 | **Track FX** | Ô có sẵn cho Dialogue Leveler, Ducker và các Track FX khác. Mặc định hiện **Dial Lev** | ★★★ |
 | **Order** | Thứ tự xử lý của Effects, Dynamics, EQ. Mặc định **FX DY EQ** | ★☆☆ |
-| **Effects** | Bấm **+** để gắn hiệu ứng cho **cả track** | ★★☆ |
+| **Effects** | Bấm **+** để gắn hiệu ứng cho **cả track**. Tối đa 6 hiệu ứng, kéo để đổi thứ tự | ★★☆ |
 | **Effects In** | Tắt/bật **mọi** hiệu ứng ở mục Effects cùng lúc. Không ảnh hưởng Track FX, Dynamics, EQ | ★★☆ |
 | **Dynamics** | Bấm đúp để mở nén, chặn, cổng — xem [Dynamics](lam-sach-giong.md#dynamics--nén-chặn-cổng) | ★★☆ |
 | **EQ** | Bấm đúp để mở EQ 6 dải — xem [EQ](lam-sach-giong.md#eq--3-thao-tác-cho-giọng-nói) | ★★☆ |
@@ -67,7 +84,7 @@ Từ trên xuống:
 | **Fader** | Kéo để chỉnh to nhỏ cả track | ★★★ |
 
 **Fader:**
-- Bấm đúp vào núm fader → về **0 dB**.
+- Bấm đúp vào núm fader → về **0 dB**. Không áp dụng khi track đã có automation.
 - Giữ `⇧` khi kéo → chỉnh mịn từng 0,1 dB.
 
 > **Không thấy mục nào đó?** Menu **ba chấm** góc trên phải Mixer → bật mục đó lên. Bật **Show Labels** để hiện tên các mục bên trái.
@@ -151,6 +168,10 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 | **Rise Time** | Nhỏ đi nhanh cỡ nào | 10 ms | Giữ mặc định |
 | **Hold** | Giữ ở mức nhỏ bao lâu | 150 ms | Tăng nếu nhạc to lên giữa các từ |
 | **Recovery Time** | To trở lại chậm cỡ nào | 750 ms | Chỉnh thử — quyết định độ tự nhiên |
+
+![Ducker: nhạc ở A2 tự nhỏ khi có lời ở A1, kèm Lookahead, Duck Amount, Hold, Recovery Time](../../assets/diagrams/fairlight-ducker-timeline.svg)
+
+*Đường tím là mức nhạc: hạ xuống ngay trước lời, giữ thêm 150 ms rồi to dần lại trong 750 ms.*
 
 **Thêm nguồn trong Inspector:** chọn track nhạc → **Inspector → tab Audio** → bấm **+** bên phải ô **Source 1** để có thêm **Source 2**, **Source 3**.
 

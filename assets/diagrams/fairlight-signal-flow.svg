@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="320" viewBox="0 0 680 320" role="img"><title>Đường đi của tiếng trong Fairlight: từ clip tới đầu ra</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="co"><rect class="bx" x="20" y="40" width="145" height="64" rx="8"/><text class="t" x="92.5" y="67" text-anchor="middle">1 · Clip</text><text class="s" x="92.5" y="87" text-anchor="middle">Clip gain, fade</text></g>
+<g class="tl"><rect class="bx" x="185" y="40" width="145" height="64" rx="8"/><text class="t" x="257.5" y="67" text-anchor="middle">2 · Track FX</text><text class="s" x="257.5" y="87" text-anchor="middle">Dialogue Leveler</text></g>
+<g class="tl"><rect class="bx" x="350" y="40" width="145" height="64" rx="8"/><text class="t" x="422.5" y="67" text-anchor="middle">3 · Effects</text><text class="s" x="422.5" y="87" text-anchor="middle">Fairlight FX, ≤ 6 ô</text></g>
+<g class="tl"><rect class="bx" x="515" y="40" width="145" height="64" rx="8"/><text class="t" x="587.5" y="67" text-anchor="middle">4 · Dynamics</text><text class="s" x="587.5" y="87" text-anchor="middle">Nén, chặn, cổng</text></g>
+<line class="ar" x1="167" y1="72" x2="181" y2="72" marker-end="url(#a)"/>
+<line class="ar" x1="332" y1="72" x2="346" y2="72" marker-end="url(#a)"/>
+<line class="ar" x1="497" y1="72" x2="511" y2="72" marker-end="url(#a)"/>
+<g class="tl"><rect class="bx" x="20" y="160" width="145" height="64" rx="8"/><text class="t" x="92.5" y="187" text-anchor="middle">5 · EQ</text><text class="s" x="92.5" y="207" text-anchor="middle">EQ 6 dải của Mixer</text></g>
+<g class="tl"><rect class="bx" x="185" y="160" width="145" height="64" rx="8"/><text class="t" x="257.5" y="187" text-anchor="middle">6 · Pan, Fader</text><text class="s" x="257.5" y="207" text-anchor="middle">To nhỏ cả track</text></g>
+<g class="pu"><rect class="bx" x="350" y="160" width="145" height="64" rx="8"/><text class="t" x="422.5" y="187" text-anchor="middle">7 · Bus 1</text><text class="s" x="422.5" y="207" text-anchor="middle">Limiter, Loudness</text></g>
+<g class="pu"><rect class="bx" x="515" y="160" width="145" height="64" rx="8"/><text class="t" x="587.5" y="187" text-anchor="middle">8 · Đầu ra</text><text class="s" x="587.5" y="207" text-anchor="middle">Loa, file xuất</text></g>
+<line class="ar" x1="167" y1="192" x2="181" y2="192" marker-end="url(#a)"/>
+<line class="ar" x1="332" y1="192" x2="346" y2="192" marker-end="url(#a)"/>
+<line class="ar" x1="497" y1="192" x2="511" y2="192" marker-end="url(#a)"/>
+<path class="ar" d="M587.5 106 L587.5 132 L92.5 132 L92.5 152" marker-end="url(#a)"/>
+<g class="co"><rect class="bx" x="20" y="251" width="14" height="14" rx="3"/><text class="s" x="42" y="262">Riêng từng clip</text></g>
+<g class="tl"><rect class="bx" x="200" y="251" width="14" height="14" rx="3"/><text class="s" x="222" y="262">Cột kênh của track trong Mixer</text></g>
+<g class="pu"><rect class="bx" x="470" y="251" width="14" height="14" rx="3"/><text class="s" x="492" y="262">Bus tổng và đầu ra</text></g>
+<g class="tl"><text class="s" x="340" y="300" text-anchor="middle">Nút Order trong cột Mixer đổi được thứ tự 3 · 4 · 5. Mặc định: FX → DY → EQ</text></g>
+</svg>

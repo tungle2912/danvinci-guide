@@ -12,6 +12,10 @@ Mỗi mục dưới đây là một **công thức**: chọn preset nào, đổi
 | Một khung hình hoặc chuỗi ảnh | [Ảnh tĩnh, chuỗi ảnh](#ảnh-tĩnh-và-chuỗi-ảnh) |
 | Dùng lại thiết lập của mình | [Tự tạo preset](#tự-tạo-preset) |
 
+![Chọn preset và codec theo mục đích: YouTube, video dọc, bản duyệt, bản gốc, chỉ tiếng](../../assets/diagrams/deliver-codec-decision.svg)
+
+*Bắt đầu từ việc bạn định làm gì với file, rồi đi theo mũi tên tới preset và codec nên chọn.*
+
 ---
 
 ## YouTube
@@ -46,6 +50,8 @@ Tick **Upload directly to YouTube** thì hiện thêm: **Title**, **Description*
 Việc tải lên chạy ngầm — vẫn làm việc khác trong Resolve được. Xem tiến độ: **Workspace → Background Activity**.
 
 > **Muốn xem lại trước khi đăng:** menu ba chấm của Render Queue → **Review Before Upload**. Render xong job dừng ở trạng thái *Waiting for Upload*. Chuột phải job → **Reveal in Finder** để xem file, rồi chuột phải lần nữa chọn **Upload to YouTube** hoặc **Cancel Upload**.
+
+**Tiếng AAC chỉ có trên macOS** (manual trang 4206). Hướng dẫn này viết cho Mac nên luôn có AAC.
 
 **Cần bitrate cụ thể?** Preset YouTube không có ô bitrate. Chọn **Custom Export**, đặt MP4 + H.264 và **Restrict to** theo [bảng bitrate](cai-dat-xuat.md#quality--chọn-bitrate).
 
@@ -117,7 +123,25 @@ Việc tải lên chạy ngầm — vẫn làm việc khác trong Resolve đư�
 | Type | Apple ProRes 422 HQ |
 | Audio Codec | Linear PCM, 16-bit |
 
-### Cách 2 — DNxHR
+### Cách 2 — H.264 Master hoặc H.265 Master
+
+`★☆☆ Tình huống cụ thể`
+
+**Dùng khi:** cần bản gốc chất lượng tốt nhưng nhẹ hơn ProRes nhiều, ví dụ lưu trữ lâu dài trên ổ nhỏ.
+
+Manual (trang 4190–4191) gọi hai preset này là **H.264 Master** và **H.265 Master**. Cả hai đặt sẵn:
+
+| Ô | H.264 Master | H.265 Master |
+|---|---|---|
+| Render | Single clip | Single clip |
+| Format | QuickTime | QuickTime |
+| Encoding Profile | Auto | Main (8-bit) |
+| Multi-pass encode | Single | Single |
+| Audio | AAC 320 Kb/s, 16-bit | AAC 320 Kb/s, 16-bit |
+
+> **Lưu ý:** đây vẫn là file nén mất dữ liệu. Cần chỉnh màu hay làm tiếp thì dùng ProRes hoặc DNxHR.
+
+### Cách 3 — DNxHR
 
 Chọn **Custom Export** → **Format** QuickTime hoặc MXF OP1A → **Codec** DNxHR, chọn loại ở **Type**. Hợp khi người nhận dùng Windows hoặc Avid.
 

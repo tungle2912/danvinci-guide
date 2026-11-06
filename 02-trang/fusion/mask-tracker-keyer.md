@@ -193,6 +193,12 @@ Xong, Viewer hiện **đường chuyển động** với các vạch nhỏ — m
 
 Cách B dùng được cho bất cứ thông số **Center**, **Pivot** nào — ví dụ cho một Ellipse bám theo để làm mờ mặt người đi lại.
 
+![Hai cách nối Tracker: kiêm Merge hoặc rẽ nhánh lấy dữ liệu](../../assets/diagrams/fusion-tracker-merge.svg)
+
+*Cách A: Tracker nhận video ở Background, lớp chữ ở Foreground và tự ghép. Cách B: Tracker đứng nhánh riêng, thông số Center của Text+ lấy vị trí từ nó qua Connect To (đường chấm).*
+
+> **Lưu ý:** ở Cách A, nút **Merge** trong tab Operation có bốn lựa chọn: **BG Only** (chống rung, bỏ lớp trên), **FG Only**, **FG Over BG** (ghép chữ lên video, hay dùng nhất), **BG Over FG** (sách hướng dẫn trang 1843–1845).
+
 > **Track bị giật ở vài khung?** Mở **Spline Editor**, tìm đường **Displacement** của tracker, sửa các điểm lệch bằng tay.
 
 ---
@@ -258,7 +264,7 @@ Cách B dùng được cho bất cứ thông số **Center**, **Pivot** nào —
 Nhìn kết quả ghép thường **đánh lừa**. Luôn kiểm tra kênh alpha:
 
 1. Đưa **DeltaKeyer1** lên Viewer 1.
-2. Bấm vào Viewer, bấm `C` (hoặc nút **Color** trên thanh Viewer) để đổi sang xem **alpha**.
+2. Bấm vào Viewer, bấm `A` (hoặc nút **Color** trên thanh Viewer) để đổi sang xem **alpha**. Bấm `C` để quay về xem hình màu (sách hướng dẫn trang 1515).
 3. Đọc hình: **đen** = trong suốt, **trắng** = đặc, **xám** = nửa trong suốt.
 
 Người phải **trắng tinh**, nền phải **đen kịt**. Chỉ tóc, mép áo mỏng được phép xám. Thấy lốm đốm xám trên người hoặc đốm trắng trên nền là cần tinh chỉnh.
@@ -279,21 +285,40 @@ Người phải **trắng tinh**, nền phải **đen kịt**. Chỉ tóc, mép 
 | **Threshold** (Low / High) | Kéo Low lên để nền đen hơn, kéo High xuống để người trắng hơn |
 | **Clean Background** | Lấp đốm trắng lốm đốm trên nền |
 | **Clean Foreground** | Lấp lỗ xám trên người |
-| **Replace Mode** | Cách xử lý ánh xanh hắt lên người (spill) |
+| **Erode/Dilate** | Co hoặc nở viền alpha — kéo âm nhẹ để gọt viền xanh còn sót |
+| **Blur** | Làm mềm viền alpha |
+| **Replace Mode** | Khi Clean Foreground/Background lấp alpha, lấy màu nào điền vào: **None**, **Source** (màu gốc), **Hard Color**, **Soft Color** |
 
 > Chỉnh **Clean Foreground** và **Clean Background** thật nhẹ. Tăng nhiều thì mép người cứng và mất chi tiết tóc.
 
-**Bảy tab của Delta Keyer:** **Key**, **Pre-Matte**, **Matte**, **Fringe**, **Tuning**, **Mask**, **Settings**. Người mới chỉ cần Key và Matte.
+**Bảy tab của Delta Keyer:** **Key**, **Pre Matte**, **Matte**, **Fringe**, **Tuning**, **Mask**, **Settings**. Người mới chỉ cần Key, Matte và Fringe.
+
+> **Mẹo:** menu **View Mode** ở đầu Inspector của Delta Keyer cho xem từng bước trung gian. Chọn **Matte** rồi bấm `A` trên Viewer để xem alpha thô, chọn **Final Result** để về kết quả cuối (trang 2566–2567).
 
 ### Ánh xanh hắt lên người (spill)
 
-Phông xanh phản sáng lên tóc, vai, mép áo — người bị viền xanh. Delta Keyer tự khử spill, nhưng đôi khi làm da người lệch màu.
+Phông xanh phản sáng lên tóc, vai, mép áo — người bị viền xanh. Delta Keyer tự khử spill ở tab **Fringe** (trang 2570–2571):
 
-Cách xử lý gọn hơn: tab **Matte** → **Replace Mode: Source** (tắt khử spill), rồi thêm một node chỉnh màu (ColorCorrector) sau Delta Keyer để giảm màu xanh lá.
+| Thông số | Làm gì |
+|---|---|
+| **Spill Method** | Độ mạnh thuật toán: **None**, **Rare** (nhẹ nhất), **Medium** (hợp phông xanh lá), **Well Done** và **Burnt** (hợp phông xanh dương, Burnt cho cảnh khó) |
+| **Spill Suppression** | `0` là tắt khử spill. Tăng dần để khử mạnh hơn |
+| **Fringe Gamma / Size / Shape** | Chỉnh độ sáng, độ rộng, vị trí của viền quanh người |
+| **Cyan/Red, Magenta/Green, Yellow/Blue** | Chỉnh màu riêng phần viền |
+
+Khử spill làm da người lệch màu? Kéo **Spill Suppression** về `0`, rồi thêm một node chỉnh màu (ColorCorrector) **rẽ nhánh riêng** để giảm màu xanh lá. Sách hướng dẫn cũng khuyên tách việc chỉnh màu, khử spill ra một nhánh riêng cho dễ quản lý.
 
 ### Chân đèn, mép phông lọt vào
 
-Phông không đủ rộng, lộ chân đèn hoặc mép phòng: vẽ một **Polygon** quanh người (thoáng rộng), nối vào đầu vào **Garbage Matte** (xám) của Delta Keyer. Mọi thứ ngoài vùng đó bị loại.
+Phông không đủ rộng, lộ chân đèn hoặc mép phòng: vẽ một **Polygon** quanh người (thoáng rộng), nối vào đầu vào **Garbage Matte** (xám) của Delta Keyer.
+
+> **Lỗi hay gặp:** mặc định Garbage Matte làm **trong suốt phần nằm trong** hình vẽ — tức là người biến mất, chân đèn còn nguyên. Vẽ quanh người thì phải đảo: tab **Mask** của Delta Keyer → mục **Garbage Mask** → tích **Invert** (trang 2572–2573). Hoặc tích **Invert** ngay trong Polygon. Ngược lại, vẽ thẳng quanh chân đèn thì không cần đảo.
+
+Còn đầu vào **Solid Matte** (trắng) làm ngược lại: phần trong hình vẽ luôn **đặc**. Dùng khi người mặc áo có mảng xanh trùng màu phông bị thủng.
+
+![Chuỗi node tách phông xanh rồi ghép nền mới](../../assets/diagrams/fusion-keyer-chain.svg)
+
+*Polygon vào Garbage Matte (xám) để bỏ rìa; Delta Keyer ra alpha; Merge đặt người (Foreground) lên nền mới (Background).*
 
 ### Không cần ghép trong Fusion
 

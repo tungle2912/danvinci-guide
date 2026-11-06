@@ -60,12 +60,12 @@ Chọn một bộ lọc → dải clip chỉ còn clip khớp. Khi đang lọc, 
 | **Chấm tốc độ phát** | Xanh = phát đủ khung. Đỏ = máy không theo kịp | ★★☆ |
 | **Tên timeline ▾** | Đổi sang timeline khác trong project | ★☆☆ |
 | **Timecode ▾** | Chọn hiện timecode nguồn hay timeline | ★☆☆ |
-| **Viewer Guides** | Khung an toàn, đường chia | ★☆☆ |
-| **Proxy** | Phát bằng proxy hay file gốc | ★☆☆ |
+| **Viewer Guides** | Khung cắt theo tỉ lệ: mạng xã hội **1:1, 4:5, 9:16, 1.91:1, 16:9**; phim **1.85, 2.35**…; vạch **Action / Title** an toàn | ★☆☆ |
+| **Proxy** | **Prefer Proxies** (dùng proxy nếu có) · **Prefer Camera Originals** (dùng file gốc nếu có) · **Disable All Proxies** (chỉ file gốc). Proxy = bản nhẹ của file gốc để phát mượt | ★☆☆ |
 | **Độ phân giải timeline** | Đổi nhanh preset | ★☆☆ |
 | **Bypass Color and Fusion** (`⇧D`) | Tắt toàn bộ grade — so trước/sau. Chuột phải để chọn tắt riêng màu hay Fusion | ★★★ |
 | **Expand** | Phóng Viewer chiếm hết phần trên màn hình | ★☆☆ |
-| **Option menu** (ba chấm) | Highlight, Split Screen, Wipe Style, xem riêng kênh R/G/B… | ★★☆ |
+| **Option menu** (ba chấm) | Highlight, Split Screen, Wipe Style, **Show Viewer Channels** (xem riêng kênh R, G hoặc B — soi nhiễu từng kênh) | ★★☆ |
 
 ### Thanh công cụ Viewer — ba nút so sánh
 
@@ -88,9 +88,12 @@ Không thấy hàng này: Option menu → bật **Show Viewer Options**.
 | **Mix** | Trộn hai ảnh, kéo để đổi tỉ lệ |
 | **Box** | Ảnh nhỏ nằm trong ảnh lớn |
 | **Difference** | Chỉ hiện chỗ khác nhau |
+| **Alpha** | ★☆☆ Ghép thử: phần bị Qualifier tách (vd phông xanh) trong suốt, still hiện ra phía sau. Cần nối ngõ ra **key** của node vào **Alpha Output** |
 | **Venetian Blind / Checkerboard** | Sọc ngang / bàn cờ — soi độ đồng đều màu |
 
 Đảo hai bên wipe: `⌥W`.
+
+**So với một clip khác trên timeline, không cần chụp still:** Option menu của Viewer → **Reference Wipe Mode** → **Timeline**. Rồi chuột phải thumbnail clip muốn so → **Wipe Timeline Clip**.
 
 #### Split Screen — xem nhiều ảnh một lúc
 
@@ -106,6 +109,11 @@ Bấm **Split Screen** rồi chọn chế độ ở menu bên phải:
 | **Selected Album** | Clip hiện tại áp thử mọi still trong album | Thử nhiều look. **Bấm đúp** ô nào là áp grade đó |
 | **Selected LUTs** | Clip hiện tại áp thử tối đa 16 LUT | Chọn LUT. `⌘`+bấm các LUT trong LUT Browser |
 | **Highlight Modes** | 4 ô: ảnh, matte xám, matte đen trắng, difference | Soi vùng chọn Qualifier |
+| **Current Group** | Tối đa 16 clip cùng **group** với clip hiện tại | ★☆☆ Kiểm tra một group có đều màu không |
+| **Playheads** | Khung ở 2–4 đầu phát (bật thêm ở **Color → Active Playhead**) | ★☆☆ So hai khung xa nhau trong cùng clip |
+| **Selected Still Grades** | Clip hiện tại áp thử grade của các still đang chọn trong Gallery | Như Selected Album nhưng chỉ vài still. **Bấm đúp** ô nào là áp grade đó |
+| **Selected Still Images** | Clip hiện tại đặt cạnh ảnh của các still đang chọn (không áp grade) | So bố cục, màu với ảnh tham chiếu |
+| **Versions and Original** | 15 version đầu + ảnh **chưa chỉnh** ở góc trên trái | Thấy ngay grade đã đi xa bản gốc tới đâu |
 
 > Khi đang Split Screen thì **không thấy khung Window** trên Viewer. Tắt Split Screen trước khi khoanh vùng.
 
@@ -132,6 +140,18 @@ Bấm **Split Screen** rồi chọn chế độ ở menu bên phải:
 
 **Unmix dùng khi:** clip có fade từ đen, cần chỉnh màu ở mấy khung đang bị fade che.
 
+**Phím di chuyển trong Viewer:**
+
+| Phím | Làm gì |
+|---|---|
+| `↑` / `↓` | Về khung đầu của clip trước / sau |
+| `←` / `→` | Lùi / tiến 1 khung |
+| `⇧←` / `⇧→` | Lùi / tiến 1 giây |
+| `J` `K` `L` | Phát lùi, dừng, phát tới |
+| Giữ `C` + rê chuột trên Viewer | Tua nhanh (skim) |
+
+**Xem lướt cả timeline:** menu **Playback → Fast Review** — phát nhanh qua từng clip, clip dài chạy nhanh hơn clip ngắn. Hợp để rà lại toàn bộ màu trước khi xuất.
+
 ### Menu onscreen control — góc dưới trái Viewer
 
 Chọn **thứ hiện đè lên ảnh**. Phần lớn tự đổi khi bạn mở palette (mở Window thì khung Window hiện).
@@ -154,8 +174,8 @@ Menu **Workspace → Viewer Mode**.
 
 | Chế độ | Phím | Dùng khi |
 |---|---|---|
-| **Enhanced Viewer** | `⌥F` | Ẩn Gallery và Node Editor, **vẫn giữ palette** — vẽ Window, soi chi tiết |
-| **Full Screen Viewer** | `⇧F` | Viewer to hơn nữa, vẫn bật được Node Editor |
+| **Enhanced Viewer** | `⌥F` | Viewer chiếm hết phần **trên palette** (che Gallery, Node Editor), **vẫn giữ palette** — vẽ Window, soi chi tiết |
+| **Full Page Viewer** | `⇧F` | To hơn nữa: **ẩn cả palette**, chỉ giữ nút phát, menu onscreen control và timecode |
 | **Cinema Viewer** | `P` | Toàn màn hình, chỉ để xem lại |
 
 ---
@@ -297,12 +317,12 @@ Hàng icon nằm trên khu palette. Màn hình từ 1920×1080 trở lên chia t
 
 | # | Palette | Làm gì | Mức | Trang |
 |---|---|---|---|---|
-| 1 | **Camera Raw** | Chỉnh file RAW từ dữ liệu cảm biến | ★☆☆ | — |
+| 1 | **Camera Raw** | Chỉnh file RAW từ dữ liệu cảm biến | ★☆☆ | [Palette khác](palette-khac.md#camera-raw--chỉnh-file-raw) |
 | 2 | **Color Match** | Tự cân theo bảng màu chuẩn quay kèm | ★☆☆ | [Palette khác](palette-khac.md#color-match) |
-| 3 | **Color Wheels** (Primaries) | Cân bằng trắng, Lift/Gamma/Gain | ★★★ | [Cân bằng](can-bang.md) |
+| 3 | **Primaries** (Color Wheels) | Cân bằng trắng, Lift/Gamma/Gain | ★★★ | [Cân bằng](can-bang.md) |
 | 4 | **HDR** | Bánh xe theo từng vùng sáng tối | ★☆☆ | [Palette khác](palette-khac.md#hdr--bánh-xe-theo-vùng-sáng) |
 | 5 | **RGB Mixer** | Trộn kênh màu, đen trắng | ★☆☆ | [Palette khác](palette-khac.md#rgb-mixer--đen-trắng-có-chủ-ý) |
-| 6 | **Motion Effects** | Chống nhiễu, motion blur | `Studio` | — |
+| 6 | **Motion Effects** | Chống nhiễu, motion blur | `Studio` | [Palette khác](palette-khac.md#motion-effects) |
 
 ### Cụm giữa — chỉnh chọn lọc và hiệu ứng
 

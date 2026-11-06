@@ -209,16 +209,39 @@ Trường tự tạo dùng được làm điều kiện Smart Bin như trường
 
 `Studio`
 
-Các công cụ này dùng DaVinci Neural Engine. Bản free không có.
+Các công cụ này dùng DaVinci Neural Engine. Phần lớn chỉ có ở bản Studio.
 
-| Công cụ | Làm gì |
-|---|---|
-| **Slate ID** | Nút trên cùng panel Metadata. Đọc chữ trên bảng clapper, tự điền Scene, Take, ngày, camera. Cần chạy **Analyze for Slate** trước |
-| **Audio Classification** | Nghe tiếng clip, gán loại: Dialogue, Effect, Music, Silence |
-| **Analyze clips for people** | Nhận diện khuôn mặt, tạo keyword theo người |
-| **Transcription** | Chép lời thoại thành chữ |
+| Công cụ | Làm gì | Bản |
+|---|---|---|
+| **Slate ID** | Nút trên cùng panel Metadata. Đọc chữ trên bảng clapper, tự điền Scene, Take, ngày, camera. Cần chạy **Analyze for Slate** trước | `Studio` |
+| **Audio Classification** | Nghe tiếng clip, gán loại: Dialogue, Effect, Music, Silence | `Studio` |
+| **Transcription** | Chép lời thoại thành chữ | `Studio` |
+| **Analyze clips for people** | Nhận diện khuôn mặt, tạo keyword theo người | `Studio` |
 
-Chạy từ: chuột phải clip → **AI Tools**, hoặc nút **AI Clip Analysis** trên Media Pool.
+Chạy từ: chuột phải clip → **AI Tools**, hoặc nút **AI Clip Analysis** trên thanh công cụ Media Pool. Bấm mũi tên cạnh nút để chọn chạy trên **mọi clip** hay **clip đang chọn**, bật công tắc từng công cụ, rồi bấm **Analyze**. Các việc chạy lần lượt, không cần bạn bấm thêm.
+
+### Gắn tên người bằng nhận diện khuôn mặt
+
+`★☆☆ Tình huống cụ thể` · `Studio`
+
+**Là gì:** Resolve quét khuôn mặt trong clip, gom clip theo từng người. Bạn đặt tên một lần, mọi clip có người đó nhận keyword tên.
+
+**Dùng khi:** phỏng vấn nhiều người, cần tìm nhanh mọi cảnh có một người.
+
+1. Chọn các clip trong Media Pool → chuột phải → **AI Tools → Analyze clips for people**.
+2. Chờ thanh tiến trình chạy xong. Cửa sổ **People Management** mở ra.
+3. Bin **People** hiện mỗi khuôn mặt nhận ra được. Bấm, dừng một chút, bấm lần nữa dưới thumbnail để gõ tên.
+4. Mở bin của từng người để soát. Clip nhận nhầm: chuột phải → chọn đúng người, hoặc **Untag**.
+5. Bin **Other People** chứa mặt chưa nhận ra. Chuột phải → gán cho người đã có, hoặc **New Person**.
+6. Bấm **Close**. Tên vừa gõ thành keyword ở trường **People**, nhóm **Shot & Scene** của Metadata Editor.
+
+Muốn có Smart Bin theo từng người: tick **Automatic Smart Bins for People Metadata** ở **Preferences → User → Editing**.
+
+Mở lại cửa sổ này: **Workspace → People**. Làm lại từ đầu: menu tuỳ chọn của cửa sổ → **Reset Face Database**.
+
+> **Ví dụ:** trong "So tay DaVinci - Demo", chạy lệnh này trên hai clip gốc ở bin `01 Footage`. Đặt tên khuôn mặt cô gái là `Aru`. Smart Bin **People → Aru** gom đúng clip trại cừu, bỏ qua clip đĩa phô mai.
+
+> **Lưu ý:** tài liệu Blackmagic không ghi lệnh này là Studio, nhưng ở Resolve 21.0.4 bản free cả menu **AI Tools** bị mờ. Cần bản Studio mới chạy được.
 
 ---
 

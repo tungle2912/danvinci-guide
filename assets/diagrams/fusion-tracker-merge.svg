@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="440" viewBox="0 0 680 440" role="img"><title>Hai cách nối Tracker để gắn chữ bám theo chuyển động</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><text class="t" x="20" y="30">Cách A — Tracker kiêm luôn Merge</text></g>
+<g class="gy"><rect class="bx" x="30" y="46" width="130" height="50" rx="8"/><text class="t" x="95" y="67" text-anchor="middle">TieuDe</text><text class="s" x="95" y="85" text-anchor="middle">Text+</text></g>
+<g class="gy"><rect class="bx" x="30" y="122" width="130" height="50" rx="8"/><text class="t" x="95" y="143" text-anchor="middle">MediaIn1</text><text class="s" x="95" y="161" text-anchor="middle">Clip có vật chạy</text></g>
+<g class="tl"><rect class="bx" x="250" y="92" width="190" height="60" rx="8"/><text class="t" x="345" y="118" text-anchor="middle">Tracker1</text><text class="s" x="345" y="136" text-anchor="middle">Match Move · FG Over BG</text></g>
+<g class="gy"><rect class="bx" x="510" y="97" width="130" height="50" rx="8"/><text class="t" x="575" y="127" text-anchor="middle">MediaOut1</text></g>
+<path class="ar" d="M160 71 H345 V90" marker-end="url(#a)"/>
+<path class="ar" d="M160 147 H200 V130 H248" marker-end="url(#a)"/>
+<line class="ar" x1="440" y1="122" x2="508" y2="122" marker-end="url(#a)"/>
+<g class="tl"><rect class="bx" x="176" y="48" width="81" height="18" rx="9"/><text class="s" x="216.5" y="61" text-anchor="middle">Foreground</text></g>
+<g class="co"><rect class="bx" x="164" y="153" width="81" height="18" rx="9"/><text class="s" x="204.5" y="166" text-anchor="middle">Background</text></g>
+<line x1="16" y1="196" x2="664" y2="196" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="20" y="224">Cách B — Tracker đứng riêng, chỉ cho dữ liệu</text></g>
+<g class="pu"><rect class="bx" x="210" y="240" width="130" height="50" rx="8"/><text class="t" x="275" y="261" text-anchor="middle">Tracker1</text><text class="s" x="275" y="279" text-anchor="middle">Chỉ phân tích</text></g>
+<g class="gy"><rect class="bx" x="30" y="306" width="130" height="50" rx="8"/><text class="t" x="95" y="327" text-anchor="middle">MediaIn1</text><text class="s" x="95" y="345" text-anchor="middle">Clip có vật chạy</text></g>
+<g class="tl"><rect class="bx" x="380" y="306" width="120" height="50" rx="8"/><text class="t" x="440" y="336" text-anchor="middle">Merge1</text></g>
+<g class="gy"><rect class="bx" x="530" y="306" width="120" height="50" rx="8"/><text class="t" x="590" y="336" text-anchor="middle">MediaOut1</text></g>
+<g class="gy"><rect class="bx" x="210" y="376" width="130" height="50" rx="8"/><text class="t" x="275" y="397" text-anchor="middle">TieuDe</text><text class="s" x="275" y="415" text-anchor="middle">Text+</text></g>
+<path class="ar" d="M160 331 H185 V265 H208" marker-end="url(#a)"/>
+<line class="ar" x1="160" y1="331" x2="378" y2="331" marker-end="url(#a)"/>
+<line class="ar" x1="500" y1="331" x2="528" y2="331" marker-end="url(#a)"/>
+<path class="ar" d="M340 401 H440 V358" marker-end="url(#a)"/>
+<line class="ar" x1="275" y1="290" x2="275" y2="374" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<g class="pu"><rect class="bx" x="283" y="296" width="81" height="18" rx="9"/><text class="s" x="323.5" y="309" text-anchor="middle">Connect To</text></g>
+<g class="co"><rect class="bx" x="290" y="336" width="81" height="18" rx="9"/><text class="s" x="330.5" y="349" text-anchor="middle">Background</text></g>
+<g class="tl"><rect class="bx" x="450" y="380" width="81" height="18" rx="9"/><text class="s" x="490.5" y="393" text-anchor="middle">Foreground</text></g>
+</svg>

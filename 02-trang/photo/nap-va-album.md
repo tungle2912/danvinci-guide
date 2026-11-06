@@ -1,5 +1,9 @@
 # Nạp ảnh, album, chấm sao, versions
 
+![Quy trình album: nạp, đưa vào album, chấm sao, lọc, chỉnh, version, xuất](../../assets/diagrams/photo-album-flow.svg)
+
+*Trang này đi theo đúng thứ tự trên: nạp → album → chấm sao, tag → lọc → versions. Phần chỉnh và xuất nằm ở trang con khác.*
+
 ---
 
 ## Nạp ảnh
@@ -17,11 +21,47 @@ Thanh nút **trên đầu Media Pool** của trang Photo, từ trái sang phải
 | **Import From Photos** | Nạp từ **ứng dụng Ảnh của Mac** (chỉ macOS) | ★★☆ |
 | **Import Blackmagic Cloud Folder** | Nạp từ thư mục đám mây dùng chung | ★☆☆ |
 | **Relink Media** | Chuyển **màu cam** khi có ảnh bị mất đường dẫn — bấm để tìm lại | ★★☆ |
-| **AI Clip Analysis** | Chạy phân tích AI hàng loạt | `Studio` |
+| **AI Clip Analysis** | Xếp hàng nhiều phép phân tích AI chạy lần lượt. Phần lớn phép phân tích (như IntelliSearch) là `Studio` | ★☆☆ |
+| **Bin Name** | Tên bin đang mở | — |
 | **Media Pool View** | Đổi giữa thumbnail và danh sách | ★★☆ |
-| **Search** | Tìm theo tên file và metadata | ★★☆ |
+| **Search** | Tìm theo tên file và metadata. Tìm theo nội dung ảnh (người, đồ vật) cần IntelliSearch — `Studio` | ★★☆ |
+| **Favorites** | Chỉ hiện các ảnh đã gắn tim | ★★☆ |
+| **Sort** | Sắp xếp Media Pool theo **Custom**, **Camera**, **Date Time**, **Clip Name**, **Bin**, **Clip Color**, **Date Modified**, **Date Imported**, **Online Status** — tăng hoặc giảm dần | ★★☆ |
+
+Ngay dưới thanh nút là **đường dẫn bin**. Bấm tên bin bất kỳ trên đó để nhảy về bin đó.
 
 **Import From Photos dùng khi:** ảnh chụp bằng iPhone đã đồng bộ về Mac qua iCloud — nạp thẳng không cần xuất ra file trước.
+
+### Cách nạp
+
+1. Bấm icon **Import Media** trên đầu Media Pool — một menu xổ ra bốn lựa chọn: **Import Media**, **Import Media Folder**, **Import from Photos**, **Import Blackmagic Cloud Folder**.
+2. Chọn file hoặc thư mục → **Open**.
+
+Cách khác: chuột phải chỗ trống trong Media Pool → **Import Media**. Hoặc kéo file từ Finder thả vào Media Pool.
+
+> **Mẹo:** nạp cả một buổi chụp thì dùng **Import Media Folder** — chọn thư mục thẻ nhớ đã chép về máy, khỏi chọn từng file.
+
+### Bin và Smart Bin
+
+`★★☆ Thường dùng`
+
+Media Pool mặc định có một bin tên **Master**. Album cũng nằm trong bin.
+
+| Loại | Là gì | Tạo |
+|---|---|---|
+| **Bin** | Thư mục thường, tự kéo ảnh vào | **Bin List** → **+ Add Bin**. Bấm đúp tên để đổi tên |
+| **Smart Bin** | Thư mục tự lọc theo luật metadata (máy ảnh, từ khoá, sao…) | **Bin List** → **+ Add Smart Bin** → đặt tên và luật → **Create Smart Bin** |
+
+**Ví dụ Smart Bin:** luật **Camera** chứa `Canon` — mọi ảnh từ máy Canon tự hiện trong bin này, kể cả ảnh nạp sau.
+
+### Nạp catalog Lightroom
+
+`★☆☆ Tình huống cụ thể`
+
+1. **File → Import → Lightroom Catalog**.
+2. Chọn file catalog của Lightroom → **Open**.
+
+> **Lưu ý:** ảnh vào ở **trạng thái gốc**. Preset và mọi chỉnh sửa đã làm trong Lightroom **không** đi theo — bạn chỉnh lại từ đầu ở Resolve.
 
 ### Định dạng RAW được hỗ trợ
 
@@ -39,12 +79,14 @@ Canon **CR3** · Fujifilm **RAF** · Apple **ProRAW** · Nikon **NEF** · Sony *
 
 | Việc | Cách |
 |---|---|
-| Tạo album | Chuột phải trong Media Pool → **New Photo Album**. Hoặc **File → New Photo Album** |
+| Tạo album | Chọn ảnh trong Media Pool → chuột phải → **Create New Photo Album Using Selected Clips...** → hộp thoại **New Photo Album** (tên mặc định `Photo Album 1`) → **Create** |
 | Thêm ảnh vào album | Chọn ảnh trong Media Pool → chuột phải → **Add Photo(s) to Album** |
-| Bỏ ảnh khỏi album | Chọn ảnh → chuột phải → **Delete Selected** (file gốc không bị xoá) |
+| Bỏ ảnh khỏi album | Chọn ảnh → chuột phải → **Delete Selected**. Ảnh rời album hiện tại, file gốc không bị xoá |
 | Mở dải album | Nút **Photo Album** trên toolbar |
 
 Tạo bao nhiêu album cũng được.
+
+**Ví dụ:** chọn 20 ảnh của buổi chụp → chuột phải → **Create New Photo Album Using Selected Clips...** → đặt tên `Demo - Anh` → **Create**. Bấm nút **Photo Album** trên toolbar để thấy dải album ở đáy màn hình.
 
 ### Cách chia album thường dùng
 
@@ -64,11 +106,19 @@ Album **không cho kéo thả** để sắp xếp. Không có trước sau như 
 
 ### Icon nhỏ dưới thumbnail
 
-| Icon | Nghĩa |
-|---|---|
-| **FX** | Ảnh đã có hiệu ứng |
-| Hình chữ nhật | Đã Transform |
-| Hai góc chồng nhau | Đã Crop |
+Nhìn thumbnail là biết ảnh đã được làm gì:
+
+| Icon | Vị trí | Nghĩa |
+|---|---|---|
+| Khung **cầu vồng** quanh số thứ tự | Quanh số ảnh | Đã chỉnh ở tab RAW hoặc tab Photo |
+| **Sao** | Trên thumbnail | Số sao. Bấm thẳng vào đây để đổi |
+| **Cờ** màu | Góc trên phải | Cờ đã gắn |
+| Chấm màu | Góc dưới trái | Nhãn màu đã gắn |
+| **Tim** hoặc **X** | Trên thumbnail | Tag tốt hoặc loại |
+| Tên định dạng (`CR3`, `JPG`…) | Dưới thumbnail, bên trái | Định dạng file |
+| **FX** | Dưới thumbnail, bên phải | Ảnh đã có hiệu ứng |
+| Hình chữ nhật | Dưới thumbnail, bên phải | Đã Transform |
+| Hai góc chồng nhau | Dưới thumbnail, bên phải | Đã Crop |
 
 ---
 
@@ -113,6 +163,28 @@ Các icon lọc nằm trên dải Photo Album. **Bấm** để bật lọc, **ch
 
 **Lọc nâng cao:** bấm mũi tên thả xuống cạnh tên Photo Album.
 
+### Lọc nâng cao
+
+`★☆☆ Tình huống cụ thể`
+
+| Mục | Hiện ảnh nào |
+|---|---|
+| **Sort By** | Mở các tiêu chí sắp xếp như icon **Sort Photos** |
+| **All Photos** | Tất cả, không lọc |
+| **Selected Photos** | Chỉ các ảnh đang chọn |
+| **Graded Photos** / **Ungraded Photos** | Ảnh đã chỉnh / chưa chỉnh gì |
+| **Modified Photos** | Ảnh sửa gần đây — menu con chọn mốc giờ (**last hour**, **last 3 hours**…) |
+| **People** | Lọc theo người trong ảnh. Cần IntelliSearch — `Studio` |
+| **Grouped** | Ảnh thuộc một group (group tạo ở trang Color) |
+| **HDR Graded** / **Magic Mask** / **Noise Reduction** | Ảnh đã dùng công cụ đó ở trang Color |
+| **Open FX** | Ảnh đã có hiệu ứng |
+| **Source Sizing** | Ảnh đã đổi kích thước |
+| **Common Media Pool Source** | Ảnh dùng chung file nguồn với ảnh đang chọn |
+| **Matte Nodes** / **Mattes Available** | Ảnh có matte ở trang Color |
+| **Create Smart Filter** | Tự đặt luật lọc theo metadata, giống Smart Bin |
+
+**Ví dụ:** chỉnh dở 300 ảnh, quên ảnh nào đã làm → **Ungraded Photos** chỉ hiện ảnh chưa chỉnh.
+
 ### Ví dụ bộ lọc hay dùng
 
 | Muốn thấy | Đặt |
@@ -141,13 +213,28 @@ Các icon lọc nằm trên dải Photo Album. **Bấm** để bật lọc, **ch
 
 **Đổi giữa các phiên bản:** menu chuột phải (cùng chỗ tạo), hoặc **Version Selector** ở thanh dưới Viewer.
 
+**Ví dụ:** ảnh chân dung trong album `Demo - Anh`:
+
+| Version | Chỉnh gì |
+|---|---|
+| `Màu ấm` | Temp kéo sang ấm, Crop `As Shot` |
+| `Đen trắng` | Saturation `0` (tab Photo), tăng Contrast |
+| `Instagram 4:5` | Như `Màu ấm`, Crop `4:5` |
+
 > **Chỉ phiên bản đang chọn mới được xuất.** Muốn xuất cả hai phiên bản thì phải xuất hai lần, mỗi lần chọn một phiên bản.
 
 ---
 
 ## Metadata ảnh
 
-Nút **Metadata** trên toolbar — mở ở cùng chỗ với Inspector.
+Nút **Metadata** trên toolbar — mở ở cùng chỗ với Inspector. Chọn nhiều ảnh thì chỉ hiện thông tin của **ảnh đầu tiên**.
+
+Hai menu xổ trên đầu bảng Metadata:
+
+| Menu | Làm gì |
+|---|---|
+| **Metadata Presets** (bên trái) | Bộ trường hiện ra. Mặc định **Default**. Bộ riêng tạo trong **Preferences → User → Metadata** |
+| **Metadata Groups** (bên phải) | Nhóm trường theo việc. Nhóm **Camera** sửa được EXIF như ISO, tốc độ, ống kính |
 
 Hoặc trong **Inspector → tab File**:
 
@@ -157,3 +244,7 @@ Hoặc trong **Inspector → tab File**:
 | **Metadata** — sửa được | Ngày chụp, tên máy, tag, từ khoá, màu, tên hiển thị, ghi chú, cờ |
 
 **Gõ metadata hàng loạt nhanh:** tick **Auto Select Next Photo**. Gõ xong một trường, bấm `Return` — Resolve tự nhảy sang ảnh kế tiếp và giữ con trỏ ở đúng trường đó. Gõ từ khoá cho 50 ảnh không cần chạm chuột.
+
+Nút **Next Photo** ngay dưới đó chọn ảnh kế tiếp, dù ô **Auto Select Next Photo** có tick hay không.
+
+> **Lưu ý:** đổi ô **Name** chỉ đổi tên hiển thị trong Media Pool. Tên file trên ổ đĩa giữ nguyên.

@@ -2,6 +2,10 @@
 
 Trang Media có năm vùng: **Media Storage** (trên trái), **Viewer** (trên giữa), **Audio Panel** và **Metadata Editor** (bên phải), **Media Pool** (dưới). Inspector và Clone Tool là hai panel bật thêm khi cần.
 
+![Năm vùng của trang Media](../../assets/diagrams/media-layout.svg)
+
+*Số trong hình khớp với bảng năm vùng ở [trang Media](README.md).*
+
 Phần lớn lệnh của trang này **không nằm trên nút**, mà nằm trong **menu chuột phải**. Gặp clip hay thư mục, cứ chuột phải trước.
 
 Đổi kích thước: kéo **đường viền** giữa hai panel bất kỳ. Lỡ kéo lộn xộn: **Workspace → Reset UI Layout** để về bố cục gốc.
@@ -9,6 +13,9 @@ Phần lớn lệnh của trang này **không nằm trên nút**, mà nằm tron
 ---
 
 ## Interface Toolbar — dải nút trên cùng
+
+![Tám nút Interface Toolbar trang Media](../../assets/img/media-interface-toolbar.png)
+*Mỗi nút bật/tắt một vùng; số trong bảng đếm từ trái sang.*
 
 Tám nút, từ trái sang phải. Mỗi nút bật/tắt một vùng.
 
@@ -35,9 +42,11 @@ Chi tiết cách dùng: [Media Storage](media-storage.md). Ở đây chỉ liệ
 |---|---|---|---|
 | **Nút ẩn/hiện danh sách thư mục** | Góc trên trái | Ẩn cột ổ đĩa bên trái để vùng xem file rộng ra | ★☆☆ |
 | **Cột ổ đĩa** (Volume List) | Bên trái | Scratch volumes, các ổ đang gắn, Favorites | ★★★ |
-| **Ba nút kiểu xem** | Phía trên vùng file | **List**, **Thumbnail**, **Metadata** | ★★☆ |
+| **Mũi tên ‹ ›** | Cạnh nút ẩn/hiện | Lùi/tiến giữa các thư mục vừa mở | ★☆☆ |
+| **Thanh trượt cỡ thumbnail** | Giữa dải trên | Phóng to/thu nhỏ thumbnail file | ★☆☆ |
+| **Hai nút kiểu xem** | Phía trên vùng file, sau nút sắp xếp | **Thumbnail** (ô lưới) và **List** (danh sách) | ★★☆ |
 | **Ô tìm kiếm** | Phía trên | Tìm file trong thư mục đang mở | ★★☆ |
-| **Menu sắp xếp** (Thumbnail Sort) | Giữa ô tìm và menu ⋯, chỉ hiện ở Thumbnail view | Sắp thumbnail theo File Name, Reel Name, Start TC, FPS… tăng hoặc giảm | ★☆☆ |
+| **Menu sắp xếp** (Thumbnail Sort, icon ≡↓) | Ngay trái hai nút kiểu xem, dùng ở Thumbnail view | Sắp thumbnail theo File Name, Reel Name, Start TC, FPS… tăng hoặc giảm | ★☆☆ |
 | **Menu ⋯** | Góc trên phải | Có **Frame Display Mode** — cách hiện chuỗi ảnh | ★☆☆ |
 | **Clip Info** (mũi tên nhỏ) | Góc dưới phải mỗi thumbnail | Xem nhanh tên, timecode, độ dài, độ phân giải, fps, codec, ngày tạo | ★★☆ |
 
@@ -142,11 +151,13 @@ Mỗi tab là một lối tắt tới một bin. Tạo: chuột phải bin → *
 
 ### Phía trên, bên phải
 
+![Thanh công cụ phía trên Media Pool](../../assets/img/media-pool-toolbar.png)
+*Đổi kiểu xem, sắp xếp và tìm clip đều ở dải này.*
+
 | Nút | Làm gì | Mức |
 |---|---|---|
-| **Thanh trượt cỡ thumbnail** (Icon Size) | Phóng to/thu nhỏ thumbnail | ★★☆ |
-| **Menu sắp xếp** (Sort Order) | Sắp clip theo tên, timecode, độ dài, fps, ngày tạo… hoặc **Custom** để kéo tay | ★★☆ |
-| **Ba nút kiểu xem** | **Thumbnail**, **List**, **Metadata** | ★★★ |
+| **Menu kiểu xem** (icon lưới ▾) | Chọn **Metadata View**, **Thumbnail View** hoặc **List View**. Thanh trượt cuối menu phóng to/thu nhỏ thumbnail | ★★★ |
+| **Menu sắp xếp** (Sort Order, icon ≡↓) | Sắp clip theo tên, timecode, độ dài, fps, ngày tạo… hoặc **Custom** để kéo tay | ★★☆ |
 | **Kính lúp** | Mở ô tìm. Menu bên cạnh chọn tìm ở **All Bins** hay **Selected Bins**; menu **Filter By** chọn tìm theo trường nào | ★★★ |
 | **Menu ⋯** | Tuỳ chọn Media Pool — bảng dưới | ★★☆ |
 | **Import Blackmagic Cloud Folder** | Nối thư mục Blackmagic Cloud vào Media Pool. Cần đăng nhập Blackmagic Cloud | ★☆☆ |
@@ -174,10 +185,11 @@ Bật bằng nút **Inspector** trên Interface Toolbar. Chọn clip trong Media
 
 | Tab | Có gì | Mức |
 |---|---|---|
-| **Video** | Transform (Zoom, Position, Rotation, Flip), Cropping, Dynamic Zoom, Composite, Retime and Scaling. Lens Correction và Super Scale là `Studio` | ★☆☆ |
+| **Video** | Transform (Zoom, Position, Rotation, Flip), Cropping, Dynamic Zoom, Composite, Retime and Scaling. **Retime Process**: Nearest, Frame Blend, Optical Flow. **Scaling**: Crop, Fit, Fill, Stretch. Lens Correction và Super Scale là `Studio` | ★☆☆ |
 | **Audio** | Clip Volume, Clip Pan, Clip Pitch, Equalizer 6 dải | ★★☆ |
+| **Effects** / **Transition** | Thông số hiệu ứng và chuyển cảnh đã gắn vào clip | ★☆☆ |
 | **Image** | Thông số camera RAW (chỉ sáng khi clip là RAW) | ★☆☆ |
-| **File** | Thông tin file, ô metadata gõ nhanh, **Audio Configuration**, **Timecode** | ★★☆ |
+| **File** | Thông tin file, ô metadata gõ nhanh, **Audio Configuration** (tới 36 track), **Timecode** | ★★☆ |
 
 Tab nào không áp dụng cho clip đang chọn thì bị mờ.
 
@@ -191,8 +203,8 @@ Không cần nhớ hết. Biết ba menu này có những gì là đủ.
 
 | Chuột phải vào | Lệnh hay dùng | Xem |
 |---|---|---|
-| **File/thư mục trong Media Storage** | Add into Media Pool, Add Folder and SubFolders into Media Pool (Create Bins), Extract Audio, Scene Cut Detection, Set As Clone Source/Destination, Add folder to favorites | [Media Storage](media-storage.md#menu-chuột-phải-trong-media-storage) |
-| **Clip trong Media Pool** | Clip Attributes, Generate Optimized/Proxy Media, Relink Selected Clips, Create Timeline Using Selected Clips, Duplicate Clip, Reveal in Finder | [Media Pool](media-pool.md#menu-chuột-phải-của-clip) |
+| **File/thư mục trong Media Storage** | Add into Media Pool, Add Folder and SubFolders into Media Pool (Create Bins), Extract Audio, Scene Cut Detection, Set as Clone Source, Add as Clone Destination, Add Folder to Favorites | [Media Storage](media-storage.md#menu-chuột-phải-trong-media-storage) |
+| **Clip trong Media Pool** | Clip Attributes, Generate Optimized/Proxy Media, Relink Selected Clips, Create New Timeline Using Selected Clips…, Duplicate Clip, Reveal in Finder | [Media Pool](media-pool.md#menu-chuột-phải-của-clip) |
 | **Bin trong Bin List** | Add Bin, Rename Bin, Delete Bin, Color Tag, Open As New Window, Open as New Tab, Export Bin, Auto Sync Audio | [Bin](bin.md#1-bin-thường) |
 
 ---

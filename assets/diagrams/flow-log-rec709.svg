@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="372" viewBox="0 0 680 372" role="img"><title>Đưa footage LOG về Rec.709: biết profile, chọn một trong ba cách chuyển, kiểm tra scope, chỉnh node, áp cho mọi clip, xuất</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><rect class="bx" x="16" y="16" width="196" height="60" rx="8"/><text class="t" stroke="none" x="114" y="41.5" text-anchor="middle">1  Biết profile</text><text class="s" stroke="none" x="114" y="60.5" text-anchor="middle">metadata hoặc menu máy</text></g>
+<g class="tl"><rect class="bx" x="242" y="16" width="422" height="60" rx="8"/><text class="t" stroke="none" x="453" y="41.5" text-anchor="middle">2  Chuyển LOG → Rec.709: chọn MỘT cách</text><text class="s" stroke="none" x="453" y="60.5" text-anchor="middle">dùng hai cách cùng lúc là chuyển hai lần, sai màu</text></g>
+<line class="ar" x1="214" y1="46" x2="238" y2="46" marker-end="url(#a)"/>
+<g class="pu"><rect class="bx" x="16" y="108" width="196" height="76" rx="8"/><text class="t" stroke="none" x="114" y="132" text-anchor="middle">CST — khuyên dùng</text><text class="s" stroke="none" x="114" y="151" text-anchor="middle">node 01 · Effects →</text><text class="s" stroke="none" x="114" y="170" text-anchor="middle">Color Space Transform</text></g>
+<g class="gy"><rect class="bx" x="242" y="108" width="196" height="76" rx="8"/><text class="t" stroke="none" x="340" y="132" text-anchor="middle">Color Management</text><text class="s" stroke="none" x="340" y="151" text-anchor="middle">Project Settings →</text><text class="s" stroke="none" x="340" y="170" text-anchor="middle">YRGB Color Managed</text></g>
+<g class="gy"><rect class="bx" x="468" y="108" width="196" height="76" rx="8"/><text class="t" stroke="none" x="566" y="132" text-anchor="middle">LUT của hãng</text><text class="s" stroke="none" x="566" y="151" text-anchor="middle">nhanh nhất, nhưng</text><text class="s" stroke="none" x="566" y="170" text-anchor="middle">cắt vùng sáng</text></g>
+<path class="ar" d="M453 78 L453 92 L114 92 L114 104" marker-end="url(#a)"/>
+<line class="ar" x1="340" y1="92" x2="340" y2="104" marker-end="url(#a)"/>
+<path class="ar" d="M453 92 L566 92 L566 104" marker-end="url(#a)"/>
+<path class="ar" d="M114 186 L114 200"/>
+<path class="ar" d="M340 186 L340 200"/>
+<path class="ar" d="M566 186 L566 200 L92 200 L92 212" marker-end="url(#a)"/>
+<g class="tl"><rect class="bx" x="16" y="216" width="153" height="76" rx="8"/><text class="t" stroke="none" x="92.5" y="240" text-anchor="middle">3  Kiểm tra</text><text class="s" stroke="none" x="92.5" y="259" text-anchor="middle">Waveform trải 0–1000</text><text class="s" stroke="none" x="92.5" y="278" text-anchor="middle">Vectorscope có màu</text></g>
+<g class="tl"><rect class="bx" x="185" y="216" width="153" height="76" rx="8"/><text class="t" stroke="none" x="261.5" y="240" text-anchor="middle">4  Chuỗi node</text><text class="s" stroke="none" x="261.5" y="259" text-anchor="middle">CST + 6 node</text><text class="s" stroke="none" x="261.5" y="278" text-anchor="middle">Balance → Finishing</text></g>
+<g class="tl"><rect class="bx" x="354" y="216" width="153" height="76" rx="8"/><text class="t" stroke="none" x="430.5" y="240" text-anchor="middle">5  Áp mọi clip</text><text class="s" stroke="none" x="430.5" y="259" text-anchor="middle">Shared Node cho</text><text class="s" stroke="none" x="430.5" y="278" text-anchor="middle">clip cùng máy</text></g>
+<g class="co"><rect class="bx" x="523" y="216" width="153" height="76" rx="8"/><text class="t" stroke="none" x="599.5" y="240" text-anchor="middle">6  Xuất, soát</text><text class="s" stroke="none" x="599.5" y="259" text-anchor="middle">Tag: Same as Project</text><text class="s" stroke="none" x="599.5" y="278" text-anchor="middle">xem lại bằng VLC</text></g>
+<line class="ar" x1="171" y1="254" x2="181" y2="254" marker-end="url(#a)"/>
+<line class="ar" x1="340" y1="254" x2="350" y2="254" marker-end="url(#a)"/>
+<line class="ar" x1="509" y1="254" x2="519" y2="254" marker-end="url(#a)"/>
+<g class="gy"><rect class="bx" x="16" y="308" width="648" height="48" rx="8"/><text class="t" stroke="none" x="340" y="337" text-anchor="middle">So trước/sau: chọn node CST, ⌘D · cả grade: ⇧D</text></g>
+</svg>

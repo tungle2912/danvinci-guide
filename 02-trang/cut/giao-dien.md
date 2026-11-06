@@ -105,10 +105,15 @@ Nút loa trên đầu đồng hồ để tắt/bật tiếng.
 
 Đây là thứ đặc trưng nhất của trang Cut.
 
+![Quan hệ giữa timeline trên và timeline dưới](../../assets/diagrams/cut-two-tier.svg)
+
+*Khung tím trên timeline trên là đoạn đang hiện ở timeline dưới. Con trỏ di chuyển thì khung đó trượt theo (sách hướng dẫn trang 662–663).*
+
 ### Timeline trên
 - **Luôn hiện toàn bộ video**, dù dài 2 phút hay 2 tiếng.
-- Bấm bất kỳ đâu trên thước thời gian để nhảy tới đó.
-- **Kéo clip ở đây được** — rất tiện để đưa một cảnh từ cuối video lên đầu.
+- Bấm bất kỳ đâu trên thước thời gian để nhảy tới đó. Con trỏ ở đây luôn **tự do**: rê trên thước để lướt cả video.
+- **Kéo clip ở đây được** — rất tiện để đưa một cảnh từ cuối video lên đầu. Phần lớn thao tác cắt, trim của tầng dưới cũng làm được ở đây.
+- Chuột phải clip ở tầng trên mở **đúng menu** như chuột phải ở tầng dưới.
 - Dãy số nhỏ bên trái: bấm để chọn track đích.
 
 ### Timeline dưới
@@ -156,10 +161,16 @@ Trong bản 21, các tuỳ chọn timeline được gom vào **ba icon menu**. B
 | **Trim to Audio** | Phóng to dạng sóng khi trim — dễ cắt đúng giữa hai từ | ★★☆ |
 | **Trim with Safe Edit** | Chặn trim lỡ tay đè lên clip bên cạnh | ★★☆ |
 | **Display Clip Names** | Hiện tên clip | ★☆☆ |
+| **Display Clip Status** | Hiện icon trạng thái trên clip (đã chỉnh màu, có hiệu ứng, đổi tốc độ…) | ★☆☆ |
+| **Display Speed Keyframes** | Hiện keyframe tốc độ trên clip có đổi tốc độ | ★☆☆ |
 | **Viewer Background** | Nền Viewer: caro, đen, xám, đỏ cảnh báo | ★☆☆ |
-| **Set Default Transition** | Chọn kiểu, độ dài chuyển cảnh mặc định | ★★☆ |
-| **Fixed Playhead** | Con trỏ đứng yên, timeline trượt bên dưới | ★☆☆ |
+| **Set Default Transition** | Chọn kiểu, độ dài, vị trí (căn giữa, trước, sau điểm cắt) của chuyển cảnh mặc định | ★★☆ |
+| **Edit Using All Channels / Ch 1&2 / Ch 3&4…** | Chọn kênh tiếng nào của clip nguồn được đưa xuống timeline | ★☆☆ |
+| **Minimize Subtitle Track** | Thu nhỏ track phụ đề cho rộng chỗ | ★☆☆ |
+| **Fixed Playhead** | Con trỏ đứng yên giữa timeline, clip trượt bên dưới. Bỏ tích thì con trỏ chạy trên clip | ★☆☆ |
 | **Boring Detector** | Soát cảnh quá dài/quá ngắn | ★☆☆ |
+
+> **Mẹo:** **Edit Using** hữu ích khi clip quay có nhiều kênh tiếng, ví dụ kênh 1-2 là mic cài áo, kênh 3-4 là mic trên máy. Chọn **Edit Using Ch 1&2** thì mọi lần edit sau chỉ lấy tiếng mic cài áo. Nhớ chuyển về **All Channels** khi xong.
 
 ### 2. Timeline Actions — thêm và sửa hàng loạt
 
@@ -170,15 +181,19 @@ Trong bản 21, các tuỳ chọn timeline được gom vào **ba icon menu**. B
 | Mục | Làm gì | Mức |
 |---|---|---|
 | **Add Video / Audio / Subtitle Track** | Thêm track | ★★☆ |
+| **Delete Empty Tracks** | Xoá mọi track không có clip | ★☆☆ |
 | **Split Clips** | Cắt đôi clip tại con trỏ | ★★★ |
 | **Join Match Edit Clips** | Nối lại hai nửa của một clip đã cắt | ★☆☆ |
 | **Add Marker** | Đánh dấu (`M`) | ★★☆ |
 | **Set Color and Add Marker** | Đánh dấu có màu và ghi chú | ★☆☆ |
 | **Add Dissolve to All Edits** | Chuyển cảnh mờ cho **mọi** điểm cắt | ★☆☆ |
+| **Add Transition to All Edits** | Thêm chuyển cảnh **dùng gần nhất** cho mọi điểm cắt | ★☆☆ |
 | **Clear Transition from All Edits** | Xoá mọi chuyển cảnh | ★☆☆ |
-| **Create Subtitles from Audio** | Tự tạo phụ đề | `Studio` |
+| **Create Subtitles from Audio** | Tự tạo phụ đề từ giọng nói | `Studio` |
 | **Detect Scene Cuts** | Tự cắt video đã dựng thành từng cảnh | `Studio` |
-| **Audio Assistant**, **Voice Convert** | Mix tiếng bằng AI, đổi giọng | `Studio` |
+| **Audio Assistant** | Mix tiếng tự động bằng AI | `Studio` |
+
+> **Lưu ý:** sách hướng dẫn (trang 664) còn liệt kê **Voice Convert** (đổi giọng, `Studio`) trong menu này. Bản 21.0.4 free không hiện mục đó, nhưng lại có thêm **Delete Empty Tracks**.
 
 ### 3. Edit Actions — sửa clip
 

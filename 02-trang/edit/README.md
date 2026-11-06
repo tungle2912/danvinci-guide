@@ -67,7 +67,7 @@ Hầu hết thời gian bạn muốn **Ripple Delete**. Quên `Fn` là timeline 
 
 ## Ví dụ: dựng một video giới thiệu món ăn 60 giây
 
-1. **Tạo timeline:** chuột phải clip trong Media Pool → **Create Timeline Using Selected Clips**.
+1. **Tạo timeline:** chuột phải clip trong Media Pool → **Create New Timeline Using Selected Clips…**.
 2. **Lấy đoạn:** bấm đúp clip, xem ở Viewer trái, `I` đầu đoạn, `O` cuối đoạn, `F10` đặt xuống. Lặp lại.
 3. **Bỏ thừa:** đặt con trỏ, `⌘B` cắt, chọn đoạn thừa, `Fn+Delete`.
 4. **Nhạc:** kéo file nhạc xuống track **A2**. Bấm `M` theo mỗi nhịp mạnh.

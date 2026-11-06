@@ -11,17 +11,34 @@ Phần lớn rắc rối về sau (video giật, tiếng lệch hình, xuất ra
 | [5. Nơi lưu cache](#bước-5--nơi-lưu-cache-và-file-tạo-ra) | Project Settings → Master Settings → Working Folders | `★★☆ Thường dùng` |
 | [6. Tự động lưu](#bước-6--tự-động-lưu-và-bản-sao-lưu) | Preferences → User → Project Save and Load | `★★★ Hằng ngày` |
 
+**Thiết lập nằm ở ba tầng.** Trước khi chỉnh, biết ô đó thuộc tầng nào thì khỏi tìm sai chỗ:
+
+![Bốn tầng: máy tính chứa project library, library chứa project, project chứa timeline, timeline chứa clip — mỗi tầng có bảng thiết lập riêng](../assets/diagrams/start-cau-truc-project.svg)
+
+*Tầng ngoài chứa tầng trong. Preferences theo máy và tài khoản đăng nhập (manual tr. 16); Project Settings theo project; Timeline Settings mặc định lấy theo project nhưng tách riêng được cho từng timeline (tr. 860–861).*
+
+| Tầng | Bảng thiết lập | Mở bằng | Ví dụ ô ở đây |
+|---|---|---|---|
+| Máy tính | **Preferences** (System, User) | **DaVinci Resolve → Preferences** | Ổ cache (Media Storage), RAM, tự động lưu |
+| Project | **Project Settings** | `⇧9` hoặc bánh răng góc dưới phải | Frame rate, độ phân giải, quản lý màu, nơi lưu cache, định dạng proxy |
+| Timeline | **Timeline Settings** | Chuột phải timeline trong Media Pool → **Timelines → Timeline Settings** | Cỡ khung, frame rate riêng cho một timeline (bỏ tick **Use Project Settings**) |
+| Clip | **Clip Attributes**, Inspector | Chuột phải clip trong Media Pool | Kênh tiếng, frame rate của riêng clip |
+
 ## Bước 1 — Tạo project trong Project Manager
 
 **Project Manager** là cửa sổ hiện ra đầu tiên khi mở Resolve. Đang làm dở thì mở lại bằng `⇧1`, hoặc nút **ngôi nhà** góc dưới phải.
 
 **Tạo project mới:**
-1. Bấm **New Project** ở đáy cửa sổ (hoặc bấm đúp icon **Untitled Project**).
+`★★★ Hằng ngày`
+
+1. Bấm **New Project** ở đáy cửa sổ (manual tr. 77).
 2. Gõ tên. Nên có ngày tháng, ví dụ `2026-10 Vlog Da Lat`.
 3. Xem ô **Media Location** — nơi Resolve lưu file nó tự tạo ra (tiếng thu voiceover…). Bấm **Change Location** nếu ổ đó sắp đầy.
 4. Bấm **Create**. Resolve mở project ở trang Media.
 
-**Chuột phải một project** trong Project Manager:
+Ví dụ: project `So tay DaVinci - Demo`, Media Location để mặc định trên ổ trong của Mac, timeline đầu tiên `Demo - Vlog` ở 25 fps.
+
+**Chuột phải một project** trong Project Manager (manual tr. 77–79, 95):
 
 | Mục | Làm gì | Mức |
 |---|---|---|
@@ -30,28 +47,37 @@ Phần lớn rắc rối về sau (video giật, tiếng lệch hình, xuất ra
 | **Project Backups** | Mở lại bản sao lưu tự động — xem [Bước 6](#bước-6--tự-động-lưu-và-bản-sao-lưu) | ★★☆ |
 | **Export Project** | Xuất file `.drp` — chỉ project, không kèm media | ★★☆ |
 | **Export Project With Stills and LUTs** | Như trên, kèm still trong Gallery và LUT đang dùng | ★☆☆ |
-| **Export Project Archive** | Gói cả project lẫn media thành một thư mục `.dra` | ★☆☆ |
+| **Export Project Archive** (tr. 95 gọi là **Archive**) | Gói cả project lẫn media thành một thư mục `.dra`. Tuỳ chọn kèm optimized media, render cache, proxy | ★☆☆ |
 | **Load Project Settings to Current Project** | Chép thiết lập của project này sang project đang mở | ★☆☆ |
+| **Delete** | Xoá project. Không xoá được project đang mở | ★☆☆ |
 
-Nhập project từ máy khác: kéo file `.drp` thả vào Project Manager, hoặc bấm **Import** ở đáy cửa sổ.
+Nhập project từ máy khác: kéo file `.drp` thả vào Project Manager, hoặc bấm **Import** ở đáy cửa sổ (tr. 78). Bấm đúp file `.drp` trong Finder cũng được — Resolve tự mở và nạp project.
 
-> **Resolve lưu project trong một "project library" (thư viện project), không phải file rời.** Nút góc trên trái Project Manager mở thanh **Project Libraries** — xem project đang nằm ở thư viện nào. Muốn mang project sang máy khác thì dùng **Export Project** hoặc **Export Project Archive**. Chỉ copy thư mục footage là không đủ.
+> **Lưu ý:** Resolve lưu project trong một **project library** (thư viện project), không phải file rời. Nút góc trên trái Project Manager mở thanh **Project Libraries** — xem project đang nằm ở thư viện nào (tr. 82). Muốn mang project sang máy khác thì dùng **Export Project** hoặc **Export Project Archive**. Chỉ copy thư mục footage là không đủ.
 
 ## Bước 2 — Frame rate, thứ không sửa được về sau
+
+`★★★ Hằng ngày`
+
+**Frame rate** (số khung hình mỗi giây, fps) quyết định chuyển động trông thế nào và phải khớp với lúc quay.
 
 Mở **Project Settings** (`⇧9`, hoặc nút **bánh răng** góc dưới phải) → **Master Settings** → nhóm **Timeline Format** → **Timeline frame rate**.
 
 Đặt đúng bằng frame rate bạn quay. Quay 24 thì để 24, quay 30 thì để 30.
 
-> **Manual ghi rõ: khi Media Pool đã có file, frame rate của project không đổi được nữa.** Nên đặt trước khi nạp media.
+> **Lưu ý:** manual ghi rõ: khi Media Pool đã có file, frame rate của project không đổi được nữa (tr. 375). Nên đặt trước khi nạp media.
 
 Lần đầu nạp clip vào Media Pool trống, nếu frame rate clip khác project, Resolve hỏi có đổi project cho khớp không. **Chọn Change.** Chọn Don't Change là bị khoá ở frame rate cũ.
 
-Cách an toàn để timeline khớp clip: nạp clip vào Media Pool, chọn clip → chuột phải → **Create Timeline Using Selected Clips**. Xem thêm [Tạo timeline và Timeline Settings](../02-trang/edit/timeline-nang-cao.md#tạo-timeline-và-timeline-settings).
+> **Mẹo:** lỡ khoá sai rồi thì vẫn cứu được ở tầng timeline: tạo timeline mới, bỏ tick **Use Project Settings** trong hộp New Timeline rồi đặt frame rate đúng cho riêng timeline đó (tr. 860).
+
+Cách an toàn để timeline khớp clip: nạp clip vào Media Pool, chọn clip → chuột phải → **Create New Timeline Using Selected Clips…**. Xem thêm [Tạo timeline và Timeline Settings](../02-trang/edit/timeline-nang-cao.md#tạo-timeline-và-timeline-settings).
 
 ## Bước 3 — Độ phân giải
 
-Cùng nhóm **Timeline Format**, ô **Timeline resolution**:
+`★★★ Hằng ngày`
+
+Cùng nhóm **Timeline Format**, ô **Timeline resolution** — cỡ khung bạn dựng:
 
 | Làm gì | Đặt |
 |---|---|
@@ -59,15 +85,17 @@ Cùng nhóm **Timeline Format**, ô **Timeline resolution**:
 | Video 4K | 3840×2160 |
 | TikTok, Reels, Shorts | 1920×1080 rồi tick **Use vertical resolution** → thành 1080×1920 |
 
-**Use vertical resolution** đảo chiều ngang và dọc của khung. Muốn một project có cả bản ngang lẫn bản dọc thì để project ngang, chỉ đổi riêng timeline dọc — xem [Timeline Settings](../02-trang/edit/timeline-nang-cao.md#timeline-settings--mỗi-timeline-một-cỡ-khung) và [Luồng: video dọc](../03-luong/video-doc.md).
+**Use vertical resolution** đảo chiều ngang và dọc của khung (tr. 144). Muốn một project có cả bản ngang lẫn bản dọc thì để project ngang, chỉ đổi riêng timeline dọc — xem [Timeline Settings](../02-trang/edit/timeline-nang-cao.md#timeline-settings--mỗi-timeline-một-cỡ-khung) và [Luồng: video dọc](../03-luong/video-doc.md).
 
 Timeline resolution đổi được bất cứ lúc nào — Resolve tự tính lại mọi chỉnh sửa theo cỡ mới. Nó cũng **khác** resolution lúc xuất: dựng ở 1080 cho nhẹ máy rồi xuất 4K được. Xem [Tối ưu hiệu năng](../04-tham-khao/hieu-nang.md#bước-3--hạ-timeline-resolution).
 
-**Clip khác cỡ khung xử lý thế nào:** **Project Settings → Image Scaling → Input Scaling → Mismatched resolution files**. Mặc định **Scale entire image to fit** (giữ toàn hình, có viền đen).
+**Clip khác cỡ khung xử lý thế nào:** **Project Settings → Image Scaling → Input Scaling → Mismatched resolution files** (tr. 152). Mặc định **Scale entire image to fit** — giữ toàn hình, khác tỉ lệ thì có viền đen. Muốn lấp kín khung (cắt bớt mép): **Scale full frame with crop**.
 
 ## Bước 4 — Chọn cách quản lý màu
 
-**Project Settings → Color Management → Color science**. Quyết định trước khi bắt đầu chỉnh màu — đổi sau khi đã chỉnh là mọi grade lệch.
+`★★☆ Thường dùng`
+
+**Project Settings → Color Management → Color science** (tr. 153). Quyết định trước khi bắt đầu chỉnh màu — đổi sau khi đã chỉnh là mọi grade lệch.
 
 | Color science | Resolve làm gì | Hợp với |
 |---|---|---|
@@ -76,19 +104,23 @@ Timeline resolution đổi được bất cứ lúc nào — Resolve tự tính 
 | **DaVinci YRGB Color Managed (Legacy)** | Bản cũ, để mở project cũ | Project từ bản Resolve cũ |
 | **ACEScc / ACEScct** | Chuẩn ACES của ngành phim | Quy trình xưởng phim |
 
-**Bật Color Managed — cách đơn giản:**
+**Bật Color Managed — cách đơn giản** (tr. 1708):
 1. **Color science** → **DaVinci YRGB Color Managed**.
 2. Tick **Automatic Color Management**.
 3. **Color processing mode** → **SDR**.
 4. **Output color space** → Rec.709 (YouTube, TV, mạng xã hội).
 
+Khi đã bật, clip chưa nhận dạng được mặc định coi là **Rec.709 Gamma 2.4** (tr. 233).
+
 Resolve tự đoán không gian màu đầu vào theo loại file. Đoán sai (hay gặp với LOG): chuột phải clip trong Media Pool → **Input Color Space** → chọn đúng profile máy quay.
 
-> **Đừng chuyển hai lần.** Đã bật Color Managed thì không thêm CST hay LUT chuyển đổi nữa. Chi tiết: [LUT và quản lý màu](../02-trang/color/lut-va-quan-ly-mau.md#color-management-của-project) và [Luồng: LOG sang Rec.709](../03-luong/log-sang-rec709.md).
+> **Lỗi hay gặp:** chuyển màu hai lần. Đã bật Color Managed thì không thêm CST hay LUT chuyển đổi nữa. Chi tiết: [LUT và quản lý màu](../02-trang/color/lut-va-quan-ly-mau.md#color-management-của-project) và [Luồng: LOG sang Rec.709](../03-luong/log-sang-rec709.md).
 
 ## Bước 5 — Nơi lưu cache và file tạo ra
 
-**Project Settings → Master Settings → Working Folders**:
+`★★☆ Thường dùng`
+
+**Project Settings → Master Settings → Working Folders** (tr. 148):
 
 | Ô | Chứa gì | Mặc định |
 |---|---|---|
@@ -99,26 +131,39 @@ Resolve tự đoán không gian màu đầu vào theo loại file. Đoán sai (h
 
 Trỏ **Cache files location** vào một ổ SSD nhanh, đừng để chung ổ với footage nếu có thể. Ổ cache bị rút ra thì Resolve sẽ báo.
 
+> **Mẹo:** "ổ đầu tiên trong Media Storage" đặt ở **Preferences → System → Media Storage** (tr. 17). Muốn cache và still mặc định nằm ở SSD ngoài thì đưa SSD đó lên đầu danh sách ở đây — áp cho mọi project mới.
+
 Cùng trang Master Settings, nhóm **Optimized Media and Render Cache** chọn định dạng và độ phân giải của proxy, optimized media, render cache — xem [Tối ưu hiệu năng](../04-tham-khao/hieu-nang.md).
 
-**Dùng lại thiết lập cho mọi project:** menu ba chấm của cửa sổ Project Settings → **Save Current Settings as Preset**. Chọn preset → **Set As Default Preset** để project mới tự dùng.
+**Dùng lại thiết lập cho mọi project:** menu ba chấm của cửa sổ Project Settings → **Save Current Settings as Preset**. Chọn preset → **Set As Default Preset** để project mới tự dùng (tr. 142–143).
 
 ## Bước 6 — Tự động lưu và bản sao lưu
 
-**DaVinci Resolve → Preferences → User → Project Save and Load**. Đây là thiết lập của máy, áp cho mọi project.
+`★★★ Hằng ngày`
 
-| Ô | Làm gì | Nên |
-|---|---|---|
-| **Live Save** | Lưu liên tục khi bạn làm. Bật sẵn mặc định | Để bật |
-| **Project Backups** | Lưu bản sao đầy đủ định kỳ: mặc định mỗi 10 phút trong giờ gần nhất, 8 bản theo giờ, 5 bản theo ngày | Bật |
-| **Project backup location** | Nơi lưu bản sao. Mặc định thư mục `ProjectBackup` trên ổ scratch | Trỏ sang ổ khác ổ hệ thống nếu có |
-| **Timeline Backups** | Lưu bản sao riêng từng timeline | Bật nếu hay sửa lớn |
+**DaVinci Resolve → Preferences → User → Project Save and Load** (manual tr. 115–117). Đây là thiết lập của máy, áp cho mọi project.
 
-Manual ghi hai bộ số mặc định khác nhau (đoạn Timeline Backups ghi 2 bản theo giờ, 2 bản theo ngày). Số thật trên máy bạn hiện ngay trong các ô này.
+| Ô | Làm gì | Mặc định | Nên |
+|---|---|---|---|
+| **Live Save** | Lưu liên tục khi bạn làm. Cut, Edit, Fairlight lưu ngay từng thao tác; Fusion, Color lưu khi chuyển clip và định kỳ ngầm | Bật | Để bật |
+| **Project Backups** | Lưu định kỳ bản sao đầy đủ của project (không gồm still và LUT) | — | Bật |
+| **Timeline Backups** | Lưu bản sao riêng từng timeline | — | Bật |
+| **Perform backups every X minutes** | Bao lâu lưu một bản trong giờ gần nhất | **10** phút → luôn giữ 6 bản của giờ gần nhất | Giữ |
+| **Hourly backups for the past X hours** | Giữ bao nhiêu bản theo giờ | **2** | Tăng lên 8 nếu ngày dài |
+| **Daily backups for the past X days** | Giữ bao nhiêu bản theo ngày | **2** | Tăng lên 7–14 cho dự án kéo dài |
+| **Backup location** | Nơi lưu bản sao, gồm cả project lẫn timeline backup | Thư mục `ProjectBackup` trên ổ scratch | Trỏ sang ổ khác ổ hệ thống nếu có |
 
-**Mở bản sao lưu:** Project Manager → chuột phải project → **Project Backups** → chọn bản → **Load**. Bản sao mở thành project riêng, không đè bản gốc.
+Ba ô số dùng chung cho cả Project Backups và Timeline Backups (tr. 116). Resolve chỉ lưu bản mới khi project có thay đổi — để máy đứng yên thì không ghi đè bản cũ.
 
-**Khôi phục timeline:** chuột phải timeline trong Media Pool → **Restore Timeline Backup**. Xem [Timeline Backup](../02-trang/edit/timeline-nang-cao.md#timeline-backup--điểm-khôi-phục).
+> **Lưu ý:** manual ghi hai bộ số mặc định. Chương 3, mục Project Backups (tr. 90–91) ghi **10 phút / 8 bản theo giờ / 5 bản theo ngày**. Chương 4, mục Project Save and Load (tr. 116–117) và mục Timeline Backup (tr. 93, 866) ghi **10 phút / 2 / 2**. Resolve 21.0.4 trên máy viết tài liệu này cài mới hiện **10 / 2 / 2**, nên coi tr. 90–91 là đoạn cũ. Số thật trên máy bạn hiện ngay trong các ô này.
+
+Ví dụ: làm project `So tay DaVinci - Demo` từ 9h tới 17h với mặc định 10 / 2 / 2 → lúc 17h có 6 bản của giờ cuối, 2 bản theo giờ (15h, 16h), và bản cuối ngày hôm qua, hôm kia.
+
+**Mở bản sao lưu:** Project Manager → chuột phải project → **Project Backups** → chọn bản (bấm tiêu đề cột để sắp theo giờ) → **Load** (tr. 91). Bản sao mở thành project riêng, không đè bản gốc.
+
+**Lưu một điểm khôi phục ngay:** **File → Create Timeline Backup** (`⌥⌘S`, tr. 92) trước khi sửa lớn.
+
+**Khôi phục timeline:** chuột phải timeline trong Media Pool → **Restore Timeline Backup** → chọn bản theo ngày giờ. Bản khôi phục vào Media Pool thành timeline mới, tên có thêm chữ "Backup" (tr. 116). Xem [Timeline Backup](../02-trang/edit/timeline-nang-cao.md#timeline-backup--điểm-khôi-phục).
 
 Chữ **Edited** cạnh tên project ở đầu cửa sổ nghĩa là còn thay đổi chưa lưu. Lưu tay: `⌘S`.
 

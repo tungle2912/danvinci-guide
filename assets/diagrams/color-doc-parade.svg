@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="320" viewBox="0 0 680 320" role="img"><title>Cách đọc Parade</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><text stroke="none" class="t" x="250" y="24" text-anchor="middle">Parade (RGB)</text></g>
+<path d="M70 280 L430 280" stroke="#D3D1C7" stroke-width="1" fill="none"/>
+<g class="gy"><text stroke="none" class="s" x="62" y="284" text-anchor="end">0</text></g>
+<path d="M70 220 L430 220" stroke="#D3D1C7" stroke-width="1" fill="none"/>
+<g class="gy"><text stroke="none" class="s" x="62" y="224" text-anchor="end">256</text></g>
+<path d="M70 160 L430 160" stroke="#D3D1C7" stroke-width="1" fill="none"/>
+<g class="gy"><text stroke="none" class="s" x="62" y="164" text-anchor="end">512</text></g>
+<path d="M70 100 L430 100" stroke="#D3D1C7" stroke-width="1" fill="none"/>
+<g class="gy"><text stroke="none" class="s" x="62" y="104" text-anchor="end">768</text></g>
+<path d="M70 40 L430 40" stroke="#D3D1C7" stroke-width="1" fill="none"/>
+<g class="gy"><text stroke="none" class="s" x="62" y="44" text-anchor="end">1023</text></g>
+<rect x="80" y="74" width="100" height="192" rx="4" fill="#F4C7C0" stroke="#C0392B" stroke-width="1.5"/>
+<g class="gy"><text stroke="none" class="t" x="130" y="304" text-anchor="middle">R</text></g>
+<rect x="200" y="74" width="100" height="192" rx="4" fill="#CDEBD3" stroke="#2E8B57" stroke-width="1.5"/>
+<g class="gy"><text stroke="none" class="t" x="250" y="304" text-anchor="middle">G</text></g>
+<rect x="320" y="55" width="100" height="211" rx="4" fill="#C9D6F2" stroke="#3557B7" stroke-width="1.5"/>
+<g class="gy"><text stroke="none" class="t" x="370" y="304" text-anchor="middle">B</text></g>
+<path class="ar" d="M452 40 L436 40" marker-end="url(#a)"/>
+<g class="co"><text stroke="none" class="s" x="458" y="44">1023 = trần. Dẹt ở đây là cháy</text></g>
+<path class="ar" d="M452 55 L436 55" marker-end="url(#a)"/>
+<g class="pu"><text stroke="none" class="s" x="458" y="59">Đỉnh B cao hơn: vùng sáng ám xanh</text></g>
+<path class="ar" d="M452 170 L436 170" marker-end="url(#a)"/>
+<g class="gy"><text stroke="none" class="s" x="458" y="174">Giữa cột = trung gian, da người</text></g>
+<path class="ar" d="M452 266 L436 266" marker-end="url(#a)"/>
+<g class="tl"><text stroke="none" class="s" x="458" y="270">Chân bằng nhau: vùng tối trung tính</text></g>
+<path class="ar" d="M452 280 L436 280" marker-end="url(#a)"/>
+<g class="co"><text stroke="none" class="s" x="458" y="284">0 = sàn. Dẹt ở đây là chết đen</text></g>
+</svg>

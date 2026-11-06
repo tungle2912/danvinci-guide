@@ -236,7 +236,9 @@ Các kiểu wipe, iris, shape có thêm **Color** và **Border** (viền màu �
 | **Resolve FX Transitions** | **Burn Away** — phim cháy | Kiểu retro |
 | **User** | Preset bạn đã lưu | Kiểu riêng dùng lại |
 
-> **Smooth Cut** làm mờ cú giật khi cắt bỏ "ờ, à" giữa câu phỏng vấn. Để thật ngắn: 2–6 khung. Nó dựa trên **AI Speed Warp**, vốn thuộc nhóm tính năng `Studio` — thử trên bản free của bạn trước khi tính dùng.
+> **Smooth Cut** làm mờ cú giật khi cắt bỏ "ờ, à" giữa câu phỏng vấn. Để thật ngắn: **2–6 khung**, không để mặc định 1 giây. Hợp nhất với cảnh người ngồi yên, nền ít chuyển động.
+>
+> Trong Inspector có **Mode**: **Better** (mặc định, giữ được chuyển động) và **Faster** (hoà giữa hai ảnh tĩnh). Từ Resolve 20 nó dùng **AI Speed Warp** — nhóm tính năng thường là `Studio`. Bỏ tick **Speed Warp** trong Inspector để quay về cách optical flow cũ. Thử trên bản free của bạn trước khi tính dùng.
 
 > **Glitch** đẹp nhất khi chỉ dài vài khung.
 
@@ -416,7 +418,12 @@ Bấm icon **Curve** góc trên trái Keyframe Editor. Mỗi thông số có key
 
 Menu ⋯ có **Reverse Keyframes** (đảo thứ tự) và **Loop Type** (lặp lại chuyển động).
 
-**Ví dụ — chữ bật vào rồi khựng lại:** keyframe **Position X** hai điểm → chọn điểm sau → **Ease Out**. Kéo tay nắm cho đoạn cuối thật thoải.
+![Linear và Ease In and Out](../../assets/diagrams/edit-keyframe-ease.svg)
+*Cùng hai keyframe. Linear đi thẳng, tốc độ đều. Ease In and Out uốn thành chữ S: khởi động chậm, dừng chậm.*
+
+**Ví dụ — chữ trượt vào rồi dừng êm:** keyframe **Position X** hai điểm, từ `-1200` (ngoài khung trái) tới `0`, cách nhau 15 khung. Chọn cả hai điểm → **Ease In and Out**. Muốn chữ lao vào nhanh rồi phanh từ từ: chọn **điểm sau**, kéo tay nắm Bezier của nó dài ra cho đoạn cuối thật thoải.
+
+> **Lưu ý:** Ease In và Ease Out tác động vào phía nào của keyframe tuỳ bạn chọn điểm đầu hay điểm cuối. Không chắc thì dùng **Ease In and Out** cho cả hai điểm rồi nhìn đường cong — đoạn **nằm ngang** là đoạn chậm.
 
 ### Đường chuyển động trên Viewer
 

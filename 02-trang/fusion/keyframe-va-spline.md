@@ -156,11 +156,15 @@ Mở bằng nút **Spline** trên thanh trên cùng.
 | **Smooth** | `⇧S` | Cong mượt — chậm lại khi qua keyframe | ★★★ |
 | **Linear** | `⇧L` | Thẳng — chuyển động đều | ★★☆ |
 | **Invert** | — | Chỉ dùng cho đường LUT, không dùng cho hoạt ảnh | — |
-| **Step In** | — | Giữ giá trị, tới keyframe sau thì nhảy cóc | ★☆☆ |
-| **Step Out** | — | Nhảy cóc ngay tại keyframe | ★☆☆ |
-| **Reverse** | — | Đảo ngược thứ tự keyframe theo thời gian | ★☆☆ |
+| **Step In** | `I` | Giữ giá trị keyframe trước, tới keyframe sau thì nhảy cóc | ★☆☆ |
+| **Step Out** | `O` | Giữ giá trị của keyframe đang chọn tới sát keyframe sau rồi mới nhảy | ★☆☆ |
+| **Reverse** | `V` | Lật ngang một đoạn đường hoạt ảnh — chuyển động chạy ngược lại | ★☆☆ |
 
 **Cách làm nhanh:** chọn mọi điểm (kéo khung chọn), bấm `⇧S`. Xong.
+
+![Ba kiểu nội suy: Linear, Smooth, Step](../../assets/diagrams/fusion-ease-curves.svg)
+
+*Cùng hai keyframe, ba kiểu đường: Linear đi đều, Smooth chậm dần ở hai đầu, Step giữ nguyên rồi nhảy (sách hướng dẫn trang 1604–1605).*
 
 ### Chỉnh độ cong bằng tay nắm
 

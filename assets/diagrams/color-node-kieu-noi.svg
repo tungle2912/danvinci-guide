@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="424" viewBox="0 0 680 424" role="img"><title>Bốn kiểu nối node: Serial, Parallel, Layer, Outside</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><rect class="bx" x="16" y="24" width="130" height="52" rx="8"/><text stroke="none" class="t" x="81" y="46" text-anchor="middle">Serial ⌥S</text><text stroke="none" class="s" x="81" y="65" text-anchor="middle">Nối tiếp</text></g>
+<g class="tl"><rect class="bx" x="170" y="30" width="100" height="40" rx="8"/><text stroke="none" class="t" x="220.0" y="55.0" text-anchor="middle">01</text></g>
+<g class="tl"><rect class="bx" x="300" y="30" width="100" height="40" rx="8"/><text stroke="none" class="t" x="350.0" y="55.0" text-anchor="middle">02</text></g>
+<g class="tl"><rect class="bx" x="430" y="30" width="100" height="40" rx="8"/><text stroke="none" class="t" x="480.0" y="55.0" text-anchor="middle">03</text></g>
+<g class="gy"><rect class="bx" x="560" y="30" width="90" height="40" rx="8"/><text stroke="none" class="t" x="605.0" y="55.0" text-anchor="middle">Ra</text></g>
+<path class="ar" d="M270 50 L296 50" marker-end="url(#a)"/>
+<path class="ar" d="M400 50 L426 50" marker-end="url(#a)"/>
+<path class="ar" d="M530 50 L556 50" marker-end="url(#a)"/>
+<g class="gy"><rect class="bx" x="16" y="124" width="130" height="52" rx="8"/><text stroke="none" class="t" x="81" y="146" text-anchor="middle">Parallel ⌥P</text><text stroke="none" class="s" x="81" y="165" text-anchor="middle">Trộn đều</text></g>
+<g class="tl"><rect class="bx" x="170" y="130" width="100" height="40" rx="8"/><text stroke="none" class="t" x="220.0" y="155.0" text-anchor="middle">01</text></g>
+<g class="tl"><rect class="bx" x="300" y="104" width="100" height="36" rx="8"/><text stroke="none" class="t" x="350.0" y="127.0" text-anchor="middle">02</text></g>
+<g class="tl"><rect class="bx" x="300" y="160" width="100" height="36" rx="8"/><text stroke="none" class="t" x="350.0" y="183.0" text-anchor="middle">03</text></g>
+<g class="pu"><rect class="bx" x="430" y="125" width="130" height="50" rx="8"/><text stroke="none" class="t" x="495.0" y="147.0" text-anchor="middle">Parallel Mixer</text><text stroke="none" class="s" x="495.0" y="164.0" text-anchor="middle">cộng đều</text></g>
+<g class="gy"><rect class="bx" x="590" y="130" width="70" height="40" rx="8"/><text stroke="none" class="t" x="625.0" y="155.0" text-anchor="middle">Ra</text></g>
+<path class="ar" d="M270 150 L296 122" marker-end="url(#a)"/>
+<path class="ar" d="M270 150 L296 178" marker-end="url(#a)"/>
+<path class="ar" d="M400 122 L426 140" marker-end="url(#a)"/>
+<path class="ar" d="M400 178 L426 160" marker-end="url(#a)"/>
+<path class="ar" d="M560 150 L586 150" marker-end="url(#a)"/>
+<g class="gy"><rect class="bx" x="16" y="244" width="130" height="52" rx="8"/><text stroke="none" class="t" x="81" y="266" text-anchor="middle">Layer ⌥L</text><text stroke="none" class="s" x="81" y="285" text-anchor="middle">Lớp dưới thắng</text></g>
+<g class="tl"><rect class="bx" x="170" y="250" width="100" height="40" rx="8"/><text stroke="none" class="t" x="220.0" y="275.0" text-anchor="middle">01</text></g>
+<g class="tl"><rect class="bx" x="300" y="224" width="100" height="36" rx="8"/><text stroke="none" class="t" x="350.0" y="247.0" text-anchor="middle">02</text></g>
+<g class="co"><rect class="bx" x="300" y="280" width="100" height="36" rx="8"/><text stroke="none" class="t" x="350.0" y="303.0" text-anchor="middle">03 (dưới)</text></g>
+<g class="co"><rect class="bx" x="430" y="245" width="130" height="50" rx="8"/><text stroke="none" class="t" x="495.0" y="267.0" text-anchor="middle">Layer Mixer</text><text stroke="none" class="s" x="495.0" y="284.0" text-anchor="middle">input dưới thắng</text></g>
+<g class="gy"><rect class="bx" x="590" y="250" width="70" height="40" rx="8"/><text stroke="none" class="t" x="625.0" y="275.0" text-anchor="middle">Ra</text></g>
+<path class="ar" d="M270 270 L296 242" marker-end="url(#a)"/>
+<path class="ar" d="M270 270 L296 298" marker-end="url(#a)"/>
+<path class="ar" d="M400 242 L426 260" marker-end="url(#a)"/>
+<path class="ar" d="M400 298 L426 280" marker-end="url(#a)"/>
+<path class="ar" d="M560 270 L586 270" marker-end="url(#a)"/>
+<g class="gy"><rect class="bx" x="16" y="344" width="130" height="52" rx="8"/><text stroke="none" class="t" x="81" y="366" text-anchor="middle">Outside ⌥O</text><text stroke="none" class="s" x="81" y="385" text-anchor="middle">Vùng còn lại</text></g>
+<g class="tl"><rect class="bx" x="170" y="350" width="140" height="40" rx="8"/><text stroke="none" class="t" x="240.0" y="375.0" text-anchor="middle">01 Tách da</text></g>
+<g class="co"><rect class="bx" x="370" y="350" width="160" height="40" rx="8"/><text stroke="none" class="t" x="450.0" y="375.0" text-anchor="middle">02 Outside: nền</text></g>
+<g class="gy"><rect class="bx" x="590" y="350" width="70" height="40" rx="8"/><text stroke="none" class="t" x="625.0" y="375.0" text-anchor="middle">Ra</text></g>
+<path class="ar" d="M310 362 L366 362" marker-end="url(#a)"/>
+<path class="ar" d="M310 380 L366 380" marker-end="url(#a)" stroke-dasharray="4 3"/>
+<path class="ar" d="M530 370 L586 370" marker-end="url(#a)"/>
+<g class="gy"><text stroke="none" class="s" x="338" y="410" text-anchor="middle">nét đứt: key đảo ngược</text></g>
+</svg>

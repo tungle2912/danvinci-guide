@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="520" viewBox="0 0 680 520" role="img"><title>Trước và sau của bảy kiểu edit trên trang Cut</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><text class="t" x="16" y="24">Kiểu edit</text></g>
+<g class="gy"><text class="t" x="310" y="24" text-anchor="middle">Trước</text></g>
+<g class="gy"><text class="t" x="562" y="24" text-anchor="middle">Sau</text></g>
+<g class="gy"><text class="t" x="16" y="64">Smart Insert</text></g>
+<g class="gy"><text class="s" x="16" y="82">Chèn vào điểm cắt gần nhất</text></g>
+<g class="gy"><rect class="bx" x="200" y="70" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="228" y="85" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="256" y="70" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="284" y="85" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="312" y="70" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="340" y="85" text-anchor="middle">CC</text></g>
+<g class="gy"><rect class="bx" x="452" y="70" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="480" y="85" text-anchor="middle">AA</text></g>
+<g class="co"><rect class="bx" x="508" y="70" width="40" height="22" rx="3"/></g>
+<g class="co"><text class="s" x="528" y="85" text-anchor="middle">DD</text></g>
+<g class="gy"><rect class="bx" x="548" y="70" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="576" y="85" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="604" y="70" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="632" y="85" text-anchor="middle">CC</text></g>
+<g class="co"><rect class="bx" x="259" y="40" width="2" height="56" rx="0"/></g>
+<line class="ar" x1="426" y1="81" x2="446" y2="81" marker-end="url(#a)"/>
+<line x1="16" y1="100" x2="664" y2="100" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="128">Append</text></g>
+<g class="gy"><text class="s" x="16" y="146">Luôn nối vào cuối</text></g>
+<g class="gy"><rect class="bx" x="200" y="134" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="228" y="149" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="256" y="134" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="284" y="149" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="312" y="134" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="340" y="149" text-anchor="middle">CC</text></g>
+<g class="gy"><rect class="bx" x="452" y="134" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="480" y="149" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="508" y="134" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="536" y="149" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="564" y="134" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="592" y="149" text-anchor="middle">CC</text></g>
+<g class="co"><rect class="bx" x="620" y="134" width="40" height="22" rx="3"/></g>
+<g class="co"><text class="s" x="640" y="149" text-anchor="middle">DD</text></g>
+<g class="co"><rect class="bx" x="213" y="104" width="2" height="56" rx="0"/></g>
+<line class="ar" x1="426" y1="145" x2="446" y2="145" marker-end="url(#a)"/>
+<line x1="16" y1="164" x2="664" y2="164" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="192">Ripple Overwrite</text></g>
+<g class="gy"><text class="s" x="16" y="210">Thay clip, phần sau co lại</text></g>
+<g class="gy"><rect class="bx" x="200" y="198" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="228" y="213" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="256" y="198" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="284" y="213" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="312" y="198" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="340" y="213" text-anchor="middle">CC</text></g>
+<g class="gy"><rect class="bx" x="452" y="198" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="480" y="213" text-anchor="middle">AA</text></g>
+<g class="co"><rect class="bx" x="508" y="198" width="40" height="22" rx="3"/></g>
+<g class="co"><text class="s" x="528" y="213" text-anchor="middle">DD</text></g>
+<g class="gy"><rect class="bx" x="548" y="198" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="576" y="213" text-anchor="middle">CC</text></g>
+<g class="co"><rect class="bx" x="299" y="168" width="2" height="56" rx="0"/></g>
+<line class="ar" x1="426" y1="209" x2="446" y2="209" marker-end="url(#a)"/>
+<line x1="16" y1="228" x2="664" y2="228" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="256">Overwrite (F10)</text></g>
+<g class="gy"><text class="s" x="16" y="274">Ghi đè, độ dài giữ nguyên</text></g>
+<g class="gy"><rect class="bx" x="200" y="262" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="228" y="277" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="256" y="262" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="284" y="277" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="312" y="262" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="340" y="277" text-anchor="middle">CC</text></g>
+<g class="gy"><rect class="bx" x="452" y="262" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="480" y="277" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="508" y="262" width="8" height="22" rx="3"/></g>
+<g class="co"><rect class="bx" x="516" y="262" width="40" height="22" rx="3"/></g>
+<g class="co"><text class="s" x="536" y="277" text-anchor="middle">DD</text></g>
+<g class="gy"><rect class="bx" x="556" y="262" width="8" height="22" rx="3"/></g>
+<g class="gy"><rect class="bx" x="564" y="262" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="592" y="277" text-anchor="middle">CC</text></g>
+<g class="co"><rect class="bx" x="263" y="232" width="2" height="56" rx="0"/></g>
+<line class="ar" x1="426" y1="273" x2="446" y2="273" marker-end="url(#a)"/>
+<line x1="16" y1="292" x2="664" y2="292" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="320">Close Up</text></g>
+<g class="gy"><text class="s" x="16" y="338">Lên track trên, phóng ~150%</text></g>
+<g class="gy"><rect class="bx" x="200" y="326" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="228" y="341" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="256" y="326" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="284" y="341" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="312" y="326" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="340" y="341" text-anchor="middle">CC</text></g>
+<g class="gy"><rect class="bx" x="452" y="326" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="480" y="341" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="508" y="326" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="536" y="341" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="564" y="326" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="592" y="341" text-anchor="middle">CC</text></g>
+<g class="co"><rect class="bx" x="522" y="300" width="60" height="22" rx="3"/></g>
+<g class="co"><text class="s" x="552" y="315" text-anchor="middle">DD 150%</text></g>
+<g class="co"><rect class="bx" x="269" y="296" width="2" height="56" rx="0"/></g>
+<line class="ar" x1="426" y1="337" x2="446" y2="337" marker-end="url(#a)"/>
+<line x1="16" y1="356" x2="664" y2="356" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="384">Place On Top</text></g>
+<g class="gy"><text class="s" x="16" y="402">Lên track trống trên cùng</text></g>
+<g class="gy"><rect class="bx" x="200" y="390" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="228" y="405" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="256" y="390" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="284" y="405" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="312" y="390" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="340" y="405" text-anchor="middle">CC</text></g>
+<g class="gy"><rect class="bx" x="452" y="390" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="480" y="405" text-anchor="middle">AA</text></g>
+<g class="gy"><rect class="bx" x="508" y="390" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="536" y="405" text-anchor="middle">BB</text></g>
+<g class="gy"><rect class="bx" x="564" y="390" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="592" y="405" text-anchor="middle">CC</text></g>
+<g class="co"><rect class="bx" x="564" y="364" width="40" height="22" rx="3"/></g>
+<g class="co"><text class="s" x="584" y="379" text-anchor="middle">DD</text></g>
+<g class="co"><rect class="bx" x="314" y="360" width="2" height="56" rx="0"/></g>
+<line class="ar" x1="426" y1="401" x2="446" y2="401" marker-end="url(#a)"/>
+<line x1="16" y1="420" x2="664" y2="420" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="448">Source Overwrite</text></g>
+<g class="gy"><text class="s" x="16" y="466">Góc máy khác, khớp timecode</text></g>
+<g class="gy"><rect class="bx" x="200" y="454" width="168" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="284" y="469" text-anchor="middle">Máy A</text></g>
+<g class="gy"><rect class="bx" x="452" y="454" width="168" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="536" y="469" text-anchor="middle">Máy A</text></g>
+<g class="co"><rect class="bx" x="502" y="428" width="60" height="22" rx="3"/></g>
+<g class="co"><text class="s" x="532" y="443" text-anchor="middle">Máy B</text></g>
+<g class="pu"><rect class="bx" x="249" y="428" width="2" height="48" rx="0"/></g>
+<g class="pu"><text class="s" x="242" y="444" text-anchor="middle">I</text></g>
+<g class="pu"><rect class="bx" x="309" y="428" width="2" height="48" rx="0"/></g>
+<g class="pu"><text class="s" x="318" y="444" text-anchor="middle">O</text></g>
+<line class="ar" x1="426" y1="465" x2="446" y2="465" marker-end="url(#a)"/>
+<g class="gy"><text class="s" x="16" y="506">DD: clip mới đưa xuống · vạch cam: con trỏ · I, O: điểm vào/ra đặt trên timeline</text></g>
+</svg>

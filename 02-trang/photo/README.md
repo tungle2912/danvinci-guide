@@ -4,10 +4,13 @@
 
 ![Trang Photo trong Resolve 21 — chưa có album](../../assets/img/page-photo.png)
 
+*Trang Photo lúc mới mở, chưa có album nào.*
 
-Trang mới từ bản 21, nằm **thứ 2** trên dãy icon (icon máy ảnh).
+Trang mới từ bản 21, nằm **thứ 2** trên dãy nút chuyển trang ở đáy cửa sổ (icon máy ảnh), ngay sau Media.
 
 ![Bố cục trang Photo](../../assets/diagrams/photo-layout.svg)
+
+*Năm vùng chính: toolbar, Media Pool, Viewer, Inspector, dải Photo Album.*
 
 ## Khi nào dùng trang Photo
 
@@ -27,6 +30,10 @@ File ảnh gốc **không bao giờ bị đụng tới**. Mọi thay đổi lưu
 ### 2. Album là trung tâm
 
 **Photo Album** với trang Photo giống như **timeline** với trang Edit. Bạn đưa ảnh vào album rồi mới chỉnh, lọc, xuất.
+
+![Quy trình album: nạp, đưa vào album, chấm sao, lọc, chỉnh, version, xuất](../../assets/diagrams/photo-album-flow.svg)
+
+*Mọi việc ở trang Photo đi qua album: nạp → album → chấm sao → lọc → chỉnh → version → xuất.*
 
 Khác timeline ở chỗ: album **không có thứ tự trước sau**, **không có độ phân giải hay frame rate cố định** — mỗi ảnh giữ nguyên kích thước gốc.
 
@@ -54,10 +61,10 @@ Nếu một ảnh nằm trong hai album, chỉnh ở album này thì album kia *
 
 ## Ví dụ: chỉnh một ảnh RAW Canon từ đầu đến cuối
 
-Tình huống thực tế: bạn có file `IMG_7912.CR3` chụp ngoài trời, hơi tối, ám xanh.
+Tình huống thực tế: bạn có một file RAW Canon đuôi `.CR3` chụp ngoài trời, hơi tối, ám xanh. Chưa có ảnh RAW để tập thì tải một file CR3 mẫu miễn phí trên mạng.
 
-1. **Nạp:** mở trang Photo, nút **Import Media** trên đầu Media Pool, chọn file.
-2. **Tạo album:** chuột phải trong Media Pool → **New Photo Album**. Chuột phải ảnh → **Add Photo(s) to Album**.
+1. **Nạp:** mở trang Photo, bấm nút **Import Media** trên đầu Media Pool → **Import Media**, chọn file.
+2. **Tạo album:** chọn ảnh trong Media Pool → chuột phải → **Create New Photo Album Using Selected Clips...** → đặt tên → **Create**.
 3. **Mở Inspector:** nút **Inspector** góc trên phải → tab **RAW** (sáng lên vì đây là file RAW).
 4. **Cân bằng trắng:** **White Balance** → chọn **Daylight** (chụp ngoài trời nắng). Vẫn ám xanh thì kéo **Color Temp** lên thêm vài trăm Kelvin.
 5. **Phơi sáng:** **Exposure** từ `0` lên `+0.7`. Trời bị cháy thì kéo **Highlights** xuống `-40`. Vùng tối mất chi tiết thì kéo **Shadows** lên `+25`.
@@ -66,7 +73,9 @@ Tình huống thực tế: bạn có file `IMG_7912.CR3` chụp ngoài trời, h
 8. **Cắt khung:** nút **Tools** dưới đáy Viewer → **Crop** → **Aspect Ratio** chọn `4:5` (khung Instagram).
 9. **Xuất:** nút **Quick Export** trên toolbar → chọn **JPEG** → **Export**.
 
-Từ bước 3 tới 7 là toàn bộ việc cân bằng và chỉnh sáng — đều nằm trong một tab duy nhất.
+Từ bước 3 tới 7 là toàn bộ việc cân bằng và chỉnh sáng — đều nằm trong một tab duy nhất. Bấm `⇧D` để so với ảnh gốc bất cứ lúc nào.
+
+Các bước theo thứ tự, có checklist: [Luồng làm việc — chỉnh ảnh tĩnh và RAW](../../03-luong/chinh-anh.md).
 
 ## Các trang con
 

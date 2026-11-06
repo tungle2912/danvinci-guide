@@ -24,6 +24,35 @@ Bật cả hai: nút **Meters** góc trên phải.
 
 Con số −14 LUFS cho YouTube có trong manual. Hai mức lời và nhạc là điểm xuất phát hay dùng, không phải quy định — tai bạn quyết định cuối cùng.
 
+### Mức đích theo nền tảng
+
+`★★☆ Thường dùng`
+
+**Là gì:** mỗi nơi phát có một mức độ to đích, đo bằng số **Integrated** (độ to trung bình cả bài, đơn vị LUFS; LKFS là cùng một thứ, tên gọi khác). Bản mix to hơn đích thì nền tảng tự vặn nhỏ xuống; nhỏ hơn thì nghe yếu so với video khác.
+
+![Độ to đích theo nền tảng: YouTube, TikTok, Spotify −14, Apple Podcasts −16, EBU R128 −23, ATSC −24, Netflix −27 LUFS](../../assets/diagrams/fairlight-loudness-targets.svg)
+
+*Thanh càng dài, bản mix càng to. Video lên mạng xã hội nằm quanh −14; truyền hình và Netflix nhỏ hơn nhiều.*
+
+| Nơi phát | Integrated | Đỉnh (true peak) | Nguồn |
+|---|---|---|---|
+| **YouTube** | −14 LUFS | ≤ −1 dBTP | Manual trang 4140 (số −14) |
+| **TikTok, Reels, Shorts** | không công bố, dùng −14 như YouTube | ≤ −1 dBTP | Thói quen phổ biến |
+| **Spotify** (podcast, nhạc) | −14 LUFS | ≤ −1 dBTP | Tài liệu Spotify |
+| **Apple Podcasts** | −16 LUFS, ±1 | ≤ −1 dBTP | Tài liệu Apple |
+| **EBU R128** (TV châu Âu) | −23 LUFS — **mặc định của Resolve** | ≤ −1 dBTP | Manual trang 4135, 4140 |
+| **ATSC A/85** (TV Mỹ) | −24 LUFS | ≤ −2 dBTP | Có trong danh sách chuẩn của meter |
+| **Netflix** | −27 LUFS, ±2, đo theo lời thoại | ≤ −2 dBTP | Tài liệu Netflix |
+
+**Cách làm:**
+1. Chọn chuẩn đúng nơi phát trong menu **ba chấm** của Loudness meter — xem [Đặt chuẩn YouTube](#đặt-chuẩn-youtube).
+2. Phát cả video từ đầu, đọc số **Integrated**.
+3. Lệch quá 1 LU (1 đơn vị độ to, bằng 1 dB) so với đích thì chỉnh fader Bus 1 hoặc Input Level của Limiter, đo lại.
+
+**Ví dụ:** cùng một vlog, bản YouTube đo được −14,3 LUFS là đạt. Gửi bản đó cho đài truyền hình theo EBU R128 thì phải hạ khoảng 9 dB, xuống −23 LUFS.
+
+> **Lưu ý:** chỉ YouTube, EBU R128 và ATSC A/85 lấy từ manual. Số của Spotify, Apple Podcasts, Netflix lấy từ tài liệu của từng nền tảng và có thể đổi theo thời gian.
+
 ---
 
 ## Loudness meter — đo độ to cảm nhận
@@ -39,7 +68,7 @@ LUFS luôn là số âm: −14 to hơn −23.
 | Ô | Nghĩa | Dùng để |
 |---|---|---|
 | **M** (cột đồng hồ) | Độ to tức thời, khung 400 ms | Nhìn chỗ nào bỗng to vọt |
-| **Short** | Độ to trung bình gần đây | Theo dõi khi đang phát |
+| **Short** | Độ to trung bình khoảng 3 giây gần nhất | Theo dõi khi đang phát |
 | **Short Max** | Mức Short cao nhất | Soát đoạn to nhất |
 | **Range** | Chênh lệch giữa đoạn nhỏ và đoạn to | Bản mix có quá "nhấp nhô" không |
 | **Integrated** | Độ to **trung bình của cả phần đã phát** | **Con số chính** để so với chuẩn |
@@ -58,6 +87,10 @@ Mặc định meter đo theo chuẩn **−23 LUFS** (chuẩn phát sóng châu �
 
 **Đặt mức đích cho cả project:** **Project Settings → Fairlight → Audio Metering → Target Loudness level**. Mặc định −23 LUFS. Đặt −14 thì vạch "0" trên meter dời về −14 LUFS.
 
+Cùng chỗ đó có **Loudness Scale**: **EBU +9** (thang −18 đến +9, mặc định) hoặc **EBU +18** (−36 đến +18, nhìn được dải rộng hơn). Video thông thường giữ mặc định.
+
+> **Lưu ý:** đồng hồ của từng track mặc định đo **sau fader** — kéo fader xuống 10 dB thì đồng hồ cũng tụt 10 dB. Muốn thấy mức gốc của file, tick **Pre fader metering on tracks** ở cùng trang Audio Metering (manual trang 4139).
+
 ### Đo cả video
 
 Số **Integrated** chỉ tính **phần bạn đã phát**. Muốn đo cả video:
@@ -70,6 +103,19 @@ Số **Integrated** chỉ tính **phần bạn đã phát**. Muốn đo cả vid
 Bấm **Pause** để tạm dừng đo, bấm lại để đo tiếp.
 
 > **Lock Metering to Transport** (trong menu ba chấm): bật thì mỗi lần nhảy con trỏ sang chỗ khác, kết quả tự xoá. Tiện khi soát từng đoạn. Tắt đi khi muốn đo cộng dồn.
+
+### Xem đường độ to theo thời gian
+
+`★☆☆ Tình huống cụ thể`
+
+**Là gì:** **Loudness History** vẽ đường độ to của bus tổng ngay trên timeline, nhìn là biết đoạn nào to quá, nhỏ quá. Đường **Integrated** đổi màu xanh dương / vàng / đỏ giống ô số Integrated.
+
+**Cách làm** (manual trang 4138):
+1. Bấm nút **automation** trên thanh công cụ timeline.
+2. Mở **Index**, bấm **con mắt** cạnh bus chính để hiện bus đó thành một track trên timeline.
+3. Kéo track bus cao lên cho đủ chỗ. Ở đầu track, bật **Loudness History**, tick các đường muốn xem: **Integrated**, **Momentary**, **Short Term**.
+
+Chỉ bus chính đầu tiên (Bus 1, manual gọi là **Main 1**) có Loudness History.
 
 ### Đo nhanh không cần phát
 
@@ -112,6 +158,7 @@ Số **TP** trên đầu là **true peak** — đỉnh thật, tính cả đỉn
 | **Input Level** | Đẩy mức vào, −18 đến +18 dB. Nút **Soft** cho chặn mềm hơn |
 | **Ceiling** | Ngưỡng chặn. 0 dB là không chặn gì |
 | **Release** | Thôi chặn nhanh hay chậm, 0.01 đến 1000 ms |
+| **Sidechain** | Ô chọn nguồn cạnh **Listen**: cho track khác điều khiển việc chặn. Ít dùng, Ducker dễ hơn | 
 | **Reduction Meter** | Đang bị chặn bao nhiêu |
 
 > **Limiter không thay được việc cân mix.** Nếu Reduction Meter nhảy liên tục vài dB, bản mix đang quá to — hạ fader các track xuống thay vì để limiter ép.

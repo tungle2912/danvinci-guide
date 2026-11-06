@@ -88,11 +88,13 @@ Gõ thẳng vào ô là xong, không cần mở Metadata Editor. Cách bấm: **
 
 | Cột | Cho biết |
 |---|---|
-| **Usage** | Clip đang được dùng mấy lần trên timeline đang mở |
+| **Usage** | Clip đang được dùng mấy lần trên timeline đang mở. Cột **tự cập nhật**. Clip có một phần hình và một phần tiếng nối với nhau thì đếm là `2` |
 | **Synced Audio** | Tên file tiếng đã đồng bộ với clip hình |
 | **Proxy**, **Proxy Media Path** | Clip đã có proxy chưa, proxy nằm đâu |
 
-Muốn cột Usage đếm cho **mọi** timeline: menu ⋯ → **Update Usage for Entire Project**.
+Muốn cột Usage đếm cho **mọi** timeline: menu ⋯ → **Update Usage for Entire Project**. Resolve có thể hỏi để mở hết các timeline ra đếm. Project nhiều timeline thì chờ một lúc.
+
+**Ví dụ:** trước khi giao project demo, bật cột **Usage**, bấm **Update Usage for Entire Project**, rồi sắp theo cột này. Clip nào hiện `0` là clip chưa dùng ở timeline nào.
 
 ### Metadata view
 
@@ -206,7 +208,7 @@ File máy quay tên `C0042.MP4` rất khó nhớ. Đặt **Clip Name** dễ đ�
 | Cách | Làm thế nào |
 |---|---|
 | Thumbnail view | Bấm tên clip, chờ một nhịp, bấm lần nữa, gõ tên mới, `Return` |
-| List view | Gõ vào cột **Clip Name** |
+| List view | Bấm vào cột **Clip Name** của clip rồi gõ tên mới từ đầu. Giữ `⌥` bấm vào ô đó thì được sửa tiếp từ tên file sẵn có |
 | Nhiều clip một lúc | Chọn các clip → chuột phải → **Clip Attributes** → tab **Name** |
 
 Đổi qua lại giữa tên file và tên clip: **View → Show File Names**.
@@ -223,7 +225,9 @@ File máy quay tên `C0042.MP4` rất khó nhớ. Đặt **Clip Name** dễ đ�
 - Chuột phải clip → **Duplicate Clip**
 - Giữ `⌥` kéo clip sang bin khác
 
-**Nhân bản timeline** — chọn timeline → **Edit → Duplicate Timeline**.
+**Nhân bản timeline** — chọn timeline trong Media Pool → **Edit → Duplicate Timeline**. Đang đứng ở timeline thì bấm `⌘4` để timeline nhận phím, rồi chọn cùng lệnh đó.
+
+> **Lưu ý:** kéo một clip từ timeline thả ngược vào Media Pool cũng tạo ra một clip nhân bản, không phải chuyển clip gốc.
 
 **Dùng khi:** trước khi sửa lớn một bản dựng, nhân bản timeline để giữ bản cũ. Đặt tên `Vlog - v1`, `Vlog - v2`.
 
@@ -236,7 +240,7 @@ File máy quay tên `C0042.MP4` rất khó nhớ. Đặt **Clip Name** dễ đ�
 Không cần kéo từng clip xuống timeline.
 
 1. (Tuỳ chọn) Đặt `I` `O` cho từng clip. Sắp clip theo đúng thứ tự muốn ghép.
-2. Chọn các clip → chuột phải → **Create Timeline Using Selected Clips**.
+2. Chọn các clip → chuột phải → **Create New Timeline Using Selected Clips…**.
    Hoặc chuột phải **bin** → **Create Timeline Using Bin** để lấy cả bin.
 3. Đặt tên. Tick **Use Selected Mark In/Out** nếu muốn dùng điểm `I` `O` đã đặt.
 4. Bấm **Create New Timeline**.
@@ -251,18 +255,25 @@ Chuột phải một clip (hoặc nhóm clip đã chọn) trong Media Pool. Nh�
 
 | Lệnh | Làm gì | Mức |
 |---|---|---|
-| **Clip Attributes** | Sửa fps, tiếng, timecode, tên — xem [Clip Attributes](clip-attributes.md) | ★★☆ |
-| **Create Timeline Using Selected Clips** | Ghép clip đã chọn thành timeline mới | ★★☆ |
-| **Generate Optimized Media** | Tạo bản nhẹ để dựng mượt — xem [Proxy và Optimized](nap-media.md#proxy-và-optimized-media) | ★★☆ |
-| **Generate Proxy Media** | Tạo proxy | ★★☆ |
-| **Relink Selected Clips** | Nối lại clip bị offline | ★★☆ |
-| **Change Source Folder** | Nối lại khi cả thư mục bị dời đi | ★☆☆ |
-| **Set Poster Frame** | Đổi ảnh đại diện (`⌘P`) | ★☆☆ |
+| **Create New Timeline Using Selected Clips** | Ghép clip đã chọn thành timeline mới | ★★☆ |
+| **Create New Multicam Clip Using Selected Clips** | Gộp nhiều góc máy thành một clip multicam | ★☆☆ |
+| **Clip Operations → Create Bin with Selected Clips** | Gom clip đã chọn vào bin mới | ★★☆ |
+| **Clip Operations → Replace Selected Clip** | Trỏ clip sang một file khác | ★☆☆ |
+| **Clip Operations → Relink Selected Clips** | Nối lại clip bị offline | ★★☆ |
+| **Clip Operations → Change Source Folder** | Nối lại khi cả thư mục bị dời đi | ★☆☆ |
+| **Clip Operations → Set Poster Frame** | Đổi ảnh đại diện (`⌘P`); **Clear Poster Frame** (`⌥P`) trả về như cũ | ★☆☆ |
 | **Duplicate Clip** | Nhân bản clip | ★☆☆ |
-| **Create Bin With Selected Clips** | Gom clip đã chọn vào bin mới | ★★☆ |
-| **Remove Selected Clips** | Bỏ clip khỏi project (không xoá file) | ★★☆ |
+| **Remove Selected Clip** | Bỏ clip khỏi project, không xoá file (`⇧⌫`) | ★★☆ |
+| **Proxy Media → Generate Proxy Media** | Tạo proxy. Cùng menu con: **Relink Proxy Media**, **Link Full Resolution Media** | ★★☆ |
+| **Generate Optimized Media** | Tạo bản nhẹ để dựng mượt — xem [Proxy và Optimized](nap-media.md#proxy-và-optimized-media) | ★★☆ |
+| **Audio Sync** | Khớp tiếng thu rời với hình — xem [Nạp media](nap-media.md) | ★★☆ |
 | **Reveal in Finder** | Mở thư mục chứa file | ★★☆ |
-| **AI Tools** | Transcription, Audio Classification, Slate, phân tích người | `Studio` |
+| **Clip Attributes** | Sửa fps, tiếng, timecode, tên — xem [Clip Attributes](clip-attributes.md) | ★★☆ |
+| **AI Tools** (Analyze clips for people, Transcription, Audio Classification, Slate) | Nhận diện người, chép lời, phân loại tiếng, đọc clapper. Ở bản free mục này mờ | `Studio` |
+| **Relink Clips for Selected Bin** | Chuột phải **bin**: nối lại mọi clip offline của bin đó | ★☆☆ |
+
+![Menu chuột phải của clip, mở menu con Clip Operations](../../assets/img/media-pool-clip-right-click.png)
+*Resolve 21.0.4: Relink, Change Source Folder và Poster Frame nằm trong Clip Operations; proxy nằm trong Proxy Media.*
 
 ---
 

@@ -21,6 +21,10 @@ Mặc định trang Fairlight có **ba vùng lớn**: **Meters** (dải đồng 
 | **Sound Library** | Tìm, nghe thử và kéo tiếng động từ thư viện âm thanh vào timeline | ★☆☆ |
 | **ADR** | Bảng thu thoại lại theo danh sách câu: List, Record, Setup | ★☆☆ |
 
+![Panel Effects mở bên trái trang Fairlight](../../assets/img/fairlight-effects.png)
+
+*Bấm **Effects** để mở kho hiệu ứng: Fairlight FX nằm trong nhóm Audio FX.*
+
 **Dùng khi:** muốn làm sạch giọng → bấm **Effects**, kéo **Noise Reduction** thả lên clip hoặc đầu track. Xem [Làm sạch giọng](lam-sach-giong.md).
 
 > **Sound Library:** từ bảng này tải được bộ **Fairlight sound library** miễn phí, hơn 500 tiếng động (bước chân, va chạm, tiếng môi trường).
@@ -49,6 +53,8 @@ Từ trái sang phải:
 | **Viewer** | Hình tại vị trí con trỏ, để mix khớp hình |
 
 Màu trên đồng hồ: **xanh lá** thấp đến vừa, **vàng** khá cao, **đỏ** rất cao.
+
+Đồng hồ từng track mặc định đo **sau fader**: kéo fader xuống thì đồng hồ tụt theo. Đổi ở **Project Settings → Fairlight → Audio Metering → Pre fader metering on tracks** (manual trang 4139).
 
 Chuột phải vào vùng đồng hồ để chọn hiển thị **một hàng hay hai hàng**, **cột hẹp hay rộng** — tiện khi có nhiều track.
 

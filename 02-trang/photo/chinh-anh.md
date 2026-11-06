@@ -14,6 +14,10 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 | **Effects** | Thông số hiệu ứng đã áp | Chỉ khi ảnh có hiệu ứng |
 | **File** | Thông tin, metadata | Mọi ảnh |
 
+![Mỗi loại chỉnh nằm ở đâu: tab RAW, tab Photo, Tools](../../assets/diagrams/photo-where-adjust.svg)
+
+*Cùng một việc có thể có ở hai chỗ. Ảnh RAW: sáng và màu ở tab RAW trước. Crop, xoay: tab Photo bằng số hoặc Tools bằng tay.*
+
 ---
 
 ## Cân bằng trắng chỉnh ở đâu?
@@ -37,9 +41,9 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 
 | Thanh | Làm gì | Đặt gì |
 |---|---|---|
-| **Decode Quality** | Giải mã ảnh ở độ phân giải Full, Half, Quarter | Máy yếu thì để **Half** khi chỉnh. Xuất luôn dùng chất lượng thật |
-| **Color Space** | Không gian màu để chỉnh và xuất | Để mặc định trừ khi bạn biết mình đang làm gì |
-| **Gamma** | Đường cong gamma | Như trên |
+| **Decode Quality** | Giải mã ảnh ở độ phân giải **Full**, **Half**, **Quarter**, hoặc **Project Settings** (theo cài đặt chung của project) | Máy yếu thì để **Half** khi chỉnh, đổi về **Full** trước khi xuất |
+| **Color Space** | Không gian màu để chỉnh và xuất | Manual khuyên chọn không gian màu của hãng máy, hoặc một chuẩn video như Rec.709 nếu ảnh sẽ vào video |
+| **Gamma** | Đường cong gamma | Của hãng máy, hoặc chuẩn video — chọn cùng nhóm với Color Space |
 
 ### Nhóm 2 — Cân bằng trắng
 
@@ -72,7 +76,7 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 | **Exposure** | Phơi sáng, tính theo **stop** | −5 tới +5 | 0 |
 | **Highlights** | Kéo **xuống** để cứu vùng sáng bị cháy | −100 tới +100 | 0 |
 | **Shadows** | Kéo **lên** để lấy lại chi tiết vùng tối | −100 tới +100 | 0 |
-| **Lift** | Điểm đen. Kéo lên làm vùng tối xám đi, kéo xuống làm đen sâu hơn | −100 tới +100 | 0 |
+| **Lift** | Điểm đen. Kéo lên làm vùng tối xám đi, kéo xuống làm đen sâu hơn | −100 tới +100 | — |
 | **Gain** | Điểm trắng. Kéo lên làm vùng sáng sáng hơn | −100 tới +100 | 0 |
 | **Contrast** | Tương phản. Kéo lên thì tối tối hơn, sáng sáng hơn, trung gian giữ nguyên | −100 tới +100 | 0 |
 
@@ -103,6 +107,20 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 
 Cân bằng trắng **trước** phơi sáng, vì ảnh ám màu sẽ đánh lừa mắt khi đánh giá độ sáng.
 
+**Ví dụ — ảnh CR3 chụp ngược sáng, mặt người tối, trời cháy:**
+
+| Thanh | Đặt |
+|---|---|
+| **White Balance** | `Daylight` |
+| **Exposure** | `+0.5` |
+| **Highlights** | `−60` |
+| **Shadows** | `+35` |
+| **Contrast** | `+10` |
+| **Color Boost** | `+15` |
+| **Midtone Detail** | `+8` |
+
+Bấm `⇧D` để so với ảnh gốc. Thấy da bị xám thì giảm **Shadows** lại một chút.
+
 ### Reset riêng tab RAW
 
 Menu **ba chấm** góc trên phải Inspector → **Reset Camera Raw**.
@@ -123,6 +141,11 @@ Tab này có bốn nhóm: **Source Transform · Source Cropping · Looks · Adju
 
 **Dùng khi:** không biết bắt đầu từ đâu. Bấm Auto Balance, xem kết quả, rồi chỉnh tiếp bằng tay. Thường là điểm khởi đầu tốt hơn ảnh gốc.
 
+**Cách làm:**
+1. Chọn ảnh trong album. **Inspector → tab Photo**.
+2. Cuộn xuống mục **Adjustments** → bấm **Auto Balance**.
+3. Bấm `⇧D` vài lần để so với ảnh gốc. Không ưng thì `⌘R` để bỏ (Inspector đang được chọn).
+
 ### Các thanh trong Adjustments
 
 | Thanh | Kéo sang phải | Kéo sang trái | Mặc định |
@@ -135,12 +158,20 @@ Tab này có bốn nhóm: **Source Transform · Source Cropping · Looks · Adju
 | **Contrast** | Tương phản tăng quanh điểm Pivot | Tương phản giảm | — |
 | **Pivot** | Dời tâm tương phản lên vùng sáng | Dời tâm xuống vùng tối | — |
 | **Midtone Details** | Nét hơn ở vùng nhiều chi tiết | Mềm vùng ít chi tiết — mịn da | 0 |
-| **Shadows** | Lấy lại chi tiết vùng tối | Vùng tối tối hơn | 0 |
-| **Highlights** | Vùng sáng sáng hơn | Cứu vùng cháy | 0 |
+| **Shadows** | Lấy lại chi tiết vùng tối | Vùng tối tối hơn | — |
+| **Highlights** | Vùng sáng sáng hơn | Cứu vùng cháy | — |
 | **Saturation** | Đậm hơn (100 = gấp đôi) | Nhạt hơn (0 = đen trắng) | **50** |
 | **Hue** | Xoay mọi màu theo vòng màu | Xoay ngược | **50** |
 
 > **Bẫy hay gặp:** **Saturation** ở tab Photo **mặc định là 50**, không phải 0. Muốn ảnh đen trắng thì kéo về **0**. Còn Saturation ở tab RAW mặc định là 0 và chạy từ −100. Hai thanh cùng tên nhưng thang khác nhau.
+
+**Ví dụ — ảnh JPG chụp trong nhà, ám vàng, hơi bệt:**
+
+1. **Auto Balance**.
+2. **Temp** kéo sang trái (âm) đến khi tường trắng hết vàng.
+3. **Contrast** kéo nhẹ sang phải. Ảnh tối thì hạ **Pivot** trước.
+4. **Saturation** từ `50` lên `55` — tăng nhẹ, không quá tay.
+5. `⇧D` so với gốc.
 
 ### Pivot dùng khi nào
 
@@ -151,13 +182,15 @@ Tab này có bốn nhóm: **Source Transform · Source Cropping · Looks · Adju
 
 Mục **Looks → Type**: chọn một tông màu preset từ danh sách. Để **Default (Original)** là không dùng.
 
-Chọn look xong vẫn chỉnh tiếp được bằng các thanh Adjustments.
+Chọn look xong vẫn chỉnh tiếp được bằng các thanh Adjustments. Muốn dùng tông màu **của riêng bạn**, áp một LUT thay vì Look — xem [Lưu tông màu thành LUT](#lưu-tông-màu-thành-lut).
 
 ### Source Transform
 
-Zoom, Position, Rotation, Pitch, Yaw, Flip — giống hệt [Transform ở trang Cut](../cut/tools.md#transform--phóng-to-dời-xoay).
+**Zoom X/Y**, **Position X/Y**, **Rotation Angle**, **Pitch**, **Yaw**, **Flip** — cùng các thông số với [Transform trên Viewer](#transform) bên dưới, chỉ khác là gõ số.
 
-**Dùng nhiều nhất:** **Rotation Angle** để chỉnh đường chân trời bị nghiêng. Phím tắt xoay 90°: `⌘[` / `⌘]`.
+**Dùng nhiều nhất:** **Rotation Angle** để chỉnh đường chân trời bị nghiêng, ví dụ `−1.5`. Phím tắt xoay 90°: `⌘[` / `⌘]`.
+
+> **Mẹo:** xoay xong mép ảnh lộ góc trống. Tăng **Zoom** một chút (ví dụ `1.03`) hoặc crop lại để che.
 
 ### Source Cropping
 
@@ -177,6 +210,8 @@ Crop bằng số ở đây, hoặc kéo trực tiếp bằng [Tools → Crop](#c
 
 ## Tools — chỉnh trực tiếp trên Viewer
 
+`★★★ Hằng ngày`
+
 Bấm **Tools** ở **góc dưới trái Viewer**. Ba nhóm hiện ra: **Transform · Crop · Looks**, cộng **Effects Overlay**.
 
 Mỗi nhóm có nút **Toggle** ngoài cùng trái (bật/tắt không mất chỉnh sửa) và **Reset** ngoài cùng phải.
@@ -194,7 +229,19 @@ Mỗi nhóm có nút **Toggle** ngoài cùng trái (bật/tắt không mất ch�
 | Cạnh | Kéo giãn một chiều |
 | Tay nắm giữa | Xoay |
 
-Nút **Zoom Link** (ổ khoá): bật để phóng to giữ đúng tỉ lệ ảnh.
+Các ô số trên thanh Transform:
+
+| Ô | Làm gì |
+|---|---|
+| **Zoom Width / Height** | Phóng to, thu nhỏ theo chiều ngang / dọc |
+| **Zoom Link** (ổ khoá) | Bật để phóng to giữ đúng tỉ lệ ảnh. Tắt để kéo giãn một chiều |
+| **Position X / Y** | Dời ảnh sang ngang / lên xuống |
+| **Rotation Angle** | Xoay quanh tâm |
+| **Pitch** | Nghiêng ảnh ra sau hoặc tới trước theo trục ngang — số dương đẩy mép trên ra xa |
+| **Yaw** | Xoay ảnh theo trục dọc — số dương kéo mép trái lại gần |
+| **Flip** | Hai nút: lật ngang, lật dọc |
+
+**Ví dụ:** ảnh tòa nhà chụp ngửa lên, cạnh tường chụm vào nhau. Kéo **Pitch** từng chút một và quan sát đến khi cạnh tường thẳng lại. Bật [đường gióng](giao-dien.md#đường-gióng-và-thước-đo) dọc để so.
 
 ### Crop
 
@@ -204,7 +251,14 @@ Nút **Zoom Link** (ổ khoá): bật để phóng to giữ đúng tỉ lệ ả
 |---|---|
 | **Aspect Ratio** | Chọn tỉ lệ có sẵn hoặc tự đặt. Mặc định **As Shot** |
 | **Lock Aspect Ratio** (ổ khoá) | Khoá tỉ lệ khi kéo crop. Mở khoá để crop tự do |
+| **Crop Left / Right / Top / Bottom** | Số pixel cắt mỗi cạnh |
 | Tay nắm mỗi cạnh trên Viewer | Kéo để cắt cạnh đó |
+
+**Cách làm — crop 4:5 cho Instagram:**
+1. Bấm **Tools** → **Crop**.
+2. **Aspect Ratio** → `4:5`. Bật ổ khoá **Lock Aspect Ratio**.
+3. Kéo góc khung để chọn vùng, kéo trong khung để dời.
+4. Đóng thanh **Tools** — crop mới áp vào ảnh.
 
 **Tỉ lệ hay dùng:**
 
@@ -222,6 +276,18 @@ Nút **Zoom Link** (ổ khoá): bật để phóng to giữ đúng tỉ lệ ả
 |---|---|
 | **Auto Balance** | Tự cân bằng — giống nút trong tab Photo |
 | **Look Selector** | Chọn tông màu preset |
+
+Look chọn ở đây và ở **tab Photo → Looks** là một. Muốn tông màu riêng của bạn thì áp LUT.
+
+### Effects Overlay
+
+`★☆☆ Tình huống cụ thể`
+
+Hiệu ứng nào có điều khiển kéo trên Viewer (như điểm tâm, vùng tác động) thì điều khiển đó nằm ở đây.
+
+1. Áp hiệu ứng — xem [Hiệu ứng ảnh](hieu-ung.md). Thường hiệu ứng tự bật chế độ này.
+2. Nếu chưa thấy điều khiển: bấm **Tools** → icon **Effects Overlay** → **Open FX Overlay** (hiệu ứng Resolve FX) hoặc **Fusion Overlay** (hiệu ứng Fusion).
+3. Kéo điều khiển trên Viewer. Bấm ``⇧` `` để tạm ẩn/hiện điều khiển khi muốn nhìn ảnh sạch.
 
 ---
 
@@ -242,14 +308,20 @@ Xong. Lưu ý:
 
 1. Chọn ảnh đã chỉnh → `⌘C`.
 2. Chọn các ảnh muốn nhận.
-3. `⌥V` (hoặc chuột phải → **Paste Attributes**).
-4. Tick những thứ muốn dán → **Apply**.
+3. **Edit → Paste Attributes** (`⌥V`), hoặc chuột phải một ảnh đã chọn → **Paste Attributes**.
+4. Trên đầu cửa sổ ghi tên ảnh nguồn và các ảnh nhận — kiểm tra lại. Tick những thứ muốn dán → **Apply**.
 
-Muốn dán cả **hiệu ứng**: tick ô **Plugins** trong mục Photo Attributes.
+Muốn dán cả **hiệu ứng**: tick ô **Plugins** trong mục **Photo Attributes**.
+
+**Ví dụ:** 40 ảnh chụp cùng ánh sáng. Chỉnh xong ảnh đầu, `⌘C`. Lọc album **Rating ≥ 4**, chọn hết (`⌘A`), `⌥V` → tick mọi mục trừ phần crop → **Apply**. Mỗi ảnh vẫn giữ crop riêng.
+
+> **Lỗi hay gặp:** click chuột giữa sang ảnh JPG từ ảnh CR3 — phần tab RAW không đi theo vì khác loại file. Ảnh JPG chỉ nhận phần tab Photo.
 
 ### Gỡ bớt chỉnh sửa
 
-Chọn ảnh → chuột phải → **Remove Attributes** → tick thứ muốn gỡ → **Apply**.
+1. Chọn một hoặc nhiều ảnh.
+2. **Edit → Remove Attributes**, hoặc chuột phải → **Remove Attributes**.
+3. Chỉ các ô có thứ để gỡ mới bật. Tick thứ muốn gỡ → **Apply**.
 
 ---
 
@@ -259,10 +331,13 @@ Chọn ảnh → chuột phải → **Remove Attributes** → tick thứ muốn 
 
 **Dùng khi:** chỉnh được một tông ảnh ưng ý, muốn áp đúng tông đó cho **video** hoặc cho project khác.
 
+**LUT là gì:** một file bảng tra màu (đuôi `.cube`), mang tông màu từ ảnh này sang ảnh, video khác.
+
 **Tạo LUT:**
 1. Chuột phải ảnh trong album → **Generate LUT**.
-2. Chọn **33 Point Cube** — loại tương thích rộng nhất.
-3. Nạp lại LUT đó vào Resolve để dùng.
+2. Chọn **33 Point Cube** — loại tương thích rộng nhất. Các lựa chọn khác: **17 Point Cube** (nhẹ, thô hơn), **65 Point Cube** (mịn hơn, file to), **Panasonic VLUT** (cho máy Panasonic VariCam).
+3. Đặt tên, lưu vào thư mục mặc định `Library/Application Support/Blackmagic Design/DaVinci Resolve/LUT/` → **Save**.
+4. Nạp lại LUT vào Resolve: **Project Settings → Color Management → Lookup Tables → Update Lists**. Xem [Cài LUT mua/tải về](../color/lut-va-quan-ly-mau.md#cài-lut-muatải-về).
 
 > Chỉ thiết lập ở **tab Photo** được lưu vào LUT. Thiết lập **tab RAW** và **hiệu ứng** thì **không**.
 

@@ -85,7 +85,7 @@ Làm đúng comp như ảnh đầu trang: chữ **PHO MAI & RAU CU** trượt t�
 
 > Vì sao bỏ chọn trước? Khi đang chọn một node, node mới sẽ tự **nối ngay sau** node đó. Muốn node đứng riêng thì bỏ chọn trước.
 
-**3. Ghép chữ lên video.** Kéo từ **ô vuông output** của Text1 thả lên **ô vuông output** của MediaIn1. Fusion tự tạo **Merge1**: video vào đầu vào Background (đường vàng), chữ vào Foreground (đường xanh lá).
+**3. Ghép chữ lên video.** Kéo từ **ô vuông output** của Text1 thả lên **ô vuông output** của MediaIn1. Fusion tự tạo **Merge1**: video vào đầu vào Background (tam giác vàng), chữ vào Foreground (tam giác xanh lá).
 
 **4. Xem kết quả.** Chọn **MediaOut1**, bấm `2` để xem ở Viewer phải. Chọn **Text1**, bấm `1` để xem riêng chữ ở Viewer trái.
 
@@ -93,7 +93,7 @@ Làm đúng comp như ảnh đầu trang: chữ **PHO MAI & RAU CU** trượt t�
 
 **6. Đặt tên node cho dễ nhớ.** Bấm vào thanh tên **Text1** ở đầu Inspector, bấm `F2`, gõ `TieuDe`, Enter.
 
-**7. Keyframe điểm cuối.** Kéo con trỏ tới **khung 30** (1 giây ở 30 fps). Sang tab **Layout**, bấm nút **keyframe** (hình thoi xám) bên phải **Center**. Nút chuyển màu cam — đã có keyframe ở vị trí chữ nằm giữa.
+**7. Keyframe điểm cuối.** Kéo con trỏ tới **khung 30** (1,2 giây ở timeline 25 fps của project mẫu, tròn 1 giây nếu timeline 30 fps). Sang tab **Layout**, bấm nút **keyframe** (hình thoi xám) bên phải **Center**. Nút chuyển màu cam — đã có keyframe ở vị trí chữ nằm giữa.
 
 **8. Keyframe điểm đầu.** Kéo con trỏ về **khung 0**. Kéo **Center X** xuống khoảng `-0.5` để chữ ra ngoài mép trái. Keyframe thứ hai tự được tạo.
 

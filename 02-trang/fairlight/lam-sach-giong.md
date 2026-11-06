@@ -24,16 +24,47 @@ Clip có hiệu ứng hiện một **huy hiệu nhỏ** bên trái tên clip.
 
 > **Đặt Noise Reduction lên đầu chuỗi.** Manual khuyên khử ồn trước tiên, để các bước sau (nén, EQ) không làm to tiếng ồn lên trước khi nó bị lọc.
 
+## Thứ tự gắn hiệu ứng cho giọng
+
+`★★☆ Thường dùng`
+
+**Là gì:** một chuỗi xử lý giọng từ đầu tới cuối, mỗi bước một việc. Bước sau nhận tiếng đã qua bước trước, nên thứ tự quyết định kết quả.
+
+**Dùng khi:** giọng thu bằng mic rời hoặc mic máy quay, cần sạch và rõ trước khi trộn với nhạc.
+
+![Chuỗi xử lý giọng: Dialogue Leveler, Noise Reduction, De-Esser, Compressor, EQ, Limiter kèm giá trị khởi đầu](../../assets/diagrams/fairlight-voice-chain.svg)
+
+*Sáu bước trên track lời, theo đúng thứ tự tiếng chạy trong cột Mixer. Giá trị chỉ là điểm xuất phát.*
+
+**Cách làm:**
+1. Mở **Mixer**. Ở cột track lời, bật **Dialogue Leveler** trong **Track FX** — xem [Dialogue Leveler](mixer-va-track-fx.md#dialogue-leveler--giọng-đều-không-cần-chỉnh-tay).
+2. Bấm **+** ở mục **Effects**, gắn **Noise Reduction** vào ô đầu tiên.
+3. Bấm **+** lần nữa, gắn **De-Esser** vào ô thứ hai.
+4. Bấm đúp ô **Dynamics**, bật **Compressor**.
+5. Bấm đúp ô **EQ**, đặt Hi-Pass và hai dải Bell.
+6. Ở cột **Bus 1**, gắn **Limiter** — xem [Limiter trên Bus](loudness-va-xuat.md#limiter-trên-bus--chặn-trần).
+
+Thứ tự mặc định trong cột là **FX → DY → EQ** (Effects, Dynamics, EQ). Nút **Order** trong cột đổi được thứ tự này, ví dụ đưa EQ lên trước Dynamics. Trong mục Effects, kéo tên hiệu ứng lên xuống để đổi thứ tự giữa các ô.
+
+**Ví dụ:** giọng A1 thu bằng mic cài áo trong phòng có điều hoà. Bật Dialogue Leveler, Noise Reduction preset **De-Hiss** ở Dry/Wet 80%, De-Esser quanh 6 kHz, Compressor Ratio 3:1, EQ Hi-Pass 80 Hz. Nghe lại: nếu giọng bị "ống", hạ Dry/Wet của Noise Reduction trước khi đụng tới bước khác.
+
+> **Lưu ý:** không phải giọng nào cũng cần đủ sáu bước. Giọng thu sạch thì bỏ Noise Reduction và De-Esser. Mỗi bước thêm vào là thêm một chỗ có thể làm hỏng tiếng.
+
 ### Nút chung của mọi Fairlight FX
 
 Trên đầu bảng chỉnh của hiệu ứng nào cũng có:
 
 | Nút | Làm gì |
 |---|---|
-| **Preset** | Chọn cài đặt có sẵn, hoặc bấm **+** để lưu cài đặt của bạn |
-| **A / B** | Lưu hai cách chỉnh, bấm qua lại để so cái nào nghe hay hơn |
-| **Reset** | Về mặc định |
-| **Bypass** | Tắt tạm hiệu ứng để nghe bản gốc |
+| **Preset** | Ô xổ chọn cài đặt có sẵn. Nút **+** (**Add Preset**) lưu cài đặt của bạn. Hai nút mũi tên chuyển sang preset trước, sau |
+| **A / B** | Lưu hai cách chỉnh, bấm qua lại để so cái nào nghe hay hơn. Nút **mũi tên** giữa A và B chép cách chỉnh bên này sang bên kia |
+| **Reset** | Đưa mọi thông số của hiệu ứng về mặc định |
+
+Bật **Automation** thì góc trên phải bảng chỉnh có thêm nút automation cho hiệu ứng đó.
+
+**Bypass** (tắt tạm hiệu ứng để nghe bản gốc) không nằm trong nhóm nút chung: mỗi hiệu ứng có ô **Bypass** riêng trong bảng chỉnh. Trong Mixer, rê chuột lên tên hiệu ứng để hiện nút bật/tắt.
+
+> **Mẹo:** giữ `⌥` hoặc `⇧` rồi kéo trong ô số để chỉnh mịn từng chút (manual trang 4090).
 
 Nhiều hiệu ứng có ô **Listen to … Only** — chỉ nghe **phần đang bị bỏ đi**. Nghe thấy cả tiếng nói trong đó là đang lọc quá tay.
 
@@ -68,12 +99,16 @@ Nhiều hiệu ứng có ô **Listen to … Only** — chỉ nghe **phần đang
 3. Tick **Listen to Noise Only**, phát thử. Nghe thấy tiếng nói lẫn trong đó là đang lọc quá tay.
 4. Bỏ tick, chỉnh tiếp:
 
-| Thanh | Làm gì |
-|---|---|
-| **Threshold** | Bản thu càng ồn so với giọng thì càng cần tăng |
-| **Sensitivity** | Tăng là lọc mạnh hơn, nhưng dễ ăn vào giọng |
-| **Dry/Wet** | Tỷ lệ bản gốc và bản đã lọc. 100% là chỉ còn bản đã lọc |
-| **Level** | Bù lại mức to bị hụt sau khi lọc, từ −6 đến +18 dB |
+| Thanh | Làm gì | Mức |
+|---|---|---|
+| **Threshold** | Bản thu càng ồn so với giọng thì càng cần tăng | ★★☆ |
+| **Sensitivity** | Tăng là lọc mạnh hơn, nhưng dễ ăn vào giọng | ★★☆ |
+| **Dry/Wet** | Tỷ lệ bản gốc và bản đã lọc. 0 là chỉ bản gốc, 100% là chỉ còn bản đã lọc | ★★☆ |
+| **Level** | Bù lại mức to bị hụt sau khi lọc, từ −6 đến +18 dB | ★★☆ |
+| **Attack** | Tốc độ cập nhật "hồ sơ ồn". Thấp hợp ồn thay đổi nhanh, cao hợp ồn đều. Có tác dụng chủ yếu ở chế độ tự nhận giọng (Auto Speech) | ★☆☆ |
+| **Ratio** | Tốc độ bám giọng so với bám ồn. Nhanh hơn giữ được phụ âm bật (t, k) tốt hơn | ★☆☆ |
+| **Frequency Smoothing** | Làm mượt tiếng "lạo xạo kim loại" còn sót sau khi lọc | ★☆☆ |
+| **Time Smoothing** | Nút bật làm mượt thêm theo thời gian | ★☆☆ |
 
 **Mẹo:** nghe hai đồng hồ hai bên đồ thị — bên trái mức vào, bên phải mức ra. Chênh nhau nhiều là đang mất nhiều tín hiệu.
 
@@ -93,7 +128,15 @@ Nhiều hiệu ứng có ô **Listen to … Only** — chỉ nghe **phần đang
 | **Mục EQ trong cột Mixer** (bấm đúp) | Cả track | 6 |
 | Fairlight FX **Fairlight EQ** | Clip hoặc track | 6 |
 
-Mỗi dải có loại lọc (**Bell**, **Lo-Shelf**, **Hi-Shelf**, **Notch**; dải ngoài cùng có thêm **Hi-Pass** / **Lo-Pass**), **Frequency**, **Gain**, và **Q** (độ rộng dải — chỉ có khi chọn Bell).
+Mỗi dải có **Frequency**, **Gain** và loại lọc. **Q** (độ rộng dải) chỉ có khi chọn **Bell**. Với EQ 6 dải (manual trang 4108–4109):
+
+| Dải | Loại lọc chọn được |
+|---|---|
+| **1** (trái cùng) | **Lo-Shelf**, **Notch**, **Hi-Shelf**, **Hi-Pass** |
+| **2–5** | **Lo-Shelf**, **Bell**, **Notch**, **Hi-Shelf** |
+| **6** (phải cùng) | **Lo-Pass**, **Bell**, **Notch**, **Hi-Shelf** |
+
+**Notch** cắt hẳn một dải hẹp nên thanh **Gain** không có tác dụng. **Hi-Pass** (lọc thông cao) giữ phần cao, cắt phần thấp hơn tần số đặt.
 
 **Cách làm cho giọng nói** — chỉnh ít thôi, mỗi lần 2–3 dB:
 
@@ -225,6 +268,8 @@ Manual gợi ý **Ratio 2.5:1 đến 3:1** cho lời thoại.
 | **Expander** | −35 dB | 1.4 ms | 93 ms |
 | **Gate** | — | 1.4 ms | 93 ms (Range mặc định 18 dB) |
 
+**Ratio** của Expander từ 1:1.1 đến 1:3.0, mặc định 1:1.1 (manual trang 4019). Gate hạ phần dưới ngưỡng tối đa bằng **Range** (mặc định 18 dB).
+
 Chặn trần cho cả bản mix thì dùng Fairlight FX **Limiter** trên Bus — xem [Limiter trên Bus](loudness-va-xuat.md#limiter-trên-bus--chặn-trần).
 
 ---
@@ -236,6 +281,7 @@ Chặn trần cho cả bản mix thì dùng Fairlight FX **Limiter** trên Bus �
 | **Reverb** | Thêm tiếng vang không gian. Có preset Cathedral, Concert Hall, Studio | ★☆☆ |
 | **Chain FX** | Ghép tối đa 6 hiệu ứng thành một chuỗi, lưu thành preset | ★☆☆ |
 | **Multiband Compressor** | Nén riêng từng dải tần | ★☆☆ |
+| **Soft Clipper** | Hạ đỉnh vượt ngưỡng theo kiểu "bo tròn", nghe ấm hơn Limiter | ★☆☆ |
 | **Meter** | Một đồng hồ to cho riêng một track hoặc bus | ★☆☆ |
 | **Pitch** | Đổi cao độ | ★☆☆ |
 | **Delay**, **Echo**, **Chorus**, **Flanger**, **Distortion** | Hiệu ứng sáng tạo | ★☆☆ |

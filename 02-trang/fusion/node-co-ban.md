@@ -62,9 +62,13 @@ Hầu hết node có một đầu vào chính và một đầu vào **Effect Mas
 
 *Ảnh chụp thật trong Resolve 21: video vào mũi tên **vàng** bên trái (Background), chữ `TieuDe` vào mũi tên **xanh lá** phía trên (Foreground), mũi tên **xanh dương** phía dưới để cắm mask.*
 
-> Manual có chỗ gọi đầu vào Background của Merge là *orange*. Trên màn hình bản 21 nó hiện **vàng** — cùng màu với đầu vào Background của Tracker.
+> Manual (trang 1449) gọi đầu vào Background của Merge là *orange*. Trên màn hình bản 21 nó hiện **vàng** — cùng màu với đầu vào Background của Tracker.
 
 Rê chuột lên một node: mọi đường nối của nó sáng lên **theo màu đầu vào** mà chúng cắm vào. Nhìn vậy là biết ngay hình nào đang là lớp trên, lớp dưới.
+
+![Luồng node từ MediaIn qua Merge tới MediaOut](../../assets/diagrams/fusion-node-flow.svg)
+
+*Một comp chữ đơn giản: video vào Background, chữ qua Transform vào Foreground, mask elip vào Effect Mask để giới hạn vùng hiện chữ. Kết quả của Merge1 đi tới MediaOut1 để trả về timeline.*
 
 ---
 

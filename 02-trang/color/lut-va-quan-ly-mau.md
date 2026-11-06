@@ -23,6 +23,9 @@ Hai loại hay gặp:
 | **LUT kỹ thuật** (chuyển đổi) | Đưa footage LOG về Rec.709. Hãng máy quay phát hành | **Đầu chuỗi** — xem [Đặt CST ở node nào](../../03-luong/log-sang-rec709.md#đặt-cst-ở-node-nào) |
 | **LUT sáng tạo** (look) | Tạo tông màu: phim, teal-orange, đen trắng… | **Sau khi đã cân bằng** — node 05 Look trong [chuỗi 6 node](node.md#chuỗi-6-node-cơ-bản) |
 
+![Sơ đồ chuỗi node: LUT kỹ thuật ở đầu, LUT sáng tạo sau khi cân bằng; trong một node, LUT áp cuối cùng](../../assets/diagrams/color-lut-vi-tri.svg)
+*Hai loại LUT, hai chỗ đặt. Trong từng node, LUT luôn là bước **cuối**.*
+
 > Quy tắc "không đặt LUT ở node 01" trong trang [Node](node.md#bốn-nguyên-tắc) là nói về **LUT sáng tạo**. LUT look được thiết kế cho ảnh **đã chuẩn** — đặt trước khi cân bằng thì ra màu sai.
 
 **Định dạng Resolve đọc được:** `.cube` (1D, 3D, shaper), Panasonic VLUT, CLF, DCTL.
@@ -87,9 +90,19 @@ Thư mục mặc định trên macOS: `Library/Application Support/Blackmagic De
 
 ### Xuất grade thành LUT
 
-Chuột phải clip trên dải clip → **Generate LUT** → **33 Point Cube**.
+`★☆☆ Tình huống cụ thể`
 
-Chỉ gồm chỉnh ở **Color Wheels**, **Custom Curves** và vài Resolve FX (CST, ACES Transform, Gamut Mapping). Qualifier, Window, Blur bị **bỏ qua**.
+1. Chuột phải clip trên dải clip (thumbnail) → **Generate LUT** → chọn một trong bốn:
+   - **Generate 3D LUT (17 Point Cube)** — file nhỏ nhất, kém mịn nhất.
+   - **Generate 3D LUT (33 Point Cube)** — cân bằng giữa cỡ file và độ mịn. **Chọn cái này nếu không chắc**.
+   - **Generate 3D LUT (65 Point Cube)** — mịn nhất, file lớn nhất. Hỏi trước xem thiết bị nhận có đọc được không.
+   - **Generate 3D LUT (Panasonic VLUT)** — cho máy Panasonic VariCam.
+2. Chọn nơi lưu. Để thư mục mặc định thì LUT hiện ngay trong LUT Browser.
+3. Gõ tên → **Save**.
+
+Chỉ gồm chỉnh ở **Primaries**, **Custom Curves** và vài Resolve FX (**Color Space Transform**, **ACES Transform**, **Gamut Mapping**). Các node được **gộp lại** thành một LUT.
+
+> **Lỗi hay gặp:** node nào có **Qualifier**, **Window**, Blur/làm nét hay hiệu ứng không hợp lệ thì bị bỏ qua **cả node** — kể cả chỉnh Primaries trong node đó. Muốn xuất LUT thì để look ở node **không** có Window, Qualifier.
 
 **Dùng khi:** muốn mang look sang máy quay để xem lúc quay, hoặc dùng ở phần mềm khác.
 
@@ -144,6 +157,11 @@ Sửa Shared Node ở một clip → **mọi clip dùng nó đổi theo**.
 ## Color Management của project
 
 `★★☆` · **Project Settings** (`⇧9`) → **Color Management** → **Color science**.
+
+**Là gì:** bạn khai báo footage quay ở chuẩn nào và muốn xuất ra chuẩn nào. Resolve tự chuyển màu ở hai đầu, bạn chỉ việc chỉnh ở giữa. Manual gọi chế độ này là **RCM** (Resolve Color Management).
+
+![Sơ đồ bốn bước: Input Color Space của clip, Timeline Color Space nơi chỉnh màu, Output Color Space, rồi xem và xuất](../../assets/diagrams/color-rcm-pipeline.svg)
+*Màu đi qua ba không gian. Chuyển vào timeline không mất dữ liệu; chuyển ra Output thì phần vượt bị cắt.*
 
 ### Bốn lựa chọn Color science
 

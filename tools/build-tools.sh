@@ -5,4 +5,5 @@ DIR=${0:A:h}
 mkdir -p /tmp/wl
 swiftc -O "$DIR/winlist.swift" -o /tmp/wl/winlist
 swiftc -O "$DIR/click.swift" -o /tmp/wl/click
-echo "ok: /tmp/wl/winlist /tmp/wl/click"
+swiftc -O "$DIR/drag.swift" -o /tmp/wl/drag
+echo "ok: /tmp/wl/winlist /tmp/wl/click /tmp/wl/drag"

@@ -57,6 +57,9 @@ Con số −14 LUFS cho YouTube có trong manual. Hai mức lời và nhạc là
 
 ## Loudness meter — đo độ to cảm nhận
 
+![Loudness meter sau khi phát hết timeline](../../assets/img/fairlight-loudness-meter.png)
+*Integrated −13,0 màu đỏ: to hơn chuẩn YouTube −14. TP +1,2 đỏ ở Control Room báo đỉnh vượt 0 dB, cần hạ bớt hoặc thêm Limiter.*
+
 `★★★ Hằng ngày`
 
 **Là gì:** đồng hồ ngoài cùng bên phải của dải Meters. Không đo đỉnh sóng mà đo **độ to tai người cảm nhận**, theo đơn vị LUFS. Đây là thứ YouTube, Netflix, đài truyền hình dùng để quy định độ to.
@@ -70,17 +73,17 @@ LUFS luôn là số âm: −14 to hơn −23.
 | **M** (cột đồng hồ) | Độ to tức thời, khung 400 ms | Nhìn chỗ nào bỗng to vọt |
 | **Short** | Độ to trung bình khoảng 3 giây gần nhất | Theo dõi khi đang phát |
 | **Short Max** | Mức Short cao nhất | Soát đoạn to nhất |
-| **Range** | Chênh lệch giữa đoạn nhỏ và đoạn to | Bản mix có quá "nhấp nhô" không |
+| **Range (LU)** | Chênh lệch giữa đoạn nhỏ và đoạn to | Bản mix có quá "nhấp nhô" không |
 | **Integrated** | Độ to **trung bình của cả phần đã phát** | **Con số chính** để so với chuẩn |
 
 Màu của số **Integrated**: **xanh dương** là nhỏ hơn chuẩn, **vàng** là trong chuẩn, **đỏ** là to hơn chuẩn.
 
 ### Đặt chuẩn YouTube
 
-Mặc định meter đo theo chuẩn **−23 LUFS** (chuẩn phát sóng châu Âu). Làm video cho YouTube thì đổi:
+Mặc định meter đo theo **BS.1770-1**, tiêu đề hiện `BS.1770-1 (LU)`. Làm video cho YouTube thì đổi:
 
 1. Bấm menu **ba chấm** góc trên phải Loudness meter.
-2. Chọn **YouTube** trong danh sách chuẩn. Danh sách còn có **EBU R128**, **ATSC A/85**, **NETFLIX**...
+2. Chọn **YOUTUBE**. Tiêu đề đổi thành `YOUTUBE (LUFS)`, vạch −14 nằm giữa thang. Danh sách còn có **BS.1770-4**, **ATSC A/85**, **EBU R128**, **NETFLIX**, **DISNEY 2.0**, **Apple ASAF**...
 3. Tick **Absolute Scale** để meter hiện số LUFS thật (−14) thay vì số tương đối (0).
 
 > **Tương đối và tuyệt đối:** mặc định meter hiện **thang tương đối** — số **0** nghĩa là "đúng chuẩn đang chọn". Bật **Absolute Scale** thì thấy luôn số LUFS.
@@ -96,7 +99,7 @@ Cùng chỗ đó có **Loudness Scale**: **EBU +9** (thang −18 đến +9, mặ
 Số **Integrated** chỉ tính **phần bạn đã phát**. Muốn đo cả video:
 
 1. Đưa con trỏ về đầu timeline.
-2. Bấm **Reset** dưới Loudness meter.
+2. Bấm **Reset** dưới Loudness meter. Nút bên trái đổi thành **Start**: bấm **Start** để bắt đầu đo.
 3. Phát từ đầu đến cuối, không tua.
 4. Đọc số **Integrated** lúc kết thúc.
 

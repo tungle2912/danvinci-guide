@@ -272,6 +272,9 @@ Mũi tên bên cạnh mỗi nút: chọn màu, hoặc xoá hết cờ/marker c�
 
 ### Nút ở đầu mỗi track — từ trái sang phải
 
+![Đầu track trang Edit, ô xanh nguồn và ô đỏ đích](../../assets/img/edit-track-header.png)
+*Ô đỏ A2 đang tối nên lệnh cắt, xoá bỏ qua track nhạc.*
+
 | Nút | Có ở | Làm gì | Mức |
 |---|---|---|---|
 | **Dải màu** sát mép trái | Mọi track | Màu track. Chuột phải → **Change Track Color** | ★☆☆ |

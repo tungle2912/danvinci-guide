@@ -65,6 +65,9 @@ Ba điều nên nhớ (manual trang 4011):
 
 ### Các mục trong cột
 
+![Một cột kênh trong Mixer Fairlight](../../assets/img/fairlight-mixer-strip.png)
+*Đọc từ trên xuống: tiếng đi qua các mục theo đúng thứ tự này rồi mới tới fader.*
+
 Từ trên xuống:
 
 | Mục | Làm gì | Mức |
@@ -112,10 +115,12 @@ Nằm ở mục **Track FX** của từng cột trong Mixer. Cũng chỉnh đư�
 | **Dialogue Separator** | Chỉnh riêng giọng, nền, tiếng vang phòng | `Studio` |
 | **Music Remixer** | Tách nhạc thành giọng hát, trống, bass, guitar, còn lại | `Studio` |
 
-Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
+Bản Free mặc định chỉ hiện ô **Dial Lev**. Ba mục Studio nằm mờ trong danh sách.
+
+**Bật, tắt và mở bảng:** bấm thẳng vào ô là bật/tắt (chữ vàng = đang bật, chữ nghiêng xám = tắt). Rê chuột lên ô sẽ hiện hai nút: **chấm đỏ** bật/tắt và **icon thanh trượt** mở bảng chỉnh.
 
 - Không thấy mục Track FX: menu **ba chấm** góc trên phải Mixer → tick **Track FX**.
-- Không thấy Ducker: menu ba chấm → **Visible Track FX** → tick **Ducker**.
+- Không thấy Ducker: menu ba chấm → **Visible Track FX** → tick **Ducker**. Ô **Ducker** hiện ngay dưới **Dial Lev**.
 
 ---
 
@@ -129,7 +134,7 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 
 **Cách làm:**
 1. Normalize các clip lời trước — manual khuyên làm vậy để có mức nền tốt.
-2. Ở cột track lời, mục **Track FX**, bấm vào ô **Dial Lev** để mở bảng.
+2. Ở cột track lời, mục **Track FX**, rê chuột lên ô **Dial Lev** → bấm **icon thanh trượt** để mở bảng.
 3. Bật plugin, chọn preset, tick các tuỳ chọn:
 
 | Mục | Đặt |
@@ -150,6 +155,9 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 
 ## Ducker — nhạc tự nhỏ khi có lời
 
+![Bảng Ducker trên track nhạc](../../assets/img/fairlight-ducker.png)
+*Ducker bật ở A2 (chữ vàng), Source là Giong noi. Đồ thị cho thấy nhạc bị hạ mỗi lần có lời.*
+
 `★★★ Hằng ngày`
 
 **Là gì:** gắn vào **track nhạc**, chọn **track lời** làm nguồn. Mỗi khi có người nói, nhạc tự nhỏ xuống; im lặng thì nhạc to lại. Không nén tiếng.
@@ -163,13 +171,13 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 
 | Thanh | Làm gì | Mặc định | Gợi ý |
 |---|---|---|---|
-| **Duck Amount** | Nhạc nhỏ đi bao nhiêu dB | 2.7 dB | **2–5 dB** là hợp đa số trường hợp |
+| **Duck Level** | Nhạc nhỏ đi bao nhiêu dB | 2.7 dB | **2–5 dB** là hợp đa số trường hợp |
 | **Lookahead** | Bắt đầu nhỏ đi **trước** khi có lời | 15 ms | Giữ mặc định |
 | **Rise Time** | Nhỏ đi nhanh cỡ nào | 10 ms | Giữ mặc định |
 | **Hold** | Giữ ở mức nhỏ bao lâu | 150 ms | Tăng nếu nhạc to lên giữa các từ |
-| **Recovery Time** | To trở lại chậm cỡ nào | 750 ms | Chỉnh thử — quyết định độ tự nhiên |
+| **Recovery** | To trở lại chậm cỡ nào | 750 ms | Chỉnh thử — quyết định độ tự nhiên |
 
-![Ducker: nhạc ở A2 tự nhỏ khi có lời ở A1, kèm Lookahead, Duck Amount, Hold, Recovery Time](../../assets/diagrams/fairlight-ducker-timeline.svg)
+![Ducker: nhạc ở A2 tự nhỏ khi có lời ở A1, kèm Lookahead, Duck Level, Hold, Recovery](../../assets/diagrams/fairlight-ducker-timeline.svg)
 
 *Đường tím là mức nhạc: hạ xuống ngay trước lời, giữ thêm 150 ms rồi to dần lại trong 750 ms.*
 
@@ -177,7 +185,7 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 
 Đồ thị trong bảng Ducker: đường **xám** là tín hiệu nguồn, đường **vàng** là mức nhạc. Chỗ đường vàng trũng xuống là chỗ nhạc đang bị hạ.
 
-**Ví dụ:** vlog có lời ở A1, nhạc ở A2. Bật Ducker ở A2, Source chọn A1, Duck Amount 4 dB. Nghe thấy nhạc "nhảy" lên ở mỗi chỗ ngắt câu ngắn → tăng **Hold** lên khoảng 300 ms.
+**Ví dụ:** vlog có lời ở A1, nhạc ở A2. Bật Ducker ở A2, Source chọn A1, Duck Level 4 dB. Nghe thấy nhạc "nhảy" lên ở mỗi chỗ ngắt câu ngắn → tăng **Hold** lên khoảng 300 ms.
 
 > **Cách khác:** Compressor trong Dynamics và Fairlight FX **Limiter** đều có mục **Sidechain** để làm việc tương tự. Ducker là cách dễ nhất.
 

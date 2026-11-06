@@ -20,6 +20,9 @@ Hai cách xuất: **Quick Export** (nhanh, đủ dùng) và **trang Deliver** (�
 
 ## Quick Export
 
+![Quick Export riêng cho ảnh tĩnh](../../assets/img/photo-quick-export.png)
+*Chọn định dạng bên trái, đặt Scale, Quality, Resolution bên phải, rồi Export. Mặc định là PNG, Quality JPEG mặc định 80 %.*
+
 `★★★ Hằng ngày`
 
 Nút **Quick Export** trên toolbar trang Photo. Cửa sổ này **dành riêng cho ảnh tĩnh**, khác với Quick Export của video.
@@ -81,15 +84,17 @@ Các ô hiện ra tuỳ định dạng bạn chọn — không phải định d�
 
 ### Mục Photo
 
+![Mục Photo trong Render Settings](../../assets/img/photo-deliver-photo-section.png)
+*JPEG, Long Side 2048 px, Compression 90 %: bộ ảnh gửi khách qua mạng.*
+
 | Ô | Làm gì | Đặt gì |
 |---|---|---|
 | **Format** | **HEIF**, **JPEG**, **PNG**, **TIFF** | Như bảng [Định dạng](#định-dạng) ở trên. HEIF ở đây là HEIC ở Quick Export |
-| **Bit Depth** | Độ sâu màu | 8-bit cho JPEG, 16-bit cho TIFF |
+| **Bit Depth** | Độ sâu màu | Không hiện với JPEG (luôn 8-bit). 16-bit cho TIFF |
 | **Include Alpha Channel** | Giữ nền trong suốt | Chỉ khi định dạng hỗ trợ (PNG, TIFF) |
 | **Size** | Cỡ ảnh | Xem [Định cỡ ảnh](#định-cỡ-ảnh--mục-size) |
 | **Resolution** | Mật độ điểm, đơn vị **ppi** hoặc **ppcm** (điểm mỗi cm) | `72` ppi cho web · `300` ppi cho in |
-| **Quality** | Chất lượng nén | Web khoảng 85–90% |
-| **Compression** | Mức hoặc kiểu nén | Tuỳ định dạng |
+| **Quality** | Hai lựa chọn: **Automatic** (chọn mức Best, High…) hoặc **Compression** (tự gõ %, mặc định 80) | Web: chọn **Compression** `85`–`90` % |
 | **Include Metadata** | Giữ vị trí, thông số ống kính… | Bỏ tick khi đăng công khai |
 
 ### Đặt tên file tự động

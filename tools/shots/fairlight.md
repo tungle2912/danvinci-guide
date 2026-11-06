@@ -31,7 +31,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-fairlight.png` (toàn cửa
 - **Chuẩn bị:** ở cột A2 "Nhac nen", bấm ô **Ducker** trong Track FX. Bật plugin, chọn nguồn điều khiển là A1 "Giong noi". Phát một đoạn có lời để thấy mức nhạc bị kéo xuống.
 - **Khung chụp:** chỉ một vùng — cửa sổ Ducker, kèm cột A2 trong Mixer nếu vừa khung.
 - **Cần thấy rõ trong ảnh:** ô chọn nguồn (A1), các núm mức giảm, Attack, Release, đồng hồ cho thấy nhạc đang bị hạ.
-- **Alt + chú thích:** `![Bảng Ducker trên track nhạc](../../assets/img/fairlight-ducker.png)` — *Ducker gắn ở track nhạc, nghe track lời để biết lúc nào cần hạ nhạc.*
+- **Alt + chú thích:** `![Bảng Ducker trên track nhạc](../../assets/img/fairlight-ducker.png)` — *Ducker bật ở A2 (chữ vàng), Source là Giong noi. Đồ thị cho thấy nhạc bị hạ mỗi lần có lời.*
 
 ### FAI-04 — `fairlight-normalize-dialog.png`
 - **Ưu tiên:** P2
@@ -67,7 +67,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-fairlight.png` (toàn cửa
 - **Chuẩn bị:** ở cột A1, nhấp đúp ô **EQ** trong Mixer. Bật band thấp kiểu High Pass khoảng 80 Hz, cắt nhẹ một band quanh 300 Hz, nâng nhẹ một band quanh 4 kHz.
 - **Khung chụp:** chỉ một vùng — cửa sổ EQ của track.
 - **Cần thấy rõ trong ảnh:** đường cong EQ với ba điểm vừa chỉnh, dãy band bên dưới có ô kiểu band, tần số, gain, Q.
-- **Alt + chú thích:** `![EQ cho giọng nói với ba thao tác](../../assets/img/fairlight-eq-voice.png)` — *Cắt dưới 80 Hz, bớt đục quanh 300 Hz, nâng rõ quanh 4 kHz.*
+- **Alt + chú thích:** `![EQ cho giọng nói với ba thao tác](../../assets/img/fairlight-eq-voice.png)` — *Band 1 Hi-Pass 80 Hz, Band 3 −3 dB ở 300 Hz, Band 4 +3 dB ở 4 kHz.*
 
 ### FAI-08 — `fairlight-de-esser.png`
 - **Ưu tiên:** P3
@@ -94,7 +94,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-fairlight.png` (toàn cửa
 - **Chuẩn bị:** đặt chuẩn loudness là YouTube (−14). Phát cả timeline từ đầu tới cuối để ô Integrated có số.
 - **Khung chụp:** chỉ một vùng — đồng hồ Loudness ngoài cùng bên phải dải Meters, kèm đồng hồ Control Room cạnh nó.
 - **Cần thấy rõ trong ảnh:** cột M, các ô Short, Short Max, Range, Integrated có số và màu; đồng hồ Control Room màu vàng.
-- **Alt + chú thích:** `![Loudness meter sau khi phát hết timeline](../../assets/img/fairlight-loudness-meter.png)` — *Integrated là con số chính để so với chuẩn của nền tảng.*
+- **Alt + chú thích:** `![Loudness meter sau khi phát hết timeline](../../assets/img/fairlight-loudness-meter.png)` — *Integrated −13,0 màu đỏ: to hơn chuẩn YouTube −14. TP +1,2 đỏ ở Control Room báo đỉnh vượt 0 dB, cần hạ bớt hoặc thêm Limiter.*
 
 ### FAI-11 — `fairlight-loudness-options.png`
 - **Ưu tiên:** P2

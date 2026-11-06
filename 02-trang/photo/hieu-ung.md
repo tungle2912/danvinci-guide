@@ -8,6 +8,9 @@ Trang Photo chỉ hiện **một nhóm hiệu ứng đã chọn lọc** cho ản
 
 ## Xem trước, áp, chỉnh
 
+![Effects Library trang Photo, xem trước Vignette](../../assets/img/photo-effects-library.png)
+*Gõ tên vào ô Search, rê chuột lên thumbnail là Viewer xem trước, chưa cần áp thật.*
+
 ### Xem trước
 
 Rê chuột ngang qua thumbnail hiệu ứng — Viewer hiện ngay kết quả trên ảnh đang chọn với thông số mặc định. Không cần áp thật.

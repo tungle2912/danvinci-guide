@@ -57,7 +57,7 @@ Ví dụ thực tế: vlog 5 phút, lời nói ở track A1, nhạc nền ở tr
 3. **Làm giọng đều:** bấm nút **Mixer** góc trên phải. Ở cột A1, mục **Track FX**, bật **Dialogue Leveler**, tick **Lift Soft Dialogue**.
 4. **Làm sạch nếu cần:** nghe thấy tiếng quạt → kéo **Noise Reduction** từ panel **Effects** thả lên đầu track A1. Xem [Làm sạch giọng](lam-sach-giong.md).
 5. **EQ giọng:** bấm đúp ô **EQ** ở cột A1. Cắt dưới 80 Hz, nâng nhẹ quanh 3–5 kHz.
-6. **Nhạc tự nhỏ:** ở cột A2, bật **Ducker**, **Source** chọn track Giọng. Để **Duck Amount** khoảng 3–5 dB.
+6. **Nhạc tự nhỏ:** ở cột A2, bật **Ducker**, **Source** chọn track Giọng. Để **Duck Level** khoảng 3–5 dB.
 7. **Cân hai fader:** phát thử, kéo fader A2 xuống tới khi nhạc nằm dưới lời. Đừng đụng fader A1 nhiều.
 8. **Chặn trần:** ở cột **Bus 1** (cột cuối Mixer), bấm **+** ở mục **Effects** → chọn **Limiter**, đặt **Ceiling** −1 dB.
 9. **Đo độ to:** bấm **Meters**, đặt Loudness meter về chuẩn **YouTube**, phát cả video. Số **Integrated** nên quanh −14 LUFS. Xem [Loudness và xuất](loudness-va-xuat.md).

@@ -38,7 +38,7 @@ Timeline mới nằm trong **bin đang chọn**. Nên có một bin riêng tên 
 
 **Là gì:** mỗi timeline có thể có độ phân giải, frame rate riêng, khác cài đặt chung của project.
 
-**Mở:** chuột phải timeline trong Media Pool → **Timelines → Timeline Settings** → bỏ tick **Use Project Settings**.
+**Mở:** chuột phải timeline trong Media Pool → **Timelines → Timeline Settings** → bỏ tick **Use project settings** (góc dưới trái).
 
 **Làm timeline dọc 9:16:** trong tab Format, chọn độ phân giải rồi tick **Use vertical resolution** — Resolve đảo chiều ngang và dọc. Hoặc gõ thẳng `1080 × 1920`.
 

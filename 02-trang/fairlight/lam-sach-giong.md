@@ -118,6 +118,9 @@ Nhiều hiệu ứng có ô **Listen to … Only** — chỉ nghe **phần đang
 
 ## EQ — 3 thao tác cho giọng nói
 
+![EQ cho giọng nói với ba thao tác](../../assets/img/fairlight-eq-voice.png)
+*Band 1 Hi-Pass 80 Hz, Band 3 −3 dB ở 300 Hz, Band 4 +3 dB ở 4 kHz.*
+
 `★★☆ Thường dùng`
 
 **Là gì:** tăng giảm từng dải tần. Có ba chỗ chỉnh EQ:
@@ -140,11 +143,11 @@ Mỗi dải có **Frequency**, **Gain** và loại lọc. **Q** (độ rộng d�
 
 **Cách làm cho giọng nói** — chỉnh ít thôi, mỗi lần 2–3 dB:
 
-1. **Cắt dưới 80 Hz** — dải ngoài cùng bên trái, chọn **Hi-Pass**, đặt khoảng 80 Hz. Bỏ tiếng ù, gió, bàn rung.
+1. **Cắt dưới 80 Hz** — **Band 1** mặc định đã là **Hi-Pass** nhưng đang **tắt**: bấm chữ **Band 1** cho sáng đỏ, gõ `80` vào Frequency. Các nút **6 12 18 24** là độ dốc (dB/octave), để **12**. Bỏ tiếng ù, gió, bàn rung.
 2. **Hạ nhẹ 200–400 Hz** — một dải **Bell**, Gain âm vài dB. Bớt cảm giác đục.
 3. **Nâng nhẹ 3–5 kHz** — một dải **Bell**, Gain dương vài dB. Chữ rõ hơn.
 
-Kéo trực tiếp các **chấm đánh số** trên đồ thị cũng được.
+Kéo trực tiếp các **chấm đánh số** trên đồ thị cũng được. Nút **L ML MH H** dưới mỗi Frequency chọn vùng tần số mà núm xoay quét (thấp, trung thấp, trung cao, cao).
 
 > Nghe bằng tai nghe tốt. EQ nghe trên loa laptop thường nâng quá tay ở dải cao.
 

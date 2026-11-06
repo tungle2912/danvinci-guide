@@ -6,6 +6,9 @@ Ba công cụ giúp **xem footage nhanh** — thứ chiếm nhiều thời gian 
 
 ## Source Tape
 
+![Chế độ Source Tape](../../assets/img/cut-source-tape.png)
+*Mọi clip trong bin nối thành một cuộn, tên bin hiện trên Viewer; clip đang phát có viền đỏ trong Media Pool.*
+
 `★★☆ Thường dùng`
 
 **Là gì:** nối **mọi clip trong bin** thành **một cuộn băng dài liền mạch** trong Viewer. Thay vì mở từng clip một, bạn tua một mạch từ đầu đến cuối.

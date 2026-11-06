@@ -82,6 +82,9 @@ Từ trái sang phải:
 
 ## Lightbox — xem cả album cùng lúc
 
+![Lightbox trang Photo](../../assets/img/photo-lightbox.png)
+*Chỉnh một ảnh, cả lưới cập nhật trực tiếp.*
+
 `★★☆ Thường dùng`
 
 Bấm **Lightbox** trên thanh trên Viewer. Ảnh to biến thành **lưới thumbnail** của cả album. Kéo thanh trượt góc trên trái để đổi cỡ thumbnail.

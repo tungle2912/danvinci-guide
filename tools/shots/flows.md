@@ -75,7 +75,7 @@ Khuôn mục: xem `FORMAT.md`. Trang luồng đi qua nhiều trang Resolve, nên
 - **Chuẩn bị:** Media Pool → chọn "Demo - Vlog" → **Edit → Duplicate Timeline**, đổi tên `Demo - Vlog doc`. Chuột phải timeline mới → **Timelines → Timeline Settings** → bỏ tick **Use Project Settings**. Tab **Format**: tick **Use vertical resolution**. **Mismatched resolution files** → **Scale full frame with crop**.
 - **Khung chụp:** hộp thoại — chụp toàn màn hình rồi cắt cửa sổ Timeline Settings.
 - **Cần thấy rõ trong ảnh:** ô Use Project Settings bỏ tick, bốn tab Format/Monitor/Output/Color, 1080 x 1920, Mismatched resolution files = Scale full frame with crop.
-- **Alt + chú thích:** `![Timeline Settings của bản dọc](../assets/img/flow-doc-timeline-settings.png)` — *Chỉ timeline bản sao đổi sang dọc; bản ngang giữ nguyên.*
+- **Alt + chú thích:** `![Timeline Settings của bản dọc](../assets/img/flow-doc-timeline-settings.png)` — *Bỏ tick Use project settings, tick Use vertical resolution, Mismatched resolution = Scale full frame with crop. Frame rate mờ vì timeline đã có clip.*
 - **Ghi chú:** nếu ô Mismatched resolution files không nằm ở tab Format, ghi lại tab thật để sửa bước 5 của trang. Giữ timeline `Demo - Vlog doc` cho FLO-08, FLO-09.
 
 ### FLO-08 — `flow-doc-reframe.png`

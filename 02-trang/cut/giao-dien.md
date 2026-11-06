@@ -46,7 +46,10 @@ Trang Cut chỉ có **một** Viewer (trang Edit có hai). Nó tự đổi giữ
 
 ### Bốn nút chế độ — góc trên trái Viewer
 
-Từ trái sang phải:
+![Nút chế độ Viewer trang Cut](../../assets/img/cut-viewer-mode-buttons.png)
+*Ba nút chế độ (Timeline đang sáng); nút lưới tách riêng bên phải là Multi Source, chỉ dùng được khi có Sync Bin.*
+
+Ba nút đầu đứng liền nhau, nút Multi Source nằm riêng ở nhóm bên phải (mờ khi chưa dùng Sync Bin):
 
 | # | Chế độ | Xem gì | Vào bằng cách |
 |---|---|---|---|

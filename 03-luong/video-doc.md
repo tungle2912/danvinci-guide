@@ -35,13 +35,16 @@ Cách đúng: **dựng xong bản ngang trước**, rồi mới tạo bản dọ
 
 ### Các bước
 
+![Timeline Settings của bản dọc](../assets/img/flow-doc-timeline-settings.png)
+*Bỏ tick Use project settings, tick Use vertical resolution, Mismatched resolution = Scale full frame with crop. Frame rate mờ vì timeline đã có clip.*
+
 Ví dụ với timeline **Demo - Vlog** (1920×1080, 25 fps) của project demo:
 
 1. Dựng và hoàn thiện bản ngang 1920×1080.
 2. Trong Media Pool, chọn timeline → **Edit → Duplicate Timeline**. Đổi tên thành `Demo - Vlog doc`. Xem [Nhân bản timeline](../02-trang/edit/timeline-nang-cao.md#nhân-bản-timeline--giữ-phiên-bản).
-3. Chuột phải timeline mới trong Media Pool → **Timelines → Timeline Settings** → bỏ tick **Use Project Settings**. Hiện thêm các tab **Format**, **Monitor**, **Output**, **Color**.
+3. Chuột phải timeline mới trong Media Pool → **Timelines → Timeline Settings** → bỏ tick ô **Use project settings** ở góc dưới trái hộp thoại. Các ô trong bốn tab **Format**, **Monitor**, **Output**, **Color** hết mờ, sửa được.
 4. Tab **Format**: tick **Use vertical resolution** (hoặc gõ thẳng 1080 × 1920). Xem [Timeline Settings](../02-trang/edit/timeline-nang-cao.md#timeline-settings--mỗi-timeline-một-cỡ-khung).
-5. Cũng trong Timeline Settings, ô **Mismatched resolution files** → **Scale full frame with crop** — xem [mục dưới](#cách-nhanh-hơn-cho-cả-timeline). Bấm **OK**.
+5. Vẫn tab **Format**, ô **Mismatched resolution** → **Scale full frame with crop** — xem [mục dưới](#cách-nhanh-hơn-cho-cả-timeline). Bấm **OK**.
 6. Phát lại cả timeline. Clip nào chủ thể lệch khỏi khung: chọn clip → **Inspector → Transform** → chỉnh **Position X** cho chủ thể vào giữa. Cần cận hơn thì tăng **Zoom**, ví dụ `1.15`. Xem [Inspector](../02-trang/edit/inspector.md#những-việc-làm-hằng-ngày).
 
 Bản ngang gốc vẫn nguyên vẹn vì bạn làm trên bản sao.
@@ -50,7 +53,7 @@ Bản ngang gốc vẫn nguyên vẹn vì bạn làm trên bản sao.
 
 ### Cách nhanh hơn cho cả timeline
 
-Thay vì chỉnh từng clip, đặt chế độ xử lý chung cho clip khác cỡ khung. Ở Timeline Settings của timeline dọc (hoặc **Project Settings → Image Scaling → Input Scaling**), ô **Mismatched resolution files**:
+Thay vì chỉnh từng clip, đặt chế độ xử lý chung cho clip khác cỡ khung. Ở Timeline Settings của timeline dọc là ô **Mismatched resolution** (tab Format); ở **Project Settings → Image Scaling → Input Scaling** nó tên **Mismatched resolution files**:
 
 | Chọn | Kết quả | Dùng khi |
 |---|---|---|
@@ -156,7 +159,7 @@ Xem [Một lượt xuất YouTube và bản dọc](../02-trang/deliver/README.md
 | Hiện tượng | Sửa |
 |---|---|
 | Viền đen hai bên | Đang xuất timeline ngang, hoặc quên **Use vertical resolution** |
-| Viền đen trên dưới trong timeline dọc | **Mismatched resolution files** đang là **Scale entire image to fit**. Đổi sang **Scale full frame with crop** |
+| Viền đen trên dưới trong timeline dọc | **Mismatched resolution** đang là **Scale entire image to fit**. Đổi sang **Scale full frame with crop** |
 | Không thấy phụ đề trên TikTok | Xuất phụ đề dạng file rời. Đổi sang **Burn into video** |
 | Chủ thể bị cắt mất | Chỉnh **Position X** của clip đó ở Inspector |
 | Video nhỏ tiếng hơn video khác | Chưa đo loudness. Đo ở Fairlight hoặc tick **Audio Normalization** khi xuất |

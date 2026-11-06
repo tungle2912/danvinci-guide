@@ -66,7 +66,7 @@ Tình huống thực tế: bạn có một file RAW Canon đuôi `.CR3` chụp n
 1. **Nạp:** mở trang Photo, bấm nút **Import Media** trên đầu Media Pool → **Import Media**, chọn file.
 2. **Tạo album:** chọn ảnh trong Media Pool → chuột phải → **Create New Photo Album Using Selected Clips...** → đặt tên → **Create**.
 3. **Mở Inspector:** nút **Inspector** góc trên phải → tab **RAW** (sáng lên vì đây là file RAW).
-4. **Cân bằng trắng:** **White Balance** → chọn **Daylight** (chụp ngoài trời nắng). Vẫn ám xanh thì kéo **Color Temp** lên thêm vài trăm Kelvin.
+4. **Cân bằng trắng:** **White Balance** → chọn **Daylight** (chụp ngoài trời nắng). Vẫn ám xanh thì kéo **Temperature** lên thêm vài trăm Kelvin.
 5. **Phơi sáng:** **Exposure** từ `0` lên `+0.7`. Trời bị cháy thì kéo **Highlights** xuống `-40`. Vùng tối mất chi tiết thì kéo **Shadows** lên `+25`.
 6. **Màu:** **Color Boost** lên `+15` cho những chỗ màu nhạt tươi hơn mà da người không bị quá đà.
 7. **Độ nét:** **Midtone Detail** lên `+10`.

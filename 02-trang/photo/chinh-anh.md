@@ -1,5 +1,8 @@
 # Chỉnh ảnh — tab RAW, tab Photo, Tools
 
+![Tab RAW xám với JPG, sáng với CR3](../../assets/img/photo-inspector-tabs.png)
+*Trái: ảnh JPG, tab RAW xám. Phải: ảnh CR3, tab RAW sáng.*
+
 Mọi thanh chỉnh ảnh nằm ở **hai chỗ**:
 
 - **Inspector** (nút góc trên phải) — các thanh trượt, chỉnh bằng số
@@ -24,7 +27,7 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 
 ![Chọn tab để chỉnh cân bằng trắng](../../assets/diagrams/photo-white-balance.svg)
 
-**Ảnh RAW** → **Inspector → tab RAW** → mục **White Balance**, **Color Temp**, **Tint**.
+**Ảnh RAW** → **Inspector → tab RAW** → mục **White Balance**, **Temperature**, **Tint**.
 **Ảnh JPG, PNG, HEIC** → **Inspector → tab Photo** → mục **Adjustments** → **Auto Balance**, **Temp**, **Tint**.
 
 Ảnh RAW thì **luôn chỉnh ở tab RAW trước**. Lý do: tab RAW chỉnh trên dữ liệu cảm biến **trước khi** thành ảnh màu, nên giữ được nhiều thông tin hơn hẳn. Tab Photo chỉnh **sau khi** ảnh đã thành hình, dư địa ít hơn.
@@ -41,16 +44,19 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 
 | Thanh | Làm gì | Đặt gì |
 |---|---|---|
-| **Decode Quality** | Giải mã ảnh ở độ phân giải **Full**, **Half**, **Quarter**, hoặc **Project Settings** (theo cài đặt chung của project) | Máy yếu thì để **Half** khi chỉnh, đổi về **Full** trước khi xuất |
+| **Decode Quality** | Giải mã ảnh ở độ phân giải **Full**, **Half**, **Quarter**, hoặc **Use project setting** (mặc định, theo cài đặt chung của project) | Máy yếu thì để **Half** khi chỉnh, đổi về **Full** trước khi xuất |
 | **Color Space** | Không gian màu để chỉnh và xuất | Manual khuyên chọn không gian màu của hãng máy, hoặc một chuẩn video như Rec.709 nếu ảnh sẽ vào video |
 | **Gamma** | Đường cong gamma | Của hãng máy, hoặc chuẩn video — chọn cùng nhóm với Color Space |
 
 ### Nhóm 2 — Cân bằng trắng
 
+![Preset White Balance trong tab RAW](../../assets/img/photo-raw-white-balance.png)
+*Chọn preset gần đúng, rồi tinh chỉnh Temperature và Tint.*
+
 | Thanh | Làm gì | Kéo thế nào |
 |---|---|---|
 | **White Balance** | Chọn **preset** theo ánh sáng lúc chụp. Chọn xong, Temp và Tint tự nhảy theo | Xem bảng preset bên dưới |
-| **Color Temp** | Nhiệt độ màu, đơn vị **Kelvin** | Ảnh **ám xanh** (lạnh) → kéo **lên**. Ảnh **ám cam** (nóng) → kéo **xuống** |
+| **Temperature** | Nhiệt độ màu, đơn vị **Kelvin** | Ảnh **ám xanh** (lạnh) → kéo **lên**. Ảnh **ám cam** (nóng) → kéo **xuống** |
 | **Tint** | Trục **xanh lá ↔ hồng tím** | Ảnh **ám xanh lá** (đèn huỳnh quang) → kéo **lên**. Ảnh **ám hồng** → kéo **xuống** |
 
 **Preset White Balance:**
@@ -65,7 +71,7 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 | **Fluorescent** | Đèn huỳnh quang, đèn tuýp |
 | **Flash** | Đèn flash |
 
-**Cách làm nhanh nhất:** chọn preset gần đúng nhất trước, rồi tinh chỉnh **Color Temp** và **Tint** bằng mắt.
+**Cách làm nhanh nhất:** chọn preset gần đúng nhất trước, rồi tinh chỉnh **Temperature** và **Tint** bằng mắt.
 
 **Cách làm chính xác nhất:** tìm trong ảnh một vật **đáng lẽ màu trắng hoặc xám** (tường trắng, áo trắng, bê tông), chỉnh Temp và Tint đến khi vật đó trông trung tính — không ngả màu nào.
 
@@ -96,8 +102,11 @@ Inspector có **bốn tab** ở trên cùng: **RAW · Photo · Effects · File**
 
 ### Thứ tự kéo các thanh trong tab RAW
 
+![Tab RAW sau khi chỉnh ảnh ví dụ](../../assets/img/photo-raw-exposure-color.png)
+*Đủ bước cân bằng trắng, phơi sáng, màu, độ nét trong một tab.*
+
 1. **White Balance** — chọn preset
-2. **Color Temp**, **Tint** — tinh chỉnh
+2. **Temperature**, **Tint** — tinh chỉnh
 3. **Exposure** — cho tổng thể đủ sáng
 4. **Highlights** — cứu trời, cứu vùng cháy
 5. **Shadows** — lấy lại vùng tối
@@ -147,6 +156,9 @@ Tab này có bốn nhóm: **Source Transform · Source Cropping · Looks · Adju
 3. Bấm `⇧D` vài lần để so với ảnh gốc. Không ưng thì `⌘R` để bỏ (Inspector đang được chọn).
 
 ### Các thanh trong Adjustments
+
+![Nhóm Adjustments trong tab Photo](../../assets/img/photo-tab-photo-adjustments.png)
+*Lưu ý Saturation mặc định là 50, không phải 0.*
 
 | Thanh | Kéo sang phải | Kéo sang trái | Mặc định |
 |---|---|---|---|
@@ -244,6 +256,9 @@ Các ô số trên thanh Transform:
 **Ví dụ:** ảnh tòa nhà chụp ngửa lên, cạnh tường chụm vào nhau. Kéo **Pitch** từng chút một và quan sát đến khi cạnh tường thẳng lại. Bật [đường gióng](giao-dien.md#đường-gióng-và-thước-đo) dọc để so.
 
 ### Crop
+
+![Crop 4:5 bằng Tools trên Viewer](../../assets/img/photo-tools-crop.png)
+*Crop chỉ áp vào ảnh khi đóng thanh Tools.*
 
 `★★★ Hằng ngày`
 

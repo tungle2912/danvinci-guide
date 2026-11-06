@@ -31,7 +31,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (toàn cửa sổ,
 - **Chuẩn bị:** bấm `Q` cho Viewer ở chế độ **Timeline** (nút Timeline sáng). Rê chuột lên nút Source Tape cho hiện tooltip nếu được.
 - **Khung chụp:** chỉ một vùng — góc trên trái Viewer, phóng to khoảng 300 × 80 px quanh cụm nút chế độ (cắt thêm một chút tiêu đề Viewer).
 - **Cần thấy rõ trong ảnh:** các nút chế độ Source Clip, Source Tape, Timeline (và nút thứ 4 nếu có thật trong bản 21 — xem ghi chú nghi vấn); nút đang bật được tô sáng.
-- **Alt + chú thích:** `![Nút chế độ Viewer trang Cut](../../assets/img/cut-viewer-mode-buttons.png)` — *Nút thứ hai là Source Tape; `Q` đảo nhanh giữa nguồn và timeline.*
+- **Alt + chú thích:** `![Nút chế độ Viewer trang Cut](../../assets/img/cut-viewer-mode-buttons.png)` — *Ba nút chế độ (Timeline đang sáng); nút lưới tách riêng bên phải là Multi Source, chỉ dùng được khi có Sync Bin.*
 
 ### CUT-04 — `cut-viewer-top-right.png`
 - **Ưu tiên:** P3
@@ -179,7 +179,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (toàn cửa sổ,
 - **Chuẩn bị:** bấm nút **Source Tape**. Bấm vào clip trại cừu trong Media Pool để con trỏ nhảy tới clip đó. Media Pool chế độ thumbnail.
 - **Khung chụp:** chỉ một vùng — Media Pool + Viewer (bỏ timeline).
 - **Cần thấy rõ trong ảnh:** nút Source Tape đang sáng; thumbnail clip đang phát được tô sáng trong Media Pool; thước dưới Viewer hiện các ranh giới clip nối liền.
-- **Alt + chú thích:** `![Chế độ Source Tape](../../assets/img/cut-source-tape.png)` — *Mọi clip trong bin nối thành một cuộn; clip đang phát sáng trong Media Pool.*
+- **Alt + chú thích:** `![Chế độ Source Tape](../../assets/img/cut-source-tape.png)` — *Mọi clip trong bin nối thành một cuộn, tên bin hiện trên Viewer; clip đang phát có viền đỏ trong Media Pool.*
 
 ### CUT-20 — `cut-sort-media-by.png`
 - **Ưu tiên:** P3

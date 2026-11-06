@@ -107,7 +107,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** chọn 3 ảnh JPG trong Media Pool, chuột phải cho hiện menu ngữ cảnh.
 - **Khung chụp:** menu xổ — cần chụp toàn màn hình rồi cắt Media Pool + menu.
 - **Cần thấy rõ trong ảnh:** mục **New Photo Album** và **Add Photo(s) to Album**.
-- **Alt + chú thích:** `![Menu chuột phải tạo album và thêm ảnh](../../assets/img/photo-new-album-menu.png)` — *Tạo album rồi thêm ảnh vào album mới chỉnh được.*
+- **Alt + chú thích:** `![Menu chuột phải tạo album và thêm ảnh](../../assets/img/photo-new-album-menu.png)` — *Hai mục đầu menu: tạo album mới từ ảnh đang chọn, hoặc thêm vào album có sẵn.*
 
 ### PHO-11 — `photo-album-strip.png`
 - **Ưu tiên:** P1
@@ -152,7 +152,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** chọn một ảnh JPG, mở Inspector. Chụp ảnh A. Chọn ảnh mẫu CR3 trong album Demo - Anh, chụp ảnh B.
 - **Khung chụp:** chỉ một vùng — hàng tab đầu Inspector; ghép hai ảnh A và B cạnh nhau.
 - **Cần thấy rõ trong ảnh:** RAW · Photo · Effects · File; tab RAW xám với JPG (A) và sáng với CR3 (B).
-- **Alt + chú thích:** `![Tab RAW xám với JPG, sáng với CR3](../../assets/img/photo-inspector-tabs.png)` — *Tab RAW chỉ sáng khi ảnh là file RAW.*
+- **Alt + chú thích:** `![Tab RAW xám với JPG, sáng với CR3](../../assets/img/photo-inspector-tabs.png)` — *Trái: ảnh JPG, tab RAW xám. Phải: ảnh CR3, tab RAW sáng.*
 
 ### PHO-16 — `photo-raw-white-balance.png`
 - **Ưu tiên:** P1
@@ -160,8 +160,8 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Trang Resolve:** Photo
 - **Chuẩn bị:** ảnh mẫu CR3 trong album Demo - Anh, Inspector → tab **RAW**, mở menu **White Balance** cho xổ danh sách preset.
 - **Khung chụp:** menu xổ — cần chụp toàn màn hình rồi cắt Inspector từ Decode Quality tới Tint + menu.
-- **Cần thấy rõ trong ảnh:** As Shot, Daylight, Cloudy, Shade, Tungsten, Fluorescent, Flash; thanh Color Temp và Tint.
-- **Alt + chú thích:** `![Preset White Balance trong tab RAW](../../assets/img/photo-raw-white-balance.png)` — *Chọn preset gần đúng, rồi tinh chỉnh Color Temp và Tint.*
+- **Cần thấy rõ trong ảnh:** As Shot, Daylight, Cloudy, Shade, Tungsten, Fluorescent, Flash; thanh Temperature và Tint.
+- **Alt + chú thích:** `![Preset White Balance trong tab RAW](../../assets/img/photo-raw-white-balance.png)` — *Chọn preset gần đúng, rồi tinh chỉnh Temperature và Tint.*
 
 ### PHO-17 — `photo-raw-exposure-color.png`
 - **Ưu tiên:** P1
@@ -253,7 +253,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** bấm **Effects Library**; chọn một ảnh JPG; rê chuột lên thumbnail **Vignette** để Viewer xem trước.
 - **Khung chụp:** chỉ một vùng — Effects Library + Viewer (ảnh có vignette xem trước).
 - **Cần thấy rõ trong ảnh:** các nhóm hiệu ứng, ô tìm kiếm, tab Favorites, thumbnail Vignette đang được rê chuột.
-- **Alt + chú thích:** `![Effects Library trang Photo, xem trước Vignette](../../assets/img/photo-effects-library.png)` — *Rê chuột qua thumbnail là thấy kết quả trên ảnh, chưa cần áp thật.*
+- **Alt + chú thích:** `![Effects Library trang Photo, xem trước Vignette](../../assets/img/photo-effects-library.png)` — *Gõ tên vào ô Search, rê chuột lên thumbnail là Viewer xem trước, chưa cần áp thật.*
 
 ### PHO-27 — `photo-effects-inspector-stack.png`
 - **Ưu tiên:** P2
@@ -271,7 +271,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** không chọn ảnh nào trong album, bấm **Quick Export** trên toolbar; đặt đúng ví dụ "gửi khách qua Zalo" trong trang: **JPEG** ở cột trái · **Export** cả album · **File Name** `Demo_` · **Scale** `50%` · **Resolution** `72` · **Quality** khoảng 85% · bỏ tick **Include Metadata**. Không bấm Export.
 - **Khung chụp:** hộp thoại — chụp toàn màn hình rồi cắt cửa sổ Quick Export.
 - **Cần thấy rõ trong ảnh:** cột định dạng JPEG/PNG/HEIC/TIFF (JPEG đang chọn); cột thông số Export, File Name = Demo_, Scale = 50%, Resolution = 72, Quality ≈ 85%, Bit Depth, Include Metadata bỏ tick; nút Export.
-- **Alt + chú thích:** `![Quick Export riêng cho ảnh tĩnh](../../assets/img/photo-quick-export.png)` — *Chọn định dạng bên trái, đặt thông số bên phải, rồi Export.*
+- **Alt + chú thích:** `![Quick Export riêng cho ảnh tĩnh](../../assets/img/photo-quick-export.png)` — *Chọn định dạng bên trái, đặt Scale, Quality, Resolution bên phải, rồi Export. Mặc định là PNG, Quality JPEG mặc định 80 %.*
 
 ### PHO-29 — `photo-deliver-still-mode.png`
 - **Ưu tiên:** P2
@@ -363,7 +363,7 @@ Sau mỗi ảnh có chỉnh sửa, reset ảnh về gốc (menu ba chấm Inspec
 - **Chuẩn bị:** album Demo - Anh đang mở ở trang Photo, chuyển sang **Deliver**. Mục **Photo**: **Format** `JPEG`, **Bit Depth** 8-bit, **Size** `Long Side` `2048`, **Resolution** `72` ppi, **Quality** `90`, bỏ tick **Include Metadata**.
 - **Khung chụp:** chỉ một vùng — panel Render Settings, riêng mục Photo từ Format tới Include Metadata.
 - **Cần thấy rõ trong ảnh:** đúng các giá trị trên, menu Format (HEIF/JPEG/PNG/TIFF) nếu chụp được lúc xổ.
-- **Alt + chú thích:** `![Mục Photo trong Render Settings](../../assets/img/photo-deliver-photo-section.png)` — *JPEG 90%, cạnh dài 2048: bộ ảnh gửi khách qua mạng.*
+- **Alt + chú thích:** `![Mục Photo trong Render Settings](../../assets/img/photo-deliver-photo-section.png)` — *JPEG, Long Side 2048 px, Compression 90 %: bộ ảnh gửi khách qua mạng.*
 - **Ghi chú:** PHO-29 chụp phần File Name/Export/Size tổng quát; ảnh này chỉ cắt mục Photo.
 
 ### PHO-39 — `photo-deliver-file-section.png`

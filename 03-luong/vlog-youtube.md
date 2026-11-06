@@ -138,7 +138,7 @@ Sang trang **Fairlight**. Bấm **Mixer** góc trên phải. Làm đúng thứ t
 | 2 | Bớt ồn nền (nếu có) | **Effects → Audio FX → Fairlight FX** → **Noise Reduction** thả lên đầu track A1 | Thử preset **De-Hiss** |
 | 3 | EQ giọng | Bấm đúp ô **EQ** ở cột A1 | **Hi-Pass** 80 Hz · hạ khoảng 2 dB quanh 300 Hz · nâng khoảng 2 dB quanh 4 kHz |
 | 4 | Nén nhẹ | Bấm đúp ô **Dynamics** → bật **Compressor** | **Ratio** 3:1, hạ **Threshold** tới khi chỉ chỗ to nhất bị nén |
-| 5 | Nhạc tự nhỏ khi có lời | Cột A2 → **Track FX** → **Ducker** | **Source** = A1 · **Duck Amount** 2–5 dB (mặc định 2.7 dB) |
+| 5 | Nhạc tự nhỏ khi có lời | Cột A2 → **Track FX** → **Ducker** | **Source** = A1 · **Duck Level** 2–5 dB (mặc định 2.7 dB) |
 | 6 | Chặn trần | Cột **Bus 1** → **+** ở mục **Effects** → **Limiter** | **Ceiling** −1 dB |
 | 7 | Đo độ to cả bài | **Meters** → menu ba chấm của Loudness meter → **YouTube** | **Integrated** quanh −14 LUFS |
 

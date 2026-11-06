@@ -73,6 +73,9 @@ Canon **CR3** · Fujifilm **RAF** · Apple **ProRAW** · Nikon **NEF** · Sony *
 
 ## Photo Album
 
+![Menu chuột phải tạo album và thêm ảnh](../../assets/img/photo-new-album-menu.png)
+*Hai mục đầu menu: tạo album mới từ ảnh đang chọn, hoặc thêm vào album có sẵn.*
+
 `★★★ Hằng ngày`
 
 **Album là nơi bạn chỉnh ảnh.** Ảnh nằm trong Media Pool mà chưa vào album thì gần như chỉ để lưu trữ.

@@ -24,7 +24,7 @@
 <g class="co"><circle class="bx" cx="360" cy="196" r="10"/><text class="s" x="360" y="200" text-anchor="middle">3</text></g>
 <g class="co"><circle class="bx" cx="410" cy="104" r="10"/><text class="s" x="410" y="108" text-anchor="middle">4</text></g>
 <g class="tl"><text class="s" x="20" y="238" text-anchor="start">1 · Lookahead 15 ms, Rise Time 10 ms: nhạc bắt đầu nhỏ ngay trước lời</text></g>
-<g class="tl"><text class="s" x="20" y="258" text-anchor="start">2 · Duck Amount: nhạc nhỏ đi bao nhiêu dB. Mặc định 2.7 dB, hay dùng 2–5 dB</text></g>
+<g class="tl"><text class="s" x="20" y="258" text-anchor="start">2 · Duck Level: nhạc nhỏ đi bao nhiêu dB. Mặc định 2.7 dB, hay dùng 2–5 dB</text></g>
 <g class="tl"><text class="s" x="20" y="278" text-anchor="start">3 · Hold 150 ms: giữ mức nhỏ thêm một chút sau khi hết lời</text></g>
-<g class="tl"><text class="s" x="20" y="298" text-anchor="start">4 · Recovery Time 750 ms: nhạc to dần trở lại</text></g>
+<g class="tl"><text class="s" x="20" y="298" text-anchor="start">4 · Recovery 750 ms: nhạc to dần trở lại</text></g>
 </svg>

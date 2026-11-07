@@ -1,21 +1,35 @@
 # Lỗi thường gặp
 
-| Nhóm | Lỗi |
-|---|---|
-| Media | [Media Offline](#clip-hiện-màu-đỏ-media-offline), [Không mở được MP4 điện thoại](#resolve-không-mở-được-file-mp4-từ-điện-thoại), [Project biến mất](#project-biến-mất) |
-| Dựng | [Tiếng lệch hình](#tiếng-lệch-hình), [Không kéo được clip](#không-kéo-được-clip-xuống-timeline) |
-| Fusion | [Fusion chậm](#fusion-làm-resolve-chậm-hẳn), [Text+ không hiện chữ](#text-không-hiện-chữ) |
-| Tiếng | [Một bên tai nghe](#chỉ-nghe-được-một-bên-tai-nghe), [Tiếng rè, quá to, quá nhỏ](#tiếng-rè-quá-to-hoặc-quá-nhỏ-sau-khi-xuất) |
-| Phụ đề | [Phụ đề không hiện](#phụ-đề-không-hiện) |
-| Xuất | [Video giật](#video-xuất-ra-bị-giật), [Màu nhạt](#màu-trong-resolve-đẹp-xuất-ra-nhạt), [Render kẹt, lỗi](#export-bị-kẹt-ở-0-hoặc-báo-lỗi) |
+Mỗi mục theo cùng một mạch: **triệu chứng → nguyên nhân → cách sửa → cách phòng**. Số trang ghi "tr." là trang trong DaVinci Resolve Manual.
+
+| Nhóm | Lỗi | Hay gặp |
+|---|---|---|
+| Media | [Media Offline](#clip-hiện-màu-đỏ-media-offline), [Không mở được MP4 điện thoại](#resolve-không-mở-được-file-mp4-từ-điện-thoại), [Project biến mất](#project-biến-mất) | `★★★` |
+| Dựng | [Tiếng lệch hình](#tiếng-lệch-hình), [Không kéo được clip](#không-kéo-được-clip-xuống-timeline) | `★★☆` |
+| Fusion | [Fusion chậm](#fusion-làm-resolve-chậm-hẳn), [Text+ không hiện chữ](#text-không-hiện-chữ) | `★★☆` |
+| Tiếng | [Một bên tai nghe](#chỉ-nghe-được-một-bên-tai-nghe), [Tiếng rè, quá to, quá nhỏ](#tiếng-rè-quá-to-hoặc-quá-nhỏ-sau-khi-xuất) | `★★★` |
+| Phụ đề | [Phụ đề không hiện](#phụ-đề-không-hiện) | `★★☆` |
+| Xuất | [Video giật](#video-xuất-ra-bị-giật), [Màu nhạt](#màu-trong-resolve-đẹp-xuất-ra-nhạt), [Render kẹt, lỗi](#export-bị-kẹt-ở-0-hoặc-báo-lỗi) | `★★★` |
 
 ## Clip hiện màu đỏ "Media Offline"
 
 Resolve không tìm thấy file gốc. Nó **không nhúng media vào project**, chỉ lưu đường dẫn.
 
+![Cây sửa Media Offline: ổ ngoài chưa cắm thì cắm lại, đã chuyển thư mục thì Relink Selected Clips, đã đổi tên file thì đổi lại tên cũ rồi relink](../assets/diagrams/ref-loi-media-offline.svg)
+
+*Cách sửa tuỳ file gốc đang ở đâu.*
+
 Nguyên nhân: bạn đổi tên file, chuyển thư mục, hoặc rút ổ cứng ngoài.
 
-Cách sửa: chuột phải vào clip trong Media Pool → **Relink Selected Clips** → trỏ tới thư mục mới. Resolve tự nối lại các clip còn lại cùng thư mục.
+**Cách sửa** (manual tr. 415–416):
+1. Nhìn Media Pool trang Cut hoặc Edit: icon **Relink Media** sáng cam. Bấm vào để xem clip mất nằm ở ổ nào, rồi **Locate** để chỉ chỗ mới, hoặc **Disk Search** để Resolve tự lục ổ.
+2. Hoặc chuột phải clip trong Media Pool → **Relink Selected Clips** (chuột phải bin → **Relink Clips for Selected Bin** để làm cả bin) → chọn thư mục chứa file → **OK**. Resolve dò theo **tên file và timecode** trong thư mục đó và mọi thư mục con; không thấy thì hỏi có tìm sâu hơn không.
+
+Ví dụ: footage `Demo - Vlog` chuyển từ `~/Movies/DaLat` sang ổ ngoài `/Volumes/SSD/DaLat` → Relink Selected Clips → chọn `/Volumes/SSD/DaLat` → mọi clip hết đỏ.
+
+> **Lỗi hay gặp:** đổi tên file trong Finder sau khi nạp. Relink dò theo tên nên không tìm ra — đổi lại tên cũ rồi relink.
+
+> **Mẹo:** nếu đã tạo Proxy Media, chọn **Playback → Proxy Handling → Prefer Proxies**: clip mất file gốc vẫn phát bằng proxy trong lúc bạn tìm file (tr. 215).
 
 Phòng tránh: sắp xếp thư mục footage **trước khi** nạp vào Resolve, và đừng đổi tên file sau đó.
 
@@ -28,25 +42,34 @@ Kiểm tra ba chỗ phải khớp nhau:
 2. **Project Settings → Timeline frame rate**
 3. Trang Deliver → **Frame rate** — để **Timeline Frame Rate**. Xem [Cài đặt xuất](../02-trang/deliver/cai-dat-xuat.md#tab-video)
 
-Nếu timeline sai frame rate thì không sửa được — phải tạo timeline mới đúng rồi copy toàn bộ clip sang.
+Frame rate của project bị khoá khi Media Pool đã có clip (manual tr. 375). Timeline sai frame rate thì tạo timeline mới: **File → New Timeline** (`⌘N`) → bỏ tick **Use Project Settings** → tab **Format** đặt **Timeline frame rate** đúng (tr. 860) → copy toàn bộ clip từ timeline cũ sang.
+
+> **Lỗi hay gặp:** điện thoại quay **frame rate biến thiên** (VFR) — file ghi 30 fps nhưng thực tế dao động. Tiếng lệch dần dù mọi ô đã khớp. Chuyển file sang frame rate cố định bằng **Shutter Encoder** hoặc **HandBrake** trước khi nạp.
 
 ## Tiếng lệch hình
 
+![Cây tìm nguyên nhân tiếng lệch hình: lệch dần thì so frame rate, lệch đều mà có số đỏ thì chuột phải số đỏ, không có số đỏ thì Auto Sync Audio hoặc dời tay](../assets/diagrams/ref-loi-tieng-lech.svg)
+
+*Xem đầu clip rồi cuối clip để biết lệch dần hay lệch đều.*
+
 **Nếu lệch dần theo thời gian** — frame rate lệch. Xem mục trên.
 
-**Nếu lệch một khoảng cố định** — thường do lỡ kéo hình và tiếng lệch nhau khi tắt Linked Selection. Clip lệch sẽ hiện **số đỏ** ở đầu tên clip (số khung bị lệch). Chuột phải vào số đỏ đó:
+**Nếu lệch một khoảng cố định** — thường do lỡ kéo hình và tiếng lệch nhau khi tắt Linked Selection. Clip lệch sẽ hiện **số đỏ** ở đầu thanh tên clip — đó là khoảng timecode bị lệch (manual tr. 938). Chuột phải vào số đỏ đó:
 
-- **Slip into place** — trượt nội dung clip cho khớp, clip không xê dịch
-- **Move into place** — dời cả clip về đúng chỗ khớp
+- **Slip into place** — trượt nội dung clip đang chọn cho khớp, clip không xê dịch
+- **Move into place** — dời clip đang chọn về đúng chỗ khớp
+- **Slip others into place** / **Move others into place** — giữ nguyên clip đang chọn, sửa các phần còn lại cho khớp theo nó
+
+**Nếu lệch cố định mà không có số đỏ** — tiếng lệch từ lúc quay hoặc thu riêng. Ghép tiếng thu rời bằng **Auto Sync Audio** theo sóng âm hoặc timecode (tr. 453), hoặc tắt Linked Selection (`⌘⇧L`) rồi dời tay từng khung bằng `,` `.`.
 
 ## Màu trong Resolve đẹp, xuất ra nhạt
 
 Vấn đề color management, hay gặp trên Mac.
 
-Màn hình Mac dùng profile Display P3 rộng hơn Rec.709, nên Resolve hiển thị sặc hơn thực tế.
+Màn hình Mac và các trình phát (QuickTime, trình duyệt) xử lý gamma, không gian màu theo cách riêng, nên cùng một file có thể trông khác trong Resolve và ngoài Resolve.
 
 Kiểm tra:
-- **Project Settings → Color Management → Output color space** phải là **Rec.709 Gamma 2.4**
+- **Project Settings → Color Management → Output color space** phải là Rec.709 (ví dụ **Rec.709 Gamma 2.4**) khi xuất cho YouTube, mạng xã hội
 - Mở file xuất ra bằng **VLC** thay vì QuickTime — QuickTime có cách xử lý màu riêng làm sai lệch
 - Custom Export: **Advanced Settings** → **Color Space Tag**, **Gamma Tag** để **Same as Project**, **Data Levels** để **Auto**. Xem [Advanced Settings](../02-trang/deliver/cai-dat-xuat.md#advanced-settings--những-ô-đáng-biết)
 
@@ -71,34 +94,42 @@ Sửa: chuột phải clip trong Media Pool → **Clip Attributes** → tab **Au
 
 ## Không kéo được clip xuống timeline
 
-Thường do track bị khoá. Nhìn icon ổ khoá ở đầu track, bấm để mở (`⌥⇧1` cho V1).
-
-Hoặc do destination control chưa chọn track nào — bấm `⌥1` để chọn V1.
+| Nguyên nhân | Sửa |
+|---|---|
+| Track bị khoá | Bấm icon ổ khoá ở đầu track, hoặc `⌥⇧1` cho V1 (`⌥⇧9` mở/khoá mọi track hình) — manual tr. 912 |
+| Nút edit (F9, F10…) không đưa clip xuống | **Destination control** (ô V1, A1 ở đầu track) chưa bật — bấm `⌥1` cho V1, `⌥⌘1` cho A1; bấm lại để tắt/bật (tr. 989) |
+| Kéo được hình mà không có tiếng, hoặc ngược lại | Lỡ giữ `⌥` (chỉ hình) hoặc `⇧` (chỉ tiếng) khi kéo, hoặc kéo từ ô **Video-only** / **Audio-only** hiện ở đáy Viewer nguồn (tr. 916). Kéo lại, không giữ phím |
 
 ## Export bị kẹt ở 0% hoặc báo lỗi
 
 - Thư mục đích hết chỗ, hoặc không có quyền ghi.
 - Bật/tắt ô **Use hardware acceleration if available** rồi thử lại.
-- Có clip offline trong timeline — sửa trước khi render.
+- Có clip offline trong timeline — Resolve cảnh báo **Media Offline** ngay khi thêm job vào Render Queue (manual tr. 4212). Sửa theo [mục Media Offline](#clip-hiện-màu-đỏ-media-offline) trước khi render.
 - Tên file có ký tự đặc biệt — đổi tên đơn giản hơn.
 
 Render xong mà hình đứng, mờ, có khung đỏ, dính timecode: xem bảng [Render xong mà file lỗi](../02-trang/deliver/render-queue-va-loi.md#render-xong-mà-file-lỗi).
 
 ## Resolve không mở được file MP4 từ điện thoại
 
-Một số điện thoại quay bằng codec Resolve không đọc được ở bản free (ví dụ HEVC 10-bit).
+Clip nạp vào nhưng chỉ có tiếng, hình đen, hoặc báo không hỗ trợ. Thường do codec điện thoại mà bản free giải mã hạn chế — hay gặp với HEVC 10-bit, HDR (Dolby Vision, HLG) của iPhone và Android đời mới.
 
-Chuyển đổi trước bằng **Shutter Encoder** hoặc **HandBrake** sang H.264 hoặc ProRes.
+Cách sửa:
+1. Thử bật **Preferences → System → Decode Options → Decode H.264/HEVC using hardware acceleration** (manual tr. 102), khởi động lại Resolve.
+2. Vẫn không được: chuyển đổi trước bằng **Shutter Encoder** hoặc **HandBrake** sang H.264 8-bit hoặc ProRes 422.
+
+Phòng tránh: trên điện thoại tắt quay HDR, chọn frame rate cố định (24, 25 hoặc 30).
 
 ## Project biến mất
 
-Resolve lưu project trong **database** nội bộ chứ không phải file rời.
+Resolve lưu project trong **project library** (thư viện project; bản cũ gọi là database) chứ không phải file rời.
 
-Tìm lại: mở **Project Manager** (`⇧1`), kiểm tra xem bạn có đang ở đúng database không — nút hình ổ cứng góc trên trái liệt kê các database.
+Tìm lại: mở **Project Manager** (`⇧0`), kiểm tra xem bạn có đang ở đúng thư viện không — nút góc trên trái mở thanh **Project Libraries** liệt kê mọi thư viện trên máy (manual tr. 82). Project cũng có thể nằm trong một thư mục con — bấm đúp để mở thư mục.
 
-Khôi phục bản cũ: chuột phải project → **Project Backups**.
+Khôi phục bản cũ: chuột phải project → **Project Backups** → chọn bản → **Load**. Xem [Tạo project → Bước 6](../01-bat-dau/tao-du-an.md#bước-6--tự-động-lưu-và-bản-sao-lưu).
 
-Mang sang máy khác: **File → Export Project** ra `.drp`.
+Mang sang máy khác: **File → Export Project** ra `.drp` (tr. 79).
+
+> **Lưu ý:** bản sao lưu không chứa still và LUT (tr. 115). Cần đủ thì dùng **Export Project With Stills and LUTs**.
 
 ## Fusion làm Resolve chậm hẳn
 
@@ -111,7 +142,7 @@ Mỗi clip có Fusion composition đều phải render lại liên tục.
 | Thu hẹp vùng render | Giữ `⌘` kéo trên Time Ruler |
 | Ngừng cập nhật node nặng | Chọn node, `⌘U`. Xem [Xoá, tắt tạm, khoá node](../02-trang/fusion/node-co-ban.md#xoá-tắt-tạm-khoá-node) |
 | Bật **Render Cache Smart** | **Playback → Render Cache**. Xem [Tối ưu hiệu năng](hieu-nang.md#bước-2--render-cache) |
-| **Render in Place** | Chuột phải clip trên timeline Edit — "nướng" mọi hiệu ứng thành file mới. Muốn sửa lại: **Decompose to Original** |
+| **Render in Place** | Chuột phải clip trên timeline Edit — "nướng" mọi hiệu ứng thành file mới (manual tr. 1187). Muốn sửa lại: chuột phải → **Decompose to Original** (tr. 1188) |
 
 ## Text+ không hiện chữ
 

@@ -10,6 +10,10 @@ Trim là **sửa độ dài và vị trí** của clip đã nằm trên timeline
 
 ![Bốn vị trí rê chuột](../../assets/diagrams/cut-trim.svg)
 
+![Kết quả của bốn kiểu trim](../../assets/diagrams/cut-trim-modes.svg)
+
+*Mỗi hàng là trước (trái) và sau (phải). Kéo mép làm phần sau dồn theo, Roll và Slip giữ nguyên tổng độ dài, L-cut chỉ kéo phần tiếng.*
+
 ### Kéo mép clip
 
 `★★★ Hằng ngày`

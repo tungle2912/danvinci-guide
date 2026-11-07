@@ -267,51 +267,81 @@ Mũi tên bên cạnh mỗi nút: chọn màu, hoặc xoá hết cờ/marker c�
 
 ## Track
 
-![Đầu track trên timeline](../../assets/img/page-edit.png)
+![Đầu track: cột nguồn xanh, cột đích đỏ, Sync Lock](../../assets/diagrams/edit-track-header.svg)
+*Ô xanh là track của clip nguồn, cắm vào ô đỏ nào thì clip đi xuống track đó. Ô đỏ tối thì lệnh cắt, xoá bỏ qua track đó.*
 
 ### Nút ở đầu mỗi track — từ trái sang phải
+
+![Đầu track trang Edit, ô xanh nguồn và ô đỏ đích](../../assets/img/edit-track-header.png)
+*Ô đỏ A2 đang tối nên lệnh cắt, xoá bỏ qua track nhạc.*
 
 | Nút | Có ở | Làm gì | Mức |
 |---|---|---|---|
 | **Dải màu** sát mép trái | Mọi track | Màu track. Chuột phải → **Change Track Color** | ★☆☆ |
-| **Ô V1 / A1 đỏ** — Destination | Mọi track | Chọn **track đích**: clip edit xuống sẽ vào track có ô đỏ sáng | ★★★ |
-| **Ô xanh** cạnh ô đỏ — Source | Chỉ khi có clip ở Viewer Source | Track của clip nguồn. Kéo ô xanh sang track khác để đổi chỗ đích | ★★☆ |
-| **Khoá** | Mọi track | Không sửa, dời được clip trên track. Track hiện lưới xám | ★★☆ |
-| **Sync Lock** (icon `<|>`) | Mọi track | Track có bật sẽ **dồn theo** khi bạn ripple ở track khác. Tắt = track đứng yên | ★★☆ |
+| **Ô xanh** — cột Source | Chỉ khi có clip ở Viewer Source hoặc đang chọn clip trong Media Pool | Các track **của clip nguồn** (V1, A1, A2…). Kéo ô xanh lên/xuống để chọn nó sẽ vào track nào trên timeline | ★★☆ |
+| **Ô đỏ V1 / A1** — cột Destination | Mọi track | **Track đích** trên timeline. Ô **sáng** = track đang được chọn: edit xuống vào đây, và các lệnh cắt, xoá, chọn bằng phím cũng chỉ tác động lên track sáng | ★★★ |
+| **Khoá** | Mọi track | Không sửa, dời được clip trên track. Track hiện lưới xám. Vẫn chỉnh màu được ở trang Color | ★★☆ |
+| **Sync Lock** | Mọi track | Bật sẵn. Track có bật sẽ **dồn theo** khi bạn ripple ở track khác. Tắt = track đứng yên | ★★☆ |
 | **Tắt track** (icon cuộn phim) | Track hình | Ẩn cả track: không hiện ở Viewer, không có ở trang Color, **không xuất** | ★★☆ |
 | **S** — Solo | Track tiếng | Chỉ nghe track này. Bật nhiều Solo để nghe vài track | ★★☆ |
 | **M** — Mute | Track tiếng | Tắt tiếng track | ★★★ |
 | **2.0**, **1.0**, **5.1** | Track tiếng | Kiểu kênh: stereo, mono, 5.1 | ★☆☆ |
 
-Bên dưới hàng nút là **tên track** (bấm để đổi tên, ví dụ `Lời`, `Nhạc`, `SFX`) và **số clip** trên track.
+Bên dưới hàng nút là **tên track** (bấm để đổi tên, ví dụ `Lời`, `Nhạc`, `SFX`) và **số clip** trên track. Tên track cũng hiện ở Mixer.
+
+> **Ô đỏ và Sync Lock khác nhau.** Ô đỏ quyết định lệnh **tác động lên track nào**. Sync Lock quyết định track nào **bị dồn theo** khi ripple ở track khác. Hai nút độc lập.
 
 ### Destination — chọn track đích
 
 `★★★ Hằng ngày`
 
-**Là gì:** ô đỏ ở đầu track. Mọi lệnh `F9`, `F10`, `F11`, Fit to Fill, Ripple Overwrite đều đưa clip vào **track có ô đỏ sáng**.
+**Là gì:** cột ô đỏ ở đầu track — manual gọi là **Destination Track Selector** (bản cũ gọi là **Auto Select**). Nó làm hai việc:
+
+1. **Chỗ clip đi xuống.** Mọi lệnh `F9`, `F10`, `F11`, Fit to Fill, Ripple Overwrite đưa clip vào track mà ô xanh nguồn đang **cắm vào**.
+2. **Track nào được lệnh tác động.** Ô đỏ sáng thì track đó được tính. Ô tối thì bị bỏ qua.
+
+**Những lệnh chỉ tác động lên track có ô đỏ sáng:**
+
+| Lệnh | Ảnh hưởng |
+|---|---|
+| Đặt `I` `O` trên timeline rồi `Delete` / `⌘X` / `⌘C` | Chỉ cắt, xoá, chép phần trên track sáng |
+| `⌘\` (cắt tại con trỏ) | Chỉ cắt clip trên track sáng |
+| `V` (chọn điểm nối gần nhất), `↑` `↓` (điểm nối trước/sau) | Bỏ qua track tối |
+| `X` (đặt `I` `O` ôm clip), Match Frame | Dùng clip trên **track sáng số nhỏ nhất** |
+| Dán sang track khác (`⌘V`) | Mặc định dán về đúng track đã chép. Muốn dán vào track khác: `⌥`-bấm ô đỏ track đó (hoặc `⌥`-bấm vùng trống trên track) rồi `⌘V` |
+| `⇧[` `⇧]` (trim tới con trỏ) | Tác động mọi clip dưới con trỏ trên track sáng |
+| **Edit → Delete Gaps**, xoá khoảng trống | Xoá theo track sáng |
 
 **Cách đổi:**
 
 | Muốn | Cách |
 |---|---|
-| Đổi track hình đích | Bấm ô đỏ của track đó, hoặc `⌥1`…`⌥8` |
-| Đổi track tiếng đích | `⌘⌥1`…`⌘⌥8` |
+| Chọn track hình nguồn đi vào | Kéo ô xanh **V1** tới track đó, hoặc `⌥1`…`⌥8` |
+| Chọn track tiếng nguồn đi vào | Kéo ô xanh **A1**, hoặc `⌘⌥1`…`⌘⌥8` |
 | Dời lên/xuống một track | `⌘⇧↑` `⌘⇧↓` (hình), `⌘⌥↑` `⌘⌥↓` (tiếng) |
-| Chỉ lấy hình, bỏ tiếng | Bấm ô đỏ của track tiếng cho **tắt** (không sáng). Bấm lần nữa để bật |
+| Bật/tắt ô đỏ một track | Bấm ô đỏ. Phím: `⌥F1`…`⌥F8` (V1–V8), `⌘⌥F1`…`⌘⌥F8` (A1–A8) |
+| Bật/tắt ô đỏ mọi track hình / mọi track tiếng | `⇧`-bấm một ô đỏ. Phím: `⌥F9` (hình), `⌘⌥F9` (tiếng) |
+| Chỉ để sáng **một** track, tắt mọi track cùng loại | `⌥`-bấm ô đỏ track đó |
+| Chỉ lấy hình, bỏ tiếng | Bấm ô **xanh A1** cho tắt, hoặc chọn **Video Only** ở menu dưới Viewer Source. Bấm lần nữa để bật |
 | Lỡ chỉnh rối | **Timeline → Source Track Selector → Reset Track Selectors** |
 
-**Ví dụ:** muốn đặt B-roll lên V2 mà không lấy tiếng gió hiện trường — bấm ô **V2**, tắt ô **A1**, rồi `F10`.
+**Ví dụ:** muốn đặt B-roll lên V2 mà không lấy tiếng gió hiện trường:
+
+1. Kéo ô xanh **V1** lên ngang track **V2** (hoặc `⌥2`).
+2. Bấm ô xanh **A1** cho tắt.
+3. Đặt con trỏ, bấm `F10`.
+
+**Ví dụ 2:** cắt đôi mọi clip ở V1 nhưng không cắt nhạc ở A2 — bấm ô đỏ **A2** cho tối → `⌘\`.
 
 ### Sync Lock — track nào được dồn theo
 
 `★★☆ Thường dùng`
 
-**Là gì:** icon `<|>` ở đầu track. Khi bạn ripple delete, insert, trim ở chế độ `T` — mọi track có **Sync Lock bật** sẽ dồn theo để giữ khớp hình tiếng.
+**Là gì:** nút ở đầu track, cạnh nút khoá. **Bật sẵn** ở mọi track. Khi bạn ripple delete, insert, trim ở chế độ `T` trên một track — mọi track **khác** có Sync Lock bật sẽ dồn theo để giữ khớp hình tiếng.
+
+**Tắt Sync Lock một track:** ripple ở track đó vẫn dồn chính nó, nhưng ripple ở track khác thì track này **đứng yên**.
 
 **Dùng khi:** muốn nhạc nền **đứng yên** trong lúc bạn cắt bớt lời nói ở track khác → tắt Sync Lock track nhạc.
-
-> Manual gọi nút này ở chỗ khác là **Auto Select**. Phím: `⌥F1`…`⌥F8` (track hình), `⌘⌥F1`…`⌘⌥F8` (track tiếng). `⇧`-click một nút để bật/tắt cả loạt.
 
 **Cảnh báo:** tắt Sync Lock rồi ripple là cách nhanh nhất làm **lệch tiếng với hình** ở phần sau. Bật lại ngay khi xong.
 
@@ -323,6 +353,7 @@ Bên dưới hàng nút là **tên track** (bấm để đổi tên, ví dụ `L
 | `⇧`-click icon khoá | Khoá/mở **mọi** track |
 | `⌥⇧1`…`⌥⇧8` | Khoá track hình V1–V8 |
 | `⌥⇧F1`…`⌥⇧F8` | Khoá track tiếng A1–A8 |
+| `⌥⇧9` / `⌥⇧F9` | Khoá/mở mọi track hình / mọi track tiếng |
 
 > **Bấm rồi kéo dọc** qua nhiều đầu track: bật/tắt cùng một nút cho cả loạt — ví dụ kéo icon khoá từ A1 xuống A3 là khoá cả ba track tiếng.
 

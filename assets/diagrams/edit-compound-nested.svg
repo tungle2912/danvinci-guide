@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="330" viewBox="0 0 680 330" role="img"><title>Compound clip và timeline lồng trong timeline</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><rect class="bx" x="16" y="16" width="648" height="140" rx="8"/>
+</g>
+<g class="gy"><text class="t" x="28" y="40" text-anchor="start">Compound Clip — chọn nhiều clip, chuột phải → New Compound Clip</text></g>
+<g class="gy"><text class="s" x="28" y="70" text-anchor="start">V3</text></g>
+<g class="tl"><rect class="bx" x="70" y="56" width="200" height="22" rx="4"/>
+<text class="s" x="170.0" y="72.0" text-anchor="middle">Chữ</text>
+</g>
+<g class="gy"><text class="s" x="28" y="98" text-anchor="start">V2</text></g>
+<g class="tl"><rect class="bx" x="70" y="84" width="200" height="22" rx="4"/>
+<text class="s" x="170.0" y="100.0" text-anchor="middle">Logo</text>
+</g>
+<g class="gy"><text class="s" x="28" y="126" text-anchor="start">V1</text></g>
+<g class="tl"><rect class="bx" x="70" y="112" width="200" height="22" rx="4"/>
+<text class="s" x="170.0" y="128.0" text-anchor="middle">Nền màu</text>
+</g>
+<line class="ar" x1="290" y1="98" x2="380" y2="98" marker-end="url(#a)"/>
+<g class="gy"><text class="s" x="335" y="90" text-anchor="middle">gộp</text></g>
+<g class="gy"><text class="s" x="392" y="102" text-anchor="start">V1</text></g>
+<g class="pu"><rect class="bx" x="420" y="84" width="200" height="28" rx="4"/>
+<text class="s" x="520.0" y="103.0" text-anchor="middle">Compound: Intro</text>
+</g>
+<g class="gy"><text class="s" x="300" y="140" text-anchor="start">Bên trong vẫn đủ 3 clip. Bản sao vào Media Pool</text></g>
+<g class="gy"><rect class="bx" x="16" y="172" width="648" height="140" rx="8"/>
+</g>
+<g class="gy"><text class="t" x="28" y="196" text-anchor="start">Nested timeline — kéo cả một timeline vào timeline khác</text></g>
+<g class="gy"><text class="s" x="28" y="222" text-anchor="start">Timeline "Selects"</text></g>
+<g class="tl"><rect class="bx" x="28" y="230" width="58" height="26" rx="4"/>
+<text class="s" x="57.0" y="248.0" text-anchor="middle">Câu 1</text>
+</g>
+<g class="tl"><rect class="bx" x="90" y="230" width="58" height="26" rx="4"/>
+<text class="s" x="119.0" y="248.0" text-anchor="middle">Câu 2</text>
+</g>
+<g class="tl"><rect class="bx" x="152" y="230" width="58" height="26" rx="4"/>
+<text class="s" x="181.0" y="248.0" text-anchor="middle">Câu 3</text>
+</g>
+<g class="tl"><rect class="bx" x="214" y="230" width="58" height="26" rx="4"/>
+<text class="s" x="243.0" y="248.0" text-anchor="middle">Câu 4</text>
+</g>
+<line class="ar" x1="290" y1="243" x2="380" y2="243" marker-end="url(#a)"/>
+<g class="gy"><text class="s" x="335" y="235" text-anchor="middle">kéo vào</text></g>
+<g class="gy"><text class="s" x="392" y="222" text-anchor="start">Timeline "Dựng chính"</text></g>
+<g class="gy"><rect class="bx" x="392" y="230" width="60" height="26" rx="4"/>
+<text class="s" x="422.0" y="248.0" text-anchor="middle">Mở đầu</text>
+</g>
+<g class="pu"><rect class="bx" x="452" y="230" width="150" height="26" rx="4"/>
+<text class="s" x="527.0" y="248.0" text-anchor="middle">Selects (1 clip)</text>
+</g>
+<g class="gy"><text class="s" x="28" y="292" text-anchor="start">Sửa bên trong: chuột phải → Open in Timeline. Tách ra: Decompose in Place</text></g>
+</svg>

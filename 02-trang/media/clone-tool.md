@@ -8,6 +8,12 @@
 
 **Mở:** bấm nút **Clone Tool** (nút thứ ba) trên Interface Toolbar ở đầu trang Media. Bấm lần nữa để ẩn.
 
+> **Lưu ý:** một đoạn trong tài liệu Blackmagic gọi nút này là **Clone** ở đầu trái thanh Media Pool. Không thấy trên Interface Toolbar thì tìm ở đó.
+
+![Clone Tool copy một nguồn ra hai ổ đích](../../assets/diagrams/media-clone-tool.svg)
+
+*Một job: một nguồn, nhiều đích; mỗi đích được so checksum và nhận một báo cáo.*
+
 Đây là công cụ ít người biết nhưng nên dùng mỗi lần đổ thẻ.
 
 ---
@@ -29,13 +35,17 @@ Clone Tool tính **checksum** — một "dấu vân tay" — cho file gốc và 
 
 ## Các nút của panel Clone Tool
 
+![Một job Clone Tool với một nguồn và hai đích](../../assets/img/media-clone-tool-job.png)
+*Một job copy ra nhiều ổ, mỗi ổ được kiểm tra riêng.*
+
 | Nút / vùng | Vị trí | Làm gì | Mức |
 |---|---|---|---|
-| **Add Job** | Góc dưới trái panel | Tạo một job copy mới | ★★★ |
-| **Drop source here** | Trong job | Ô thả nguồn — thẻ nhớ hoặc thư mục gốc | ★★★ |
-| **Drop destination here** | Trong job | Ô thả đích. Thả được nhiều đích | ★★★ |
-| **Clone** | Trong panel | Bắt đầu copy | ★★★ |
-| **Menu tuỳ chọn** | Option menu của panel | **Preserve Folder Name** và menu con **Checksum** | ★★☆ |
+| **Add Job** | Góc dưới trái panel | Tạo một job mới, tên **Job 1**, **Job 2**… | ★★★ |
+| **Source** — ô **Drop source folder here** | Trong job | Ô thả nguồn — thẻ nhớ hoặc thư mục gốc | ★★★ |
+| **Destination** — ô **Drop destination folder here** | Trong job | Ô thả đích. Có đích rồi thì ô đổi thành **Drop another destination folder here** để thả thêm | ★★★ |
+| **✕** cạnh tên job / cạnh mỗi đích | Góc phải | Bỏ cả job, hoặc bỏ một đích | ★★☆ |
+| **Clone** | Góc dưới phải panel | Bắt đầu copy. Mờ khi chưa có job đủ nguồn và đích | ★★★ |
+| **⋯** (menu tuỳ chọn) | Góc trên phải panel | **Preserve Folder Name** và menu con **Checksum Type** | ★★☆ |
 
 ---
 
@@ -46,16 +56,16 @@ Clone Tool tính **checksum** — một "dấu vân tay" — cho file gốc và 
 **Cách kéo thả:**
 
 1. Bấm nút **Clone Tool** trên Interface Toolbar.
-2. Bấm **Add Job**. Một job mới hiện ra, có chữ hướng dẫn.
-3. Từ [Media Storage](media-storage.md), kéo **thẻ nhớ** (hoặc thư mục gốc) vào ô **Drop source here**.
-4. Kéo **thư mục đích** vào ô **Drop destination here**.
-5. Muốn nhiều bản: kéo thêm ổ đích khác vào.
+2. Bấm **Add Job**. Job mới (**Job 1**) hiện ra với hai ô trống.
+3. Từ [Media Storage](media-storage.md), kéo **thẻ nhớ** (hoặc thư mục gốc) vào ô **Drop source folder here**.
+4. Kéo **thư mục đích** vào ô **Drop destination folder here**.
+5. Muốn nhiều bản: kéo thêm ổ đích khác vào ô **Drop another destination folder here**.
 6. Bấm **Clone**.
 
 **Cách nhanh bằng chuột phải:**
 
-1. Trong Media Storage, chuột phải thẻ nhớ → **Set As Clone Source**. Job tự được tạo.
-2. Chuột phải thư mục đích → **Set As Clone Destination**. Lặp lại cho mỗi ổ đích.
+1. Trong Media Storage, chuột phải thẻ nhớ → **Set as Clone Source**. Job tự được tạo nếu panel đang trống.
+2. Chuột phải thư mục đích → **Add as Clone Destination**. Lặp lại cho mỗi ổ đích.
 3. Bấm **Clone**.
 
 **Ví dụ — đổ thẻ sau buổi quay:** tạo trước thư mục `2026-10-13_quay-cafe/A001` trên ổ làm việc và ổ backup. Đặt thẻ làm source, hai thư mục `A001` làm destination. Bấm **Clone**, chờ xong rồi mới rút thẻ.
@@ -66,13 +76,16 @@ Clone Tool tính **checksum** — một "dấu vân tay" — cho file gốc và 
 
 **Bật khi:** muốn ổ đích có thêm một lớp thư mục mang tên thẻ (ví dụ `A001`), thay vì nội dung thẻ đổ thẳng vào thư mục đích.
 
-**Bật ở:** menu tuỳ chọn của panel → **Preserve Folder Name**.
+**Bật ở:** nút **⋯** góc trên phải panel → **Preserve Folder Name**.
 
 > Cấu trúc thư mục **bên trong** luôn được giữ nguyên, dù bật hay tắt mục này.
 
 ### Chọn kiểu checksum
 
-Menu tuỳ chọn → **Checksum**. Kiểm tra càng chặt thì copy càng chậm.
+![Menu Checksum của Clone Tool](../../assets/img/media-clone-checksum-menu.png)
+*MD5 là mặc định; XXHASH 64 nhanh nhất mà vẫn kiểm tra tốt.*
+
+Nút **⋯** góc trên phải panel → **Checksum Type** → chọn một trong bảy kiểu. Dấu tick nằm ở kiểu đang dùng. Kiểm tra càng chặt thì copy càng chậm.
 
 | Kiểu | Tốc độ | Độ chắc | Khi nào chọn |
 |---|---|---|---|
@@ -81,9 +94,9 @@ Menu tuỳ chọn → **Checksum**. Kiểm tra càng chặt thì copy càng ch�
 | **CRC 32** | Nhanh hơn MD5 | Kém MD5 | Ít khi cần |
 | **MD5** | Vừa | Khá | **Mặc định**. Đủ cho hầu hết dự án |
 | **SHA 256** / **SHA 512** | Chậm | Cao nhất | Hợp đồng yêu cầu chuẩn này |
-| **XXHASH64** | Nhanh nhất trong các kiểu có kiểm tra thật | Tốt | Đổ hàng terabyte mỗi ngày |
+| **XXHASH 64** | Nhanh nhất trong các kiểu có kiểm tra thật | Tốt | Đổ hàng terabyte mỗi ngày |
 
-> **Không chắc thì để MD5.** Đổ nhiều thẻ dung lượng lớn mà thấy chậm thì đổi sang **XXHASH64**.
+> **Không chắc thì để MD5.** Đổ nhiều thẻ dung lượng lớn mà thấy chậm thì đổi sang **XXHASH 64**.
 
 ---
 
@@ -95,11 +108,13 @@ Quy tắc an toàn cho footage: **ba bản, trên hai loại thiết bị, một
 
 **Ví dụ:** destination 1 là SSD làm việc, destination 2 là ổ HDD backup. Xong cắm ổ HDD về nhà, chép thêm một bản nữa.
 
+> **Lỗi hay gặp:** thả cùng một ổ hai lần làm hai đích. Bạn có hai bản trên **một** thiết bị — ổ đó hỏng là mất cả hai. Mỗi đích phải là một ổ vật lý khác nhau.
+
 ---
 
 ## File MHL
 
-Sau khi clone, Resolve ghi một **báo cáo checksum** vào **thư mục gốc của mỗi ổ đích**. Báo cáo ghi checksum của từng file, xác nhận bản copy khớp với bản gốc. Dân DIT hay gọi chung loại file này là file MHL (Media Hash List).
+Sau khi clone, Resolve ghi một **báo cáo checksum** vào **thư mục gốc của mỗi ổ đích**. Báo cáo xác nhận bản copy khớp với bản gốc. Dân DIT hay gọi chung loại báo cáo này là file MHL (Media Hash List). Tài liệu Blackmagic chỉ gọi là "checksum report", không nói rõ định dạng file — mở ổ đích sau lần clone đầu để xem tên và đuôi file thật.
 
 **Dùng để làm gì:**
 

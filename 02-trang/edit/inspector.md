@@ -63,6 +63,9 @@ Mỗi nhóm (Transform, Cropping…) có một **thanh tiêu đề**:
 
 ## Tab Video
 
+![Tab Video của Inspector, nhóm Transform](../../assets/img/edit-inspector-video.png)
+*Mỗi thông số có nút keyframe (hình thoi) và nút reset ở mép phải.*
+
 Thứ tự các nhóm từ trên xuống: Transform · Smart Reframe · Cropping · Dynamic Zoom · Composite · Speed Change · Stabilization · Lens Correction · Retime and Scaling · Super Scale.
 
 ### Transform

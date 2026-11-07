@@ -14,7 +14,7 @@ Những công cụ này không dùng mỗi ngày. Nhưng khi cần thì chúng t
 |---|---|
 | **File → New Timeline** (`⌘N`) | Hộp thoại đầy đủ |
 | Chuột phải Media Pool → **Timelines → Create New Timeline** | Như trên |
-| Chọn clip → chuột phải → **Create Timeline Using Selected Clips** | Timeline có sẵn các clip, theo thứ tự sắp xếp của Media Pool |
+| Chọn clip → chuột phải → **Create New Timeline Using Selected Clips…** | Timeline có sẵn các clip, theo thứ tự sắp xếp của Media Pool |
 | Chuột phải một bin → **Create Timeline Using Bin** | Timeline chứa mọi clip trong bin |
 | Kéo một clip thả vào vùng timeline trống (project chưa có timeline) | Tự tạo timeline |
 
@@ -38,7 +38,7 @@ Timeline mới nằm trong **bin đang chọn**. Nên có một bin riêng tên 
 
 **Là gì:** mỗi timeline có thể có độ phân giải, frame rate riêng, khác cài đặt chung của project.
 
-**Mở:** chuột phải timeline trong Media Pool → **Timelines → Timeline Settings** → bỏ tick **Use Project Settings**.
+**Mở:** chuột phải timeline trong Media Pool → **Timelines → Timeline Settings** → bỏ tick **Use project settings** (góc dưới trái).
 
 **Làm timeline dọc 9:16:** trong tab Format, chọn độ phân giải rồi tick **Use vertical resolution** — Resolve đảo chiều ngang và dọc. Hoặc gõ thẳng `1080 × 1920`.
 
@@ -121,14 +121,17 @@ Khôi phục **không ghi đè** timeline hiện tại — bản khôi phục hi
 - Ở trang Color, nhóm hiện như **một clip** — chỉnh màu một lần.
 - Timeline gọn hơn.
 
+![Compound clip và nested timeline](../../assets/diagrams/edit-compound-nested.svg)
+*Compound clip gộp clip đang có trên timeline. Nested timeline là cả một timeline khác được thả vào như một clip.*
+
 ### Cách tạo
 
 | Cách | Làm |
 |---|---|
-| Từ các clip đang chọn | Chọn clip → chuột phải → **New Compound Clip** → đặt tên → **Create** |
+| Từ các clip đang chọn | Chọn clip → chuột phải → **New Compound Clip** → đặt tên (và timecode bắt đầu nếu cần) → **Create** |
 | Từ một đoạn `I` `O` | Đặt `I` `O` trên timeline → chuột phải vùng `I`→`O` trên thước → **Convert In and Out to Compound Clip** |
 
-Cách `I` `O` lấy được **một phần** clip ở hai đầu, và lấy **mọi track** trong khoảng đó.
+Cách `I` `O` lấy được **một phần** clip ở hai đầu, và lấy **mọi track** trong khoảng đó — kể cả track đang tắt hoặc track có ô đỏ Destination tối.
 
 Một bản sao của compound clip cũng xuất hiện trong Media Pool — kéo xuống timeline khác dùng lại được.
 
@@ -148,7 +151,7 @@ Chuột phải → **Decompose in Place**. Compound clip biến mất, các clip
 
 Kéo **một timeline** từ Media Pool vào timeline khác → nó thành một clip, giống compound clip. Sửa: chuột phải → **Open in Timeline**.
 
-**Muốn lấy clip gốc chứ không lấy cả khối:** bật **Edit → Decompose Compound Clips on Edit** trước khi edit. Hoặc mở timeline đó ở Viewer Source, đặt con trỏ vào clip cần lấy, bấm `X` để đặt `I` `O` ôm đúng clip đó, rồi `F10`.
+**Muốn lấy clip gốc chứ không lấy cả khối:** bật **Edit → Edit Options → Decompose Compound Clips on Edit** trước khi edit. Áp dụng cho mọi kiểu edit trừ Fit to Fill và Place On Top. Hoặc mở timeline đó ở Viewer Source, đặt con trỏ vào clip cần lấy, bấm `X` để đặt `I` `O` ôm đúng clip đó, rồi `F10`.
 
 **Dùng khi:** có timeline "selects" gom câu hay nhất của mỗi buổi phỏng vấn, muốn dựng tiếp từ đó.
 
@@ -213,8 +216,11 @@ Kéo multicam clip xuống timeline như clip thường.
 
 ### Bước 3 — cắt chọn góc
 
+![Dựng multicam](../../assets/diagrams/edit-multicam.svg)
+*Bấm góc nào thì timeline cắt tại con trỏ và chuyển sang góc đó. ⌥-bấm chỉ đổi góc, không thêm vết cắt.*
+
 1. Menu **Source Viewer Mode** (dưới Viewer Source) → **Multicam**. Viewer Source chia lưới, mỗi ô một góc.
-2. Menu ở góc dưới phải Viewer: chọn lưới **2×2**, **3×3**… Máy yếu thì chọn ít góc.
+2. Menu ở góc dưới phải Viewer: chọn lưới **1×1**, **1×2**, **2×2**, **3×3** hoặc **4×4**. Máy yếu thì chọn ít góc để phát không giật.
 3. Chọn đổi **cả hình và tiếng**, **chỉ hình**, hay **chỉ tiếng** bằng nút ở giữa đáy Viewer. Thường chọn **chỉ hình** để tiếng giữ một nguồn tốt nhất.
 4. Phát timeline. Bấm vào góc nào là **cắt và chuyển** sang góc đó.
 
@@ -222,12 +228,19 @@ Kéo multicam clip xuống timeline như clip thường.
 |---|---|
 | Bấm một góc | Cắt tại con trỏ và chuyển góc |
 | `⌥`-bấm một góc | **Đổi góc** đoạn hiện tại, **không** thêm vết cắt |
-| Phím `1`…`9` | Cắt sang góc số đó |
+| Phím `1`…`9` | Cắt sang góc số đó (**Clip → Multicam Cut**) |
+| `⌥1`…`⌥9` | Đổi góc đoạn hiện tại sang góc số đó, không cắt (**Clip → Multicam Switch**) |
 | `⌘⇧←` / `⌘⇧→` | Đổi sang góc trước / sau |
+| `⌥⇧[` / `⌥⇧]` / `⌥⇧\` | Cắt **cả hình và tiếng** / **chỉ hình** / **chỉ tiếng** |
+| `⌥⇧←` / `⌥⇧→` | Trang góc trước / sau (khi số góc nhiều hơn số ô đang hiện) |
 
 5. Dừng phát là xong. Chọn lại **Source** ở Source Viewer Mode để trim như clip thường.
 
-**Sửa một góc đã chọn sai:** đặt con trỏ trong đoạn đó, `⌥`-bấm góc đúng.
+**Sửa một góc đã chọn sai:** đặt con trỏ trong đoạn đó, `⌥`-bấm góc đúng. Không cần mở Viewer Multicam: chuột phải đoạn đó trên timeline → **Switch Multicam Clip Angle** → chọn góc.
+
+**Bỏ cắt thừa:** vết cắt giữa hai đoạn multicam là through edit — bấm chọn → `Delete`.
+
+**Chốt lại thành clip thường:** chuột phải → **Flatten Multicam Clip**. Các góc không dùng bị bỏ đi. Làm khi đã chắc chắn, vì sau đó không đổi góc được nữa.
 
 **Chỉnh multicam clip** (dời lệch sync, xoá góc thừa, đổi tên góc): chuột phải multicam clip trong Media Pool → **Open in Timeline**.
 

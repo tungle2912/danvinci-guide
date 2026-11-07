@@ -48,6 +48,26 @@ Bật Mixer: nút **Mixer** góc trên phải. Mỗi track một cột, bus nằ
 
 Trong [ảnh chụp trang Fairlight](../../assets/img/page-fairlight.png) có ba cột: **A1** (Giong noi), **A2** (Nhac nen), **Bus1**.
 
+### Tiếng đi qua cột kênh theo thứ tự nào
+
+Tiếng của một track chạy qua các mục trong cột **từ trên xuống**, rồi mới đổ vào bus:
+
+![Đường đi của tiếng trong Fairlight: clip, Track FX, Effects, Dynamics, EQ, fader, Bus 1, đầu ra](../../assets/diagrams/fairlight-signal-flow.svg)
+
+*Clip gain và fade tác động trước khi tiếng vào Mixer; Limiter trên Bus 1 là chốt cuối trước file xuất.*
+
+Ba điều nên nhớ (manual trang 4011):
+- **Track FX** có sẵn ô nhưng **tắt** cho tới khi bạn bật plugin.
+- Mục **Effects** chứa được tối đa **6 hiệu ứng** (gọi là 6 *insert* — điểm cắm hiệu ứng) mỗi track, chưa tính Dynamics và EQ có sẵn.
+- **Bus Sends** mặc định lấy tín hiệu **sau fader** (post-fader): kéo fader nhỏ thì phần gửi đi cũng nhỏ theo.
+
+**Ví dụ:** bạn tăng clip gain một câu lên +3 dB. Câu đó vào Compressor ở Dynamics to hơn, nên bị nén nhiều hơn. Muốn tránh, chỉnh clip gain trước rồi mới chỉnh Dynamics.
+
+### Các mục trong cột
+
+![Một cột kênh trong Mixer Fairlight](../../assets/img/fairlight-mixer-strip.png)
+*Đọc từ trên xuống: tiếng đi qua các mục theo đúng thứ tự này rồi mới tới fader.*
+
 Từ trên xuống:
 
 | Mục | Làm gì | Mức |
@@ -55,7 +75,7 @@ Từ trên xuống:
 | **Input** | Chọn nguồn thu cho track (mic, cổng vào). Mặc định **No Input** | ★★☆ |
 | **Track FX** | Ô có sẵn cho Dialogue Leveler, Ducker và các Track FX khác. Mặc định hiện **Dial Lev** | ★★★ |
 | **Order** | Thứ tự xử lý của Effects, Dynamics, EQ. Mặc định **FX DY EQ** | ★☆☆ |
-| **Effects** | Bấm **+** để gắn hiệu ứng cho **cả track** | ★★☆ |
+| **Effects** | Bấm **+** để gắn hiệu ứng cho **cả track**. Tối đa 6 hiệu ứng, kéo để đổi thứ tự | ★★☆ |
 | **Effects In** | Tắt/bật **mọi** hiệu ứng ở mục Effects cùng lúc. Không ảnh hưởng Track FX, Dynamics, EQ | ★★☆ |
 | **Dynamics** | Bấm đúp để mở nén, chặn, cổng — xem [Dynamics](lam-sach-giong.md#dynamics--nén-chặn-cổng) | ★★☆ |
 | **EQ** | Bấm đúp để mở EQ 6 dải — xem [EQ](lam-sach-giong.md#eq--3-thao-tác-cho-giọng-nói) | ★★☆ |
@@ -67,7 +87,7 @@ Từ trên xuống:
 | **Fader** | Kéo để chỉnh to nhỏ cả track | ★★★ |
 
 **Fader:**
-- Bấm đúp vào núm fader → về **0 dB**.
+- Bấm đúp vào núm fader → về **0 dB**. Không áp dụng khi track đã có automation.
 - Giữ `⇧` khi kéo → chỉnh mịn từng 0,1 dB.
 
 > **Không thấy mục nào đó?** Menu **ba chấm** góc trên phải Mixer → bật mục đó lên. Bật **Show Labels** để hiện tên các mục bên trái.
@@ -95,10 +115,12 @@ Nằm ở mục **Track FX** của từng cột trong Mixer. Cũng chỉnh đư�
 | **Dialogue Separator** | Chỉnh riêng giọng, nền, tiếng vang phòng | `Studio` |
 | **Music Remixer** | Tách nhạc thành giọng hát, trống, bass, guitar, còn lại | `Studio` |
 
-Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
+Bản Free mặc định chỉ hiện ô **Dial Lev**. Ba mục Studio nằm mờ trong danh sách.
+
+**Bật, tắt và mở bảng:** bấm thẳng vào ô là bật/tắt (chữ vàng = đang bật, chữ nghiêng xám = tắt). Rê chuột lên ô sẽ hiện hai nút: **chấm đỏ** bật/tắt và **icon thanh trượt** mở bảng chỉnh.
 
 - Không thấy mục Track FX: menu **ba chấm** góc trên phải Mixer → tick **Track FX**.
-- Không thấy Ducker: menu ba chấm → **Visible Track FX** → tick **Ducker**.
+- Không thấy Ducker: menu ba chấm → **Visible Track FX** → tick **Ducker**. Ô **Ducker** hiện ngay dưới **Dial Lev**.
 
 ---
 
@@ -112,7 +134,7 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 
 **Cách làm:**
 1. Normalize các clip lời trước — manual khuyên làm vậy để có mức nền tốt.
-2. Ở cột track lời, mục **Track FX**, bấm vào ô **Dial Lev** để mở bảng.
+2. Ở cột track lời, mục **Track FX**, rê chuột lên ô **Dial Lev** → bấm **icon thanh trượt** để mở bảng.
 3. Bật plugin, chọn preset, tick các tuỳ chọn:
 
 | Mục | Đặt |
@@ -133,6 +155,9 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 
 ## Ducker — nhạc tự nhỏ khi có lời
 
+![Bảng Ducker trên track nhạc](../../assets/img/fairlight-ducker.png)
+*Ducker bật ở A2 (chữ vàng), Source là Giong noi. Đồ thị cho thấy nhạc bị hạ mỗi lần có lời.*
+
 `★★★ Hằng ngày`
 
 **Là gì:** gắn vào **track nhạc**, chọn **track lời** làm nguồn. Mỗi khi có người nói, nhạc tự nhỏ xuống; im lặng thì nhạc to lại. Không nén tiếng.
@@ -146,17 +171,21 @@ Mặc định chỉ **Voice Isolation** và **Dialogue Leveler** hiện ra.
 
 | Thanh | Làm gì | Mặc định | Gợi ý |
 |---|---|---|---|
-| **Duck Amount** | Nhạc nhỏ đi bao nhiêu dB | 2.7 dB | **2–5 dB** là hợp đa số trường hợp |
+| **Duck Level** | Nhạc nhỏ đi bao nhiêu dB | 2.7 dB | **2–5 dB** là hợp đa số trường hợp |
 | **Lookahead** | Bắt đầu nhỏ đi **trước** khi có lời | 15 ms | Giữ mặc định |
 | **Rise Time** | Nhỏ đi nhanh cỡ nào | 10 ms | Giữ mặc định |
 | **Hold** | Giữ ở mức nhỏ bao lâu | 150 ms | Tăng nếu nhạc to lên giữa các từ |
-| **Recovery Time** | To trở lại chậm cỡ nào | 750 ms | Chỉnh thử — quyết định độ tự nhiên |
+| **Recovery** | To trở lại chậm cỡ nào | 750 ms | Chỉnh thử — quyết định độ tự nhiên |
+
+![Ducker: nhạc ở A2 tự nhỏ khi có lời ở A1, kèm Lookahead, Duck Level, Hold, Recovery](../../assets/diagrams/fairlight-ducker-timeline.svg)
+
+*Đường tím là mức nhạc: hạ xuống ngay trước lời, giữ thêm 150 ms rồi to dần lại trong 750 ms.*
 
 **Thêm nguồn trong Inspector:** chọn track nhạc → **Inspector → tab Audio** → bấm **+** bên phải ô **Source 1** để có thêm **Source 2**, **Source 3**.
 
 Đồ thị trong bảng Ducker: đường **xám** là tín hiệu nguồn, đường **vàng** là mức nhạc. Chỗ đường vàng trũng xuống là chỗ nhạc đang bị hạ.
 
-**Ví dụ:** vlog có lời ở A1, nhạc ở A2. Bật Ducker ở A2, Source chọn A1, Duck Amount 4 dB. Nghe thấy nhạc "nhảy" lên ở mỗi chỗ ngắt câu ngắn → tăng **Hold** lên khoảng 300 ms.
+**Ví dụ:** vlog có lời ở A1, nhạc ở A2. Bật Ducker ở A2, Source chọn A1, Duck Level 4 dB. Nghe thấy nhạc "nhảy" lên ở mỗi chỗ ngắt câu ngắn → tăng **Hold** lên khoảng 300 ms.
 
 > **Cách khác:** Compressor trong Dynamics và Fairlight FX **Limiter** đều có mục **Sidechain** để làm việc tương tự. Ducker là cách dễ nhất.
 

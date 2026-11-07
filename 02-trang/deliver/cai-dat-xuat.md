@@ -8,6 +8,9 @@ Chọn preset mạng xã hội (YouTube, TikTok…) thì panel đổi sang **d�
 
 ## Tab Video
 
+![Tab Video của Custom Export](../../assets/img/deliver-video-tab.png)
+*Chọn Custom Export thì mọi ô trong ba tab mới mở khoá.*
+
 ### Export Video
 
 `★★★ Hằng ngày`
@@ -25,7 +28,8 @@ Chọn preset mạng xã hội (YouTube, TikTok…) thì panel đổi sang **d�
 | **MP4** | H.264, H.265 | Đăng mạng xã hội, gửi khách xem. Mở được ở mọi nơi |
 | **QuickTime** (`.mov`) | H.264, H.265, Apple ProRes, DNxHR | Lưu trữ, gửi đi chỉnh tiếp |
 | **MXF OP1A** / **MXF OP-Atom** | DNxHD, DNxHR | Gửi cho người dựng bằng Avid |
-| **TIFF**, **PNG**, **JPEG**, **DPX**, **EXR** | — | Xuất chuỗi ảnh (mỗi khung một file) |
+| **MKV** | — | File cho trình phát trên máy tính, máy chủ phim tại nhà. Ít dùng |
+| **TIFF**, **PNG**, **JPEG**, **HEIF**, **DPX**, **EXR** | — | Ảnh tĩnh. Xuất cả timeline thì ra chuỗi ảnh (mỗi khung một file) |
 | **GIF**, **WebP** | — | Ảnh động cho web |
 | **WAVE** (ở tab Audio) | Linear PCM | Chỉ xuất tiếng |
 
@@ -44,7 +48,16 @@ Chọn preset mạng xã hội (YouTube, TikTok…) thì panel đổi sang **d�
 
 `★★★ Hằng ngày`
 
-Hiện khi chọn H.264 hoặc H.265. Tick để dùng chip mã hoá của máy — **render nhanh hơn nhiều lần**.
+**Là gì:** dùng bộ mã hoá phần cứng (chip chuyên nén video) thay cho CPU. Hiện khi chọn MP4, hoặc QuickTime với H.264 / H.265.
+
+**Dùng khi:** gần như luôn tick nếu ô này có — render nhanh hơn nhiều.
+
+Manual (trang 4200) chỉ nói tới **QuickSync** của Intel và **NVENC** của card NVIDIA, không nhắc tới Mac. Trên Mac, bộ mã hoá của chip Apple có được dùng ở bản free hay không thì manual không ghi rõ.
+
+**Cách tự kiểm tra:**
+1. Đặt In/Out quanh 10 giây trên timeline, chọn **In/Out Range**.
+2. Render một lần có tick, một lần bỏ tick, cùng codec H.265.
+3. Xem thời gian render của từng job trong Render Queue. Chênh nhau rõ là phần cứng đang chạy.
 
 Bỏ tick chỉ khi file xuất ra bị lỗi hình — xem [Render xong mà file lỗi](render-queue-va-loi.md#render-xong-mà-file-lỗi).
 
@@ -120,11 +133,14 @@ Video dọc 1080×1920 dùng cùng mức với 1080p. Bản gửi khách duyệt
 
 | Ô | Làm gì | Đặt gì |
 |---|---|---|
-| **Encoding Profile** | Mức nén. Với H.264: **High** cho HD, **Base** cho điện thoại cũ. Với H.265: **Main** (8-bit), **Main10** (10-bit) | **Auto** |
+| **Encoding Profile** | Mức nén. Với H.264: **High** cho HD, **Base** cho điện thoại cũ. Với H.265: **Main** (8-bit), **Main10** (10-bit), **Main 4:2:2 10** (10-bit, màu 4:2:2) | **Auto** |
 | **Entropy Mode** | Thuật toán nén. **CABAC** đẹp hơn ở cùng bitrate, **CAVLC** nhẹ máy hơn | **Auto** |
 | **Multi-pass encode** | Nén nhiều lượt — chất lượng tốt hơn, render chậm hơn | Tắt, trừ khi cần bản đẹp nhất ở bitrate thấp |
 | **Key Frames** | Khoảng cách giữa các khung khoá | **Automatic** |
 | **Frame reordering** | Dùng B-frame để nén tốt hơn. Tắt thì render nhanh hơn nhưng xấu hơn | Bật (mặc định) |
+| **Use Constant Bit Rate** | Ép bitrate cố định suốt file, thay vì lúc nhiều lúc ít theo cảnh | Tắt, trừ khi nơi nhận yêu cầu CBR |
+
+Theo manual (trang 4201), **Multi-pass encode**, **Key Frames** và **Frame reordering** dành cho **QuickTime** H.264 / H.265. Chọn MP4 mà không thấy mấy ô này là bình thường.
 
 ### Advanced Settings — những ô đáng biết
 
@@ -133,6 +149,7 @@ Bấm **Advanced Settings** ở cuối tab Video để mở thêm. Phần lớn 
 | Ô | Làm gì | Mức |
 |---|---|---|
 | **Data Levels** | **Auto** (mặc định) tự chọn theo codec. **Video** hoặc **Full** ép mọi clip theo một dải mức sáng | ★☆☆ |
+| **Retain sub-black and super-white data** | Giữ phần tối hơn đen chuẩn, sáng hơn trắng chuẩn thay vì cắt bỏ. Tắt thì Resolve cắt để file qua kiểm định kỹ thuật | ★☆☆ |
 | **Color Space Tag** / **Gamma Tag** | Gắn thông tin không gian màu vào file. Mặc định **Same as Project** | ★☆☆ |
 | **Data burn-in** | **Same as Project** giữ chữ đè (timecode, tên clip) đã bật ở Workspace → Data Burn-In. **None** tắt hết | ★☆☆ |
 | **Bypass re-encode when possible** | Chép thẳng hình từ file gốc, không nén lại — chỉ khi codec giống file gốc và clip chưa chỉnh gì | ★☆☆ |
@@ -141,8 +158,8 @@ Bấm **Advanced Settings** ở cuối tab Video để mở thêm. Phần lớn 
 | **Use render cached images** | Render từ cache cho nhanh | ★☆☆ |
 | **Force sizing to highest quality** | Ép bộ lọc phóng to/thu nhỏ đẹp nhất khi xuất | ★★☆ |
 | **Force debayer res to highest quality** | Ép giải mã RAW ở chất lượng cao nhất khi xuất | ★★☆ |
-| **Render All Video Tracks** | Bỏ tick để chọn track không xuất trong job này | ★☆☆ |
-| **Enable flat pass** | **Always On** xuất không có chỉnh màu | ★☆☆ |
+| **Render All Video Tracks** | (Single clip) Bỏ tick rồi chọn track cần bỏ ở menu **Disable** bên cạnh. Chỉ áp cho job này | ★☆☆ |
+| **Enable flat pass** | **Off** (mặc định) xuất có màu đã chỉnh. **Always On** bỏ chỉnh màu mọi clip. **With clip settings** chỉ bỏ ở clip được đánh dấu flat pass | ★☆☆ |
 | **Render at Source Resolution** | (Individual clips) mỗi clip giữ độ phân giải gốc | ★☆☆ |
 | **Add X frame handles** | (Individual clips) thêm khung thừa đầu/đuôi mỗi clip | ★☆☆ |
 
@@ -180,13 +197,28 @@ Với **As a separate file**, tick chọn track phụ đề cần xuất ở m�
 |---|---|---|
 | **Export Audio** | Có xuất tiếng hay không | **Tick** |
 | **Codec** | Cách nén tiếng | **AAC** |
+| **Sample Rate** | Số mẫu mỗi giây, tính bằng Hz | **48000** |
+| **Bit Rate Strategy** | (AAC) Cách phân bitrate: **Constant**, **Average**, **Variable Bit Rate Constrained**, **Variable** | Để mặc định |
 | **Data Rate** | Bitrate tiếng | **320 Kb/s** |
 | **Bit Depth** | Độ sâu bit | 16 |
 | **Output Track 1** | Bus nào được xuất | **Bus 1** (bus chính, stereo) |
 
 Tick **Export Audio** — nghe thì hiển nhiên, nhưng đây là lỗi hay gặp khi dùng preset lạ.
 
+**Bốn codec tiếng** (manual trang 4206):
+
+| Codec | Là gì | Dùng khi |
+|---|---|---|
+| **Linear PCM** | Không nén, nguyên vẹn. **Mặc định** khi tự đặt | Bản lưu trữ, gửi đi mix tiếp |
+| **AAC** | Nén, nhẹ. **Chỉ có trên macOS** | Video đăng mạng |
+| **IEEE Float** | Không nén, số thực 32-bit, không lo vượt trần khi xử lý tiếp | Gửi cho phòng tiếng |
+| **MP3** | Nén, mở được ở mọi nơi | Podcast, file nghe thử |
+
+Chọn **Variable Bit Rate** ở Bit Rate Strategy thì ô **Data Rate** đổi thành ô **Quality** với năm mức, đổi giữa nhanh và đẹp.
+
 **Codec cho bản lưu trữ:** chọn **Linear PCM** — không nén, chất lượng tiếng nguyên vẹn. Preset ProRes mặc định dùng Linear PCM 16-bit.
+
+Hai ô tick ít dùng ở cuối: **Render one track per channel** (mỗi kênh thành một track riêng, vẫn giữ nhóm 2.0, 5.1) và **Render as discrete audio tracks** (mỗi kênh một track, không còn thông tin vị trí trái phải). Cả hai `★☆☆`, chỉ dùng khi phòng tiếng yêu cầu.
 
 ### Output Track — chọn bus
 
@@ -217,9 +249,9 @@ Preset YouTube có sẵn ô **Normalize Audio**. Tick vào thì **Standard** đ�
 
 | Ô | Làm gì | Mức |
 |---|---|---|
-| **Filename uses** | **Custom name** — tên tự gõ. **Timeline name** — lấy tên timeline (Single clip). **Source name** — lấy tên file gốc (Individual clips) | ★★☆ |
+| **Filename uses** | **Use Custom Filename** — tên tự gõ vào ô **Custom name**. **Use Timeline Name** — lấy tên timeline (Single clip). **Use Source Filename** — lấy tên file gốc (Individual clips) | ★★☆ |
 | **File suffix** | Thêm chữ vào cuối tên file | ★☆☆ |
-| **Use unique filenames** | (Individual clips) thêm số track và số clip vào tên để không file nào đè file nào | ★☆☆ |
+| **Use unique filenames** | (Individual clips, khi đặt tên tự gõ) thêm số track và số clip vào tên để không file nào đè file nào | ★☆☆ |
 | **Use filename digits** | Số chữ số đánh số khi xuất chuỗi ảnh. Mặc định 8 | ★☆☆ |
 | **Start timeline timecode at** | (Single clip) timecode bắt đầu ghi vào file | ★☆☆ |
 | **Place clips in separate folders** | (Individual clips) mỗi clip một thư mục | ★☆☆ |
@@ -249,4 +281,4 @@ Preset YouTube có sẵn ô **Normalize Audio**. Tick vào thì **Standard** đ�
 
 ## Giới hạn bản free
 
-Theo bảng so sánh của Blackmagic, bản free xuất tối đa **4K UHD (3840×2160) ở 60 fps**, màu 8-bit. Lớn hơn cần `Studio`. Preset **IMF** cũng là `Studio`. Xem [Free và Studio](../../01-bat-dau/free-vs-studio.md).
+Theo bảng so sánh của Blackmagic, bản free xuất tối đa **4K UHD (3840×2160) ở 60 fps**. Giới hạn màu 8-bit và việc H.265 10-bit (**Main10**) có dùng được ở bản free trên Mac hay không thì manual không ghi — thử render rồi xem thông tin file để chắc. Lớn hơn cần `Studio`. Preset **IMF** cũng là `Studio`. Xem [Free và Studio](../../01-bat-dau/free-vs-studio.md).

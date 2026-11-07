@@ -13,7 +13,7 @@ Trang này đi theo thứ tự bạn làm: **đưa clip xuống → cắt bỏ p
 ### Ba bước cơ bản
 
 1. **Chọn đoạn:** bấm đúp clip trong Media Pool — nó mở ở **Viewer Source** (trái). Tua tới đầu đoạn cần lấy, bấm `I`. Tới cuối đoạn, bấm `O`.
-2. **Chọn track đích:** bấm ô **V1/A1 đỏ** ở đầu track muốn đặt vào (track được chọn sáng lên). Xem [Destination](giao-dien.md#destination--chọn-track-đích).
+2. **Chọn track đích:** ô **xanh** V1/A1 (track của clip nguồn) cắm vào track nào thì clip đi xuống track đó. Kéo ô xanh sang track khác, hoặc bấm `⌥2` để cắm hình vào V2. Xem [Destination](giao-dien.md#destination--chọn-track-đích).
 3. **Chọn vị trí:** đặt con trỏ timeline ở chỗ muốn clip bắt đầu, rồi bấm phím edit.
 
 Đặt `I` `O` sai: `⌥X` xoá cả hai, đặt lại.
@@ -31,6 +31,9 @@ Trang này đi theo thứ tự bạn làm: **đưa clip xuống → cắt bỏ p
 | `⇧F12` | **Append** | Nối vào **cuối** timeline | Có | ★★★ |
 
 Cả bảy cũng có trong menu **Edit**, và trong lớp phủ hiện ra khi **kéo clip lên Viewer Timeline**.
+
+![Bảy kiểu edit: trước và sau](../../assets/diagrams/edit-seven-edits.svg)
+*Cùng một timeline A–B–C, con trỏ ở giữa B, clip nguồn S. Mỗi hàng là kết quả sau một kiểu edit. Riêng Fit to Fill: đã đặt `I` `O` quanh B trên timeline.*
 
 > Insert, Overwrite, Place On Top, Ripple Overwrite, Append đưa được **nhiều clip cùng lúc** (chọn nhiều clip trong Media Pool rồi bấm phím). Replace và Fit to Fill chỉ lấy **clip đầu tiên**.
 
@@ -92,7 +95,7 @@ Cả bảy cũng có trong menu **Edit**, và trong lớp phủ hiện ra khi **
 
 `★★★ Hằng ngày`
 
-**Là gì:** đặt clip lên **track hình trống đầu tiên phía trên** clip đang ở dưới con trỏ. Tiếng đi xuống track tiếng trống dưới cùng. **Bỏ qua track đích**, thiếu track thì tự tạo.
+**Là gì:** đặt hình lên **trên track hình cao nhất** đang có clip ở chỗ đó, tiếng xuống **dưới track tiếng thấp nhất**. **Bỏ qua track đích**, thiếu track thì tự tạo track mới.
 
 **Dùng khi:** B-roll phủ lên đoạn nói, logo, chữ, ảnh chèn — mà không phải chọn track.
 
@@ -143,7 +146,7 @@ Cả bảy cũng có trong menu **Edit**, và trong lớp phủ hiện ra khi **
 | Cách | Giữ lựa chọn bao lâu |
 |---|---|
 | Menu **Video / Audio** dưới Viewer Source → chọn **Video Only** hoặc **Audio Only** | Tới khi bạn đổi lại |
-| Bấm ô đỏ của track tiếng (hoặc hình) cho tắt | Tới khi bạn bật lại |
+| Bấm ô **xanh** A1 (hoặc V1) ở cột nguồn cho tắt | Tới khi bạn bật lại |
 | `⌥` kéo (chỉ hình), `⇧` kéo (chỉ tiếng) | Chỉ lần kéo đó |
 
 **Ví dụ:** lấy cảnh đường phố làm B-roll nhưng tiếng xe ồn → Video Only rồi `F12`.
@@ -208,7 +211,7 @@ Không có `I` ở Source thì lấy từ khung đầu clip. Không có `O` thì
 | Cắt bằng chuột, nhiều chỗ liên tiếp | `B` (Blade), bấm lên clip. Xong bấm `A` |
 | Nối lại hai nửa vừa cắt | Bấm vào đường cắt (đường **chấm chấm** — gọi là *through edit*) → `Delete` |
 
-`⌘\` cắt **mọi track có Sync Lock bật** tại con trỏ. Chỉ muốn cắt một track: tắt Sync Lock các track kia, hoặc dùng `B` bấm đúng clip đó.
+`⌘\` cắt **mọi track có ô đỏ Destination sáng** tại con trỏ. Có chọn clip trước khi cắt thì sau khi cắt nửa đầu vẫn được chọn. Chỉ muốn cắt một track: `⌥`-bấm ô đỏ của track đó (các track khác tắt), hoặc dùng `B` bấm đúng clip đó. Xem [Destination](giao-dien.md#destination--chọn-track-đích).
 
 ### Xoá
 
@@ -218,7 +221,7 @@ Không có `I` ở Source thì lấy từ khung đầu clip. Không có `O` thì
 | Xoá, **phần sau dồn lên** (Ripple Delete) | Chọn clip → `Fn` + `Delete` |
 | Xoá một đoạn giữa clip | Đặt `I` `O` trên timeline quanh đoạn đó → `Fn` + `Delete` |
 | Xoá khoảng trống lỡ để lại | Bấm vào khoảng trống (nó sáng lên) → `Delete`. Phần sau dồn lên |
-| Xoá **mọi** khoảng trống | **Edit → Delete Gaps**. Giới hạn bằng `I` `O` nếu cần |
+| Xoá **mọi** khoảng trống | **Edit → Delete Gaps**. Chỉ xét các track có ô đỏ sáng |
 | Tìm khoảng trống quá nhỏ khó thấy | `⌥⌘;` (trước) / `⌥⌘'` (sau) |
 | Tắt clip mà không xoá | Chọn → `D`. Clip mờ đi, không phát, không xuất. `D` lần nữa để bật |
 
@@ -270,7 +273,19 @@ Dán sang track khác: `⌥`-click vùng trống trên track đó trước khi `
 
 > Mới học thì dựng ở chế độ **Trim `T`** — kéo mép clip là phần sau tự dồn, không bao giờ để lại lỗ đen.
 
-Khi trim, **Viewer Timeline chia 2 hoặc 4 ô** để bạn so khung cuối clip trước với khung đầu clip sau. Giữ `⇧` trong lúc kéo để tạm chỉ xem một khung.
+![Ripple, Roll, Slip, Slide](../../assets/diagrams/edit-trim-types.svg)
+*Bốn kiểu trim. Ripple đổi tổng độ dài. Roll, Slip, Slide giữ nguyên tổng độ dài.*
+
+Khi trim, **Viewer Timeline chia ô** để bạn so khung:
+
+| Kiểu trim | Viewer hiện |
+|---|---|
+| Ripple, Roll | **2 ô**: khung cuối clip trước, khung đầu clip sau |
+| Slip, Slide | **4 ô**: hai ô giữa là khung đầu/cuối clip đang sửa, hai ô ngoài là clip hai bên |
+
+Giữ `⇧` trong lúc kéo để tạm chỉ xem một khung. Tắt hẳn: bỏ tick **View → Enable Multiview Edit Preview**.
+
+**Gõ số thay vì kéo:** đã chọn điểm nối hoặc clip, gõ `+12` rồi `Return` là dịch tới 12 khung. `-1.` (dấu chấm = `00`) là lùi 1 giây tròn.
 
 ### Ripple — kéo mép, phần sau dồn theo
 
@@ -278,7 +293,9 @@ Khi trim, **Viewer Timeline chia 2 hoặc 4 ô** để bạn so khung cuối cli
 
 **Rê tới:** mép trái hoặc phải của clip, ở chế độ `T`.
 
-**Kết quả:** clip ngắn/dài ra, mọi clip phía sau (trên các track có Sync Lock) dời theo. **Tổng độ dài timeline thay đổi.**
+**Kết quả:** clip ngắn/dài ra, mọi clip phía sau dời theo — cả trên các track khác nếu track đó bật Sync Lock. **Tổng độ dài timeline thay đổi.**
+
+**Ví dụ:** clip lời dài 8 giây, 1 giây cuối là tiếng thở. Bấm `T`, kéo mép phải vào 1 giây (nhìn ô số `-00:00:01:00` hiện cạnh chuột). Clip còn 7 giây, mọi thứ sau đó lùi lên 1 giây, nhạc trên A2 lùi theo vì Sync Lock bật.
 
 **Dùng khi:** bỏ đoạn thừa đầu hoặc đuôi một câu nói.
 
@@ -292,6 +309,10 @@ Khi trim, **Viewer Timeline chia 2 hoặc 4 ô** để bạn so khung cuối cli
 
 **Dùng khi:** chuyển cảnh sớm/muộn vài khung cho khớp nhịp, không làm xê dịch phần sau.
 
+**Ví dụ:** cảnh đĩa phô mai chuyển sang cảnh rau muộn 6 khung so với nhịp trống. Rê tới giữa điểm nối, kéo sang trái 6 khung. Clip phô mai ngắn đi 6 khung, clip rau dài ra 6 khung, cảnh sau đó đứng yên.
+
+> Roll cần **footage dư** ở clip được kéo dài. Clip đã dùng tới khung cuối của file gốc thì không kéo dài thêm được.
+
 ### Slip — đổi nội dung bên trong
 
 `★★☆ Thường dùng`
@@ -301,6 +322,10 @@ Khi trim, **Viewer Timeline chia 2 hoặc 4 ô** để bạn so khung cuối cli
 **Kết quả:** clip đứng yên, độ dài như cũ, nhưng hiện **khúc sớm hơn hoặc muộn hơn** của footage gốc. Một khung nét đứt cho thấy footage còn dư bao nhiêu.
 
 **Dùng khi:** độ dài đã khớp nhạc, nhưng khoảnh khắc đẹp nhất rơi hơi muộn — slip sớm lên.
+
+**Ví dụ:** cảnh cô gái quay lại cười dài 3 giây trên timeline, nhưng nụ cười rơi vào giây thứ 3,5 của đoạn đang dùng. Slip sang trái 1 giây — đoạn hiện giờ là giây 1–4 của file gốc thay vì 0–3, nụ cười vào đúng giữa cảnh. Vị trí và độ dài clip không đổi.
+
+> Slip cũng làm được **không cần chế độ `T`**: bấm đúp clip trên timeline để mở nó ở Viewer Source, rồi `⇧`-kéo trên thanh jog.
 
 ### Slide — dời clip, hai bên bù
 
@@ -326,6 +351,9 @@ Khi trim, **Viewer Timeline chia 2 hoặc 4 ô** để bạn so khung cuối cli
 | `⌥U` | Đảo giữa **hình + tiếng / chỉ hình / chỉ tiếng** |
 | `↑` `↓` | Nhảy tới điểm nối trước/sau, giữ kiểu chọn |
 | `S` | Khi chọn clip ở chế độ `T`: đảo giữa **Slip** và **Slide** |
+| `⌥E` / `⇧E` | Chọn điểm nối gần nhất **chỉ phần hình** / **chỉ phần tiếng** |
+| `⌘`-bấm điểm nối | Chọn thêm nhiều điểm nối, trim một lần |
+| `⌘⇧A` | Bỏ chọn tất cả |
 
 **Bước 2 — dịch:** `,` `.` từng khung, `⇧,` `⇧.` mỗi lần 5 khung. Hoặc gõ `+5` / `-5` rồi `Return`.
 
@@ -333,18 +361,30 @@ Khi trim, **Viewer Timeline chia 2 hoặc 4 ô** để bạn so khung cuối cli
 
 **Ví dụ — bỏ 8 khung im lặng đầu câu:** bấm `T` → `V` → `U` cho tới khi chọn nửa phải điểm nối → gõ `+8` → `Return`.
 
+**Trim trong lúc phát lặp** — cách chỉnh nhịp cắt chính xác nhất:
+
+1. `V` chọn điểm nối, `U` chọn nửa cần sửa.
+2. `⌘/` bật phát lặp.
+3. `/` — Resolve phát lặp đi lặp lại quanh điểm nối.
+4. Trong lúc phát, bấm `,` `.` (1 khung) hoặc `⇧,` `⇧.` (5 khung). Vòng lặp chạy lại ngay để bạn xem kết quả.
+5. `K` để dừng, `⌘/` để tắt lặp.
+
+> Độ dài trước/sau khi phát quanh (pre-roll, post-roll) và số khung của `⇧,` `⇧.` đổi ở **Preferences → User → Editing**.
+
 ### Trim tới con trỏ
 
 `★★★ Hằng ngày` — cách trim nhanh nhất
 
 | Phím | Làm gì |
 |---|---|
-| `⇧[` | Cắt **đầu** clip dưới con trỏ tới đúng con trỏ |
-| `⇧]` | Cắt **đuôi** clip dưới con trỏ tới đúng con trỏ |
+| `⇧[` | Cắt **đầu** clip dưới con trỏ tới đúng con trỏ (**Trim Start**) |
+| `⇧]` | Cắt **đuôi** clip dưới con trỏ tới đúng con trỏ (**Trim End**) |
 | `⌘⇧[` / `⌘⇧]` | Như trên nhưng **luôn dồn** timeline, ở chế độ nào cũng vậy |
 | `E` | Kéo điểm nối đang chọn tới con trỏ (Extend) |
 
 Ở chế độ `A`, `⇧[` `⇧]` để lại khoảng trống. Ở chế độ `T` thì dồn.
+
+Cả bốn phím tác động **mọi clip dưới con trỏ** trên các track có **ô đỏ Destination sáng**. Muốn chỉ cắt clip lời ở A1 mà không cắt nhạc ở A2: tắt ô đỏ A2 trước.
 
 **Không cần chọn trước.** Tua tới chỗ câu nói bắt đầu → `⌘⇧[` — xong.
 
@@ -372,8 +412,11 @@ Giống [Trim Editor trang Cut](../cut/trim.md#trim-editor--trim-chính-xác-t�
 1. Chọn điểm nối (`V`), hoặc không chọn gì — Resolve tự chọn điểm gần con trỏ nhất.
 2. Bấm `W`. Nút Dynamic Trim và con trỏ chuyển **vàng**.
 3. `A` để resize/roll, `T` để ripple. Với clip: `S` đổi slip/slide.
-4. `J` `K` `L` để trim. Bấm `L` hoặc `J` nhiều lần để nhanh hơn, `K` để dừng.
-5. `W` để thoát.
+4. `J` `K` `L` để trim. Bấm `L` hoặc `J` nhiều lần để nhanh hơn, `K` để dừng. Giữ `K` rồi gõ `J`/`L` để trim từng khung; giữ `K`+`L` để trim chậm.
+5. `Space` — trong chế độ này **không phát tiếp** mà **phát quanh** chỗ vừa trim để bạn xem lại.
+6. `W` để thoát.
+
+> **Lỗi hay gặp:** quên tắt `W`. Lúc đó `J` `K` `L` vẫn trim clip đang chọn thay vì phát timeline. Thấy con trỏ **vàng** là biết. Muốn phát mà chưa thoát: `⌘⇧A` bỏ chọn hết.
 
 **Dùng khi:** cắt theo cảm giác — nghe nhạc chạy rồi dừng đúng lúc muốn cắt.
 
@@ -388,9 +431,14 @@ Cho **tiếng** của một cảnh lấn sang **hình** của cảnh kế bên:
 - **L-cut:** hình đã chuyển, tiếng cảnh trước vẫn còn.
 - **J-cut:** nghe tiếng cảnh sau trước khi thấy hình.
 
-**Cách làm:**
-1. Giữ `⌥` rồi bấm vào **mép phần tiếng** ở điểm nối — chỉ phần tiếng được chọn.
-2. Kéo mép đó sang trái hoặc phải.
+![J-cut và L-cut](../../assets/diagrams/edit-jl-cut.svg)
+*Tên gọi theo hình chữ trên timeline: J-cut tiếng thò sang trái, L-cut tiếng thò sang phải.*
+
+**Cách làm (roll riêng phần tiếng):**
+1. Giữ `⌥` rồi bấm vào **chính giữa điểm nối của phần tiếng** — chỉ phần tiếng được chọn, hình đứng yên.
+2. Kéo sang trái (J-cut) hoặc phải (L-cut). Tổng độ dài không đổi.
+
+Cần clip có **footage dư**: L-cut cần tiếng dư ở đuôi clip trước, J-cut cần tiếng dư ở đầu clip sau.
 
 **Cách bằng phím:** `V` chọn điểm nối → `⌥U` cho tới khi chỉ chọn tiếng → `,` `.` dịch từng khung.
 
@@ -411,7 +459,8 @@ Cho **tiếng** của một cảnh lấn sang **hình** của cảnh kế bên:
 | Sửa marker | Bấm đúp marker, hoặc chọn rồi `⇧M` |
 | Nhảy marker trước / sau | `⇧↑` / `⇧↓` |
 | Đổi màu | Mũi tên cạnh nút Marker, hoặc trong ô sửa marker |
-| Xoá | Mở ô sửa marker → **Remove Marker** |
+| Xoá một marker | Đặt con trỏ ngay marker → `⌥M`. Hoặc bấm chọn marker → `Delete`. Hoặc bấm đúp → **Delete** |
+| Xoá mọi marker | Chọn clip → mũi tên cạnh nút **Marker** → **Clear All**. Không chọn clip nào thì xoá marker trên thước |
 | Marker có độ dài | Ở Viewer Source, đặt `I` `O` → chuột phải thanh jog → **Convert In and Out to Duration Marker** |
 | Xem danh sách mọi marker | **Index → Markers**. Bấm đúp một dòng là nhảy tới |
 

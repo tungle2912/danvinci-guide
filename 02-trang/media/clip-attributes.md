@@ -13,7 +13,7 @@
 | **Media Pool** (trang nào cũng được) | Chọn một hoặc nhiều clip → chuột phải → **Clip Attributes** |
 | **Timeline** trang Cut, Edit, Color | Chọn clip trên timeline → chuột phải → **Clip Attributes** |
 
-Cửa sổ có nhiều tab: **Video**, **Audio**, **Timecode**, **Name**, **Reel Name**. Bấm tab cần sửa → sửa → bấm **OK**.
+Cửa sổ có bốn tab: **Video**, **Audio**, **Timecode**, **Name**. Tab thứ năm **Reel Name** chỉ hiện khi bật **Assist using Reel Names** (xem cuối trang). Bấm tab cần sửa → sửa → bấm **OK**.
 
 > **Sửa ở đây không đụng tới file trên ổ.** Resolve chỉ ghi lại cách hiểu mới trong project. Muốn quay về: mở lại Clip Attributes, đặt lại giá trị cũ.
 
@@ -21,23 +21,34 @@ Cửa sổ có nhiều tab: **Video**, **Audio**, **Timecode**, **Name**, **Reel
 
 ## Tab Video
 
+![Tab Video của Clip Attributes](../../assets/img/media-clip-attributes-video.png)
+*Sửa cách Resolve hiểu clip, file trên ổ không đổi.*
+
 Sửa frame rate, tỉ lệ điểm ảnh, mức sáng, hướng hình.
 
 | Mục | Làm gì | Khi nào cần | Mức |
 |---|---|---|---|
-| **Video Frame Rate** | Đổi fps Resolve coi clip là gì. Chọn từ 1 tới 120, hoặc **Custom** gõ số | Resolve đọc nhầm fps, hay gặp với file slow motion hoặc file đã qua phần mềm khác | ★★☆ |
+| **Video Frame Rate** | Đổi fps Resolve coi clip là gì. Chọn từ 1 tới 120, hoặc **Custom** gõ từ 1 tới 32.000 | Resolve đọc nhầm fps, hay gặp với file slow motion hoặc file đã qua phần mềm khác | ★★☆ |
 | **Data Levels** | Chọn **Auto**, **Video** hoặc **Full** | Ảnh bệt đen hoặc cháy trắng bất thường — xem mục dưới | ★★☆ |
 | **Pixel Aspect Ratio** | Tỉ lệ một điểm ảnh. **Custom** để gõ số | Hình bị méo ngang hoặc dọc. Footage thường để **Square** | ★☆☆ |
 | **Image Orientation** | Xoay 0°, 90° phải, 180°, 90° trái | File có ghi hướng xoay nhưng mở ra bị nằm ngang | ★☆☆ |
-| **Horizontal / Vertical Image Flip** | Lật hình ngang/dọc | Chỉ cho file **R3D** (máy RED) | ★☆☆ |
+| **Image Flip** | Hai nút: lật ngang, lật dọc | Hình bị ngược do máy quay lắp ngược hoặc gương | ★☆☆ |
 | **Input Sizing Preset** | Gán preset co giãn hình | Nhiều clip SD cần cùng một cách co giãn | ★☆☆ |
-| **Field Dominance** | Auto / Upper / Lower | Footage xen kẽ (interlaced) bị rung răng cưa | ★☆☆ |
-| **Enable Deinterlacing** | Khử xen kẽ | Footage interlaced cũ | `Studio` |
+| **Stereoscopic Mode** | **Monoscopic** (mặc định) hoặc kiểu ghép hai mắt trái/phải | Footage 3D nổi. Video thường để nguyên | ★☆☆ |
+| **Projection Format** | Kiểu chiếu của video 360°/VR | Footage máy quay VR. Video thường để **None** | ★☆☆ |
+| **Field Dominance** | **Auto** (clip thường hiện `Auto - Progressive`), **Upper**, **Lower** | Footage xen kẽ (interlaced) bị rung răng cưa | ★☆☆ |
+| **Enable Deinterlacing** | Khử xen kẽ theo mục **Deinterlace quality** trong Project Settings → Image Scaling. Chỉ bấm được khi tắt **Enable video field processing** trong Master Settings | Footage interlaced cũ | `Studio` |
 | **Alpha Mode** | Bật/tắt kênh trong suốt, chọn Premultiplied hay Straight, đảo alpha | File có nền trong suốt (ProRes 4444, chuỗi ảnh PNG/TIFF, EXR) bị viền đen hoặc nền không trong | ★☆☆ |
-| **Super Scale** | Phóng to bằng thuật toán, tăng độ phân giải gốc của clip | Đưa footage SD vào timeline 4K | `Studio` |
-| **Remove 3:2 Pulldown** | Lấy lại 24 khung gốc từ video 29.97 interlaced | Phim nhựa đã telecine sang NTSC | ★☆☆ |
+| **Super Scale** | Phóng to bằng thuật toán, tăng độ phân giải gốc của clip. Chọn **2x**, **3x**, **4x** hoặc bản **Enhanced**, kèm **Sharpness** và **Noise Reduction**. Bản free vẫn hiện menu này | Đưa footage SD vào timeline 4K | `Studio` |
+| **Remove 3:2 Pulldown** | Lấy lại 24 khung gốc từ video 29.97 interlaced. Đặt **First Frame of Clip** về khung bắt đầu nhịp 3:2 (thường là khung "A") | Phim nhựa đã telecine sang NTSC | ★☆☆ |
+
+> **Không thấy Enable Deinterlacing hay Remove 3:2 Pulldown?** Hai mục này chỉ hiện với clip phù hợp (interlaced, 29.97). Clip progressive từ điện thoại hay máy ảnh sẽ không có.
+
+> **Lưu ý về Super Scale:** rất nặng máy, gần như chắc chắn hết phát mượt. Tạo optimized media cho clip đó — optimized media "nướng" sẵn hiệu ứng Super Scale.
 
 **Ví dụ — clip slow motion chạy nhanh:** máy quay ghi 120 fps nhưng file ghi là 30 fps. Chọn clip → **Clip Attributes** → **Video Frame Rate** → `120` → **OK**.
+
+> **Ví dụ trong project demo:** timeline "Demo - Vlog" chạy 25 fps. Một clip trại cừu quay 50 fps hiện thành clip 50 fps bình thường. Muốn nó thành slow motion một nửa tốc độ ngay từ Media Pool: **Video Frame Rate** → `25` → **OK**. Clip dài gấp đôi, chạy chậm một nửa.
 
 > **Đổi Video Frame Rate thì độ dài và tốc độ phát của hình đổi theo, nhưng tiếng thì không.** Clip có tiếng thoại sẽ lệch tiếng. Chỉ dùng cho clip hình, hoặc clip mà bạn sẽ tắt tiếng.
 
@@ -78,10 +89,10 @@ Sửa frame rate, tỉ lệ điểm ảnh, mức sáng, hướng hình.
 
 | Nút | Làm gì |
 |---|---|
-| **Format** | Chọn định dạng cho track sắp thêm: **Mono**, **Stereo**, **5.1**, **7.1**, **Adaptive** |
+| **Format** | Chọn định dạng cho track sắp thêm: **Mono**, **Stereo**, **5.1**, **7.1**, **Adaptive**… Danh sách cuộn được, còn nhiều kiểu vòm khác (LRC, LCR, Quad, 5.0…) |
 | **Tracks** | Số track muốn thêm |
 | **Add** | Thêm các track đó vào clip |
-| **Reset** (icon) | Trả phần tiếng của clip về như lúc mới nạp |
+| **Reset** (icon mũi tên vòng ↺ cạnh nút Add) | Trả phần tiếng của clip về như lúc mới nạp |
 
 Bảng chọn định dạng:
 
@@ -94,6 +105,9 @@ Bảng chọn định dạng:
 
 ### Danh sách track bên dưới
 
+![Tab Audio của Clip Attributes](../../assets/img/media-clip-attributes-audio.png)
+*Thêm track Mono rồi xoá track Stereo để giọng ra đều hai tai.*
+
 Mỗi dòng là một track, các kênh của nó nằm thụt vào bên dưới.
 
 | Cột | Làm gì |
@@ -102,7 +116,7 @@ Mỗi dòng là một track, các kênh của nó nằm thụt vào bên dưới
 | **Source Channel** | Kênh nào trong file đi vào đây. Chọn `<none>` để bỏ kênh |
 | **Track** | Tên track |
 | **Channel in Track** | Tên kênh trong track |
-| **Thùng rác** | Rê chuột lên một track mới hiện. Bấm để xoá track đó |
+| **Thùng rác** | Icon cuối dòng mỗi track. Bấm để xoá track đó |
 
 ### Sửa mic mono thu vào một kênh
 
@@ -149,7 +163,7 @@ Máy ảnh hay ghi mic trong máy vào kênh 1, mic ngoài vào kênh 2.
 
 **Ví dụ — cả thẻ nhớ lệch đúng 1 giờ:** chọn mọi clip của thẻ → **Clip Attributes** → **Timecode** → **Offset Source Timecode** → gõ khoảng lệch → **OK**.
 
-> **Máy quay thu timecode vào kênh tiếng (LTC)?** Chọn clip → chuột phải → **Update timecode from audio - LTC**. Resolve đọc LTC và sửa timecode ngay, không cần mở Clip Attributes.
+> **Máy quay thu timecode vào kênh tiếng (LTC)?** Chọn clip trong Media Pool → chuột phải → **Update timecode from audio - LTC**. Resolve đọc LTC và sửa timecode ngay, không cần mở Clip Attributes. Xem thêm [Đồng bộ tiếng thu rời](nap-media.md#đồng-bộ-tiếng-thu-rời-với-hình).
 
 ---
 
@@ -185,6 +199,21 @@ Dùng khi trao đổi project với phần mềm khác qua EDL. Tab này **chỉ
 Các cách lấy reel name: từ đường dẫn file (kèm **Pattern**), từ tên bin, từ dữ liệu nhúng trong file, từ tên file, hoặc **User Defined** để gõ tay.
 
 > Dựng vlog, YouTube thì bỏ qua tab này.
+
+---
+
+## Khử nhoè chuyển động
+
+`Studio`
+
+**Là gì:** **Motion DeBlur** dùng AI làm nét lại clip bị nhoè do chuyển động. Resolve render ra **clip mới** và thêm vào Media Pool. Clip gốc giữ nguyên.
+
+1. Tải model ở **DaVinci Resolve → Extras Download Manager** (lần đầu).
+2. Chọn clip trong Media Pool → chuột phải → **AI Tools → Remove Motion Blur**.
+3. Đặt tên file, codec và **Mode** (**Standard** hoặc **Extreme** tuỳ độ nhoè). Tick **User selected mark in and out** để chỉ render đoạn giữa `I` và `O`.
+4. Bấm **Render**.
+
+> **Lưu ý:** rất chậm — có thể mất tới 60 giây cho mỗi giây footage. Luôn đặt `I` `O` quanh đoạn cần.
 
 ---
 

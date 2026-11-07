@@ -291,3 +291,7 @@ Cần nhập file mới ngay tại đây: chuột phải Media Pool → **Import
 ## Hoàn tác
 
 `⌘Z` hoàn tác, `⇧⌘Z` làm lại. Không giới hạn số bước, nhưng lịch sử bị xoá khi đóng project.
+
+Mỗi clip trong trang Fusion có **lịch sử hoàn tác riêng**, tách khỏi trang Edit (sách hướng dẫn trang 670). Hoàn tác trong comp của clip A không đụng tới thay đổi ở clip B hay trên timeline.
+
+> **Lỗi hay gặp:** sửa comp xong quay về trang Edit bấm `⌘Z` để bỏ thay đổi trong comp. Không được, vì trang Edit dùng lịch sử khác. Quay lại trang Fusion, mở đúng clip đó rồi mới hoàn tác.

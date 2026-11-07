@@ -38,6 +38,12 @@ Phần lớn trường hợp để Track 1. Riêng nút **Place On Top** thì b�
 
 Xong mỗi lần edit, bấm `Q` để xem lại trên timeline, `Q` lần nữa để quay về chọn clip tiếp.
 
+![Trước và sau của bảy kiểu edit](../../assets/diagrams/cut-edit-results.svg)
+
+*AA, BB, CC là clip có sẵn trên Track 1, DD là clip mới. Ba kiểu trên cùng làm timeline dài ra hoặc ngắn lại, bốn kiểu dưới giữ nguyên độ dài (sách hướng dẫn trang 717–721).*
+
+> **Phím tắt:** các phím `F9` (Insert), `F10` (Overwrite), `F11` (Replace), `F12` (Place On Top), `⇧F10` (Ripple Overwrite), `⇧F12` (Append) là phím chung với trang Edit (sách hướng dẫn trang 912–913). Sách chỉ xác nhận `F10` cho trang Cut (trang 721). Các phím kia nếu bấm không ăn thì dùng nút.
+
 ---
 
 ## Smart Indicator — cái tam giác nhỏ trên thước thời gian
@@ -65,6 +71,8 @@ Một số nút không cần bạn chỉ định chính xác vị trí. Resolve 
 4. Bấm **Smart Insert**.
 
 **Lưu ý:** nó **chỉ chèn được vào điểm cắt có sẵn**, không chèn vào giữa một clip. Muốn chèn vào giữa clip thì dùng `F9` (Insert thường).
+
+Chèn vào **Track 1** thì mọi clip phía sau bị đẩy lùi. Chèn vào track trên thì chỉ track đó bị ảnh hưởng.
 
 **Ví dụ:** vlog đang có cảnh "ra sân bay" rồi "lên máy bay". Bạn muốn chèn cảnh "làm thủ tục" vào giữa. Đặt con trỏ gần chỗ nối hai cảnh đó, bấm Smart Insert.
 
@@ -121,6 +129,16 @@ Một số nút không cần bạn chỉ định chính xác vị trí. Resolve 
 2. Đặt con trỏ ở chỗ muốn cảnh cận bắt đầu (hoặc đặt `I` trên timeline).
 3. Bấm **Close Up**.
 
+**Clip được đặt ở đâu theo chiều thời gian:**
+
+| Tình huống | Clip bắt đầu tại |
+|---|---|
+| Không đặt `I` `O` trên timeline | Đúng vị trí con trỏ |
+| Có đặt `I` trên timeline | Điểm `I` đó |
+| Chỉ đặt `O` trên timeline | Clip **kết thúc** tại `O` (tính lùi) |
+
+Clip cận nằm trên **track phía trên**, đè lên cảnh rộng ở dưới. Muốn chỉnh lại mức phóng hoặc vị trí mặt: chọn clip, mở **Inspector** → **Transform**.
+
 **Chất lượng:** đẹp nhất khi footage **lớn hơn** timeline — quay 4K dựng timeline 1080p thì phóng 150% vẫn nét hoàn toàn. Quay 1080p dựng 1080p thì sẽ hơi mềm.
 
 **Ví dụ:** phỏng vấn 3 phút một góc máy. Cứ khoảng 20 giây chèn một đoạn Close Up khi nhân vật nói câu quan trọng — người xem có cảm giác như có hai máy quay.
@@ -143,6 +161,8 @@ Một số nút không cần bạn chỉ định chính xác vị trí. Resolve 
 | Con trỏ ở xa điểm cắt | Đúng vị trí con trỏ |
 | Có đặt `I` trên timeline | Điểm `I` đó |
 | Chỉ đặt `O` trên timeline | Clip **kết thúc** tại `O` (tính lùi) |
+
+Phím tắt: `F12` (phím chung với trang Edit).
 
 **Ví dụ:** đang nói về món phở, muốn hiện cảnh bát phở. Chọn clip bát phở, đặt `I` `O`, đặt con trỏ ở chữ "phở", bấm Place On Top.
 
@@ -177,6 +197,16 @@ Resolve tự lấy đúng đoạn có cùng timecode, đặt lên track trên, k
 
 **Dùng khi:** muốn thay một khoảng cố định mà không làm xê dịch nhịp phía sau — ví dụ đã dựng khớp nhạc rồi.
 
+**Clip được đặt ở đâu** (sách hướng dẫn trang 721):
+
+| Tình huống | Clip bắt đầu tại |
+|---|---|
+| Không đặt `I` `O` trên timeline | Đúng vị trí con trỏ |
+| Có đặt `I` trên timeline | Điểm `I` đó |
+| Chỉ đặt `O` trên timeline | Clip **kết thúc** tại `O` (tính lùi) |
+
+**Ví dụ:** nhạc nền đã cắt khớp nhịp. Cảnh thứ ba bị rung ở giữa. Đặt con trỏ đầu đoạn rung, chọn đoạn thay thế dài đúng bằng đoạn rung, bấm `F10`. Nhịp phía sau không lệch một khung nào.
+
 ---
 
 ## Kéo thả trực tiếp
@@ -198,7 +228,11 @@ Kéo clip từ Media Pool hoặc Viewer thả thẳng xuống timeline (tầng t
 
 `★★☆ Thường dùng`
 
-Bên trái **timeline trên** có hai icon: **Audio Only** và **Video Only**. Bật một cái thì mọi kiểu edit sau đó chỉ đưa phần đó xuống. Bấm lại để tắt, quay về lấy cả hai.
+Sách hướng dẫn (trang 714) ghi: bên trái **timeline trên** có hai icon **Audio Only** và **Video Only**. Bật một cái thì mọi kiểu edit sau đó chỉ đưa phần đó xuống. Bấm lại để tắt, quay về lấy cả hai.
+
+> **Lưu ý:** trên Resolve 21.0.4 bản free, chỗ bên trái timeline trên chỉ thấy ba icon menu (Timeline Options, Timeline Actions, Edit Actions), chưa tìm thấy hai icon này. Nếu bản của bạn cũng không có, hai cách thay thế:
+> - Chỉ lấy một phần kênh tiếng: **Timeline Options** → **Edit Using Ch 1&2** (hoặc 3&4…).
+> - Chỉ lấy hình hoặc chỉ lấy tiếng: làm lượt edit đó ở trang **Edit**, tắt nút track đích **A1** (chỉ lấy hình) hoặc **V1** (chỉ lấy tiếng) rồi quay lại trang Cut.
 
 **Dùng khi:**
 - Lấy tiếng gió, tiếng đường phố từ một clip khác lót cho cảnh → bật **Audio Only**

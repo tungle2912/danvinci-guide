@@ -319,7 +319,7 @@ Không đề xuất ảnh cho Planar Tracker / Planar Transform / Camera Tracker
 - **Trang Resolve:** Fusion
 - **Chuẩn bị:** demo không có phông xanh — dùng clip 2 (trại cừu) chỉ để minh hoạ giao diện: MediaIn1 → **DeltaKeyer1** → MediaOut1. Tab **Key**, kéo ống nhỏ giọt cạnh **Background Color** thả lên mảng cỏ (hoặc trời) để có kết quả key tạm. DeltaKeyer1 ở Viewer 1.
 - **Khung chụp:** chỉ một vùng — Inspector DeltaKeyer1 tab Key (hàng bảy tab, Background Color + ống nhỏ giọt, Gain, Balance).
-- **Cần thấy rõ trong ảnh:** bảy tab Key, Pre-Matte, Matte, Fringe, Tuning, Mask, Settings; ô màu đã hút; ống nhỏ giọt.
+- **Cần thấy rõ trong ảnh:** bảy tab Key, Pre Matte, Matte, Fringe, Tuning, Mask, Settings; ô màu đã hút; ống nhỏ giọt.
 - **Alt + chú thích:** `![Delta Keyer, tab Key](../../assets/img/fusion-delta-keyer.png)` — *Kéo ống nhỏ giọt thả lên phông để hút màu nền.*
 - **Ghi chú:** Nếu muốn ảnh thật về phông xanh, cần nạp một clip green screen miễn phí — demo hiện không có.
 
@@ -331,3 +331,22 @@ Không đề xuất ảnh cho Planar Tracker / Planar Transform / Camera Tracker
 - **Khung chụp:** ghép: Inspector tab Matte (Threshold Low/High, Clean Background, Clean Foreground, Replace Mode) + Viewer 1 kênh alpha.
 - **Cần thấy rõ trong ảnh:** các thông số tab Matte; hình đen trắng của alpha.
 - **Alt + chú thích:** `![Delta Keyer tab Matte và kênh alpha](../../assets/img/fusion-delta-keyer-matte.png)` — *Xem alpha: trắng là đặc, đen là trong suốt; chỉnh Threshold và Clean.*
+
+### FUS-36 — `fusion-delta-keyer-fringe.png`
+- **Ưu tiên:** P2
+- **Chèn vào:** `02-trang/fusion/mask-tracker-keyer.md` — ngay sau heading `### Ánh xanh hắt lên người (spill)`
+- **Trang Resolve:** Fusion
+- **Chuẩn bị:** tiếp FUS-34 (Delta Keyer đã hút màu nền). Inspector chọn tab **Fringe**. Bấm vào menu **Spill Method** cho xổ ra.
+- **Khung chụp:** chỉ một vùng — Inspector tab Fringe từ hàng tab tới hết Fringe Shape; menu Spill Method đang xổ (chụp toàn màn hình rồi cắt).
+- **Cần thấy rõ trong ảnh:** **Spill Suppression**, **Spill Method** với năm lựa chọn None / Rare / Medium / Well Done / Burnt, các thanh Fringe Gamma / Size / Shape.
+- **Alt + chú thích:** `![Delta Keyer tab Fringe](../../assets/img/fusion-delta-keyer-fringe.png)` — *Spill Method chọn mức khử ánh xanh; Spill Suppression chỉnh lượng khử.*
+
+### FUS-37 — `fusion-delta-keyer-garbage-invert.png`
+- **Ưu tiên:** P2
+- **Chèn vào:** `02-trang/fusion/mask-tracker-keyer.md` — ngay sau heading `### Chân đèn, mép phông lọt vào`
+- **Trang Resolve:** Fusion
+- **Chuẩn bị:** tiếp FUS-34. Thêm **Polygon** vẽ thoáng quanh người, nối đầu ra của Polygon vào đầu vào **Garbage Matte** (xám) của DeltaKeyer1. Inspector của DeltaKeyer1 chọn tab **Mask**, tích **Invert** trong mục **Garbage Mask**. Viewer 1 bấm `A` xem alpha.
+- **Khung chụp:** ghép hai vùng: (1) Node Editor có Polygon1 nối vào ô xám của DeltaKeyer1; (2) Inspector tab Mask với Invert đã tích, cạnh Viewer 1 kênh alpha.
+- **Cần thấy rõ trong ảnh:** đường nối màu xám, ô **Invert** đã tích, vùng ngoài polygon đã đen trên alpha.
+- **Alt + chú thích:** `![Garbage Matte có Invert trên Delta Keyer](../../assets/img/fusion-delta-keyer-garbage-invert.png)` — *Vẽ quanh người thì phải tích Invert, nếu không người sẽ bị xoá thay cho chân đèn.*
+- **Ghi chú:** chụp thêm một lần khi chưa tích Invert để kiểm chứng câu "người biến mất" trong trang; nếu kết quả ngược lại thì báo để sửa.

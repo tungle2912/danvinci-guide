@@ -95,9 +95,15 @@ Có hai chỗ:
 
 ## Parade
 
+![Scope Parade thật của clip món ăn: ba cột R G B](../../assets/img/color-scope-parade.png)
+*Clip đã cân bằng: chân và đỉnh ba cột gần ngang nhau.*
+
 `★★★ Hằng ngày` — dùng để cân bằng trắng
 
 Ba cột **đỏ, xanh lá, xanh dương** đặt cạnh nhau. Trục dọc là độ sáng, từ 0 (đáy) tới 1023 (đỉnh).
+
+![Sơ đồ Parade ba cột R, G, B trên thang 0 đến 1023, cột B có đỉnh cao hơn](../../assets/diagrams/color-doc-parade.svg)
+*Sơ đồ đơn giản hoá: chân ba cột bằng nhau (tối trung tính), đỉnh B cao hơn (vùng sáng ám xanh) → kéo **Temp** lên, hoặc **Gain** về phía cam.*
 
 | Thấy gì | Nghĩa | Sửa |
 |---|---|---|
@@ -117,6 +123,9 @@ Ba cột **đỏ, xanh lá, xanh dương** đặt cạnh nhau. Trục dọc là 
 **Ví dụ — quay trong nhà dưới đèn sợi đốt:** cột đỏ cao hơn hẳn ở đỉnh. Kéo **Temp** xuống tới khi đỉnh ba cột ngang nhau ở chỗ tường trắng.
 
 ## Waveform
+
+![Scope Waveform (chế độ RGB) của clip trại cừu](../../assets/img/color-scope-waveform.png)
+*Trái sang phải trên scope là trái sang phải trong khung hình; trời nằm ở phần cao.*
 
 `★★★ Hằng ngày` — dùng để đặt độ sáng
 
@@ -146,6 +155,9 @@ Một khối duy nhất cho độ sáng. Trái sang phải tương ứng trái s
 
 ## Vectorscope
 
+![Vectorscope thật có vạch màu da](../../assets/img/color-scope-vectorscope.png)
+*Vạch chéo hướng 11 giờ là vạch màu da; da người nằm dọc theo nó.*
+
 `★★☆ Thường dùng` — dùng cho màu da
 
 Một vòng tròn. **Càng xa tâm càng đậm màu**, hướng chỉ loại màu.
@@ -154,7 +166,10 @@ Một vòng tròn. **Càng xa tâm càng đậm màu**, hướng chỉ loại m�
 
 **Bật vạch:** nút Option của Vectorscope → **Show Skin Tone Indicator**.
 
-**Cách kiểm tra da:** dùng Window khoanh riêng khuôn mặt — Vectorscope chỉ hiện màu của vùng đó. Lệch khỏi vạch thì chỉnh ở node Secondary.
+![Sơ đồ Vectorscope: sáu ô mục tiêu màu, vạch màu da hướng 11 giờ, đám màu da nằm trên vạch](../../assets/diagrams/color-doc-vectorscope.svg)
+*Vạch màu da nằm giữa ô **R** và ô **Yl**. Đám da (màu cam) nằm dọc theo vạch là ổn.*
+
+**Cách tìm màu da trên scope:** bật **Display Qualifier Focus** (menu ⋯ của scope), mở Qualifier, rê ống hút lên má — Vectorscope khoanh tròn đúng chỗ của điểm ảnh đó. Lệch khỏi vạch thì sửa ở một node riêng cho da (Qualifier hút da + chỉnh nhẹ).
 
 | Thấy gì | Nghĩa |
 |---|---|
@@ -166,7 +181,7 @@ Một vòng tròn. **Càng xa tâm càng đậm màu**, hướng chỉ loại m�
 
 Mỗi **ô nhỏ** quanh vòng là mục tiêu của một màu: đỏ, hồng tím, xanh dương, xanh ngọc, xanh lá, vàng.
 
-**Ví dụ — mặt bị ám xanh lá do đèn huỳnh quang:** khoanh mặt bằng Window → vệt nằm bên phải vạch da, ngả về phía G. Kéo bánh xe **Gamma** ngược hướng cho vệt quay về vạch.
+**Ví dụ — mặt bị ám xanh lá do đèn huỳnh quang:** rê ống hút Qualifier lên má (đã bật Display Qualifier Focus) → vòng khoanh nằm lệch khỏi vạch da, ngả về phía **G**. Tạo node mới, Qualifier hút da, kéo bánh xe **Gamma** về phía ngược lại (hồng tím) tới khi vòng khoanh quay về vạch.
 
 ## Histogram
 

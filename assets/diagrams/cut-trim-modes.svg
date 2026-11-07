@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="330" viewBox="0 0 680 330" role="img"><title>Trước và sau của bốn kiểu trim trên trang Cut</title>
+<style>
+.bx{stroke-width:1}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><text class="t" x="16" y="24">Kiểu trim</text></g>
+<g class="gy"><text class="t" x="310" y="24" text-anchor="middle">Trước</text></g>
+<g class="gy"><text class="t" x="562" y="24" text-anchor="middle">Sau</text></g>
+<g class="gy"><text class="t" x="16" y="64">Kéo mép clip</text></g>
+<g class="gy"><text class="s" x="16" y="82">Track 1: phần sau tự dồn</text></g>
+<g class="gy"><rect class="bx" x="200" y="57" width="80" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="240" y="72" text-anchor="middle">A</text></g>
+<g class="gy"><rect class="bx" x="280" y="57" width="80" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="320" y="72" text-anchor="middle">B</text></g>
+<g class="gy"><rect class="bx" x="360" y="57" width="50" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="385" y="72" text-anchor="middle">C</text></g>
+<g class="gy"><rect class="bx" x="452" y="57" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="480" y="72" text-anchor="middle">A</text></g>
+<g class="gy"><rect class="bx" x="508" y="57" width="80" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="548" y="72" text-anchor="middle">B</text></g>
+<g class="gy"><rect class="bx" x="588" y="57" width="50" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="613" y="72" text-anchor="middle">C</text></g>
+<g class="pu"><rect class="bx" x="275" y="51" width="4" height="34" rx="1"/></g>
+<line class="ar" x1="426" y1="68" x2="446" y2="68" marker-end="url(#a)"/>
+<line x1="16" y1="100" x2="664" y2="100" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="128">Roll</text></g>
+<g class="gy"><text class="s" x="16" y="146">Dời điểm nối, tổng giữ nguyên</text></g>
+<g class="gy"><rect class="bx" x="200" y="121" width="80" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="240" y="136" text-anchor="middle">A</text></g>
+<g class="gy"><rect class="bx" x="280" y="121" width="80" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="320" y="136" text-anchor="middle">B</text></g>
+<g class="gy"><rect class="bx" x="360" y="121" width="50" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="385" y="136" text-anchor="middle">C</text></g>
+<g class="gy"><rect class="bx" x="452" y="121" width="104" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="504" y="136" text-anchor="middle">A</text></g>
+<g class="gy"><rect class="bx" x="556" y="121" width="56" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="584" y="136" text-anchor="middle">B</text></g>
+<g class="gy"><rect class="bx" x="612" y="121" width="50" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="637" y="136" text-anchor="middle">C</text></g>
+<g class="pu"><rect class="bx" x="278" y="115" width="4" height="34" rx="1"/></g>
+<line class="ar" x1="426" y1="132" x2="446" y2="132" marker-end="url(#a)"/>
+<line x1="16" y1="164" x2="664" y2="164" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="192">Slip</text></g>
+<g class="gy"><text class="s" x="16" y="210">Đổi khúc, vị trí giữ nguyên</text></g>
+<g class="gy"><rect class="bx" x="200" y="185" width="60" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="230" y="200" text-anchor="middle">A</text></g>
+<g class="gy"><rect class="bx" x="260" y="185" width="100" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="310" y="200" text-anchor="middle">B: giây 1–4</text></g>
+<g class="gy"><rect class="bx" x="360" y="185" width="50" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="385" y="200" text-anchor="middle">C</text></g>
+<g class="gy"><rect class="bx" x="452" y="185" width="60" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="482" y="200" text-anchor="middle">A</text></g>
+<g class="gy"><rect class="bx" x="512" y="185" width="100" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="562" y="200" text-anchor="middle">B: giây 2–5</text></g>
+<g class="gy"><rect class="bx" x="612" y="185" width="50" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="637" y="200" text-anchor="middle">C</text></g>
+<g class="pu"><rect class="bx" x="304" y="175" width="12" height="8" rx="2"/></g>
+<line class="ar" x1="426" y1="196" x2="446" y2="196" marker-end="url(#a)"/>
+<line x1="16" y1="228" x2="664" y2="228" stroke="#D3D1C7" stroke-width="1"/>
+<g class="gy"><text class="t" x="16" y="256">L-cut (J-cut ngược lại)</text></g>
+<g class="gy"><text class="s" x="16" y="274">Tiếng A lấn sang hình B</text></g>
+<g class="gy"><rect class="bx" x="200" y="236" width="100" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="250" y="251" text-anchor="middle">A hình</text></g>
+<g class="gy"><rect class="bx" x="300" y="236" width="100" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="350" y="251" text-anchor="middle">B hình</text></g>
+<g class="tl"><rect class="bx" x="200" y="262" width="100" height="22" rx="3"/></g>
+<g class="tl"><text class="s" x="250" y="277" text-anchor="middle">A tiếng</text></g>
+<g class="tl"><rect class="bx" x="300" y="262" width="100" height="22" rx="3"/></g>
+<g class="tl"><text class="s" x="350" y="277" text-anchor="middle">B tiếng</text></g>
+<g class="gy"><rect class="bx" x="452" y="236" width="100" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="502" y="251" text-anchor="middle">A hình</text></g>
+<g class="gy"><rect class="bx" x="552" y="236" width="100" height="22" rx="3"/></g>
+<g class="gy"><text class="s" x="602" y="251" text-anchor="middle">B hình</text></g>
+<g class="tl"><rect class="bx" x="452" y="262" width="150" height="22" rx="3"/></g>
+<g class="tl"><text class="s" x="527" y="277" text-anchor="middle">A tiếng</text></g>
+<g class="tl"><rect class="bx" x="602" y="262" width="50" height="22" rx="3"/></g>
+<g class="tl"><text class="s" x="627" y="277" text-anchor="middle">B</text></g>
+<g class="pu"><rect class="bx" x="298" y="258" width="4" height="30" rx="1"/></g>
+<line class="ar" x1="426" y1="260" x2="446" y2="260" marker-end="url(#a)"/>
+<g class="gy"><text class="s" x="16" y="316">Vạch tím: chỗ đặt chuột để kéo. Xám: hình. Xanh: tiếng.</text></g>
+</svg>

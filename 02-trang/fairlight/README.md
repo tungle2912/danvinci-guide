@@ -17,7 +17,7 @@ Phần lớn việc cân tiếng cơ bản làm ngay ở [trang Edit](../edit/du
 | Chưa quan tâm độ to tổng | Cần đạt **độ to chuẩn** cho YouTube trước khi xuất |
 | | Cần **thu giọng** có kiểm soát: chọn input, nghe lại, nhiều take |
 
-Điều khác lớn nhất so với Edit: ở Fairlight mỗi track có **một cột trong Mixer**. Cột đó có sẵn EQ, nén, hiệu ứng và fader. Mọi chỉnh ở cột này áp cho **cả track**, không phải một clip.
+Điều khác lớn nhất so với Edit: ở Fairlight mỗi track có **một cột trong Mixer**. Cột đó có sẵn EQ, nén, hiệu ứng và fader. Mọi chỉnh ở cột này áp cho **cả track**, không phải một clip. Tiếng chạy qua cột theo một thứ tự cố định — xem [sơ đồ đường đi của tiếng](mixer-va-track-fx.md#tiếng-đi-qua-cột-kênh-theo-thứ-tự-nào).
 
 > **Clip hay track?** Chỉnh **clip** khi chỉ một đoạn có vấn đề (một câu nói nhỏ, một chỗ có tiếng còi). Chỉnh **track** khi cả track cần cùng một xử lý (cả giọng cần EQ, cả nhạc cần nhỏ khi có lời).
 
@@ -35,6 +35,8 @@ Phần lớn việc cân tiếng cơ bản làm ngay ở [trang Edit](../edit/du
 | ★★☆ | [EQ cho giọng](lam-sach-giong.md#eq--3-thao-tác-cho-giọng-nói) | Giọng rõ hơn, bớt ù, bớt đục |
 | ★★☆ | [De-Esser](lam-sach-giong.md#de-esser--bớt-tiếng-s-chói) | Bớt tiếng "s", "x" chói tai |
 | ★★☆ | [Compressor](lam-sach-giong.md#dynamics--nén-chặn-cổng) | Giọng chắc, đều hơn |
+| ★★☆ | [Thứ tự gắn hiệu ứng cho giọng](lam-sach-giong.md#thứ-tự-gắn-hiệu-ứng-cho-giọng) | Biết gắn Noise Reduction, De-Esser, nén, EQ theo thứ tự nào |
+| ★★☆ | [Mức đích theo nền tảng](loudness-va-xuat.md#mức-đích-theo-nền-tảng) | YouTube, TikTok, Spotify, truyền hình cần to cỡ nào |
 | ★★☆ | [Limiter trên Bus](loudness-va-xuat.md#limiter-trên-bus--chặn-trần) | Chặn trần, không bao giờ bị rè |
 | ★★☆ | [Thu giọng đọc](thu-am-va-chinh-clip.md#thu-giọng-đọc-trên-fairlight) | Thu voiceover thẳng vào timeline |
 | ★☆☆ | [De-Hummer](lam-sach-giong.md#de-hummer--bỏ-tiếng-ù-điện) | Bỏ tiếng ù điện 50/60 Hz |
@@ -55,7 +57,7 @@ Ví dụ thực tế: vlog 5 phút, lời nói ở track A1, nhạc nền ở tr
 3. **Làm giọng đều:** bấm nút **Mixer** góc trên phải. Ở cột A1, mục **Track FX**, bật **Dialogue Leveler**, tick **Lift Soft Dialogue**.
 4. **Làm sạch nếu cần:** nghe thấy tiếng quạt → kéo **Noise Reduction** từ panel **Effects** thả lên đầu track A1. Xem [Làm sạch giọng](lam-sach-giong.md).
 5. **EQ giọng:** bấm đúp ô **EQ** ở cột A1. Cắt dưới 80 Hz, nâng nhẹ quanh 3–5 kHz.
-6. **Nhạc tự nhỏ:** ở cột A2, bật **Ducker**, **Source** chọn track Giọng. Để **Duck Amount** khoảng 3–5 dB.
+6. **Nhạc tự nhỏ:** ở cột A2, bật **Ducker**, **Source** chọn track Giọng. Để **Duck Level** khoảng 3–5 dB.
 7. **Cân hai fader:** phát thử, kéo fader A2 xuống tới khi nhạc nằm dưới lời. Đừng đụng fader A1 nhiều.
 8. **Chặn trần:** ở cột **Bus 1** (cột cuối Mixer), bấm **+** ở mục **Effects** → chọn **Limiter**, đặt **Ceiling** −1 dB.
 9. **Đo độ to:** bấm **Meters**, đặt Loudness meter về chuẩn **YouTube**, phát cả video. Số **Integrated** nên quanh −14 LUFS. Xem [Loudness và xuất](loudness-va-xuat.md).

@@ -25,28 +25,42 @@ Nằm ở **đáy cửa sổ**. Icon đang sáng là trang hiện tại.
 | 7 | Nốt nhạc | **Fairlight** |
 | 8 | Tên lửa | **Deliver** |
 
-Muốn thấy cả chữ bên cạnh icon: chuột phải vào dãy icon → **Show Icons and Labels**.
+Muốn thấy cả chữ bên cạnh icon: chuột phải vào dãy icon → **Show Icons and Labels** (manual tr. 20).
 
 ## Phím tắt đổi trang
 
-| Phím | Đi tới | Chắc chắn? |
-|---|---|---|
-| `⇧1` | Project Manager | Có — theo manual |
-| `⇧9` | Project Settings | Có — theo manual |
-| `⇧2` … `⇧8` | Các trang | Xem lưu ý dưới |
+`★★★ Hằng ngày`
 
-Manual ghi `⇧2` tới `⇧8` dành cho các trang — nhưng câu đó viết từ khi Resolve còn bảy trang. Với tám trang ở bản 21, cách gán phím có thể đã đổi.
+Đã kiểm tra trên menu của Resolve 21 (**Workspace → Switch to Page** và **File**):
 
-**Cách kiểm tra chắc chắn trên máy bạn:** mở menu **Workspace → Switch to Page**. Phím tắt của từng trang hiện ngay bên phải tên trang.
+| Phím | Đi tới |
+|---|---|
+| `⇧0` | Project Manager |
+| `⇧1` | Media |
+| `⇧2` | Photo |
+| `⇧3` | Cut |
+| `⇧4` | Edit |
+| `⇧5` | Fusion |
+| `⇧6` | Color |
+| `⇧7` | Fairlight |
+| `⇧8` | Deliver |
+| `⇧9` | Project Settings |
 
-Nếu thứ tự không đổi so với bản cũ thì là: `⇧2` Media · `⇧3` Cut · `⇧4` Edit · `⇧5` Fusion · `⇧6` Color · `⇧7` Fairlight · `⇧8` Deliver.
+Mẹo nhớ: số trùng thứ tự icon ở đáy cửa sổ, từ trái sang phải.
+
+![Menu Workspace → Switch to Page trên Resolve 21, mỗi trang có phím ⇧1 tới ⇧8](../assets/img/start-menu-switch-to-page.png)
+*Menu **Workspace → Switch to Page**: phím của từng trang in ngay bên phải tên trang.*
+
+> **Lưu ý:** manual (tr. 21) và nhiều bài cũ vẫn ghi `⇧1` Project Manager, `⇧2` Media… `⇧8` Deliver. Đó là thứ tự của bản bảy trang, chưa có Photo. Trên bản 21, `⇧1` mở trang **Media**; Project Manager chuyển sang `⇧0`.
+
+> **Mẹo:** phím không ăn thì bấm vào một panel trước (ví dụ Viewer) rồi bấm lại — con trỏ đang nằm trong ô nhập số thì phím bị ô đó nuốt. Vẫn không được thì đổi trang bằng icon ở đáy, hoặc tự gán phím ở **DaVinci Resolve → Keyboard Customization** (manual tr. 125–128).
 
 ## Mỗi trang làm gì
 
 | Trang | Làm gì | Bạn sẽ dùng | Giao diện chi tiết | Đọc tiếp |
 |---|---|---|---|---|
 | [**Media**](../02-trang/media/README.md) | Nạp file, sắp xếp bin, gõ metadata, backup thẻ nhớ | Đầu mỗi dự án | [Năm vùng của trang Media](../02-trang/media/README.md#năm-vùng-của-trang-media) | [Nạp media](../02-trang/media/nap-media.md), [Bin](../02-trang/media/bin.md), [Clone Tool](../02-trang/media/clone-tool.md) |
-| [**Photo**](../02-trang/photo/README.md) | Quản lý và chỉnh ảnh tĩnh: album, chấm sao, chụp tethered, xuất ảnh | Nếu bạn làm ảnh | [Giao diện Photo](../02-trang/photo/giao-dien.md) | [Chỉnh ảnh](../02-trang/photo/chinh-anh.md), [Xuất ảnh](../02-trang/photo/xuat-anh.md) |
+| [**Photo**](../02-trang/photo/README.md) | Quản lý và chỉnh ảnh tĩnh: album, chấm sao, xuất ảnh. Chụp tethered (máy ảnh cắm vào máy tính) là `Studio` — manual tr. 645 | Nếu bạn làm ảnh | [Giao diện Photo](../02-trang/photo/giao-dien.md) | [Chỉnh ảnh](../02-trang/photo/chinh-anh.md), [Xuất ảnh](../02-trang/photo/xuat-anh.md) |
 | [**Cut**](../02-trang/cut/README.md) | Dựng nhanh, ít nút, nhiều tự động | Video ngắn, deadline gấp | [Giao diện Cut](../02-trang/cut/giao-dien.md) | [6 nút edit](../02-trang/cut/dung-clip.md), [Trim](../02-trang/cut/trim.md), [Quick Export](../02-trang/cut/kiem-tra-va-xuat.md#quick-export) |
 | [**Edit**](../02-trang/edit/README.md) | Dựng chi tiết, nhiều track, keyframe, phụ đề | Phần lớn thời gian | [Giao diện Edit](../02-trang/edit/giao-dien.md) | [Cắt, trim](../02-trang/edit/dung-va-cat.md), [Inspector](../02-trang/edit/inspector.md), [Phụ đề](../02-trang/edit/phu-de.md) |
 | [**Fusion**](../02-trang/fusion/README.md) | Hiệu ứng dạng node: chữ động, ghép lớp, phông xanh, tracking | Khi trang Edit không làm được | [Giao diện Fusion](../02-trang/fusion/giao-dien.md) | [Node cơ bản](../02-trang/fusion/node-co-ban.md), [Chữ động](../02-trang/fusion/chu-dong.md), [Mask, Tracker, Keyer](../02-trang/fusion/mask-tracker-keyer.md) |
@@ -77,13 +91,15 @@ Bước 2 đến 5 không bắt buộc đúng thứ tự — quay lại trang tr
 
 ## Ẩn bớt trang không dùng
 
-Không làm ảnh thì trang Photo chỉ tổ chật mắt. Vào **Workspace → Show Page** rồi bỏ tick những trang không cần.
+`★☆☆ Tình huống cụ thể`
 
-Hiệu ứng đã áp ở trang bị ẩn **vẫn hoạt động bình thường**, chỉ là nút bấm biến mất. Vẫn vào được bằng phím tắt hoặc **Workspace → Switch to Page**.
+Không làm ảnh thì trang Photo chỉ tổ chật mắt. Vào **Workspace → Show Page** rồi bỏ tick những trang không cần (manual tr. 20).
+
+Hiệu ứng đã áp ở trang bị ẩn **vẫn hoạt động bình thường**, chỉ là nút bấm biến mất. Vẫn vào được bằng **Workspace → Switch to Page**.
 
 Gọn hơn nữa:
 - Chuột phải dãy icon → **Show Icons Only** — chỉ hiện icon, không chữ.
-- **Workspace → Show Page Navigation** bỏ tick — ẩn hẳn dãy icon, chỉ đổi trang bằng phím tắt.
+- **Workspace → Show Page Navigation** bỏ tick — ẩn hẳn dãy icon, chỉ đổi trang bằng **Workspace → Switch to Page** hoặc phím bạn tự gán (manual tr. 21).
 
 ## Ba panel xuất hiện ở nhiều trang
 

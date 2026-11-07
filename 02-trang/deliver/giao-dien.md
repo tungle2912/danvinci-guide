@@ -16,7 +16,7 @@ Trang Deliver có **năm vùng**: Render Settings (trái), Viewer (giữa trên)
 | **Render Settings** | Ẩn/hiện panel thiết lập xuất | ★★★ |
 | **Tape** | Chuyển sang chế độ xuất ra băng. Cần đầu băng thật — người làm video mạng không dùng | ★☆☆ |
 | **Clips** | Ẩn/hiện Thumbnail timeline | ★★☆ |
-| **Mũi tên cạnh Clips** | Lọc Thumbnail timeline (Timeline Filter) | ★☆☆ |
+| **Mũi tên cạnh Clips** | Lọc Thumbnail timeline (**Timeline Filter**): chỉ hiện clip đã sửa (**Modified Clips**) hoặc chưa render (**Unrendered Clips**). Đang lọc thì dưới nút Clips có **gạch cam** và chỉ render được **Individual clips**. Chọn **All Clips** để bỏ lọc — xem [Chỉ render lại clip đã sửa](render-queue-va-loi.md#chỉ-render-lại-clip-đã-sửa) | ★☆☆ |
 
 ### Bên phải
 
@@ -34,6 +34,9 @@ Trang Deliver có **năm vùng**: Render Settings (trái), Viewer (giữa trên)
 Đây là nơi bạn ở lâu nhất. Từ trên xuống dưới:
 
 ### 1. Preset
+
+![Menu Preset của Render Settings](../../assets/img/deliver-preset-menu.png)
+*Bản 21 gom preset vào một menu thả xuống thay cho hàng icon.*
 
 `★★★ Hằng ngày`
 
@@ -161,7 +164,7 @@ Timeline thu gọn, dùng để **chọn khoảng xuất** chứ không phải �
 
 | Mục | Làm gì | Mức |
 |---|---|---|
-| **Render** (menu) | **Entire Timeline** — xuất cả timeline. **In/Out Range** — chỉ xuất khoảng giữa `I` và `O` | ★★★ |
+| **Render** (menu) | **Entire Timeline** — xuất cả timeline. **In/Out Range** — chỉ xuất khoảng giữa `I` và `O`. **All Filtered Clips** — chỉ các clip còn lại sau khi lọc bằng Timeline Filter | ★★★ |
 | **Thanh trượt zoom** | Phóng to, thu nhỏ timeline | ★☆☆ |
 
 Thu cả timeline vừa khung: `⇧Z`.
@@ -177,6 +180,10 @@ Chi tiết cách chọn khoảng xuất: [Render Queue → Xuất một đoạn]
 ---
 
 ## Render Queue
+
+![Trang Deliver với hai job trong Render Queue ở cột phải](../../assets/img/page-deliver.png)
+
+*Render Queue nằm ở cột phải; mỗi thẻ là một job chờ render.*
 
 Danh sách các job chờ render. Mỗi job là một thẻ: tên job (**Job 1**, **Job 2**…), icon preset, *tên project | tên timeline*, và đường dẫn file sẽ xuất.
 

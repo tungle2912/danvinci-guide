@@ -1,19 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="230" viewBox="0 0 860 230" role="img"><title>Thanh công cụ trên timeline trang Edit, từ trái sang phải</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="330" viewBox="0 0 680 330" role="img"><title>Thanh công cụ trên timeline trang Edit, bảy nhóm nút từ trái sang phải</title>
 <style>
 .bx{stroke-width:1}
-.t{font:500 13px -apple-system,Helvetica,Arial,sans-serif}
-.s{font:400 11.5px -apple-system,Helvetica,Arial,sans-serif}
-.gy rect,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
-.tl rect{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
-.pu rect{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
-.co rect{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.t{font:500 14px -apple-system,Helvetica,Arial,sans-serif}
+.s{font:400 12px -apple-system,Helvetica,Arial,sans-serif}
+.gy rect,.gy circle,.gy{fill:#F1EFE8;stroke:#5F5E5A}.gy .t{fill:#2C2C2A}.gy .s{fill:#5F5E5A}
+.tl rect,.tl circle{fill:#E1F5EE;stroke:#0F6E56}.tl .t{fill:#04342C}.tl .s{fill:#0F6E56}
+.pu rect,.pu circle{fill:#EEEDFE;stroke:#534AB7}.pu .t{fill:#26215C}.pu .s{fill:#534AB7}
+.co rect,.co circle{fill:#FAECE7;stroke:#993C1D}.co .t{fill:#4A1B0C}.co .s{fill:#993C1D}
+.ar{stroke:#888780;stroke-width:1.5;fill:none}
 </style>
-<g class="gy"><rect class="bx" x="10" y="10" width="840" height="210" rx="14"/></g>
-<g class="gy"><rect class="bx" x="22" y="40" width="104" height="150" rx="8" fill="#FFFFFF"/><text class="t" x="74" y="64" text-anchor="middle">1. Hiển thị</text><text class="s" x="74" y="92" text-anchor="middle">View Options</text><text class="s" x="74" y="112" text-anchor="middle">Keyframe Editor</text><text class="s" x="74" y="132" text-anchor="middle">Voiceover</text></g>
-<g class="tl"><rect class="bx" x="134" y="40" width="118" height="150" rx="8"/><text class="t" x="193" y="64" text-anchor="middle">2. Chế độ</text><text class="s" x="193" y="92" text-anchor="middle">Selection  A</text><text class="s" x="193" y="112" text-anchor="middle">Trim  T</text><text class="s" x="193" y="132" text-anchor="middle">Dynamic Trim  W</text><text class="s" x="193" y="152" text-anchor="middle">Blade  B</text></g>
-<g class="pu"><rect class="bx" x="260" y="40" width="118" height="150" rx="8"/><text class="t" x="319" y="64" text-anchor="middle">3. Edit</text><text class="s" x="319" y="92" text-anchor="middle">Insert  F9</text><text class="s" x="319" y="112" text-anchor="middle">Overwrite  F10</text><text class="s" x="319" y="132" text-anchor="middle">Replace  F11</text></g>
-<g class="co"><rect class="bx" x="386" y="40" width="118" height="150" rx="8"/><text class="t" x="445" y="64" text-anchor="middle">4. Khoá, hít</text><text class="s" x="445" y="92" text-anchor="middle">Snapping  N</text><text class="s" x="445" y="112" text-anchor="middle">Linked  ⌘⇧L</text><text class="s" x="445" y="132" text-anchor="middle">Position Lock</text></g>
-<g class="tl"><rect class="bx" x="512" y="40" width="100" height="150" rx="8"/><text class="t" x="562" y="64" text-anchor="middle">5. Đánh dấu</text><text class="s" x="562" y="92" text-anchor="middle">Flag  G</text><text class="s" x="562" y="112" text-anchor="middle">Marker  M</text></g>
-<g class="pu"><rect class="bx" x="620" y="40" width="112" height="150" rx="8"/><text class="t" x="676" y="64" text-anchor="middle">6. Zoom</text><text class="s" x="676" y="92" text-anchor="middle">Full Extent</text><text class="s" x="676" y="112" text-anchor="middle">Detail</text><text class="s" x="676" y="132" text-anchor="middle">Custom</text><text class="s" x="676" y="152" text-anchor="middle">Thanh trượt</text></g>
-<g class="gy"><rect class="bx" x="740" y="40" width="98" height="150" rx="8" fill="#FFFFFF"/><text class="t" x="789" y="64" text-anchor="middle">7. Nghe</text><text class="s" x="789" y="92" text-anchor="middle">Bật/tắt loa</text><text class="s" x="789" y="112" text-anchor="middle">Âm lượng</text><text class="s" x="789" y="132" text-anchor="middle">DIM</text></g>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="gy"><text class="t" x="340" y="26" text-anchor="middle">Thanh công cụ timeline — bảy nhóm</text></g>
+<g class="gy"><rect class="bx" x="16" y="44" width="154" height="124" rx="8"/>
+</g>
+<g class="gy"><text class="t" x="28" y="68">1 · Hiển thị</text>
+<text class="s" x="28" y="92">View Options</text>
+<text class="s" x="28" y="112">Keyframe Editor</text>
+<text class="s" x="28" y="132">Voiceover</text>
+</g>
+<g class="tl"><rect class="bx" x="180" y="44" width="154" height="124" rx="8"/>
+</g>
+<g class="tl"><text class="t" x="192" y="68">2 · Chế độ chuột</text>
+<text class="s" x="192" y="92">Selection   A</text>
+<text class="s" x="192" y="112">Trim   T</text>
+<text class="s" x="192" y="132">Dynamic Trim   W</text>
+<text class="s" x="192" y="152">Blade   B</text>
+</g>
+<g class="pu"><rect class="bx" x="344" y="44" width="154" height="124" rx="8"/>
+</g>
+<g class="pu"><text class="t" x="356" y="68">3 · Edit</text>
+<text class="s" x="356" y="92">Insert   F9</text>
+<text class="s" x="356" y="112">Overwrite   F10</text>
+<text class="s" x="356" y="132">Replace   F11</text>
+</g>
+<g class="co"><rect class="bx" x="508" y="44" width="154" height="124" rx="8"/>
+</g>
+<g class="co"><text class="t" x="520" y="68">4 · Khoá, hít</text>
+<text class="s" x="520" y="92">Snapping   N</text>
+<text class="s" x="520" y="112">Linked   ⌘⇧L</text>
+<text class="s" x="520" y="132">Position Lock</text>
+</g>
+<g class="gy"><rect class="bx" x="16" y="184" width="209" height="104" rx="8"/>
+</g>
+<g class="gy"><text class="t" x="28" y="208">5 · Đánh dấu</text>
+<text class="s" x="28" y="232">Flag   G</text>
+<text class="s" x="28" y="252">Marker   M</text>
+</g>
+<g class="gy"><rect class="bx" x="235" y="184" width="209" height="104" rx="8"/>
+</g>
+<g class="gy"><text class="t" x="247" y="208">6 · Zoom</text>
+<text class="s" x="247" y="232">Full Extent   ⇧Z</text>
+<text class="s" x="247" y="252">Detail · Custom</text>
+<text class="s" x="247" y="272">Thanh trượt zoom</text>
+</g>
+<g class="gy"><rect class="bx" x="454" y="184" width="209" height="104" rx="8"/>
+</g>
+<g class="gy"><text class="t" x="466" y="208">7 · Nghe</text>
+<text class="s" x="466" y="232">Loa bật/tắt</text>
+<text class="s" x="466" y="252">Âm lượng bạn nghe</text>
+<text class="s" x="466" y="272">DIM — hạ nhỏ tạm</text>
+</g>
+<line class="ar" x1="16" y1="308" x2="662" y2="308" marker-end="url(#a)"/>
+<g class="gy"><text class="s" x="340" y="324" text-anchor="middle">Nhóm 1 ở mép trái, nhóm 7 ở mép phải thanh công cụ</text></g>
 </svg>

@@ -24,6 +24,8 @@ Không phải lúc nào cũng cần sang Deliver. **File → Quick Export** xu�
 4. Lặp lại 1–3 nếu cần nhiều phiên bản.
 5. **Render All**.
 
+Sơ đồ từng bước: xem [Nhiều job, một lượt render](render-queue-va-loi.md#nhiều-job-một-lượt-render). Chưa biết chọn preset nào: xem sơ đồ chọn theo mục đích ở đầu trang [Preset theo nền tảng](preset-theo-nen-tang.md).
+
 ## Tính năng hay dùng nhất
 
 | Mức | Tính năng | Dùng để |
@@ -44,6 +46,7 @@ Không phải lúc nào cũng cần sang Deliver. **File → Quick Export** xu�
 | ★★☆ | [Chapters from Markers](cai-dat-xuat.md#chapters-from-markers) | Marker thành chương trong video |
 | ★☆☆ | [Single clip / Individual clips](giao-dien.md#3-render--single-clip-hay-individual-clips) | Xuất từng clip riêng cho người khác dựng |
 | ★☆☆ | [Advanced Settings](cai-dat-xuat.md#advanced-settings--những-ô-đáng-biết) | Data levels, color space tag, burn-in… |
+| ★☆☆ | [Chỉ render lại clip đã sửa](render-queue-va-loi.md#chỉ-render-lại-clip-đã-sửa) | Xuất lại riêng các clip vừa chỉnh |
 | ★☆☆ | [Chỉ xuất tiếng](preset-theo-nen-tang.md#chỉ-xuất-tiếng) | File WAV, MP3 cho podcast, nhạc |
 | ★☆☆ | [Ảnh tĩnh, chuỗi ảnh](preset-theo-nen-tang.md#ảnh-tĩnh-và-chuỗi-ảnh) | Ảnh bìa, chuỗi ảnh cho VFX |
 | `Studio` | [Remote Rendering](render-queue-va-loi.md#remote-rendering) | Render trên máy khác trong mạng |
@@ -90,7 +93,7 @@ Cần phụ đề dính vào bản dọc? Job 2 chọn **Custom Export** thay v�
 
 ## Giới hạn bản free
 
-Xuất tối đa **4K UHD (3840×2160) ở 60 fps**, màu 8-bit. Lớn hơn cần `Studio`. Preset **IMF** và **Remote Rendering** cũng là `Studio`. Xem [Free và Studio](../../01-bat-dau/free-vs-studio.md).
+Xuất tối đa **4K UHD (3840×2160) ở 60 fps**. Lớn hơn cần `Studio`. Xuất 10-bit (ví dụ H.265 **Main10**) ở bản free: chưa xác nhận — xem [Giới hạn bản free](cai-dat-xuat.md#giới-hạn-bản-free). Preset **IMF** và **Remote Rendering** cũng là `Studio`. Xem [Free và Studio](../../01-bat-dau/free-vs-studio.md).
 
 ## Các trang con
 

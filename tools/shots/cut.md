@@ -2,7 +2,7 @@
 
 Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (toàn cửa sổ, đã nhúng ở README). Các hình `assets/diagrams/cut-*.svg` là sơ đồ vẽ, không phải ảnh chụp — các mục dưới đây bổ sung ảnh thật bên cạnh sơ đồ, không thay sơ đồ.
 
-**Chuẩn bị chung:** mở project "So tay DaVinci - Demo", timeline "Demo - Vlog" (25 fps; V1 có 6 clip từ hai clip LOG 4K — đĩa phô mai/rau củ và cô gái ở trại cừu Kazakhstan; A1 "Giong noi", A2 "Nhac nen"). Sang trang **Cut** (Shift+2 hoặc icon thứ 3 dưới đáy). Cửa sổ Resolve phóng toàn màn hình. Sau mỗi ảnh có thay đổi timeline thì `⌘Z` hoàn tác về trạng thái gốc.
+**Chuẩn bị chung:** mở project "So tay DaVinci - Demo", timeline "Demo - Vlog" (25 fps; V1 có 6 clip từ hai clip LOG 4K — đĩa phô mai/rau củ và cô gái ở trại cừu Kazakhstan; A1 "Giong noi", A2 "Nhac nen"). Sang trang **Cut** (icon thứ 3 trong hàng icon trang dưới đáy, sau Media và Photo; bản 21 không dùng ⇧2 để chuyển trang). Cửa sổ Resolve phóng toàn màn hình. Sau mỗi ảnh có thay đổi timeline thì `⌘Z` hoàn tác về trạng thái gốc.
 
 ---
 
@@ -31,7 +31,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (toàn cửa sổ,
 - **Chuẩn bị:** bấm `Q` cho Viewer ở chế độ **Timeline** (nút Timeline sáng). Rê chuột lên nút Source Tape cho hiện tooltip nếu được.
 - **Khung chụp:** chỉ một vùng — góc trên trái Viewer, phóng to khoảng 300 × 80 px quanh cụm nút chế độ (cắt thêm một chút tiêu đề Viewer).
 - **Cần thấy rõ trong ảnh:** các nút chế độ Source Clip, Source Tape, Timeline (và nút thứ 4 nếu có thật trong bản 21 — xem ghi chú nghi vấn); nút đang bật được tô sáng.
-- **Alt + chú thích:** `![Nút chế độ Viewer trang Cut](../../assets/img/cut-viewer-mode-buttons.png)` — *Nút thứ hai là Source Tape; `Q` đảo nhanh giữa nguồn và timeline.*
+- **Alt + chú thích:** `![Nút chế độ Viewer trang Cut](../../assets/img/cut-viewer-mode-buttons.png)` — *Ba nút chế độ (Timeline đang sáng); nút lưới tách riêng bên phải là Multi Source, chỉ dùng được khi có Sync Bin.*
 
 ### CUT-04 — `cut-viewer-top-right.png`
 - **Ưu tiên:** P3
@@ -170,6 +170,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (toàn cửa sổ,
 - **Khung chụp:** chỉ một vùng — cột bên trái tầng trên timeline gồm hai icon Audio Only / Video Only và dãy số track.
 - **Cần thấy rõ trong ảnh:** hai icon, Video Only đang sáng.
 - **Alt + chú thích:** `![Icon Audio Only và Video Only](../../assets/img/cut-audio-video-only.png)` — *Video Only đang bật: lần edit sau chỉ đưa hình xuống. Nhớ tắt sau khi dùng.*
+- **Ghi chú:** sách hướng dẫn trang 714 ghi hai icon nằm bên trái timeline trên, nhưng ảnh `page-cut.png` và `cut-timeline-two-tier.png` của bản 21.0.4 free chỉ cho thấy ba icon menu ở đó. Trước khi chụp, kiểm tra cả chuột phải vùng đầu track của timeline trên. Không tìm thấy thì bỏ mục này và báo lại để sửa trang (trang đã có Lưu ý về chuyện này, kèm cách thay thế; xem CUT-39).
 
 ### CUT-19 — `cut-source-tape.png`
 - **Ưu tiên:** P1
@@ -178,7 +179,7 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (toàn cửa sổ,
 - **Chuẩn bị:** bấm nút **Source Tape**. Bấm vào clip trại cừu trong Media Pool để con trỏ nhảy tới clip đó. Media Pool chế độ thumbnail.
 - **Khung chụp:** chỉ một vùng — Media Pool + Viewer (bỏ timeline).
 - **Cần thấy rõ trong ảnh:** nút Source Tape đang sáng; thumbnail clip đang phát được tô sáng trong Media Pool; thước dưới Viewer hiện các ranh giới clip nối liền.
-- **Alt + chú thích:** `![Chế độ Source Tape](../../assets/img/cut-source-tape.png)` — *Mọi clip trong bin nối thành một cuộn; clip đang phát sáng trong Media Pool.*
+- **Alt + chú thích:** `![Chế độ Source Tape](../../assets/img/cut-source-tape.png)` — *Mọi clip trong bin nối thành một cuộn, tên bin hiện trên Viewer; clip đang phát có viền đỏ trong Media Pool.*
 
 ### CUT-20 — `cut-sort-media-by.png`
 - **Ưu tiên:** P3
@@ -359,3 +360,13 @@ Khuôn mục: xem `FORMAT.md`. Ảnh đã có: `page-cut.png` (toàn cửa sổ,
 - **Cần thấy rõ trong ảnh:** hàng icon preset (H.264, H.265, ProRes, YouTube, Vimeo, TikTok…), preset YouTube đang chọn, thông số tóm tắt, nút Export, icon List View.
 - **Alt + chú thích:** `![Cửa sổ Quick Export](../../assets/img/cut-quick-export-dialog.png)` — *Chọn preset ở hàng icon trên cùng rồi bấm Export.*
 - **Ghi chú:** ảnh này dùng lại ở `02-trang/deliver/render-queue-va-loi.md` mục `## Quick Export` (xem DEL-21, ghi "Dùng lại").
+
+### CUT-39 — `cut-timeline-options-edit-using.png`
+- **Ưu tiên:** P3
+- **Chèn vào:** `02-trang/cut/dung-clip.md` — ngay sau heading `## Chỉ lấy hình, hoặc chỉ lấy tiếng`
+- **Trang Resolve:** Cut
+- **Chuẩn bị:** bấm icon **Timeline Options** (icon đầu tiên ở góc trên trái timeline), rê xuống nhóm **Edit Using**. Không chọn gì, `Esc` để đóng.
+- **Khung chụp:** menu xổ — cần chụp toàn màn hình rồi cắt, lấy từ icon Timeline Options tới hết nhóm Edit Using.
+- **Cần thấy rõ trong ảnh:** các mục **Edit Using All Channels**, **Edit Using Ch 1&2**, **Ch 3&4**…, dấu tích ở mục đang chọn.
+- **Alt + chú thích:** `![Nhóm Edit Using trong Timeline Options](../../assets/img/cut-timeline-options-edit-using.png)` — *Chọn cặp kênh tiếng sẽ được đưa xuống timeline ở lần edit sau.*
+- **Ghi chú:** nếu tên mục trên bản 21.0.4 khác sách (trang 664), ghi lại tên đúng để sửa `giao-dien.md` và `dung-clip.md`.

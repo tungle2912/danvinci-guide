@@ -35,15 +35,19 @@ Khác với phần mềm khác dùng hộp thoại Import, Resolve dành hẳn m
 
 ## Năm vùng của trang Media
 
-Mặc định trang chia làm năm vùng:
+Mặc định trang chia làm năm vùng. Số trong sơ đồ khớp với cột **#** của bảng:
 
-| Vùng | Vị trí | Dùng để | Mức |
-|---|---|---|---|
-| **Media Storage** | Trên trái | Duyệt ổ cứng, xem clip **trước khi** nạp | ★★★ |
-| **Viewer** | Trên phải | Xem clip, đặt điểm vào/ra | ★★★ |
-| **Audio Panel** | Dưới Viewer | Đồng hồ đo tiếng, hoặc dạng sóng để đồng bộ | ★★☆ |
-| **Metadata Editor** | Phải | Thông tin clip, nơi gõ ghi chú | ★★☆ |
-| **Media Pool** | Dưới | Kho clip của project | ★★★ |
+![Sơ đồ năm vùng của trang Media](../../assets/diagrams/media-layout.svg)
+
+*Bố cục mặc định: hàng trên là Media Storage, Viewer, Audio Panel; hàng dưới là Media Pool và Metadata.*
+
+| # | Vùng | Vị trí | Dùng để | Mức |
+|---|---|---|---|---|
+| 1 | **Media Storage** | Trên trái | Duyệt ổ cứng, xem clip **trước khi** nạp | ★★★ |
+| 2 | **Viewer** | Trên giữa | Xem clip, đặt điểm vào/ra | ★★★ |
+| 3 | **Audio Panel** | Trên phải, cạnh Viewer | Đồng hồ đo tiếng (**Meters**), hoặc dạng sóng để đồng bộ (**Waveform**) | ★★☆ |
+| 4 | **Metadata Editor** | Dưới phải | Thông tin clip, nơi gõ ghi chú | ★★☆ |
+| 5 | **Media Pool** | Dưới, chiếm phần lớn bề ngang | Kho clip của project. Bên trái là Bin List, bên phải là clip của bin đang chọn | ★★★ |
 
 Thêm hai panel bật khi cần: **Inspector** (chỉnh clip trước khi dựng) và **Clone Tool** (copy thẻ nhớ có kiểm tra).
 
@@ -76,6 +80,10 @@ Nằm **trên cùng trang Media**. Tám nút, kể từ trái sang phải — đ
 
 Một buổi đổ footage điển hình, từ thẻ nhớ tới lúc sẵn sàng dựng:
 
+![Quy trình nạp media năm bước và nhánh relink khi clip offline](../../assets/diagrams/media-import-flow.svg)
+
+*Đi từ trái sang phải. Clip nào hiện đỏ sau khi nạp thì relink trước, rồi mới gắn nhãn.*
+
 | Bước | Làm gì | Ở đâu |
 |---|---|---|
 | 1 | **Backup thẻ nhớ** ra ổ cứng, có kiểm tra checksum | [Clone Tool](clone-tool.md) |
@@ -83,6 +91,7 @@ Một buổi đổ footage điển hình, từ thẻ nhớ tới lúc sẵn sàn
 | 3 | **Nạp media** từ ổ backup vào đúng bin. Gặp hộp thoại đổi frame rate thì đọc kỹ | [Nạp media](nap-media.md) |
 | 4 | **Xem và gắn nhãn**: đánh dấu take tốt, gõ keyword | [Metadata](metadata.md) |
 | 5 | **Sửa clip đọc sai** (fps, tiếng một bên tai) | [Clip Attributes](clip-attributes.md) |
+| — | **Clip hiện đỏ?** Nối lại bằng **Relink** | [Media offline](nap-media.md#media-offline--khi-clip-hiện-đỏ) |
 
 **Ví dụ — một buổi quay phỏng vấn:** Clone thẻ máy A và thẻ máy thu tiếng ra hai ổ. Tạo bin `01_Phong-van`, `02_B-roll`, `03_Audio`. Nạp từng thư mục vào đúng bin. Chạy **Auto Sync Audio** để ghép tiếng. Gõ keyword tên nhân vật. Sửa clip nào tiếng chỉ ra một tai.
 

@@ -51,6 +51,25 @@ Bấm nút **tắt track** ở đầu track video hoặc tiếng trên timeline 
 
 **Ví dụ:** cần bản không chữ để gửi đơn vị dịch phụ đề. Chữ nằm ở V3 → tắt V3 → Add to Render Queue. Bật lại V3 trước khi tạo job tiếp theo.
 
+### Chỉ render lại clip đã sửa
+
+`★☆☆ Tình huống cụ thể`
+
+**Là gì:** lọc Thumbnail timeline để chỉ còn những clip đã đổi hoặc chưa render, rồi render riêng chúng. Mỗi clip ra một file.
+
+**Dùng khi:** bạn đã xuất từng clip riêng (Individual clips) để gửi người khác, rồi chỉnh màu lại vài clip. Không cần xuất lại cả loạt.
+
+**Cách làm** (manual trang 4182, 4210):
+1. Bấm mũi tên cạnh nút **Clips** trên toolbar (menu **Timeline Filter**).
+2. Chọn một mục nhóm **Modified Clips** (clip sửa trong một khoảng thời gian) hoặc **Unrendered Clips** (clip chưa render).
+3. Ở menu **Render** trên timeline, chọn **All Filtered Clips**.
+4. **Add to Render Queue** → render.
+5. Xong thì chọn **All Clips** trong menu Timeline Filter để bỏ lọc.
+
+Khi đang lọc, dưới nút **Clips** có **gạch cam**, và job chỉ tạo được ở chế độ **Individual clips**.
+
+> **Lỗi hay gặp:** quên bỏ lọc, lần sau bấm Add to Render Queue mà Resolve không cho chọn Single clip. Nhìn gạch cam dưới nút Clips.
+
 ---
 
 ## Nhiều job, một lượt render
@@ -60,6 +79,10 @@ Bấm nút **tắt track** ở đầu track video hoặc tiếng trên timeline 
 **Là gì:** mỗi lần bấm Add to Render Queue là một job mới. Đổi thông số, đổi timeline, đổi khoảng xuất giữa các lần bấm.
 
 **Dùng khi:** cần nhiều phiên bản — bản YouTube, bản dọc, bản duyệt, bản master.
+
+![Các bước trên trang Deliver: chọn timeline, chọn preset, chọn khoảng, Add to Render Queue, Render All, Reveal in Finder](../../assets/diagrams/deliver-render-queue-flow.svg)
+
+*Bước 1–4 lặp lại cho mỗi phiên bản; bước 5 render cả hàng đợi một lượt.*
 
 **Cách làm:**
 1. Tạo job đầu như bình thường.

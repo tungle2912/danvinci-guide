@@ -19,7 +19,7 @@
 
 ### Hàng icon palette — từ trái sang phải
 
-**Camera Raw · Color Match · Color Wheels · HDR · RGB Mixer · Motion Effects** (cụm trái), rồi **Curves · ColorSlice · Color Warper · Qualifier · Window · Tracker · Blur · Key · Sizing · 3D** (cụm giữa). Ngoài cùng bên phải: **Keyframes · Scopes · Info**.
+**Camera Raw · Color Match · Primaries (bánh xe màu) · HDR · RGB Mixer · Motion Effects** (cụm trái), rồi **Curves · ColorSlice · Color Warper · Qualifier · Window · Tracker · Blur · Key · Sizing · 3D** (cụm giữa). Ngoài cùng bên phải: **Keyframes · Scopes · Info**.
 
 Bảng đầy đủ, mức độ dùng và link từng palette: [Giao diện — hàng icon palette](giao-dien.md#hàng-icon-palette).
 
@@ -54,7 +54,7 @@ Bảng đầy đủ, mức độ dùng và link từng palette: [Giao diện —
 
 1. **Mở trang Color**, bấm clip trên dải clip.
 2. **Dựng khung:** bấm `⌥S` năm lần → 6 node.
-3. **Node 01 — Balance:** mở **Color Wheels**. Bấm nút **A** (Auto Color) để có điểm khởi đầu. Nhìn **Parade**: chân ba cột R G B chưa ngang nhau thì kéo **Temp** và **Tint**.
+3. **Node 01 — Balance:** mở **Primaries** (palette bánh xe màu). Bấm nút **A** (Auto Color) để có điểm khởi đầu. Nhìn **Parade**: chân ba cột R G B chưa ngang nhau thì kéo **Temp** và **Tint**.
 4. **Node 02 — Contrast:** kéo **Contrast** lên khoảng 1.2. Vùng tối bệt quá thì hạ **Pivot**.
 5. **Node 03 — Color:** **Color Boost** lên khoảng 20.
 6. **Node 04 — Secondary:** dùng **Qualifier** hút màu da nếu có người. Clip món ăn thì bỏ qua.

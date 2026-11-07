@@ -1,6 +1,6 @@
 # Các palette khác — mỗi cái một việc
 
-Ngoài Color Wheels, Curves, Qualifier, Window, trang Color còn nhiều palette ít dùng hơn. Mỗi palette dưới đây kèm **một việc thực tế** để nhớ nó dùng vào đâu.
+Ngoài Primaries, Curves, Qualifier, Window, trang Color còn nhiều palette ít dùng hơn. Mỗi palette dưới đây kèm **một việc thực tế** để nhớ nó dùng vào đâu.
 
 Vị trí từng icon: [hàng icon palette](giao-dien.md#hàng-icon-palette).
 
@@ -16,6 +16,8 @@ Vị trí từng icon: [hàng icon palette](giao-dien.md#hàng-icon-palette).
 | [Color Match](#color-match) | Tự cân màu theo bảng màu chuẩn | ★☆☆ |
 | [Shot Match](#shot-match--khớp-nhiều-clip-theo-một-clip) | Khớp màu cả cảnh theo một clip | ★★☆ |
 | [Magic Mask](#magic-mask) | Tách người bằng AI | `Studio` |
+| [Camera Raw](#camera-raw--chỉnh-file-raw) | Sửa phơi sáng, nhiệt độ màu của file RAW từ dữ liệu gốc | ★☆☆ |
+| [Motion Effects](#motion-effects) | Chống nhiễu, motion blur | `Studio` |
 
 ---
 
@@ -287,4 +289,50 @@ Manual ghi rõ Magic Mask v2 là **Studio Version Only**. Bản free không có 
 
 `Studio` · Icon thứ 6
 
-Chống nhiễu (**Temporal NR**, **Spatial NR**) và motion blur nhân tạo. Manual ghi palette này **chỉ có ở bản Studio**.
+![Palette Motion Effects: ba cột Temporal NR, Spatial NR, Motion Blur](../../assets/img/color-pal-motion-effects.png)
+*Motion Effects trong Resolve 21 free: palette vẫn hiện, nhưng manual ghi đây là tính năng Studio.*
+
+Chống nhiễu (**Temporal NR**, **Spatial NR**) và motion blur nhân tạo. Manual ghi palette này **chỉ có ở bản Studio** (Motion Effects Palette — Studio Version Only).
+
+| Cột | Làm gì |
+|---|---|
+| **Temporal NR** | Chống nhiễu bằng cách so nhiều khung liền nhau (**Frames**). Hợp cảnh tĩnh |
+| **Spatial NR** | Chống nhiễu trong từng khung (**Mode**, **Radius**, **Spatial Threshold** Luma/Chroma) |
+| **Motion Blur** | Thêm nhoè chuyển động nhân tạo (**Motion Blur** 0 = tắt) |
+
+> **Lưu ý:** ở bản free, đừng dựa vào palette này để cứu cảnh nhiễu. Quay ISO thấp, đủ sáng để ít nhiễu ngay từ đầu.
+
+---
+
+## Camera Raw — chỉnh file RAW
+
+`★☆☆ Tình huống cụ thể` · Icon thứ 1
+
+![Palette Camera Raw cho clip ARRI: Decode Quality, Decode Using, Color Temp, Tint, Exposure, Sharpness](../../assets/img/color-pal-camera-raw.png)
+*Camera Raw với clip ARRI. Đang ở **Camera metadata** nên mọi thanh mờ đi — chưa chỉnh được.*
+
+**Là gì:** file RAW (BRAW, RED, ARRI, Sony, CinemaDNG…) chưa phải ảnh hoàn chỉnh — Resolve phải "giải mã" (debayer) từ dữ liệu cảm biến. Palette này đổi cách giải mã **cho riêng clip đang chọn**. Clip không phải RAW (như H.264, ProRes) thì mọi thanh bị tắt.
+
+**Dùng khi:** một clip RAW bị thiếu sáng hoặc sai nhiệt độ màu. Sửa ở đây lấy lại chi tiết **từ dữ liệu gốc**, sạch hơn kéo Gain ở Primaries.
+
+**Cách làm:**
+1. Chọn clip RAW, mở **Camera Raw**.
+2. **Decode Using** → **Clip**. Các thanh sáng lên, chỉnh được. (Mặc định dùng thiết lập chung của project hoặc metadata máy quay.)
+3. Kéo thanh cần sửa. Tên thanh đã đổi chuyển **màu cam**.
+
+| Thanh | Làm gì | Gốc (không đổi) | Khoảng |
+|---|---|---|---|
+| **Color Temp** | Nhiệt độ màu, đơn vị Kelvin. Số thấp bù ánh đèn ấm, số cao bù ánh sáng lạnh | 6500 | 2000 – 50 000 |
+| **Tint** | Bù ám xanh lá / hồng tím (đèn huỳnh quang) | 0 | −150 – +150 |
+| **Exposure** | Phơi sáng, tính theo stop. Vượt trắng cũng không mất dữ liệu | 0 | −5 – +5 |
+| **Sharpness** | Độ nét lúc giải mã | 20 | 0 – 100 |
+
+Một số định dạng (BRAW…) có thêm **Highlights**, **Shadows**, **Color Boost**, **Saturation**, **Lift**, **Gain**, **Contrast**. Thanh nào hiện ra tuỳ loại file.
+
+**Áp cho nhiều clip:** chọn nhiều clip trên dải clip, chỉnh clip hiện tại, rồi bấm:
+- **Use Changes** — chỉ chép các thanh **đã đổi** (tên màu cam) sang các clip kia.
+- **Use Settings** — chép **toàn bộ** thiết lập, ghi đè hết.
+
+Làm hỏng: menu ⋯ của palette → **Reset** (về mặc định) hoặc **Revert** (về như lúc mới chọn clip).
+
+**Ví dụ:** clip BRAW quay dưới đèn huỳnh quang, da hơi xanh, tối 1 stop → **Decode Using: Clip** → **Exposure 1**, rồi kéo **Tint** từng chút tới khi cột G trên [Parade](scopes.md#parade) ngang với R và B ở vùng da, tường trắng.

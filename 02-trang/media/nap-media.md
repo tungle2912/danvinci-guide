@@ -173,23 +173,28 @@ Nếu bạn chỉ dời cả thư mục sang chỗ mới mà giữ nguyên cấu
 
 ### Tự động — Auto Sync Audio
 
+![Hộp thoại Automatically Sync Audio và menu Synchronize Using](../../assets/img/media-auto-sync-audio.png)
+*Waveform hợp nhất khi máy quay có thu tiếng mic trên máy. Mặc định là Timecode.*
+
 1. Bỏ clip hình và clip tiếng cần ghép vào **cùng một bin** (hoặc `⌘` chọn hai bin).
-2. Chuột phải bin → **Auto Sync Audio**.
-3. Ở **Synchronize Using**, chọn cách so:
+2. Chuột phải bin → **Auto Sync Audio...** → hộp thoại **Automatically Sync Audio** mở ra. Bin chỉ có clip hình (chưa có clip tiếng) thì bấm vào không có gì xảy ra.
+3. Ở **Synchronize Using** (mặc định **Timecode**), chọn cách so:
 
 | Cách | Dùng khi |
 |---|---|
 | **Timecode** | Máy quay và máy ghi âm chạy chung timecode |
 | **Waveform** | Không có timecode chung, nhưng máy quay **có thu tiếng** (mic trên máy). Phổ biến nhất với người làm vlog |
-| **In / Out / Marker** | Không có cả hai. Phải tự đặt `I`, `O` hoặc marker ở cùng một khoảnh khắc (tiếng vỗ tay) trên clip hình và clip tiếng. Chỉ ghép **từng cặp** một |
+| **In / Out / Marker** | Không có cả hai. Phải tự đặt `I`, `O` hoặc marker ở cùng một khoảnh khắc (tiếng vỗ tay) trên clip hình và clip tiếng. Chỉ ghép **từng cặp** một: chọn cặp clip → chuột phải → **Audio Sync → Auto Sync Audio** |
 
 4. Tuỳ chọn:
    - **Retain embedded audio** — giữ cả tiếng máy quay. Trên timeline clip có thêm một track tiếng.
    - **Retain Video Metadata** — giữ metadata của clip hình thay vì lấy của file tiếng.
-   - Với Waveform: **Use channel number** chọn kênh để so. **Auto** để Resolve tự chọn.
+   - Với Waveform: **Use channel number** chọn kênh để so (bản 21.0.4 hiện sẵn `1`). **Auto** để Resolve tự chọn. **Mix** so tiếng trộn của mọi kênh — hợp khi một kênh im lặng nhiều đoạn. Kênh nào nhiễu thì chọn đích danh kênh khác.
 5. Bấm **Sync**.
 
 Clip đã ghép có **icon âm thanh** ở góc dưới trái thumbnail.
+
+> **Ví dụ:** bạn quay cô gái ở trại cừu bằng máy ảnh (có mic trên máy) và thu tiếng nói rời bằng máy ghi âm. Bỏ clip hình và file `.wav` vào bin `01 Footage` (trong project demo: kéo `giong-noi.wav` từ bin `02 Audio` sang) → chuột phải bin → **Auto Sync Audio** → **Waveform** → bật **Retain embedded audio** → **Sync**. Kéo clip xuống timeline "Demo - Vlog", tiếng tốt đã đi kèm hình.
 
 > **Chia nhỏ để nhanh:** quay nhiều ngày thì ghép từng ngày một. Resolve so ít file hơn, chạy nhanh hơn và ít ghép nhầm.
 
@@ -202,7 +207,18 @@ Clip đã ghép có **icon âm thanh** ở góc dưới trái thumbnail.
 
 Lệch vài khung sau khi ghép: chọn clip, mở Waveform, tắt nút link, chỉnh lại điểm khớp, bật link lại.
 
+**Nhích tiếng trên timeline** (chọn clip tiếng rồi bấm):
+
+| Phím | Nhích |
+|---|---|
+| `⌥.` / `⌥,` | Một khung sau / trước |
+| `⌥→` / `⌥←` | Một phần mười khung sau / trước |
+
 Tìm clip tiếng đã ghép: chuột phải clip hình → **Audio Sync → Reveal synced audio in Media Pool**.
+
+Muốn timeline hiện tên file tiếng gốc thay vì tên clip hình: bật **View → Show File Names**, rồi **View → Overlay Synced Audio File Names**.
+
+> **Mẹo:** máy quay không khoá được timecode ngoài? Nối nguồn timecode vào cổng tiếng của máy để LTC được ghi vào một track tiếng. Trong Media Pool, chọn các clip → chuột phải → **Update timecode from audio - LTC**. Resolve đổi timecode clip theo LTC, rồi bạn đồng bộ bằng **Timecode**.
 
 ---
 
@@ -228,7 +244,11 @@ Tìm clip tiếng đã ghép: chuột phải clip hình → **Audio Sync → Rev
 
 `★★☆ Thường dùng`
 
-Hai thứ khác nhau, hay bị nhầm.
+Hai thứ khác nhau, hay bị nhầm. Thêm **Render Cache** — thứ thứ ba cũng giúp phát mượt.
+
+![So sánh proxy, optimized media và render cache](../../assets/diagrams/media-proxy-optimized-cache.svg)
+
+*Proxy và optimized media thay file gốc khi phát; render cache lưu sẵn đoạn đã thêm hiệu ứng.*
 
 | | Optimized Media | Proxy Media |
 |---|---|---|
@@ -256,6 +276,11 @@ File optimized nằm cùng chỗ với cache — mặc định là ổ scratch �
 
 Đổi thông số RAW của clip thì optimized media cũ **bị bỏ**, phải tạo lại.
 
+Optimized media được giữ lại sau khi đóng project, và dùng chung cho mọi project trong cùng project library có clip đó.
+
+- **Mất liên kết** (ví dụ tạo trên máy khác mà quên lưu project): chọn clip → chuột phải → **Rediscover Optimized Media**. Không phải tạo lại.
+- **Xoá để lấy chỗ trống:** Resolve không có lệnh xoá. Bạn xoá tay trong Finder, ở thư mục cache.
+
 ### Proxy Media
 File thật nằm trên ổ, **mang sang máy khác được**.
 
@@ -268,7 +293,7 @@ Chọn độ phân giải và codec ở **Project Settings → Master Settings �
 
 | Chế độ | Làm gì |
 |---|---|
-| **Disable All Proxies** | Chỉ dùng file gốc |
+| **Disable All Proxies** | Chỉ dùng file gốc. Mất file gốc thì clip hiện **Media Offline** |
 | **Prefer Proxies** | Dùng proxy nếu có, không có thì dùng file gốc |
 | **Prefer Camera Originals** | Dùng file gốc nếu có, không có thì dùng proxy |
 
@@ -285,7 +310,21 @@ Chọn độ phân giải và codec ở **Project Settings → Master Settings �
 
 **Proxy làm ở chỗ khác** (hoặc bạn đã dời proxy đi): chọn clip → chuột phải → **Link Proxy Media** → chỉ tới file/thư mục proxy. Bỏ liên kết: **Unlink Proxy Media** — file proxy vẫn nằm trên ổ, phải xoá tay.
 
-> **Khi xuất ở trang Deliver,** Resolve tự quay về file gốc để có chất lượng cao nhất. Không cần tắt proxy trước khi xuất.
+Tạo proxy lần nữa cho cùng clip (ví dụ khác độ phân giải): file mới có đuôi `_s00x` và tự được nối. Bản cũ vẫn nằm trên ổ.
+
+> **Khi xuất ở trang Deliver,** Resolve tự quay về file gốc để có chất lượng cao nhất. Không cần tắt proxy trước khi xuất. Chỉ khi bạn bật **Use proxy media** trong **Advanced Settings** của Deliver thì Resolve mới xuất từ proxy — hợp khi xuất bản xem nhanh, hoặc khi không còn file gốc.
+
+### Render Cache
+
+**Là gì:** Resolve render sẵn những đoạn nặng (màu nhiều node, Fusion, hiệu ứng) thành file trong thư mục cache, rồi phát lại file đó cho mượt.
+
+**Dùng khi:** clip phát được, nhưng thêm hiệu ứng là giật.
+
+1. Chọn **Playback → Render Cache → Smart** để Resolve tự cache đoạn quá nặng. **User** cache những clip bạn đánh dấu, cộng các hiệu ứng nặng bật trong Master Settings. **Off** để tắt.
+2. Ở trang Color và Edit, `⌥R` đổi nhanh giữa các chế độ.
+3. Chọn codec cache ở **Project Settings → Master Settings → Optimized Media and Render Cache → Render Cache Format**.
+
+> **Mẹo:** muốn cache riêng một clip, chuột phải clip trên timeline trang Color hoặc Edit → bật **Render Cache Clip Output**. Sửa clip thì cache cũ tự bị xoá và Resolve cache lại.
 
 Chi tiết cách chọn codec: [Tối ưu hiệu năng](../../04-tham-khao/hieu-nang.md).
 

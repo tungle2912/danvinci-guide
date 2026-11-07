@@ -33,7 +33,7 @@ Nằm dưới cùng. Dành cho thư mục bạn hay vào, khỏi phải lần m�
 
 | Việc | Cách |
 |---|---|
-| Thêm | Chuột phải thư mục trong Volume List → **Add folder to favorites** |
+| Thêm | Chuột phải thư mục trong Volume List → **Add Folder to Favorites** |
 | Mở | Bấm vào favorite đó |
 | Bỏ | Chuột phải favorite → **Remove folder from favorites** |
 
@@ -117,25 +117,56 @@ Sắp cột xong rồi **lưu lại layout** để lần sau gọi ra dùng luô
 
 ## Menu chuột phải trong Media Storage
 
-Phần lớn việc nạp media nằm ở đây. Chuột phải vào **file** hoặc **thư mục**:
+Phần lớn việc nạp media nằm ở đây. Menu khác nhau tuỳ bạn chuột phải vào **thư mục** (ở Volume List) hay **file** (ở khung duyệt bên phải).
+
+### Chuột phải thư mục
+
+![Menu chuột phải thư mục trong Media Storage](../../assets/img/media-storage-right-click.png)
+*Create Bins nạp cả thư mục con và dựng sẵn cây bin.*
+
+| Lệnh | Làm gì | Mức |
+|---|---|---|
+| **Refresh** | Đọc lại thư mục khi vừa chép thêm file từ Finder | ★★☆ |
+| **Add Folder into Media Pool** | Nạp file trong thư mục. **Bỏ qua** thư mục con | ★★☆ |
+| **Add Folder and SubFolders into Media Pool** | Nạp cả thư mục con, dồn hết vào **một** bin | ★★☆ |
+| **Add Folder and SubFolders into Media Pool (Create Bins)** | Nạp cả cây, **mỗi thư mục thành một bin** | ★★★ |
+| **Add Folder to Favorites** | Thêm vào Favorites để lần sau mở nhanh | ★★☆ |
+| **Set as Clone Source** / **Add as Clone Destination** | Đưa thư mục vào [Clone Tool](clone-tool.md) làm nguồn / làm đích | ★★☆ |
+| **Reveal in Finder** | Mở thư mục đó trong Finder | ★★☆ |
+| **Create New Folder...** / **Rename Folder...** | Tạo, đổi tên thư mục ngay trên ổ | ★☆☆ |
+| **Delete Folder Permanently...** | **Xoá hẳn thư mục trên ổ**, không qua Thùng rác | ★☆☆ |
+
+Nhóm **Split and Add...**, **...Based on EDLs...**, **...with Source Offset...** dành cho quy trình conform EDL, người mới không cần.
+
+### Chuột phải file
+
+![Menu chuột phải một file trong Media Storage](../../assets/img/media-storage-file-right-click.png)
+*Menu của file ngắn hơn menu thư mục. Lệnh cuối xoá hẳn file trên ổ.*
 
 | Lệnh | Làm gì | Mức |
 |---|---|---|
 | **Add into Media Pool** | Nạp file đang chọn vào bin đang mở | ★★★ |
-| **Add Folder into Media Pool** | Nạp file trong thư mục. **Bỏ qua** thư mục con | ★★☆ |
-| **Add Folder and SubFolders into Media Pool** | Nạp cả thư mục con, dồn hết vào **một** bin | ★★☆ |
-| **Add Folder and SubFolders into Media Pool (Create Bins)** | Nạp cả cây, **mỗi thư mục thành một bin** | ★★★ |
-| **Extract Audio** | Tách tiếng của clip ra file `.wav` riêng | ★☆☆ |
-| **Scene Cut Detection** | Cắt một file video đã dựng sẵn thành từng cảnh | ★☆☆ |
-| **Set As Clone Source / Set As Clone Destination** | Đưa thư mục vào [Clone Tool](clone-tool.md) | ★★☆ |
-| **Add As Offline Clip** | Nạp làm video tham chiếu để so với bản dựng | ★☆☆ |
-| **Add to Media Pool as a Matte** | Gắn file matte cho clip, dùng ở trang Color | ★☆☆ |
-| **Add folder to favorites** | Thêm vào Favorites | ★★☆ |
-| **Add New Location** | (vùng trống Volume List) thêm ổ không tự hiện | ★☆☆ |
+| **Add as Offline Reference Clip** | Nạp làm video tham chiếu để so với bản dựng. Clip có huy hiệu ô bàn cờ trong Media Pool | ★☆☆ |
+| **Scene Cut Detection...** | Cắt một file video đã dựng sẵn thành từng cảnh | ★☆☆ |
+| **Extract Audio...** | Tách tiếng của clip ra file `.wav` riêng | ★☆☆ |
+| **Add to Media Pool as a Matte** | Nạp file matte (ảnh đen trắng đánh dấu vùng trong suốt) để dùng ở trang Color. Đang chọn sẵn một clip trong Media Pool thì matte **gắn vào clip đó** (clip matte). Không chọn clip nào thì thành **timeline matte**, dùng cho clip nào cũng được | ★☆☆ |
+| **Reveal in Finder** | Mở Finder tại file đó | ★★☆ |
+| **Delete Permanently...** | **Xoá hẳn file trên ổ** | ★☆☆ |
 
-Các lệnh nâng cao hơn (Add Folder Based on EDLs, Split and add into Media Pool, Add Folder with Source Offset) dành cho quy trình conform EDL, người mới không cần.
+> **Lỗi hay gặp:** bấm nhầm **Delete Permanently...** / **Delete Folder Permanently...** tưởng chỉ gỡ khỏi project. Hai lệnh này xoá file thật trên ổ. Muốn bỏ clip khỏi project thì xoá trong **Media Pool**, không xoá ở Media Storage.
+
+**Thêm ổ không tự hiện:** chuột phải vùng trống Volume List → **Add New Location**.
 
 Cách dùng từng lệnh nạp: [Nạp media](nap-media.md).
+
+**Ví dụ — nạp thư mục quay của dự án demo:** trên ổ có `So tay DaVinci/Footage/` chứa hai thư mục con `Bep` và `Trang-trai`.
+
+1. Trong Media Pool, bấm chọn bin `01 Footage`.
+2. Trong Volume List, mở tới thư mục `Footage`.
+3. Chuột phải `Footage` → **Add Folder and SubFolders into Media Pool (Create Bins)**.
+4. Bin `01 Footage` có thêm bin `Footage`, bên trong là hai bin con `Bep` và `Trang-trai`, mỗi bin chứa đúng clip của thư mục đó.
+
+> **Lỗi hay gặp:** chọn nhầm **Add Folder into Media Pool** cho thư mục chỉ có thư mục con. Lệnh này bỏ qua thư mục con, nên Media Pool không có thêm clip nào.
 
 ---
 

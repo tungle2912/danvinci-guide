@@ -8,6 +8,10 @@ Có **ba loại bin** trong Media Pool, mỗi loại nằm ở một khu riêng 
 | **Power Bin** | Clip bạn kéo vào | **Có** | ★★☆ |
 | **Smart Bin** | Không chứa gì — tự lọc clip theo điều kiện | Tuỳ chọn | ★★☆ |
 
+![Ba loại bin: Bin, Power Bin, Smart Bin](../../assets/diagrams/media-bin-types.svg)
+
+*Bin và Power Bin chứa clip bạn kéo vào; Smart Bin chỉ hiện clip khớp điều kiện.*
+
 Hiện/ẩn khu Power Bins và Smart Bins: **menu tuỳ chọn Media Pool** (ba chấm) → tick **Show Power Bins** / **Show Smart Bins**.
 
 ## 1. Bin thường
@@ -62,7 +66,7 @@ Master
 
 `★★☆ Thường dùng`
 
-**Mặc định ẩn.** Đây là bin **dùng chung cho mọi project trong cùng database**.
+**Mặc định ẩn.** Đây là bin **dùng chung cho mọi project** của bạn. Máy cài một người dùng thì mọi project đều thấy. Cài nhiều người dùng thì mỗi người có bộ Power Bin riêng, dùng chung cho các project của người đó.
 
 Dùng để chứa những thứ bạn cần ở mọi dự án:
 
@@ -88,9 +92,17 @@ Power Bin lồng nhau được như bin thường. Khu Power Bin có vạch chia
 
 Không chứa clip. Nó là **bộ lọc tự chạy** — bạn đặt điều kiện, clip nào thoả thì tự xuất hiện.
 
-Tạo: hiện khu Smart Bins → chuột phải → **Add Smart Bin** (có chỗ ghi **Create Smart Bin**) → đặt tên và điều kiện → **Create Smart Bin**.
+Tạo:
+
+1. Mở menu tuỳ chọn Media Pool (ba chấm) → tick **Show Smart Bins**.
+2. Chuột phải vùng trống trong khu Smart Bins → **Add Smart Bin...** (hoặc bấm **+** cạnh chữ **Smart Bins**). Hộp thoại **Create Smart Bin** mở ra.
+3. Đặt tên, thêm điều kiện.
+4. Bấm **Create**. Bin mới hiện trong khu Smart Bins.
 
 ### Hộp thoại tạo Smart Bin
+
+![Hộp thoại Create Smart Bin](../../assets/img/media-create-smart-bin.png)
+*Hai điều kiện ghép bằng Match All: tên file có "Artlist" và đúng 3840 × 2160.*
 
 | Phần | Làm gì |
 |---|---|
@@ -101,9 +113,13 @@ Tạo: hiện khu Smart Bins → chuột phải → **Add Smart Bin** (có chỗ
 | **Menu thứ nhất** — nhóm metadata | Chọn nhóm: các nhóm của Metadata Editor, **Media Pool Properties** (mọi cột của Media Pool), **Color Timeline Properties** |
 | **Menu thứ hai** — trường | Trường cụ thể trong nhóm đó |
 | **Menu thứ ba** — so sánh | **is**, **contains**, khoảng số, khoảng ngày, đúng/sai, màu flag, màu marker… tuỳ trường |
+| **Ô giá trị** | Gõ giá trị so sánh. Trường **Resolution** có hai ô: rộng `X` cao |
 | **Nút +** | Thêm một điều kiện. Giữ `⌥` bấm để thêm một **nhóm** điều kiện lồng bên trong |
+| **Nút −** | Xoá dòng điều kiện đó. Chỉ hiện khi có từ hai dòng |
 
-Trong lúc bạn sửa điều kiện, dải thumbnail trong hộp thoại cập nhật luôn để bạn thấy bộ lọc đang bắt được clip nào.
+Dòng đầu mặc định là **MediaPool Properties → File Name → contains**. Hộp thoại không xem trước clip khớp: bấm **Create** rồi mở bin để kiểm tra, sai thì sửa lại điều kiện.
+
+> **Ví dụ trong project demo:** tên `B-roll 4K`, Match **All**. Dòng 1: **File Name** **contains** `Artlist`. Bấm **+**, dòng 2: **Resolution** **is** `3840` X `2160`. Bấm **Create** → bin chỉ hiện clip đĩa phô mai (4K UHD). Clip trại cừu 4448x3096 bị loại vì sai độ phân giải.
 
 ### Ví dụ điều kiện hữu ích
 
@@ -111,7 +127,7 @@ Trong lúc bạn sửa điều kiện, dải thumbnail trong hộp thoại cập
 |---|---|
 | Mọi cảnh phỏng vấn | Keywords **contains** `phỏng vấn` |
 | Mọi take tốt | Good Take **is** `true` |
-| Footage quay 4K | Resolution **is** `3840x2160` |
+| Footage quay 4K | Resolution **is** `3840` X `2160` |
 | Clip dài trên 1 phút | Duration **greater than** `00:01:00:00` |
 | Clip quay hôm nay | Date Created **is** hôm nay |
 
@@ -123,15 +139,16 @@ Ghép nhiều điều kiện bằng **All** (và) hoặc **Any** (hoặc).
 
 | Việc | Cách |
 |---|---|
-| Sửa điều kiện | **Bấm đúp** Smart Bin → sửa → **OK** |
+| Sửa điều kiện | Chuột phải → **Edit...** (hoặc **bấm đúp** Smart Bin) → hộp thoại **Edit Smart Bin** → sửa → **OK**. Ô **Show in all projects** mờ đi, không đổi được lúc sửa |
 | Đổi tên | Chuột phải → **Rename** |
 | Nhân bản | Chuột phải → **Duplicate**. Tiện khi cần biến thể của một bộ lọc phức tạp |
-| Xoá | Chuột phải → **Delete Smart Bin** → **Delete**. Clip không bị xoá |
+| Xoá | Chuột phải → **Remove...** → xác nhận. Clip không bị xoá |
+| Mở riêng | Chuột phải → **Open As a New Window** hoặc **Open As a New Tab** |
 | Gom vào thư mục | Chuột phải khu Smart Bins → **Add Folder**, rồi kéo Smart Bin vào. Chọn thư mục là thấy clip của mọi Smart Bin bên trong |
 
 ### Smart Bin tự tạo
 
-Resolve tự sinh Smart Bin theo metadata có sẵn: **Timelines**, **Keywords**, **People**, **Shot**, **Scene**, **Offline Clips**… Mỗi loại là một nhóm đóng sẵn trong khu Smart Bins, bấm tam giác để mở.
+Resolve tự sinh Smart Bin theo metadata có sẵn: **Timelines**, **Photo Albums**, **Keywords**, **Collections**, **People** (từ nhận diện người), **Shot**, **Scene**, **Offline Clips**. Mỗi loại là một nhóm đóng sẵn trong khu Smart Bins, bấm tam giác để mở. Chọn dòng đầu nhóm là thấy clip của mọi Smart Bin bên trong.
 
 Chọn loại nào được tự tạo: **Preferences → User → Editing → Automatic Smart Bins**.
 
@@ -167,8 +184,8 @@ Cách dùng thường thấy: đỏ cho footage chưa xem, vàng cho đang dựn
 
 | Định dạng | Chứa gì | Xuất | Nhập |
 |---|---|---|---|
-| `.drb` | Một hay nhiều bin (DaVinci Resolve Bin) | Chuột phải bin → **Export Bin**, hoặc **File → Export → Export Bin** | Chuột phải Media Pool → **Import Bin**, hoặc **File → Import → Import Bin** |
-| `.drt` | Một timeline (DaVinci Resolve Timeline) | Chọn timeline → **File → Export → Export AAF, XML, DRT** (`⇧⌘O`) → chọn loại `.drt` | **File → Import Timeline → Import AAF, XML, DRT** (`⇧⌘I`) |
+| `.drb` | Một hay nhiều bin (DaVinci Resolve Bin) | Chuột phải bin → **Export Bin**, hoặc **File → Export → Export Bin** | Chuột phải Media Pool → **Import Bin**, hoặc **File → Import → Import Bin**, hoặc bấm đúp file `.drb` |
+| `.drt` | Một timeline (DaVinci Resolve Timeline) | Chọn timeline → **File → Export → Export AAF, XML, DRT** (`⇧⌘O`) → chọn loại `.drt` | Chọn bin đích → **File → Import Timeline → Import AAF, XML, DRT** (`⇧⌘I`), hoặc bấm đúp file `.drt` → **Import** |
 | `.drp` | Cả project | **File → Export Project** | |
 
 `.drb` tiện khi muốn chuyển một bộ đồ hoạ sang dự án khác mà không mang cả project.
@@ -177,7 +194,9 @@ Cách dùng thường thấy: đỏ cho footage chưa xem, vàng cho đang dựn
 
 - `.drb` mang theo metadata, điểm `I` `O`, timeline trong bin. **Không** mang file media.
 - `.drt` chỉ mang timeline và thông tin clip. **Không** mang file media.
-- Bin hay timeline nhập vào có thêm chữ **import** ở cuối tên để khỏi trùng.
+- Bin nhập vào có thêm chữ **import** ở cuối tên để khỏi trùng.
+- `.drb` có clip **đã có sẵn** trong Media Pool thì Resolve không nhập trùng, mà nối vào clip có sẵn.
+- Nhập `.drt`, hộp thoại **Import Timeline** có ô **Automatically link to existing media pool clips**. Tick để Resolve tự nối timeline vào clip đã có, khỏi relink tay.
 - Sang máy khác, có thể phải [nối lại media](nap-media.md#media-offline--khi-clip-hiện-đỏ).
 
 **Xuất nhiều timeline một lúc:** chọn các timeline → chuột phải → **Timelines → Export → DaVinci Resolve Timeline Files** → chọn thư mục. Mỗi file giữ đúng tên timeline.
@@ -204,7 +223,7 @@ Chỉ đồng bộ một lần: chuột phải bin → **Resync Media Files**.
 - Bin có **ít nhất một clip**.
 - Mọi clip trong bin nằm **cùng một thư mục** trên ổ.
 - **Tên bin trùng tên thư mục** chứa clip.
-- Thư mục con tạo **sau** khi nạp thì không được theo dõi. Nạp lại thư mục cha để bắt thư mục con mới.
+- File mới trong **thư mục con** chỉ được thêm nếu đã có **bin con** tương ứng. Thư mục con tạo **sau** khi nạp thì không được theo dõi. Nạp lại thư mục cha để bắt thư mục con mới.
 
 File bị xoá khỏi thư mục thì clip trong bin chuyển sang **offline**, metadata vẫn giữ.
 

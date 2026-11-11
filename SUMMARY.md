@@ -79,3 +79,7 @@
 * [Tối ưu hiệu năng](04-tham-khao/hieu-nang.md)
 * [Lỗi thường gặp](04-tham-khao/loi-thuong-gap.md)
 * [Nguồn tham khảo](04-tham-khao/nguon.md)
+
+## Phụ lục
+
+* [CapCut trên điện thoại — dựng nhanh bằng mẫu có sẵn](05-phu-luc/capcut-dien-thoai.md)
